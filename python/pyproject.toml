@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "msp"
+version = "0.1.0"
+description = "domain models for microsoft api"
+authors = ["Hiroki Mizukami"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "msp", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+protobuf = "^5.27.0"
+grpcio = "^1.64.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
