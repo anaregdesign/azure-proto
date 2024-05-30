@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { Choice, Error } from "./entity_pb.js";
+import { Choice } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.CompletionRequest
@@ -26,7 +26,11 @@ export const CompletionRequest = /*@__PURE__*/ proto3.makeMessageType(
 export const CompletionResponse = /*@__PURE__*/ proto3.makeMessageType(
   "azure.openai.v1.CompletionResponse",
   () => [
-    { no: 1, name: "error", kind: "message", T: Error },
+    { no: 1, name: "model", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "created", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 5, name: "choices", kind: "message", T: Choice, repeated: true },
   ],
 );
 

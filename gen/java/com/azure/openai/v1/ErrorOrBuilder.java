@@ -58,32 +58,17 @@ public interface ErrorOrBuilder extends
       getTypeBytes();
 
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    * @return Whether the innerError field is set.
    */
   boolean hasInnerError();
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    * @return The innerError.
    */
-  com.azure.openai.v1.Error getInnerError();
+  com.azure.openai.v1.InnerError getInnerError();
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    */
-  com.azure.openai.v1.ErrorOrBuilder getInnerErrorOrBuilder();
-
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   * @return Whether the contentFilterResults field is set.
-   */
-  boolean hasContentFilterResults();
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   * @return The contentFilterResults.
-   */
-  com.azure.openai.v1.ContentFilterResults getContentFilterResults();
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   */
-  com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder();
+  com.azure.openai.v1.InnerErrorOrBuilder getInnerErrorOrBuilder();
 }

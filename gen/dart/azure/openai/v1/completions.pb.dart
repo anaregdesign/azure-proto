@@ -117,11 +117,27 @@ class CompletionRequest extends $pb.GeneratedMessage {
 
 class CompletionResponse extends $pb.GeneratedMessage {
   factory CompletionResponse({
-    $0.Error? error,
+    $core.String? model,
+    $core.String? object,
+    $core.String? id,
+    $core.int? created,
+    $core.Iterable<$0.Choice>? choices,
   }) {
     final $result = create();
-    if (error != null) {
-      $result.error = error;
+    if (model != null) {
+      $result.model = model;
+    }
+    if (object != null) {
+      $result.object = object;
+    }
+    if (id != null) {
+      $result.id = id;
+    }
+    if (created != null) {
+      $result.created = created;
+    }
+    if (choices != null) {
+      $result.choices.addAll(choices);
     }
     return $result;
   }
@@ -130,7 +146,11 @@ class CompletionResponse extends $pb.GeneratedMessage {
   factory CompletionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
-    ..aOM<$0.Error>(1, _omitFieldNames ? '' : 'error', subBuilder: $0.Error.create)
+    ..aOS(1, _omitFieldNames ? '' : 'model')
+    ..aOS(2, _omitFieldNames ? '' : 'object')
+    ..aOS(3, _omitFieldNames ? '' : 'id')
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'created', $pb.PbFieldType.OU3)
+    ..pc<$0.Choice>(5, _omitFieldNames ? '' : 'choices', $pb.PbFieldType.PM, subBuilder: $0.Choice.create)
     ..hasRequiredFields = false
   ;
 
@@ -156,15 +176,43 @@ class CompletionResponse extends $pb.GeneratedMessage {
   static CompletionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.Error get error => $_getN(0);
+  $core.String get model => $_getSZ(0);
   @$pb.TagNumber(1)
-  set error($0.Error v) { setField(1, v); }
+  set model($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasError() => $_has(0);
+  $core.bool hasModel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearError() => clearField(1);
-  @$pb.TagNumber(1)
-  $0.Error ensureError() => $_ensure(0);
+  void clearModel() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get object => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set object($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasObject() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearObject() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get id => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set id($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get created => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set created($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasCreated() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCreated() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.List<$0.Choice> get choices => $_getList(4);
 }
 
 

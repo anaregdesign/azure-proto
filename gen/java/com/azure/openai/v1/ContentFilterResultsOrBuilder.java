@@ -10,94 +10,94 @@ public interface ContentFilterResultsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    * @return Whether the sexual field is set.
    */
   boolean hasSexual();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    * @return The sexual.
    */
-  com.azure.openai.v1.ContentFilterResult getSexual();
+  com.azure.openai.v1.ContentFilterSeverityResult getSexual();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getSexualOrBuilder();
+  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSexualOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    * @return Whether the violence field is set.
    */
   boolean hasViolence();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    * @return The violence.
    */
-  com.azure.openai.v1.ContentFilterResult getViolence();
+  com.azure.openai.v1.ContentFilterSeverityResult getViolence();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getViolenceOrBuilder();
+  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getViolenceOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    * @return Whether the hate field is set.
    */
   boolean hasHate();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    * @return The hate.
    */
-  com.azure.openai.v1.ContentFilterResult getHate();
+  com.azure.openai.v1.ContentFilterSeverityResult getHate();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getHateOrBuilder();
+  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getHateOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    * @return Whether the selfHarm field is set.
    */
   boolean hasSelfHarm();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    * @return The selfHarm.
    */
-  com.azure.openai.v1.ContentFilterResult getSelfHarm();
+  com.azure.openai.v1.ContentFilterSeverityResult getSelfHarm();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getSelfHarmOrBuilder();
+  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSelfHarmOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    * @return Whether the profanity field is set.
    */
   boolean hasProfanity();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    * @return The profanity.
    */
-  com.azure.openai.v1.ContentFilterResult getProfanity();
+  com.azure.openai.v1.ContentFilterSeverityResult getProfanity();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getProfanityOrBuilder();
+  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getProfanityOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    * @return Whether the jailbreak field is set.
    */
   boolean hasJailbreak();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    * @return The jailbreak.
    */
-  com.azure.openai.v1.ContentFilterResult getJailbreak();
+  com.azure.openai.v1.ContentFilterDetectedResult getJailbreak();
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    */
-  com.azure.openai.v1.ContentFilterResultOrBuilder getJailbreakOrBuilder();
+  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getJailbreakOrBuilder();
 
   /**
    * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>

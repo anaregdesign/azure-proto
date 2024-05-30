@@ -45,20 +45,19 @@ public struct Azure_Openai_V1_CompletionResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  public var error: Azure_Openai_V1_Error {
-    get {return _error ?? Azure_Openai_V1_Error()}
-    set {_error = newValue}
-  }
-  /// Returns true if `error` has been explicitly set.
-  public var hasError: Bool {return self._error != nil}
-  /// Clears the value of `error`. Subsequent reads from it will return its default value.
-  public mutating func clearError() {self._error = nil}
+  public var model: String = String()
+
+  public var object: String = String()
+
+  public var id: String = String()
+
+  public var created: UInt32 = 0
+
+  public var choices: [Azure_Openai_V1_Choice] = []
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
-
-  fileprivate var _error: Azure_Openai_V1_Error? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -129,7 +128,11 @@ extension Azure_Openai_V1_CompletionRequest: SwiftProtobuf.Message, SwiftProtobu
 extension Azure_Openai_V1_CompletionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".CompletionResponse"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "error"),
+    1: .same(proto: "model"),
+    2: .same(proto: "object"),
+    3: .same(proto: "id"),
+    4: .same(proto: "created"),
+    5: .same(proto: "choices"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -138,25 +141,41 @@ extension Azure_Openai_V1_CompletionResponse: SwiftProtobuf.Message, SwiftProtob
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._error) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.model) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.object) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.id) }()
+      case 4: try { try decoder.decodeSingularUInt32Field(value: &self.created) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.choices) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._error {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
+    if !self.model.isEmpty {
+      try visitor.visitSingularStringField(value: self.model, fieldNumber: 1)
+    }
+    if !self.object.isEmpty {
+      try visitor.visitSingularStringField(value: self.object, fieldNumber: 2)
+    }
+    if !self.id.isEmpty {
+      try visitor.visitSingularStringField(value: self.id, fieldNumber: 3)
+    }
+    if self.created != 0 {
+      try visitor.visitSingularUInt32Field(value: self.created, fieldNumber: 4)
+    }
+    if !self.choices.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.choices, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Azure_Openai_V1_CompletionResponse, rhs: Azure_Openai_V1_CompletionResponse) -> Bool {
-    if lhs._error != rhs._error {return false}
+    if lhs.model != rhs.model {return false}
+    if lhs.object != rhs.object {return false}
+    if lhs.id != rhs.id {return false}
+    if lhs.created != rhs.created {return false}
+    if lhs.choices != rhs.choices {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

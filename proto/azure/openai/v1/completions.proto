@@ -16,5 +16,9 @@ message CompletionRequest {
 }
 
 message CompletionResponse {
-  Error error = 1;
+  string model = 1;
+  string object = 2;
+  string id = 3;
+  uint32 created = 4;
+  repeated Choice choices = 5;
 }

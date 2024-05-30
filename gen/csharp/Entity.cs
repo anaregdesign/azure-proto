@@ -27,41 +27,43 @@ namespace Azure.Openai.V1 {
             "ChxhenVyZS9vcGVuYWkvdjEvZW50aXR5LnByb3RvEg9henVyZS5vcGVuYWku",
             "djEicwoGQ2hvaWNlEhQKBWluZGV4GAEgASgNUgVpbmRleBISCgR0ZXh0GAIg",
             "ASgJUgR0ZXh0EhoKCGxvZ3Byb2JzGAMgASgCUghsb2dwcm9icxIjCg1maW5p",
-            "c2hfcmVhc29uGAQgASgJUgxmaW5pc2hSZWFzb24i9QEKBUVycm9yEhIKBGNv",
+            "c2hfcmVhc29uGAQgASgJUgxmaW5pc2hSZWFzb24inQEKBUVycm9yEhIKBGNv",
             "ZGUYASABKAlSBGNvZGUSGAoHbWVzc2FnZRgCIAEoCVIHbWVzc2FnZRIUCgVw",
-            "YXJhbRgDIAEoCVIFcGFyYW0SEgoEdHlwZRgEIAEoCVIEdHlwZRI3Cgtpbm5l",
-            "cl9lcnJvchgFIAEoCzIWLmF6dXJlLm9wZW5haS52MS5FcnJvclIKaW5uZXJF",
-            "cnJvchJbChZjb250ZW50X2ZpbHRlcl9yZXN1bHRzGAYgASgLMiUuYXp1cmUu",
-            "b3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJSZXN1bHRzUhRjb250ZW50RmlsdGVy",
-            "UmVzdWx0cyJ9CgpJbm5lckVycm9yEhIKBGNvZGUYASABKAlSBGNvZGUSWwoW",
-            "Y29udGVudF9maWx0ZXJfcmVzdWx0cxgCIAEoCzIlLmF6dXJlLm9wZW5haS52",
-            "MS5Db250ZW50RmlsdGVyUmVzdWx0c1IUY29udGVudEZpbHRlclJlc3VsdHMi",
-            "yQMKFENvbnRlbnRGaWx0ZXJSZXN1bHRzEjwKBnNleHVhbBgBIAEoCzIkLmF6",
-            "dXJlLm9wZW5haS52MS5Db250ZW50RmlsdGVyUmVzdWx0UgZzZXh1YWwSQAoI",
-            "dmlvbGVuY2UYAiABKAsyJC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRl",
-            "clJlc3VsdFIIdmlvbGVuY2USOAoEaGF0ZRgDIAEoCzIkLmF6dXJlLm9wZW5h",
-            "aS52MS5Db250ZW50RmlsdGVyUmVzdWx0UgRoYXRlEkEKCXNlbGZfaGFybRgE",
-            "IAEoCzIkLmF6dXJlLm9wZW5haS52MS5Db250ZW50RmlsdGVyUmVzdWx0Ughz",
-            "ZWxmSGFybRJCCglwcm9mYW5pdHkYBSABKAsyJC5henVyZS5vcGVuYWkudjEu",
-            "Q29udGVudEZpbHRlclJlc3VsdFIJcHJvZmFuaXR5EkIKCWphaWxicmVhaxgG",
-            "IAEoCzIkLmF6dXJlLm9wZW5haS52MS5Db250ZW50RmlsdGVyUmVzdWx0Uglq",
-            "YWlsYnJlYWsSLAoFZXJyb3IYByABKAsyFi5henVyZS5vcGVuYWkudjEuRXJy",
-            "b3JSBWVycm9yImkKE0NvbnRlbnRGaWx0ZXJSZXN1bHQSGgoIZmlsdGVyZWQY",
-            "ASABKAhSCGZpbHRlcmVkEhoKCGRldGVjdGVkGAIgASgIUghkZXRlY3RlZBIa",
-            "CghzZXZlcml0eRgDIAEoCVIIc2V2ZXJpdHlCwQEKE2NvbS5henVyZS5vcGVu",
-            "YWkudjFCC0VudGl0eVByb3RvUAFaP2dpdGh1Yi5jb20vYW5hcmVnZGVzaWdu",
-            "L2F6dXJlLXByb3RvL2dvL2F6dXJlL29wZW5haS92MTtvcGVuYWl2MaICA0FP",
-            "WKoCD0F6dXJlLk9wZW5haS5WMcoCD0F6dXJlXE9wZW5haVxWMeICG0F6dXJl",
-            "XE9wZW5haVxWMVxHUEJNZXRhZGF0YeoCEUF6dXJlOjpPcGVuYWk6OlYxYgZw",
-            "cm90bzM="));
+            "YXJhbRgDIAEoCVIFcGFyYW0SEgoEdHlwZRgEIAEoCVIEdHlwZRI8Cgtpbm5l",
+            "cl9lcnJvchgFIAEoCzIbLmF6dXJlLm9wZW5haS52MS5Jbm5lckVycm9yUgpp",
+            "bm5lckVycm9yIp8BCgpJbm5lckVycm9yEiAKC2Rlc2NyaXB0aW9uGAEgASgJ",
+            "UgtkZXNjcmlwdGlvbhISCgRjb2RlGAIgASgJUgRjb2RlElsKFmNvbnRlbnRf",
+            "ZmlsdGVyX3Jlc3VsdHMYAyABKAsyJS5henVyZS5vcGVuYWkudjEuQ29udGVu",
+            "dEZpbHRlclJlc3VsdHNSFGNvbnRlbnRGaWx0ZXJSZXN1bHRzIvkDChRDb250",
+            "ZW50RmlsdGVyUmVzdWx0cxJECgZzZXh1YWwYASABKAsyLC5henVyZS5vcGVu",
+            "YWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5UmVzdWx0UgZzZXh1YWwSSAoI",
+            "dmlvbGVuY2UYAiABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRl",
+            "clNldmVyaXR5UmVzdWx0Ugh2aW9sZW5jZRJACgRoYXRlGAMgASgLMiwuYXp1",
+            "cmUub3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJTZXZlcml0eVJlc3VsdFIEaGF0",
+            "ZRJJCglzZWxmX2hhcm0YBCABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVu",
+            "dEZpbHRlclNldmVyaXR5UmVzdWx0UghzZWxmSGFybRJKCglwcm9mYW5pdHkY",
+            "BSABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5",
+            "UmVzdWx0Uglwcm9mYW5pdHkSSgoJamFpbGJyZWFrGAYgASgLMiwuYXp1cmUu",
+            "b3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJEZXRlY3RlZFJlc3VsdFIJamFpbGJy",
+            "ZWFrEiwKBWVycm9yGAcgASgLMhYuYXp1cmUub3BlbmFpLnYxLkVycm9yUgVl",
+            "cnJvciJVChtDb250ZW50RmlsdGVyRGV0ZWN0ZWRSZXN1bHQSGgoIZmlsdGVy",
+            "ZWQYASABKAhSCGZpbHRlcmVkEhoKCGRldGVjdGVkGAIgASgIUghkZXRlY3Rl",
+            "ZCJVChtDb250ZW50RmlsdGVyU2V2ZXJpdHlSZXN1bHQSGgoIZmlsdGVyZWQY",
+            "ASABKAhSCGZpbHRlcmVkEhoKCHNldmVyaXR5GAIgASgJUghzZXZlcml0eULB",
+            "AQoTY29tLmF6dXJlLm9wZW5haS52MUILRW50aXR5UHJvdG9QAVo/Z2l0aHVi",
+            "LmNvbS9hbmFyZWdkZXNpZ24vYXp1cmUtcHJvdG8vZ28vYXp1cmUvb3BlbmFp",
+            "L3YxO29wZW5haXYxogIDQU9YqgIPQXp1cmUuT3BlbmFpLlYxygIPQXp1cmVc",
+            "T3BlbmFpXFYx4gIbQXp1cmVcT3BlbmFpXFYxXEdQQk1ldGFkYXRh6gIRQXp1",
+            "cmU6Ok9wZW5haTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Choice), global::Azure.Openai.V1.Choice.Parser, new[]{ "Index", "Text", "Logprobs", "FinishReason" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Error), global::Azure.Openai.V1.Error.Parser, new[]{ "Code", "Message", "Param", "Type", "InnerError", "ContentFilterResults" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.InnerError), global::Azure.Openai.V1.InnerError.Parser, new[]{ "Code", "ContentFilterResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Error), global::Azure.Openai.V1.Error.Parser, new[]{ "Code", "Message", "Param", "Type", "InnerError" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.InnerError), global::Azure.Openai.V1.InnerError.Parser, new[]{ "Description", "Code", "ContentFilterResults" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterResults), global::Azure.Openai.V1.ContentFilterResults.Parser, new[]{ "Sexual", "Violence", "Hate", "SelfHarm", "Profanity", "Jailbreak", "Error" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterResult), global::Azure.Openai.V1.ContentFilterResult.Parser, new[]{ "Filtered", "Detected", "Severity" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterDetectedResult), global::Azure.Openai.V1.ContentFilterDetectedResult.Parser, new[]{ "Filtered", "Detected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterSeverityResult), global::Azure.Openai.V1.ContentFilterSeverityResult.Parser, new[]{ "Filtered", "Severity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -417,7 +419,6 @@ namespace Azure.Openai.V1 {
       param_ = other.param_;
       type_ = other.type_;
       innerError_ = other.innerError_ != null ? other.innerError_.Clone() : null;
-      contentFilterResults_ = other.contentFilterResults_ != null ? other.contentFilterResults_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -477,25 +478,13 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "inner_error" field.</summary>
     public const int InnerErrorFieldNumber = 5;
-    private global::Azure.Openai.V1.Error innerError_;
+    private global::Azure.Openai.V1.InnerError innerError_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.Error InnerError {
+    public global::Azure.Openai.V1.InnerError InnerError {
       get { return innerError_; }
       set {
         innerError_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "content_filter_results" field.</summary>
-    public const int ContentFilterResultsFieldNumber = 6;
-    private global::Azure.Openai.V1.ContentFilterResults contentFilterResults_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResults ContentFilterResults {
-      get { return contentFilterResults_; }
-      set {
-        contentFilterResults_ = value;
       }
     }
 
@@ -519,7 +508,6 @@ namespace Azure.Openai.V1 {
       if (Param != other.Param) return false;
       if (Type != other.Type) return false;
       if (!object.Equals(InnerError, other.InnerError)) return false;
-      if (!object.Equals(ContentFilterResults, other.ContentFilterResults)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -532,7 +520,6 @@ namespace Azure.Openai.V1 {
       if (Param.Length != 0) hash ^= Param.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (innerError_ != null) hash ^= InnerError.GetHashCode();
-      if (contentFilterResults_ != null) hash ^= ContentFilterResults.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -571,10 +558,6 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(InnerError);
       }
-      if (contentFilterResults_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ContentFilterResults);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -605,10 +588,6 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(InnerError);
       }
-      if (contentFilterResults_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ContentFilterResults);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -633,9 +612,6 @@ namespace Azure.Openai.V1 {
       }
       if (innerError_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InnerError);
-      }
-      if (contentFilterResults_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContentFilterResults);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -663,15 +639,9 @@ namespace Azure.Openai.V1 {
       }
       if (other.innerError_ != null) {
         if (innerError_ == null) {
-          InnerError = new global::Azure.Openai.V1.Error();
+          InnerError = new global::Azure.Openai.V1.InnerError();
         }
         InnerError.MergeFrom(other.InnerError);
-      }
-      if (other.contentFilterResults_ != null) {
-        if (contentFilterResults_ == null) {
-          ContentFilterResults = new global::Azure.Openai.V1.ContentFilterResults();
-        }
-        ContentFilterResults.MergeFrom(other.ContentFilterResults);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -710,16 +680,9 @@ namespace Azure.Openai.V1 {
           }
           case 42: {
             if (innerError_ == null) {
-              InnerError = new global::Azure.Openai.V1.Error();
+              InnerError = new global::Azure.Openai.V1.InnerError();
             }
             input.ReadMessage(InnerError);
-            break;
-          }
-          case 50: {
-            if (contentFilterResults_ == null) {
-              ContentFilterResults = new global::Azure.Openai.V1.ContentFilterResults();
-            }
-            input.ReadMessage(ContentFilterResults);
             break;
           }
         }
@@ -759,16 +722,9 @@ namespace Azure.Openai.V1 {
           }
           case 42: {
             if (innerError_ == null) {
-              InnerError = new global::Azure.Openai.V1.Error();
+              InnerError = new global::Azure.Openai.V1.InnerError();
             }
             input.ReadMessage(InnerError);
-            break;
-          }
-          case 50: {
-            if (contentFilterResults_ == null) {
-              ContentFilterResults = new global::Azure.Openai.V1.ContentFilterResults();
-            }
-            input.ReadMessage(ContentFilterResults);
             break;
           }
         }
@@ -813,6 +769,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InnerError(InnerError other) : this() {
+      description_ = other.description_;
       code_ = other.code_;
       contentFilterResults_ = other.contentFilterResults_ != null ? other.contentFilterResults_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -824,8 +781,20 @@ namespace Azure.Openai.V1 {
       return new InnerError(this);
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 1;
+    private string description_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "code" field.</summary>
-    public const int CodeFieldNumber = 1;
+    public const int CodeFieldNumber = 2;
     private string code_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -837,7 +806,7 @@ namespace Azure.Openai.V1 {
     }
 
     /// <summary>Field number for the "content_filter_results" field.</summary>
-    public const int ContentFilterResultsFieldNumber = 2;
+    public const int ContentFilterResultsFieldNumber = 3;
     private global::Azure.Openai.V1.ContentFilterResults contentFilterResults_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -863,6 +832,7 @@ namespace Azure.Openai.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Description != other.Description) return false;
       if (Code != other.Code) return false;
       if (!object.Equals(ContentFilterResults, other.ContentFilterResults)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -872,6 +842,7 @@ namespace Azure.Openai.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Code.Length != 0) hash ^= Code.GetHashCode();
       if (contentFilterResults_ != null) hash ^= ContentFilterResults.GetHashCode();
       if (_unknownFields != null) {
@@ -892,12 +863,16 @@ namespace Azure.Openai.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Code.Length != 0) {
+      if (Description.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Code);
       }
       if (contentFilterResults_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(ContentFilterResults);
       }
       if (_unknownFields != null) {
@@ -910,12 +885,16 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Code.Length != 0) {
+      if (Description.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Code);
       }
       if (contentFilterResults_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(ContentFilterResults);
       }
       if (_unknownFields != null) {
@@ -928,6 +907,9 @@ namespace Azure.Openai.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
       if (Code.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
       }
@@ -945,6 +927,9 @@ namespace Azure.Openai.V1 {
     public void MergeFrom(InnerError other) {
       if (other == null) {
         return;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
       }
       if (other.Code.Length != 0) {
         Code = other.Code;
@@ -975,10 +960,14 @@ namespace Azure.Openai.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Code = input.ReadString();
+            Description = input.ReadString();
             break;
           }
           case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
             if (contentFilterResults_ == null) {
               ContentFilterResults = new global::Azure.Openai.V1.ContentFilterResults();
             }
@@ -1005,10 +994,14 @@ namespace Azure.Openai.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Code = input.ReadString();
+            Description = input.ReadString();
             break;
           }
           case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
             if (contentFilterResults_ == null) {
               ContentFilterResults = new global::Azure.Openai.V1.ContentFilterResults();
             }
@@ -1075,10 +1068,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "sexual" field.</summary>
     public const int SexualFieldNumber = 1;
-    private global::Azure.Openai.V1.ContentFilterResult sexual_;
+    private global::Azure.Openai.V1.ContentFilterSeverityResult sexual_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult Sexual {
+    public global::Azure.Openai.V1.ContentFilterSeverityResult Sexual {
       get { return sexual_; }
       set {
         sexual_ = value;
@@ -1087,10 +1080,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "violence" field.</summary>
     public const int ViolenceFieldNumber = 2;
-    private global::Azure.Openai.V1.ContentFilterResult violence_;
+    private global::Azure.Openai.V1.ContentFilterSeverityResult violence_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult Violence {
+    public global::Azure.Openai.V1.ContentFilterSeverityResult Violence {
       get { return violence_; }
       set {
         violence_ = value;
@@ -1099,10 +1092,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "hate" field.</summary>
     public const int HateFieldNumber = 3;
-    private global::Azure.Openai.V1.ContentFilterResult hate_;
+    private global::Azure.Openai.V1.ContentFilterSeverityResult hate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult Hate {
+    public global::Azure.Openai.V1.ContentFilterSeverityResult Hate {
       get { return hate_; }
       set {
         hate_ = value;
@@ -1111,10 +1104,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "self_harm" field.</summary>
     public const int SelfHarmFieldNumber = 4;
-    private global::Azure.Openai.V1.ContentFilterResult selfHarm_;
+    private global::Azure.Openai.V1.ContentFilterSeverityResult selfHarm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult SelfHarm {
+    public global::Azure.Openai.V1.ContentFilterSeverityResult SelfHarm {
       get { return selfHarm_; }
       set {
         selfHarm_ = value;
@@ -1123,10 +1116,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "profanity" field.</summary>
     public const int ProfanityFieldNumber = 5;
-    private global::Azure.Openai.V1.ContentFilterResult profanity_;
+    private global::Azure.Openai.V1.ContentFilterSeverityResult profanity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult Profanity {
+    public global::Azure.Openai.V1.ContentFilterSeverityResult Profanity {
       get { return profanity_; }
       set {
         profanity_ = value;
@@ -1135,10 +1128,10 @@ namespace Azure.Openai.V1 {
 
     /// <summary>Field number for the "jailbreak" field.</summary>
     public const int JailbreakFieldNumber = 6;
-    private global::Azure.Openai.V1.ContentFilterResult jailbreak_;
+    private global::Azure.Openai.V1.ContentFilterDetectedResult jailbreak_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.ContentFilterResult Jailbreak {
+    public global::Azure.Openai.V1.ContentFilterDetectedResult Jailbreak {
       get { return jailbreak_; }
       set {
         jailbreak_ = value;
@@ -1322,37 +1315,37 @@ namespace Azure.Openai.V1 {
       }
       if (other.sexual_ != null) {
         if (sexual_ == null) {
-          Sexual = new global::Azure.Openai.V1.ContentFilterResult();
+          Sexual = new global::Azure.Openai.V1.ContentFilterSeverityResult();
         }
         Sexual.MergeFrom(other.Sexual);
       }
       if (other.violence_ != null) {
         if (violence_ == null) {
-          Violence = new global::Azure.Openai.V1.ContentFilterResult();
+          Violence = new global::Azure.Openai.V1.ContentFilterSeverityResult();
         }
         Violence.MergeFrom(other.Violence);
       }
       if (other.hate_ != null) {
         if (hate_ == null) {
-          Hate = new global::Azure.Openai.V1.ContentFilterResult();
+          Hate = new global::Azure.Openai.V1.ContentFilterSeverityResult();
         }
         Hate.MergeFrom(other.Hate);
       }
       if (other.selfHarm_ != null) {
         if (selfHarm_ == null) {
-          SelfHarm = new global::Azure.Openai.V1.ContentFilterResult();
+          SelfHarm = new global::Azure.Openai.V1.ContentFilterSeverityResult();
         }
         SelfHarm.MergeFrom(other.SelfHarm);
       }
       if (other.profanity_ != null) {
         if (profanity_ == null) {
-          Profanity = new global::Azure.Openai.V1.ContentFilterResult();
+          Profanity = new global::Azure.Openai.V1.ContentFilterSeverityResult();
         }
         Profanity.MergeFrom(other.Profanity);
       }
       if (other.jailbreak_ != null) {
         if (jailbreak_ == null) {
-          Jailbreak = new global::Azure.Openai.V1.ContentFilterResult();
+          Jailbreak = new global::Azure.Openai.V1.ContentFilterDetectedResult();
         }
         Jailbreak.MergeFrom(other.Jailbreak);
       }
@@ -1383,42 +1376,42 @@ namespace Azure.Openai.V1 {
             break;
           case 10: {
             if (sexual_ == null) {
-              Sexual = new global::Azure.Openai.V1.ContentFilterResult();
+              Sexual = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Sexual);
             break;
           }
           case 18: {
             if (violence_ == null) {
-              Violence = new global::Azure.Openai.V1.ContentFilterResult();
+              Violence = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Violence);
             break;
           }
           case 26: {
             if (hate_ == null) {
-              Hate = new global::Azure.Openai.V1.ContentFilterResult();
+              Hate = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Hate);
             break;
           }
           case 34: {
             if (selfHarm_ == null) {
-              SelfHarm = new global::Azure.Openai.V1.ContentFilterResult();
+              SelfHarm = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(SelfHarm);
             break;
           }
           case 42: {
             if (profanity_ == null) {
-              Profanity = new global::Azure.Openai.V1.ContentFilterResult();
+              Profanity = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Profanity);
             break;
           }
           case 50: {
             if (jailbreak_ == null) {
-              Jailbreak = new global::Azure.Openai.V1.ContentFilterResult();
+              Jailbreak = new global::Azure.Openai.V1.ContentFilterDetectedResult();
             }
             input.ReadMessage(Jailbreak);
             break;
@@ -1451,42 +1444,42 @@ namespace Azure.Openai.V1 {
             break;
           case 10: {
             if (sexual_ == null) {
-              Sexual = new global::Azure.Openai.V1.ContentFilterResult();
+              Sexual = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Sexual);
             break;
           }
           case 18: {
             if (violence_ == null) {
-              Violence = new global::Azure.Openai.V1.ContentFilterResult();
+              Violence = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Violence);
             break;
           }
           case 26: {
             if (hate_ == null) {
-              Hate = new global::Azure.Openai.V1.ContentFilterResult();
+              Hate = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Hate);
             break;
           }
           case 34: {
             if (selfHarm_ == null) {
-              SelfHarm = new global::Azure.Openai.V1.ContentFilterResult();
+              SelfHarm = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(SelfHarm);
             break;
           }
           case 42: {
             if (profanity_ == null) {
-              Profanity = new global::Azure.Openai.V1.ContentFilterResult();
+              Profanity = new global::Azure.Openai.V1.ContentFilterSeverityResult();
             }
             input.ReadMessage(Profanity);
             break;
           }
           case 50: {
             if (jailbreak_ == null) {
-              Jailbreak = new global::Azure.Openai.V1.ContentFilterResult();
+              Jailbreak = new global::Azure.Openai.V1.ContentFilterDetectedResult();
             }
             input.ReadMessage(Jailbreak);
             break;
@@ -1506,16 +1499,16 @@ namespace Azure.Openai.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class ContentFilterResult : pb::IMessage<ContentFilterResult>
+  public sealed partial class ContentFilterDetectedResult : pb::IMessage<ContentFilterDetectedResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<ContentFilterResult> _parser = new pb::MessageParser<ContentFilterResult>(() => new ContentFilterResult());
+    private static readonly pb::MessageParser<ContentFilterDetectedResult> _parser = new pb::MessageParser<ContentFilterDetectedResult>(() => new ContentFilterDetectedResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<ContentFilterResult> Parser { get { return _parser; } }
+    public static pb::MessageParser<ContentFilterDetectedResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1531,7 +1524,7 @@ namespace Azure.Openai.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ContentFilterResult() {
+    public ContentFilterDetectedResult() {
       OnConstruction();
     }
 
@@ -1539,17 +1532,16 @@ namespace Azure.Openai.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ContentFilterResult(ContentFilterResult other) : this() {
+    public ContentFilterDetectedResult(ContentFilterDetectedResult other) : this() {
       filtered_ = other.filtered_;
       detected_ = other.detected_;
-      severity_ = other.severity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ContentFilterResult Clone() {
-      return new ContentFilterResult(this);
+    public ContentFilterDetectedResult Clone() {
+      return new ContentFilterDetectedResult(this);
     }
 
     /// <summary>Field number for the "filtered" field.</summary>
@@ -1576,27 +1568,15 @@ namespace Azure.Openai.V1 {
       }
     }
 
-    /// <summary>Field number for the "severity" field.</summary>
-    public const int SeverityFieldNumber = 3;
-    private string severity_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Severity {
-      get { return severity_; }
-      set {
-        severity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as ContentFilterResult);
+      return Equals(other as ContentFilterDetectedResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(ContentFilterResult other) {
+    public bool Equals(ContentFilterDetectedResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1605,7 +1585,6 @@ namespace Azure.Openai.V1 {
       }
       if (Filtered != other.Filtered) return false;
       if (Detected != other.Detected) return false;
-      if (Severity != other.Severity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1615,7 +1594,6 @@ namespace Azure.Openai.V1 {
       int hash = 1;
       if (Filtered != false) hash ^= Filtered.GetHashCode();
       if (Detected != false) hash ^= Detected.GetHashCode();
-      if (Severity.Length != 0) hash ^= Severity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1642,10 +1620,6 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Detected);
       }
-      if (Severity.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Severity);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1664,10 +1638,6 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Detected);
       }
-      if (Severity.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Severity);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1684,9 +1654,6 @@ namespace Azure.Openai.V1 {
       if (Detected != false) {
         size += 1 + 1;
       }
-      if (Severity.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Severity);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1695,7 +1662,7 @@ namespace Azure.Openai.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(ContentFilterResult other) {
+    public void MergeFrom(ContentFilterDetectedResult other) {
       if (other == null) {
         return;
       }
@@ -1704,9 +1671,6 @@ namespace Azure.Openai.V1 {
       }
       if (other.Detected != false) {
         Detected = other.Detected;
-      }
-      if (other.Severity.Length != 0) {
-        Severity = other.Severity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1733,10 +1697,6 @@ namespace Azure.Openai.V1 {
           }
           case 16: {
             Detected = input.ReadBool();
-            break;
-          }
-          case 26: {
-            Severity = input.ReadString();
             break;
           }
         }
@@ -1766,7 +1726,238 @@ namespace Azure.Openai.V1 {
             Detected = input.ReadBool();
             break;
           }
-          case 26: {
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContentFilterSeverityResult : pb::IMessage<ContentFilterSeverityResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContentFilterSeverityResult> _parser = new pb::MessageParser<ContentFilterSeverityResult>(() => new ContentFilterSeverityResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContentFilterSeverityResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentFilterSeverityResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentFilterSeverityResult(ContentFilterSeverityResult other) : this() {
+      filtered_ = other.filtered_;
+      severity_ = other.severity_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentFilterSeverityResult Clone() {
+      return new ContentFilterSeverityResult(this);
+    }
+
+    /// <summary>Field number for the "filtered" field.</summary>
+    public const int FilteredFieldNumber = 1;
+    private bool filtered_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Filtered {
+      get { return filtered_; }
+      set {
+        filtered_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "severity" field.</summary>
+    public const int SeverityFieldNumber = 2;
+    private string severity_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Severity {
+      get { return severity_; }
+      set {
+        severity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContentFilterSeverityResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContentFilterSeverityResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Filtered != other.Filtered) return false;
+      if (Severity != other.Severity) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Filtered != false) hash ^= Filtered.GetHashCode();
+      if (Severity.Length != 0) hash ^= Severity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Filtered != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Filtered);
+      }
+      if (Severity.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Severity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Filtered != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Filtered);
+      }
+      if (Severity.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Severity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Filtered != false) {
+        size += 1 + 1;
+      }
+      if (Severity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Severity);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContentFilterSeverityResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Filtered != false) {
+        Filtered = other.Filtered;
+      }
+      if (other.Severity.Length != 0) {
+        Severity = other.Severity;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Filtered = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Severity = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Filtered = input.ReadBool();
+            break;
+          }
+          case 18: {
             Severity = input.ReadString();
             break;
           }

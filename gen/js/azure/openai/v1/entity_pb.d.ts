@@ -70,14 +70,9 @@ export declare class Error extends Message<Error> {
   type: string;
 
   /**
-   * @generated from field: azure.openai.v1.Error inner_error = 5;
+   * @generated from field: azure.openai.v1.InnerError inner_error = 5;
    */
-  innerError?: Error;
-
-  /**
-   * @generated from field: azure.openai.v1.ContentFilterResults content_filter_results = 6;
-   */
-  contentFilterResults?: ContentFilterResults;
+  innerError?: InnerError;
 
   constructor(data?: PartialMessage<Error>);
 
@@ -99,12 +94,17 @@ export declare class Error extends Message<Error> {
  */
 export declare class InnerError extends Message<InnerError> {
   /**
-   * @generated from field: string code = 1;
+   * @generated from field: string description = 1;
+   */
+  description: string;
+
+  /**
+   * @generated from field: string code = 2;
    */
   code: string;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResults content_filter_results = 2;
+   * @generated from field: azure.openai.v1.ContentFilterResults content_filter_results = 3;
    */
   contentFilterResults?: ContentFilterResults;
 
@@ -128,34 +128,34 @@ export declare class InnerError extends Message<InnerError> {
  */
 export declare class ContentFilterResults extends Message<ContentFilterResults> {
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult sexual = 1;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult sexual = 1;
    */
-  sexual?: ContentFilterResult;
+  sexual?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult violence = 2;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult violence = 2;
    */
-  violence?: ContentFilterResult;
+  violence?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult hate = 3;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult hate = 3;
    */
-  hate?: ContentFilterResult;
+  hate?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult self_harm = 4;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult self_harm = 4;
    */
-  selfHarm?: ContentFilterResult;
+  selfHarm?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult profanity = 5;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult profanity = 5;
    */
-  profanity?: ContentFilterResult;
+  profanity?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterResult jailbreak = 6;
+   * @generated from field: azure.openai.v1.ContentFilterDetectedResult jailbreak = 6;
    */
-  jailbreak?: ContentFilterResult;
+  jailbreak?: ContentFilterDetectedResult;
 
   /**
    * @generated from field: azure.openai.v1.Error error = 7;
@@ -178,9 +178,9 @@ export declare class ContentFilterResults extends Message<ContentFilterResults> 
 }
 
 /**
- * @generated from message azure.openai.v1.ContentFilterResult
+ * @generated from message azure.openai.v1.ContentFilterDetectedResult
  */
-export declare class ContentFilterResult extends Message<ContentFilterResult> {
+export declare class ContentFilterDetectedResult extends Message<ContentFilterDetectedResult> {
   /**
    * @generated from field: bool filtered = 1;
    */
@@ -191,23 +191,47 @@ export declare class ContentFilterResult extends Message<ContentFilterResult> {
    */
   detected: boolean;
 
+  constructor(data?: PartialMessage<ContentFilterDetectedResult>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.ContentFilterDetectedResult";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterDetectedResult;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
+
+  static equals(a: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined, b: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterSeverityResult
+ */
+export declare class ContentFilterSeverityResult extends Message<ContentFilterSeverityResult> {
   /**
-   * @generated from field: string severity = 3;
+   * @generated from field: bool filtered = 1;
+   */
+  filtered: boolean;
+
+  /**
+   * @generated from field: string severity = 2;
    */
   severity: string;
 
-  constructor(data?: PartialMessage<ContentFilterResult>);
+  constructor(data?: PartialMessage<ContentFilterSeverityResult>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.ContentFilterResult";
+  static readonly typeName = "azure.openai.v1.ContentFilterSeverityResult";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterResult;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterSeverityResult;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterResult;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterSeverityResult;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterResult;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterSeverityResult;
 
-  static equals(a: ContentFilterResult | PlainMessage<ContentFilterResult> | undefined, b: ContentFilterResult | PlainMessage<ContentFilterResult> | undefined): boolean;
+  static equals(a: ContentFilterSeverityResult | PlainMessage<ContentFilterSeverityResult> | undefined, b: ContentFilterSeverityResult | PlainMessage<ContentFilterSeverityResult> | undefined): boolean;
 }
 

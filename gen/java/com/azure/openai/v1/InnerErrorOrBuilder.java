@@ -10,29 +10,41 @@ public interface InnerErrorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string code = 1 [json_name = "code"];</code>
+   * <code>string description = 1 [json_name = "description"];</code>
+   * @return The description.
+   */
+  java.lang.String getDescription();
+  /**
+   * <code>string description = 1 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
+
+  /**
+   * <code>string code = 2 [json_name = "code"];</code>
    * @return The code.
    */
   java.lang.String getCode();
   /**
-   * <code>string code = 1 [json_name = "code"];</code>
+   * <code>string code = 2 [json_name = "code"];</code>
    * @return The bytes for code.
    */
   com.google.protobuf.ByteString
       getCodeBytes();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    * @return Whether the contentFilterResults field is set.
    */
   boolean hasContentFilterResults();
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    * @return The contentFilterResults.
    */
   com.azure.openai.v1.ContentFilterResults getContentFilterResults();
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    */
   com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder();
 }

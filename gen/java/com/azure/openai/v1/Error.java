@@ -204,9 +204,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INNER_ERROR_FIELD_NUMBER = 5;
-  private com.azure.openai.v1.Error innerError_;
+  private com.azure.openai.v1.InnerError innerError_;
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    * @return Whether the innerError field is set.
    */
   @java.lang.Override
@@ -214,45 +214,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    * @return The innerError.
    */
   @java.lang.Override
-  public com.azure.openai.v1.Error getInnerError() {
-    return innerError_ == null ? com.azure.openai.v1.Error.getDefaultInstance() : innerError_;
+  public com.azure.openai.v1.InnerError getInnerError() {
+    return innerError_ == null ? com.azure.openai.v1.InnerError.getDefaultInstance() : innerError_;
   }
   /**
-   * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+   * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ErrorOrBuilder getInnerErrorOrBuilder() {
-    return innerError_ == null ? com.azure.openai.v1.Error.getDefaultInstance() : innerError_;
-  }
-
-  public static final int CONTENT_FILTER_RESULTS_FIELD_NUMBER = 6;
-  private com.azure.openai.v1.ContentFilterResults contentFilterResults_;
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   * @return Whether the contentFilterResults field is set.
-   */
-  @java.lang.Override
-  public boolean hasContentFilterResults() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   * @return The contentFilterResults.
-   */
-  @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResults getContentFilterResults() {
-    return contentFilterResults_ == null ? com.azure.openai.v1.ContentFilterResults.getDefaultInstance() : contentFilterResults_;
-  }
-  /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-   */
-  @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder() {
-    return contentFilterResults_ == null ? com.azure.openai.v1.ContentFilterResults.getDefaultInstance() : contentFilterResults_;
+  public com.azure.openai.v1.InnerErrorOrBuilder getInnerErrorOrBuilder() {
+    return innerError_ == null ? com.azure.openai.v1.InnerError.getDefaultInstance() : innerError_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -284,9 +258,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getInnerError());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(6, getContentFilterResults());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -311,10 +282,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getInnerError());
-    }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getContentFilterResults());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -344,11 +311,6 @@ private static final long serialVersionUID = 0L;
       if (!getInnerError()
           .equals(other.getInnerError())) return false;
     }
-    if (hasContentFilterResults() != other.hasContentFilterResults()) return false;
-    if (hasContentFilterResults()) {
-      if (!getContentFilterResults()
-          .equals(other.getContentFilterResults())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -371,10 +333,6 @@ private static final long serialVersionUID = 0L;
     if (hasInnerError()) {
       hash = (37 * hash) + INNER_ERROR_FIELD_NUMBER;
       hash = (53 * hash) + getInnerError().hashCode();
-    }
-    if (hasContentFilterResults()) {
-      hash = (37 * hash) + CONTENT_FILTER_RESULTS_FIELD_NUMBER;
-      hash = (53 * hash) + getContentFilterResults().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -507,7 +465,6 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getInnerErrorFieldBuilder();
-        getContentFilterResultsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -522,11 +479,6 @@ private static final long serialVersionUID = 0L;
       if (innerErrorBuilder_ != null) {
         innerErrorBuilder_.dispose();
         innerErrorBuilder_ = null;
-      }
-      contentFilterResults_ = null;
-      if (contentFilterResultsBuilder_ != null) {
-        contentFilterResultsBuilder_.dispose();
-        contentFilterResultsBuilder_ = null;
       }
       return this;
     }
@@ -580,12 +532,6 @@ private static final long serialVersionUID = 0L;
             : innerErrorBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.contentFilterResults_ = contentFilterResultsBuilder_ == null
-            ? contentFilterResults_
-            : contentFilterResultsBuilder_.build();
-        to_bitField0_ |= 0x00000002;
-      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -623,9 +569,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasInnerError()) {
         mergeInnerError(other.getInnerError());
-      }
-      if (other.hasContentFilterResults()) {
-        mergeContentFilterResults(other.getContentFilterResults());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -680,13 +623,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              input.readMessage(
-                  getContentFilterResultsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -992,31 +928,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.azure.openai.v1.Error innerError_;
+    private com.azure.openai.v1.InnerError innerError_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Error, com.azure.openai.v1.Error.Builder, com.azure.openai.v1.ErrorOrBuilder> innerErrorBuilder_;
+        com.azure.openai.v1.InnerError, com.azure.openai.v1.InnerError.Builder, com.azure.openai.v1.InnerErrorOrBuilder> innerErrorBuilder_;
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      * @return Whether the innerError field is set.
      */
     public boolean hasInnerError() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      * @return The innerError.
      */
-    public com.azure.openai.v1.Error getInnerError() {
+    public com.azure.openai.v1.InnerError getInnerError() {
       if (innerErrorBuilder_ == null) {
-        return innerError_ == null ? com.azure.openai.v1.Error.getDefaultInstance() : innerError_;
+        return innerError_ == null ? com.azure.openai.v1.InnerError.getDefaultInstance() : innerError_;
       } else {
         return innerErrorBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
-    public Builder setInnerError(com.azure.openai.v1.Error value) {
+    public Builder setInnerError(com.azure.openai.v1.InnerError value) {
       if (innerErrorBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1030,10 +966,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
     public Builder setInnerError(
-        com.azure.openai.v1.Error.Builder builderForValue) {
+        com.azure.openai.v1.InnerError.Builder builderForValue) {
       if (innerErrorBuilder_ == null) {
         innerError_ = builderForValue.build();
       } else {
@@ -1044,13 +980,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
-    public Builder mergeInnerError(com.azure.openai.v1.Error value) {
+    public Builder mergeInnerError(com.azure.openai.v1.InnerError value) {
       if (innerErrorBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           innerError_ != null &&
-          innerError_ != com.azure.openai.v1.Error.getDefaultInstance()) {
+          innerError_ != com.azure.openai.v1.InnerError.getDefaultInstance()) {
           getInnerErrorBuilder().mergeFrom(value);
         } else {
           innerError_ = value;
@@ -1065,7 +1001,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
     public Builder clearInnerError() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1078,160 +1014,39 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
-    public com.azure.openai.v1.Error.Builder getInnerErrorBuilder() {
+    public com.azure.openai.v1.InnerError.Builder getInnerErrorBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getInnerErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
-    public com.azure.openai.v1.ErrorOrBuilder getInnerErrorOrBuilder() {
+    public com.azure.openai.v1.InnerErrorOrBuilder getInnerErrorOrBuilder() {
       if (innerErrorBuilder_ != null) {
         return innerErrorBuilder_.getMessageOrBuilder();
       } else {
         return innerError_ == null ?
-            com.azure.openai.v1.Error.getDefaultInstance() : innerError_;
+            com.azure.openai.v1.InnerError.getDefaultInstance() : innerError_;
       }
     }
     /**
-     * <code>.azure.openai.v1.Error inner_error = 5 [json_name = "innerError"];</code>
+     * <code>.azure.openai.v1.InnerError inner_error = 5 [json_name = "innerError"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Error, com.azure.openai.v1.Error.Builder, com.azure.openai.v1.ErrorOrBuilder> 
+        com.azure.openai.v1.InnerError, com.azure.openai.v1.InnerError.Builder, com.azure.openai.v1.InnerErrorOrBuilder> 
         getInnerErrorFieldBuilder() {
       if (innerErrorBuilder_ == null) {
         innerErrorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.Error, com.azure.openai.v1.Error.Builder, com.azure.openai.v1.ErrorOrBuilder>(
+            com.azure.openai.v1.InnerError, com.azure.openai.v1.InnerError.Builder, com.azure.openai.v1.InnerErrorOrBuilder>(
                 getInnerError(),
                 getParentForChildren(),
                 isClean());
         innerError_ = null;
       }
       return innerErrorBuilder_;
-    }
-
-    private com.azure.openai.v1.ContentFilterResults contentFilterResults_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResults, com.azure.openai.v1.ContentFilterResults.Builder, com.azure.openai.v1.ContentFilterResultsOrBuilder> contentFilterResultsBuilder_;
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     * @return Whether the contentFilterResults field is set.
-     */
-    public boolean hasContentFilterResults() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     * @return The contentFilterResults.
-     */
-    public com.azure.openai.v1.ContentFilterResults getContentFilterResults() {
-      if (contentFilterResultsBuilder_ == null) {
-        return contentFilterResults_ == null ? com.azure.openai.v1.ContentFilterResults.getDefaultInstance() : contentFilterResults_;
-      } else {
-        return contentFilterResultsBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public Builder setContentFilterResults(com.azure.openai.v1.ContentFilterResults value) {
-      if (contentFilterResultsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        contentFilterResults_ = value;
-      } else {
-        contentFilterResultsBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public Builder setContentFilterResults(
-        com.azure.openai.v1.ContentFilterResults.Builder builderForValue) {
-      if (contentFilterResultsBuilder_ == null) {
-        contentFilterResults_ = builderForValue.build();
-      } else {
-        contentFilterResultsBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public Builder mergeContentFilterResults(com.azure.openai.v1.ContentFilterResults value) {
-      if (contentFilterResultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          contentFilterResults_ != null &&
-          contentFilterResults_ != com.azure.openai.v1.ContentFilterResults.getDefaultInstance()) {
-          getContentFilterResultsBuilder().mergeFrom(value);
-        } else {
-          contentFilterResults_ = value;
-        }
-      } else {
-        contentFilterResultsBuilder_.mergeFrom(value);
-      }
-      if (contentFilterResults_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public Builder clearContentFilterResults() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      contentFilterResults_ = null;
-      if (contentFilterResultsBuilder_ != null) {
-        contentFilterResultsBuilder_.dispose();
-        contentFilterResultsBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public com.azure.openai.v1.ContentFilterResults.Builder getContentFilterResultsBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getContentFilterResultsFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    public com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder() {
-      if (contentFilterResultsBuilder_ != null) {
-        return contentFilterResultsBuilder_.getMessageOrBuilder();
-      } else {
-        return contentFilterResults_ == null ?
-            com.azure.openai.v1.ContentFilterResults.getDefaultInstance() : contentFilterResults_;
-      }
-    }
-    /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 6 [json_name = "contentFilterResults"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResults, com.azure.openai.v1.ContentFilterResults.Builder, com.azure.openai.v1.ContentFilterResultsOrBuilder> 
-        getContentFilterResultsFieldBuilder() {
-      if (contentFilterResultsBuilder_ == null) {
-        contentFilterResultsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResults, com.azure.openai.v1.ContentFilterResults.Builder, com.azure.openai.v1.ContentFilterResultsOrBuilder>(
-                getContentFilterResults(),
-                getParentForChildren(),
-                isClean());
-        contentFilterResults_ = null;
-      }
-      return contentFilterResultsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:azure.openai.v1.Error)

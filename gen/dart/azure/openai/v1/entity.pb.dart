@@ -111,8 +111,7 @@ class Error extends $pb.GeneratedMessage {
     $core.String? message,
     $core.String? param,
     $core.String? type,
-    Error? innerError,
-    ContentFilterResults? contentFilterResults,
+    InnerError? innerError,
   }) {
     final $result = create();
     if (code != null) {
@@ -130,9 +129,6 @@ class Error extends $pb.GeneratedMessage {
     if (innerError != null) {
       $result.innerError = innerError;
     }
-    if (contentFilterResults != null) {
-      $result.contentFilterResults = contentFilterResults;
-    }
     return $result;
   }
   Error._() : super();
@@ -144,8 +140,7 @@ class Error extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'message')
     ..aOS(3, _omitFieldNames ? '' : 'param')
     ..aOS(4, _omitFieldNames ? '' : 'type')
-    ..aOM<Error>(5, _omitFieldNames ? '' : 'innerError', subBuilder: Error.create)
-    ..aOM<ContentFilterResults>(6, _omitFieldNames ? '' : 'contentFilterResults', subBuilder: ContentFilterResults.create)
+    ..aOM<InnerError>(5, _omitFieldNames ? '' : 'innerError', subBuilder: InnerError.create)
     ..hasRequiredFields = false
   ;
 
@@ -207,34 +202,27 @@ class Error extends $pb.GeneratedMessage {
   void clearType() => clearField(4);
 
   @$pb.TagNumber(5)
-  Error get innerError => $_getN(4);
+  InnerError get innerError => $_getN(4);
   @$pb.TagNumber(5)
-  set innerError(Error v) { setField(5, v); }
+  set innerError(InnerError v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasInnerError() => $_has(4);
   @$pb.TagNumber(5)
   void clearInnerError() => clearField(5);
   @$pb.TagNumber(5)
-  Error ensureInnerError() => $_ensure(4);
-
-  @$pb.TagNumber(6)
-  ContentFilterResults get contentFilterResults => $_getN(5);
-  @$pb.TagNumber(6)
-  set contentFilterResults(ContentFilterResults v) { setField(6, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasContentFilterResults() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearContentFilterResults() => clearField(6);
-  @$pb.TagNumber(6)
-  ContentFilterResults ensureContentFilterResults() => $_ensure(5);
+  InnerError ensureInnerError() => $_ensure(4);
 }
 
 class InnerError extends $pb.GeneratedMessage {
   factory InnerError({
+    $core.String? description,
     $core.String? code,
     ContentFilterResults? contentFilterResults,
   }) {
     final $result = create();
+    if (description != null) {
+      $result.description = description;
+    }
     if (code != null) {
       $result.code = code;
     }
@@ -248,8 +236,9 @@ class InnerError extends $pb.GeneratedMessage {
   factory InnerError.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'InnerError', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'code')
-    ..aOM<ContentFilterResults>(2, _omitFieldNames ? '' : 'contentFilterResults', subBuilder: ContentFilterResults.create)
+    ..aOS(1, _omitFieldNames ? '' : 'description')
+    ..aOS(2, _omitFieldNames ? '' : 'code')
+    ..aOM<ContentFilterResults>(3, _omitFieldNames ? '' : 'contentFilterResults', subBuilder: ContentFilterResults.create)
     ..hasRequiredFields = false
   ;
 
@@ -275,34 +264,43 @@ class InnerError extends $pb.GeneratedMessage {
   static InnerError? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get code => $_getSZ(0);
+  $core.String get description => $_getSZ(0);
   @$pb.TagNumber(1)
-  set code($core.String v) { $_setString(0, v); }
+  set description($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasCode() => $_has(0);
+  $core.bool hasDescription() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
+  void clearDescription() => clearField(1);
 
   @$pb.TagNumber(2)
-  ContentFilterResults get contentFilterResults => $_getN(1);
+  $core.String get code => $_getSZ(1);
   @$pb.TagNumber(2)
-  set contentFilterResults(ContentFilterResults v) { setField(2, v); }
+  set code($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasContentFilterResults() => $_has(1);
+  $core.bool hasCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearContentFilterResults() => clearField(2);
-  @$pb.TagNumber(2)
-  ContentFilterResults ensureContentFilterResults() => $_ensure(1);
+  void clearCode() => clearField(2);
+
+  @$pb.TagNumber(3)
+  ContentFilterResults get contentFilterResults => $_getN(2);
+  @$pb.TagNumber(3)
+  set contentFilterResults(ContentFilterResults v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasContentFilterResults() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContentFilterResults() => clearField(3);
+  @$pb.TagNumber(3)
+  ContentFilterResults ensureContentFilterResults() => $_ensure(2);
 }
 
 class ContentFilterResults extends $pb.GeneratedMessage {
   factory ContentFilterResults({
-    ContentFilterResult? sexual,
-    ContentFilterResult? violence,
-    ContentFilterResult? hate,
-    ContentFilterResult? selfHarm,
-    ContentFilterResult? profanity,
-    ContentFilterResult? jailbreak,
+    ContentFilterSeverityResult? sexual,
+    ContentFilterSeverityResult? violence,
+    ContentFilterSeverityResult? hate,
+    ContentFilterSeverityResult? selfHarm,
+    ContentFilterSeverityResult? profanity,
+    ContentFilterDetectedResult? jailbreak,
     Error? error,
   }) {
     final $result = create();
@@ -334,12 +332,12 @@ class ContentFilterResults extends $pb.GeneratedMessage {
   factory ContentFilterResults.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContentFilterResults', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
-    ..aOM<ContentFilterResult>(1, _omitFieldNames ? '' : 'sexual', subBuilder: ContentFilterResult.create)
-    ..aOM<ContentFilterResult>(2, _omitFieldNames ? '' : 'violence', subBuilder: ContentFilterResult.create)
-    ..aOM<ContentFilterResult>(3, _omitFieldNames ? '' : 'hate', subBuilder: ContentFilterResult.create)
-    ..aOM<ContentFilterResult>(4, _omitFieldNames ? '' : 'selfHarm', subBuilder: ContentFilterResult.create)
-    ..aOM<ContentFilterResult>(5, _omitFieldNames ? '' : 'profanity', subBuilder: ContentFilterResult.create)
-    ..aOM<ContentFilterResult>(6, _omitFieldNames ? '' : 'jailbreak', subBuilder: ContentFilterResult.create)
+    ..aOM<ContentFilterSeverityResult>(1, _omitFieldNames ? '' : 'sexual', subBuilder: ContentFilterSeverityResult.create)
+    ..aOM<ContentFilterSeverityResult>(2, _omitFieldNames ? '' : 'violence', subBuilder: ContentFilterSeverityResult.create)
+    ..aOM<ContentFilterSeverityResult>(3, _omitFieldNames ? '' : 'hate', subBuilder: ContentFilterSeverityResult.create)
+    ..aOM<ContentFilterSeverityResult>(4, _omitFieldNames ? '' : 'selfHarm', subBuilder: ContentFilterSeverityResult.create)
+    ..aOM<ContentFilterSeverityResult>(5, _omitFieldNames ? '' : 'profanity', subBuilder: ContentFilterSeverityResult.create)
+    ..aOM<ContentFilterDetectedResult>(6, _omitFieldNames ? '' : 'jailbreak', subBuilder: ContentFilterDetectedResult.create)
     ..aOM<Error>(7, _omitFieldNames ? '' : 'error', subBuilder: Error.create)
     ..hasRequiredFields = false
   ;
@@ -366,70 +364,70 @@ class ContentFilterResults extends $pb.GeneratedMessage {
   static ContentFilterResults? _defaultInstance;
 
   @$pb.TagNumber(1)
-  ContentFilterResult get sexual => $_getN(0);
+  ContentFilterSeverityResult get sexual => $_getN(0);
   @$pb.TagNumber(1)
-  set sexual(ContentFilterResult v) { setField(1, v); }
+  set sexual(ContentFilterSeverityResult v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSexual() => $_has(0);
   @$pb.TagNumber(1)
   void clearSexual() => clearField(1);
   @$pb.TagNumber(1)
-  ContentFilterResult ensureSexual() => $_ensure(0);
+  ContentFilterSeverityResult ensureSexual() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  ContentFilterResult get violence => $_getN(1);
+  ContentFilterSeverityResult get violence => $_getN(1);
   @$pb.TagNumber(2)
-  set violence(ContentFilterResult v) { setField(2, v); }
+  set violence(ContentFilterSeverityResult v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasViolence() => $_has(1);
   @$pb.TagNumber(2)
   void clearViolence() => clearField(2);
   @$pb.TagNumber(2)
-  ContentFilterResult ensureViolence() => $_ensure(1);
+  ContentFilterSeverityResult ensureViolence() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  ContentFilterResult get hate => $_getN(2);
+  ContentFilterSeverityResult get hate => $_getN(2);
   @$pb.TagNumber(3)
-  set hate(ContentFilterResult v) { setField(3, v); }
+  set hate(ContentFilterSeverityResult v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHate() => $_has(2);
   @$pb.TagNumber(3)
   void clearHate() => clearField(3);
   @$pb.TagNumber(3)
-  ContentFilterResult ensureHate() => $_ensure(2);
+  ContentFilterSeverityResult ensureHate() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  ContentFilterResult get selfHarm => $_getN(3);
+  ContentFilterSeverityResult get selfHarm => $_getN(3);
   @$pb.TagNumber(4)
-  set selfHarm(ContentFilterResult v) { setField(4, v); }
+  set selfHarm(ContentFilterSeverityResult v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasSelfHarm() => $_has(3);
   @$pb.TagNumber(4)
   void clearSelfHarm() => clearField(4);
   @$pb.TagNumber(4)
-  ContentFilterResult ensureSelfHarm() => $_ensure(3);
+  ContentFilterSeverityResult ensureSelfHarm() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  ContentFilterResult get profanity => $_getN(4);
+  ContentFilterSeverityResult get profanity => $_getN(4);
   @$pb.TagNumber(5)
-  set profanity(ContentFilterResult v) { setField(5, v); }
+  set profanity(ContentFilterSeverityResult v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasProfanity() => $_has(4);
   @$pb.TagNumber(5)
   void clearProfanity() => clearField(5);
   @$pb.TagNumber(5)
-  ContentFilterResult ensureProfanity() => $_ensure(4);
+  ContentFilterSeverityResult ensureProfanity() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  ContentFilterResult get jailbreak => $_getN(5);
+  ContentFilterDetectedResult get jailbreak => $_getN(5);
   @$pb.TagNumber(6)
-  set jailbreak(ContentFilterResult v) { setField(6, v); }
+  set jailbreak(ContentFilterDetectedResult v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasJailbreak() => $_has(5);
   @$pb.TagNumber(6)
   void clearJailbreak() => clearField(6);
   @$pb.TagNumber(6)
-  ContentFilterResult ensureJailbreak() => $_ensure(5);
+  ContentFilterDetectedResult ensureJailbreak() => $_ensure(5);
 
   @$pb.TagNumber(7)
   Error get error => $_getN(6);
@@ -443,11 +441,10 @@ class ContentFilterResults extends $pb.GeneratedMessage {
   Error ensureError() => $_ensure(6);
 }
 
-class ContentFilterResult extends $pb.GeneratedMessage {
-  factory ContentFilterResult({
+class ContentFilterDetectedResult extends $pb.GeneratedMessage {
+  factory ContentFilterDetectedResult({
     $core.bool? filtered,
     $core.bool? detected,
-    $core.String? severity,
   }) {
     final $result = create();
     if (filtered != null) {
@@ -456,19 +453,15 @@ class ContentFilterResult extends $pb.GeneratedMessage {
     if (detected != null) {
       $result.detected = detected;
     }
-    if (severity != null) {
-      $result.severity = severity;
-    }
     return $result;
   }
-  ContentFilterResult._() : super();
-  factory ContentFilterResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ContentFilterResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ContentFilterDetectedResult._() : super();
+  factory ContentFilterDetectedResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContentFilterDetectedResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContentFilterResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContentFilterDetectedResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'filtered')
     ..aOB(2, _omitFieldNames ? '' : 'detected')
-    ..aOS(3, _omitFieldNames ? '' : 'severity')
     ..hasRequiredFields = false
   ;
 
@@ -476,22 +469,22 @@ class ContentFilterResult extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ContentFilterResult clone() => ContentFilterResult()..mergeFromMessage(this);
+  ContentFilterDetectedResult clone() => ContentFilterDetectedResult()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ContentFilterResult copyWith(void Function(ContentFilterResult) updates) => super.copyWith((message) => updates(message as ContentFilterResult)) as ContentFilterResult;
+  ContentFilterDetectedResult copyWith(void Function(ContentFilterDetectedResult) updates) => super.copyWith((message) => updates(message as ContentFilterDetectedResult)) as ContentFilterDetectedResult;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ContentFilterResult create() => ContentFilterResult._();
-  ContentFilterResult createEmptyInstance() => create();
-  static $pb.PbList<ContentFilterResult> createRepeated() => $pb.PbList<ContentFilterResult>();
+  static ContentFilterDetectedResult create() => ContentFilterDetectedResult._();
+  ContentFilterDetectedResult createEmptyInstance() => create();
+  static $pb.PbList<ContentFilterDetectedResult> createRepeated() => $pb.PbList<ContentFilterDetectedResult>();
   @$core.pragma('dart2js:noInline')
-  static ContentFilterResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContentFilterResult>(create);
-  static ContentFilterResult? _defaultInstance;
+  static ContentFilterDetectedResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContentFilterDetectedResult>(create);
+  static ContentFilterDetectedResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get filtered => $_getBF(0);
@@ -510,15 +503,70 @@ class ContentFilterResult extends $pb.GeneratedMessage {
   $core.bool hasDetected() => $_has(1);
   @$pb.TagNumber(2)
   void clearDetected() => clearField(2);
+}
 
-  @$pb.TagNumber(3)
-  $core.String get severity => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set severity($core.String v) { $_setString(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasSeverity() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearSeverity() => clearField(3);
+class ContentFilterSeverityResult extends $pb.GeneratedMessage {
+  factory ContentFilterSeverityResult({
+    $core.bool? filtered,
+    $core.String? severity,
+  }) {
+    final $result = create();
+    if (filtered != null) {
+      $result.filtered = filtered;
+    }
+    if (severity != null) {
+      $result.severity = severity;
+    }
+    return $result;
+  }
+  ContentFilterSeverityResult._() : super();
+  factory ContentFilterSeverityResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ContentFilterSeverityResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContentFilterSeverityResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'filtered')
+    ..aOS(2, _omitFieldNames ? '' : 'severity')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ContentFilterSeverityResult clone() => ContentFilterSeverityResult()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ContentFilterSeverityResult copyWith(void Function(ContentFilterSeverityResult) updates) => super.copyWith((message) => updates(message as ContentFilterSeverityResult)) as ContentFilterSeverityResult;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ContentFilterSeverityResult create() => ContentFilterSeverityResult._();
+  ContentFilterSeverityResult createEmptyInstance() => create();
+  static $pb.PbList<ContentFilterSeverityResult> createRepeated() => $pb.PbList<ContentFilterSeverityResult>();
+  @$core.pragma('dart2js:noInline')
+  static ContentFilterSeverityResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContentFilterSeverityResult>(create);
+  static ContentFilterSeverityResult? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get filtered => $_getBF(0);
+  @$pb.TagNumber(1)
+  set filtered($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFiltered() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFiltered() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get severity => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set severity($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSeverity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSeverity() => clearField(2);
 }
 
 

@@ -50,13 +50,16 @@ public final class CompletionsProto {
       "\005model\022\026\n\006object\030\002 \001(\tR\006object\022\016\n\002id\030\003 \001" +
       "(\tR\002id\022\030\n\007created\030\004 \001(\rR\007created\0221\n\007choi" +
       "ces\030\005 \003(\0132\027.azure.openai.v1.ChoiceR\007choi" +
-      "ces\"B\n\022CompletionResponse\022,\n\005error\030\001 \001(\013" +
-      "2\026.azure.openai.v1.ErrorR\005errorB\306\001\n\023com." +
-      "azure.openai.v1B\020CompletionsProtoP\001Z?git" +
-      "hub.com/anaregdesign/azure-proto/go/azur" +
-      "e/openai/v1;openaiv1\242\002\003AOX\252\002\017Azure.Opena" +
-      "i.V1\312\002\017Azure\\Openai\\V1\342\002\033Azure\\Openai\\V1" +
-      "\\GPBMetadata\352\002\021Azure::Openai::V1b\006proto3"
+      "ces\"\237\001\n\022CompletionResponse\022\024\n\005model\030\001 \001(" +
+      "\tR\005model\022\026\n\006object\030\002 \001(\tR\006object\022\016\n\002id\030\003" +
+      " \001(\tR\002id\022\030\n\007created\030\004 \001(\rR\007created\0221\n\007ch" +
+      "oices\030\005 \003(\0132\027.azure.openai.v1.ChoiceR\007ch" +
+      "oicesB\306\001\n\023com.azure.openai.v1B\020Completio" +
+      "nsProtoP\001Z?github.com/anaregdesign/azure" +
+      "-proto/go/azure/openai/v1;openaiv1\242\002\003AOX" +
+      "\252\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033A" +
+      "zure\\Openai\\V1\\GPBMetadata\352\002\021Azure::Open" +
+      "ai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +77,7 @@ public final class CompletionsProto {
     internal_static_azure_openai_v1_CompletionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_CompletionResponse_descriptor,
-        new java.lang.String[] { "Error", });
+        new java.lang.String[] { "Model", "Object", "Id", "Created", "Choices", });
     descriptor.resolveAllFeaturesImmutable();
     com.azure.openai.v1.EntityProto.getDescriptor();
   }

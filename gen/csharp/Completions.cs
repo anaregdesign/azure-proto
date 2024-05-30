@@ -29,18 +29,20 @@ namespace Azure.Openai.V1 {
             "cGxldGlvblJlcXVlc3QSFAoFbW9kZWwYASABKAlSBW1vZGVsEhYKBm9iamVj",
             "dBgCIAEoCVIGb2JqZWN0Eg4KAmlkGAMgASgJUgJpZBIYCgdjcmVhdGVkGAQg",
             "ASgNUgdjcmVhdGVkEjEKB2Nob2ljZXMYBSADKAsyFy5henVyZS5vcGVuYWku",
-            "djEuQ2hvaWNlUgdjaG9pY2VzIkIKEkNvbXBsZXRpb25SZXNwb25zZRIsCgVl",
-            "cnJvchgBIAEoCzIWLmF6dXJlLm9wZW5haS52MS5FcnJvclIFZXJyb3JCxgEK",
-            "E2NvbS5henVyZS5vcGVuYWkudjFCEENvbXBsZXRpb25zUHJvdG9QAVo/Z2l0",
-            "aHViLmNvbS9hbmFyZWdkZXNpZ24vYXp1cmUtcHJvdG8vZ28vYXp1cmUvb3Bl",
-            "bmFpL3YxO29wZW5haXYxogIDQU9YqgIPQXp1cmUuT3BlbmFpLlYxygIPQXp1",
-            "cmVcT3BlbmFpXFYx4gIbQXp1cmVcT3BlbmFpXFYxXEdQQk1ldGFkYXRh6gIR",
-            "QXp1cmU6Ok9wZW5haTo6VjFiBnByb3RvMw=="));
+            "djEuQ2hvaWNlUgdjaG9pY2VzIp8BChJDb21wbGV0aW9uUmVzcG9uc2USFAoF",
+            "bW9kZWwYASABKAlSBW1vZGVsEhYKBm9iamVjdBgCIAEoCVIGb2JqZWN0Eg4K",
+            "AmlkGAMgASgJUgJpZBIYCgdjcmVhdGVkGAQgASgNUgdjcmVhdGVkEjEKB2No",
+            "b2ljZXMYBSADKAsyFy5henVyZS5vcGVuYWkudjEuQ2hvaWNlUgdjaG9pY2Vz",
+            "QsYBChNjb20uYXp1cmUub3BlbmFpLnYxQhBDb21wbGV0aW9uc1Byb3RvUAFa",
+            "P2dpdGh1Yi5jb20vYW5hcmVnZGVzaWduL2F6dXJlLXByb3RvL2dvL2F6dXJl",
+            "L29wZW5haS92MTtvcGVuYWl2MaICA0FPWKoCD0F6dXJlLk9wZW5haS5WMcoC",
+            "D0F6dXJlXE9wZW5haVxWMeICG0F6dXJlXE9wZW5haVxWMVxHUEJNZXRhZGF0",
+            "YeoCEUF6dXJlOjpPcGVuYWk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Azure.Openai.V1.EntityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.CompletionRequest), global::Azure.Openai.V1.CompletionRequest.Parser, new[]{ "Model", "Object", "Id", "Created", "Choices" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.CompletionResponse), global::Azure.Openai.V1.CompletionResponse.Parser, new[]{ "Error" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.CompletionResponse), global::Azure.Openai.V1.CompletionResponse.Parser, new[]{ "Model", "Object", "Id", "Created", "Choices" }, null, null, null, null)
           }));
     }
     #endregion
@@ -417,7 +419,11 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CompletionResponse(CompletionResponse other) : this() {
-      error_ = other.error_ != null ? other.error_.Clone() : null;
+      model_ = other.model_;
+      object_ = other.object_;
+      id_ = other.id_;
+      created_ = other.created_;
+      choices_ = other.choices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -427,16 +433,63 @@ namespace Azure.Openai.V1 {
       return new CompletionResponse(this);
     }
 
-    /// <summary>Field number for the "error" field.</summary>
-    public const int ErrorFieldNumber = 1;
-    private global::Azure.Openai.V1.Error error_;
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 1;
+    private string model_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Azure.Openai.V1.Error Error {
-      get { return error_; }
+    public string Model {
+      get { return model_; }
       set {
-        error_ = value;
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "object" field.</summary>
+    public const int ObjectFieldNumber = 2;
+    private string object_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Object {
+      get { return object_; }
+      set {
+        object_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 3;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "created" field.</summary>
+    public const int CreatedFieldNumber = 4;
+    private uint created_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Created {
+      get { return created_; }
+      set {
+        created_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "choices" field.</summary>
+    public const int ChoicesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Azure.Openai.V1.Choice> _repeated_choices_codec
+        = pb::FieldCodec.ForMessage(42, global::Azure.Openai.V1.Choice.Parser);
+    private readonly pbc::RepeatedField<global::Azure.Openai.V1.Choice> choices_ = new pbc::RepeatedField<global::Azure.Openai.V1.Choice>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Azure.Openai.V1.Choice> Choices {
+      get { return choices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -454,7 +507,11 @@ namespace Azure.Openai.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Error, other.Error)) return false;
+      if (Model != other.Model) return false;
+      if (Object != other.Object) return false;
+      if (Id != other.Id) return false;
+      if (Created != other.Created) return false;
+      if(!choices_.Equals(other.choices_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -462,7 +519,11 @@ namespace Azure.Openai.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (error_ != null) hash ^= Error.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (Object.Length != 0) hash ^= Object.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Created != 0) hash ^= Created.GetHashCode();
+      hash ^= choices_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -481,10 +542,23 @@ namespace Azure.Openai.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (error_ != null) {
+      if (Model.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Error);
+        output.WriteString(Model);
       }
+      if (Object.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Object);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Id);
+      }
+      if (Created != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Created);
+      }
+      choices_.WriteTo(output, _repeated_choices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -495,10 +569,23 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (error_ != null) {
+      if (Model.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(Error);
+        output.WriteString(Model);
       }
+      if (Object.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Object);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Id);
+      }
+      if (Created != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Created);
+      }
+      choices_.WriteTo(ref output, _repeated_choices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -509,9 +596,19 @@ namespace Azure.Openai.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (error_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
+      if (Object.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Object);
+      }
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Created != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Created);
+      }
+      size += choices_.CalculateSize(_repeated_choices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -524,12 +621,19 @@ namespace Azure.Openai.V1 {
       if (other == null) {
         return;
       }
-      if (other.error_ != null) {
-        if (error_ == null) {
-          Error = new global::Azure.Openai.V1.Error();
-        }
-        Error.MergeFrom(other.Error);
+      if (other.Model.Length != 0) {
+        Model = other.Model;
       }
+      if (other.Object.Length != 0) {
+        Object = other.Object;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Created != 0) {
+        Created = other.Created;
+      }
+      choices_.Add(other.choices_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -550,10 +654,23 @@ namespace Azure.Openai.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (error_ == null) {
-              Error = new global::Azure.Openai.V1.Error();
-            }
-            input.ReadMessage(Error);
+            Model = input.ReadString();
+            break;
+          }
+          case 18: {
+            Object = input.ReadString();
+            break;
+          }
+          case 26: {
+            Id = input.ReadString();
+            break;
+          }
+          case 32: {
+            Created = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            choices_.AddEntriesFrom(input, _repeated_choices_codec);
             break;
           }
         }
@@ -576,10 +693,23 @@ namespace Azure.Openai.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (error_ == null) {
-              Error = new global::Azure.Openai.V1.Error();
-            }
-            input.ReadMessage(Error);
+            Model = input.ReadString();
+            break;
+          }
+          case 18: {
+            Object = input.ReadString();
+            break;
+          }
+          case 26: {
+            Id = input.ReadString();
+            break;
+          }
+          case 32: {
+            Created = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            choices_.AddEntriesFrom(ref input, _repeated_choices_codec);
             break;
           }
         }

@@ -6,6 +6,3 @@ modules:
 lint:
   use:
     - DEFAULT
-breaking:
-  use:
-    - FILE

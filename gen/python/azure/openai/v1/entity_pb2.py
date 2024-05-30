@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61zure/openai/v1/entity.proto\x12\x0f\x61zure.openai.v1\"s\n\x06\x43hoice\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x12\n\x04text\x18\x02 \x01(\tR\x04text\x12\x1a\n\x08logprobs\x18\x03 \x01(\x02R\x08logprobs\x12#\n\rfinish_reason\x18\x04 \x01(\tR\x0c\x66inishReason\"\xf5\x01\n\x05\x45rror\x12\x12\n\x04\x63ode\x18\x01 \x01(\tR\x04\x63ode\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x14\n\x05param\x18\x03 \x01(\tR\x05param\x12\x12\n\x04type\x18\x04 \x01(\tR\x04type\x12\x37\n\x0binner_error\x18\x05 \x01(\x0b\x32\x16.azure.openai.v1.ErrorR\ninnerError\x12[\n\x16\x63ontent_filter_results\x18\x06 \x01(\x0b\x32%.azure.openai.v1.ContentFilterResultsR\x14\x63ontentFilterResults\"}\n\nInnerError\x12\x12\n\x04\x63ode\x18\x01 \x01(\tR\x04\x63ode\x12[\n\x16\x63ontent_filter_results\x18\x02 \x01(\x0b\x32%.azure.openai.v1.ContentFilterResultsR\x14\x63ontentFilterResults\"\xc9\x03\n\x14\x43ontentFilterResults\x12<\n\x06sexual\x18\x01 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\x06sexual\x12@\n\x08violence\x18\x02 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\x08violence\x12\x38\n\x04hate\x18\x03 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\x04hate\x12\x41\n\tself_harm\x18\x04 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\x08selfHarm\x12\x42\n\tprofanity\x18\x05 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\tprofanity\x12\x42\n\tjailbreak\x18\x06 \x01(\x0b\x32$.azure.openai.v1.ContentFilterResultR\tjailbreak\x12,\n\x05\x65rror\x18\x07 \x01(\x0b\x32\x16.azure.openai.v1.ErrorR\x05\x65rror\"i\n\x13\x43ontentFilterResult\x12\x1a\n\x08\x66iltered\x18\x01 \x01(\x08R\x08\x66iltered\x12\x1a\n\x08\x64\x65tected\x18\x02 \x01(\x08R\x08\x64\x65tected\x12\x1a\n\x08severity\x18\x03 \x01(\tR\x08severityB\xc1\x01\n\x13\x63om.azure.openai.v1B\x0b\x45ntityProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61zure/openai/v1/entity.proto\x12\x0f\x61zure.openai.v1\"s\n\x06\x43hoice\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x12\n\x04text\x18\x02 \x01(\tR\x04text\x12\x1a\n\x08logprobs\x18\x03 \x01(\x02R\x08logprobs\x12#\n\rfinish_reason\x18\x04 \x01(\tR\x0c\x66inishReason\"\x9d\x01\n\x05\x45rror\x12\x12\n\x04\x63ode\x18\x01 \x01(\tR\x04\x63ode\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x14\n\x05param\x18\x03 \x01(\tR\x05param\x12\x12\n\x04type\x18\x04 \x01(\tR\x04type\x12<\n\x0binner_error\x18\x05 \x01(\x0b\x32\x1b.azure.openai.v1.InnerErrorR\ninnerError\"\x9f\x01\n\nInnerError\x12 \n\x0b\x64\x65scription\x18\x01 \x01(\tR\x0b\x64\x65scription\x12\x12\n\x04\x63ode\x18\x02 \x01(\tR\x04\x63ode\x12[\n\x16\x63ontent_filter_results\x18\x03 \x01(\x0b\x32%.azure.openai.v1.ContentFilterResultsR\x14\x63ontentFilterResults\"\xf9\x03\n\x14\x43ontentFilterResults\x12\x44\n\x06sexual\x18\x01 \x01(\x0b\x32,.azure.openai.v1.ContentFilterSeverityResultR\x06sexual\x12H\n\x08violence\x18\x02 \x01(\x0b\x32,.azure.openai.v1.ContentFilterSeverityResultR\x08violence\x12@\n\x04hate\x18\x03 \x01(\x0b\x32,.azure.openai.v1.ContentFilterSeverityResultR\x04hate\x12I\n\tself_harm\x18\x04 \x01(\x0b\x32,.azure.openai.v1.ContentFilterSeverityResultR\x08selfHarm\x12J\n\tprofanity\x18\x05 \x01(\x0b\x32,.azure.openai.v1.ContentFilterSeverityResultR\tprofanity\x12J\n\tjailbreak\x18\x06 \x01(\x0b\x32,.azure.openai.v1.ContentFilterDetectedResultR\tjailbreak\x12,\n\x05\x65rror\x18\x07 \x01(\x0b\x32\x16.azure.openai.v1.ErrorR\x05\x65rror\"U\n\x1b\x43ontentFilterDetectedResult\x12\x1a\n\x08\x66iltered\x18\x01 \x01(\x08R\x08\x66iltered\x12\x1a\n\x08\x64\x65tected\x18\x02 \x01(\x08R\x08\x64\x65tected\"U\n\x1b\x43ontentFilterSeverityResult\x12\x1a\n\x08\x66iltered\x18\x01 \x01(\x08R\x08\x66iltered\x12\x1a\n\x08severity\x18\x02 \x01(\tR\x08severityB\xc1\x01\n\x13\x63om.azure.openai.v1B\x0b\x45ntityProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,11 +35,13 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_CHOICE']._serialized_start=49
   _globals['_CHOICE']._serialized_end=164
   _globals['_ERROR']._serialized_start=167
-  _globals['_ERROR']._serialized_end=412
-  _globals['_INNERERROR']._serialized_start=414
-  _globals['_INNERERROR']._serialized_end=539
-  _globals['_CONTENTFILTERRESULTS']._serialized_start=542
-  _globals['_CONTENTFILTERRESULTS']._serialized_end=999
-  _globals['_CONTENTFILTERRESULT']._serialized_start=1001
-  _globals['_CONTENTFILTERRESULT']._serialized_end=1106
+  _globals['_ERROR']._serialized_end=324
+  _globals['_INNERERROR']._serialized_start=327
+  _globals['_INNERERROR']._serialized_end=486
+  _globals['_CONTENTFILTERRESULTS']._serialized_start=489
+  _globals['_CONTENTFILTERRESULTS']._serialized_end=994
+  _globals['_CONTENTFILTERDETECTEDRESULT']._serialized_start=996
+  _globals['_CONTENTFILTERDETECTEDRESULT']._serialized_end=1081
+  _globals['_CONTENTFILTERSEVERITYRESULT']._serialized_start=1083
+  _globals['_CONTENTFILTERSEVERITYRESULT']._serialized_end=1168
 # @@protoc_insertion_point(module_scope)

@@ -35,12 +35,17 @@ final $typed_data.Uint8List completionRequestDescriptor = $convert.base64Decode(
 const CompletionResponse$json = {
   '1': 'CompletionResponse',
   '2': [
-    {'1': 'error', '3': 1, '4': 1, '5': 11, '6': '.azure.openai.v1.Error', '10': 'error'},
+    {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
+    {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
+    {'1': 'id', '3': 3, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'created', '3': 4, '4': 1, '5': 13, '10': 'created'},
+    {'1': 'choices', '3': 5, '4': 3, '5': 11, '6': '.azure.openai.v1.Choice', '10': 'choices'},
   ],
 };
 
 /// Descriptor for `CompletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List completionResponseDescriptor = $convert.base64Decode(
-    'ChJDb21wbGV0aW9uUmVzcG9uc2USLAoFZXJyb3IYASABKAsyFi5henVyZS5vcGVuYWkudjEuRX'
-    'Jyb3JSBWVycm9y');
+    'ChJDb21wbGV0aW9uUmVzcG9uc2USFAoFbW9kZWwYASABKAlSBW1vZGVsEhYKBm9iamVjdBgCIA'
+    'EoCVIGb2JqZWN0Eg4KAmlkGAMgASgJUgJpZBIYCgdjcmVhdGVkGAQgASgNUgdjcmVhdGVkEjEK'
+    'B2Nob2ljZXMYBSADKAsyFy5henVyZS5vcGVuYWkudjEuQ2hvaWNlUgdjaG9pY2Vz');
 

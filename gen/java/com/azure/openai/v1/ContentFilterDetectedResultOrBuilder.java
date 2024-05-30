@@ -5,8 +5,8 @@
 
 package com.azure.openai.v1;
 
-public interface ContentFilterResultOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:azure.openai.v1.ContentFilterResult)
+public interface ContentFilterDetectedResultOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:azure.openai.v1.ContentFilterDetectedResult)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -20,16 +20,4 @@ public interface ContentFilterResultOrBuilder extends
    * @return The detected.
    */
   boolean getDetected();
-
-  /**
-   * <code>string severity = 3 [json_name = "severity"];</code>
-   * @return The severity.
-   */
-  java.lang.String getSeverity();
-  /**
-   * <code>string severity = 3 [json_name = "severity"];</code>
-   * @return The bytes for severity.
-   */
-  com.google.protobuf.ByteString
-      getSeverityBytes();
 }

@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private InnerError() {
+    description_ = "";
     code_ = "";
   }
 
@@ -44,11 +45,50 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int CODE_FIELD_NUMBER = 1;
+  public static final int DESCRIPTION_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
+  /**
+   * <code>string description = 1 [json_name = "description"];</code>
+   * @return The description.
+   */
+  @java.lang.Override
+  public java.lang.String getDescription() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      description_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string description = 1 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      description_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CODE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object code_ = "";
   /**
-   * <code>string code = 1 [json_name = "code"];</code>
+   * <code>string code = 2 [json_name = "code"];</code>
    * @return The code.
    */
   @java.lang.Override
@@ -65,7 +105,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string code = 1 [json_name = "code"];</code>
+   * <code>string code = 2 [json_name = "code"];</code>
    * @return The bytes for code.
    */
   @java.lang.Override
@@ -83,10 +123,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONTENT_FILTER_RESULTS_FIELD_NUMBER = 2;
+  public static final int CONTENT_FILTER_RESULTS_FIELD_NUMBER = 3;
   private com.azure.openai.v1.ContentFilterResults contentFilterResults_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    * @return Whether the contentFilterResults field is set.
    */
   @java.lang.Override
@@ -94,7 +134,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    * @return The contentFilterResults.
    */
   @java.lang.Override
@@ -102,7 +142,7 @@ private static final long serialVersionUID = 0L;
     return contentFilterResults_ == null ? com.azure.openai.v1.ContentFilterResults.getDefaultInstance() : contentFilterResults_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+   * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
    */
   @java.lang.Override
   public com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder() {
@@ -123,11 +163,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, description_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(code_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, code_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, code_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(2, getContentFilterResults());
+      output.writeMessage(3, getContentFilterResults());
     }
     getUnknownFields().writeTo(output);
   }
@@ -138,12 +181,15 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, description_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(code_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, code_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, code_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getContentFilterResults());
+        .computeMessageSize(3, getContentFilterResults());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -160,6 +206,8 @@ private static final long serialVersionUID = 0L;
     }
     com.azure.openai.v1.InnerError other = (com.azure.openai.v1.InnerError) obj;
 
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
     if (!getCode()
         .equals(other.getCode())) return false;
     if (hasContentFilterResults() != other.hasContentFilterResults()) return false;
@@ -178,6 +226,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCode().hashCode();
     if (hasContentFilterResults()) {
@@ -321,6 +371,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      description_ = "";
       code_ = "";
       contentFilterResults_ = null;
       if (contentFilterResultsBuilder_ != null) {
@@ -361,10 +412,13 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.azure.openai.v1.InnerError result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.code_ = code_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.contentFilterResults_ = contentFilterResultsBuilder_ == null
             ? contentFilterResults_
             : contentFilterResultsBuilder_.build();
@@ -385,9 +439,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.azure.openai.v1.InnerError other) {
       if (other == com.azure.openai.v1.InnerError.getDefaultInstance()) return this;
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getCode().isEmpty()) {
         code_ = other.code_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasContentFilterResults()) {
@@ -420,17 +479,22 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              code_ = input.readStringRequireUtf8();
+              description_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              input.readMessage(
-                  getContentFilterResultsFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              code_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getContentFilterResultsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -448,9 +512,81 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object description_ = "";
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The description.
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      description_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDescription() {
+      description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string description = 1 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      description_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object code_ = "";
     /**
-     * <code>string code = 1 [json_name = "code"];</code>
+     * <code>string code = 2 [json_name = "code"];</code>
      * @return The code.
      */
     public java.lang.String getCode() {
@@ -466,7 +602,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string code = 1 [json_name = "code"];</code>
+     * <code>string code = 2 [json_name = "code"];</code>
      * @return The bytes for code.
      */
     public com.google.protobuf.ByteString
@@ -483,7 +619,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string code = 1 [json_name = "code"];</code>
+     * <code>string code = 2 [json_name = "code"];</code>
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -491,22 +627,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       code_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string code = 1 [json_name = "code"];</code>
+     * <code>string code = 2 [json_name = "code"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCode() {
       code_ = getDefaultInstance().getCode();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string code = 1 [json_name = "code"];</code>
+     * <code>string code = 2 [json_name = "code"];</code>
      * @param value The bytes for code to set.
      * @return This builder for chaining.
      */
@@ -515,7 +651,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       code_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -524,14 +660,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.azure.openai.v1.ContentFilterResults, com.azure.openai.v1.ContentFilterResults.Builder, com.azure.openai.v1.ContentFilterResultsOrBuilder> contentFilterResultsBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      * @return Whether the contentFilterResults field is set.
      */
     public boolean hasContentFilterResults() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      * @return The contentFilterResults.
      */
     public com.azure.openai.v1.ContentFilterResults getContentFilterResults() {
@@ -542,7 +678,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public Builder setContentFilterResults(com.azure.openai.v1.ContentFilterResults value) {
       if (contentFilterResultsBuilder_ == null) {
@@ -553,12 +689,12 @@ private static final long serialVersionUID = 0L;
       } else {
         contentFilterResultsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public Builder setContentFilterResults(
         com.azure.openai.v1.ContentFilterResults.Builder builderForValue) {
@@ -567,16 +703,16 @@ private static final long serialVersionUID = 0L;
       } else {
         contentFilterResultsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public Builder mergeContentFilterResults(com.azure.openai.v1.ContentFilterResults value) {
       if (contentFilterResultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           contentFilterResults_ != null &&
           contentFilterResults_ != com.azure.openai.v1.ContentFilterResults.getDefaultInstance()) {
           getContentFilterResultsBuilder().mergeFrom(value);
@@ -587,16 +723,16 @@ private static final long serialVersionUID = 0L;
         contentFilterResultsBuilder_.mergeFrom(value);
       }
       if (contentFilterResults_ != null) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public Builder clearContentFilterResults() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       contentFilterResults_ = null;
       if (contentFilterResultsBuilder_ != null) {
         contentFilterResultsBuilder_.dispose();
@@ -606,15 +742,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public com.azure.openai.v1.ContentFilterResults.Builder getContentFilterResultsBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getContentFilterResultsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     public com.azure.openai.v1.ContentFilterResultsOrBuilder getContentFilterResultsOrBuilder() {
       if (contentFilterResultsBuilder_ != null) {
@@ -625,7 +761,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 2 [json_name = "contentFilterResults"];</code>
+     * <code>.azure.openai.v1.ContentFilterResults content_filter_results = 3 [json_name = "contentFilterResults"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.azure.openai.v1.ContentFilterResults, com.azure.openai.v1.ContentFilterResults.Builder, com.azure.openai.v1.ContentFilterResultsOrBuilder> 

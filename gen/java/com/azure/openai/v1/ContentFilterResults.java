@@ -44,9 +44,9 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int SEXUAL_FIELD_NUMBER = 1;
-  private com.azure.openai.v1.ContentFilterResult sexual_;
+  private com.azure.openai.v1.ContentFilterSeverityResult sexual_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    * @return Whether the sexual field is set.
    */
   @java.lang.Override
@@ -54,25 +54,25 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    * @return The sexual.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getSexual() {
-    return sexual_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : sexual_;
+  public com.azure.openai.v1.ContentFilterSeverityResult getSexual() {
+    return sexual_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : sexual_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getSexualOrBuilder() {
-    return sexual_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : sexual_;
+  public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSexualOrBuilder() {
+    return sexual_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : sexual_;
   }
 
   public static final int VIOLENCE_FIELD_NUMBER = 2;
-  private com.azure.openai.v1.ContentFilterResult violence_;
+  private com.azure.openai.v1.ContentFilterSeverityResult violence_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    * @return Whether the violence field is set.
    */
   @java.lang.Override
@@ -80,25 +80,25 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    * @return The violence.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getViolence() {
-    return violence_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : violence_;
+  public com.azure.openai.v1.ContentFilterSeverityResult getViolence() {
+    return violence_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : violence_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getViolenceOrBuilder() {
-    return violence_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : violence_;
+  public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getViolenceOrBuilder() {
+    return violence_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : violence_;
   }
 
   public static final int HATE_FIELD_NUMBER = 3;
-  private com.azure.openai.v1.ContentFilterResult hate_;
+  private com.azure.openai.v1.ContentFilterSeverityResult hate_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    * @return Whether the hate field is set.
    */
   @java.lang.Override
@@ -106,25 +106,25 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    * @return The hate.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getHate() {
-    return hate_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : hate_;
+  public com.azure.openai.v1.ContentFilterSeverityResult getHate() {
+    return hate_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : hate_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getHateOrBuilder() {
-    return hate_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : hate_;
+  public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getHateOrBuilder() {
+    return hate_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : hate_;
   }
 
   public static final int SELF_HARM_FIELD_NUMBER = 4;
-  private com.azure.openai.v1.ContentFilterResult selfHarm_;
+  private com.azure.openai.v1.ContentFilterSeverityResult selfHarm_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    * @return Whether the selfHarm field is set.
    */
   @java.lang.Override
@@ -132,25 +132,25 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    * @return The selfHarm.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getSelfHarm() {
-    return selfHarm_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : selfHarm_;
+  public com.azure.openai.v1.ContentFilterSeverityResult getSelfHarm() {
+    return selfHarm_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : selfHarm_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getSelfHarmOrBuilder() {
-    return selfHarm_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : selfHarm_;
+  public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSelfHarmOrBuilder() {
+    return selfHarm_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : selfHarm_;
   }
 
   public static final int PROFANITY_FIELD_NUMBER = 5;
-  private com.azure.openai.v1.ContentFilterResult profanity_;
+  private com.azure.openai.v1.ContentFilterSeverityResult profanity_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    * @return Whether the profanity field is set.
    */
   @java.lang.Override
@@ -158,25 +158,25 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000010) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    * @return The profanity.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getProfanity() {
-    return profanity_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : profanity_;
+  public com.azure.openai.v1.ContentFilterSeverityResult getProfanity() {
+    return profanity_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : profanity_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getProfanityOrBuilder() {
-    return profanity_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : profanity_;
+  public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getProfanityOrBuilder() {
+    return profanity_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : profanity_;
   }
 
   public static final int JAILBREAK_FIELD_NUMBER = 6;
-  private com.azure.openai.v1.ContentFilterResult jailbreak_;
+  private com.azure.openai.v1.ContentFilterDetectedResult jailbreak_;
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    * @return Whether the jailbreak field is set.
    */
   @java.lang.Override
@@ -184,19 +184,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000020) != 0);
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    * @return The jailbreak.
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResult getJailbreak() {
-    return jailbreak_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : jailbreak_;
+  public com.azure.openai.v1.ContentFilterDetectedResult getJailbreak() {
+    return jailbreak_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : jailbreak_;
   }
   /**
-   * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.ContentFilterResultOrBuilder getJailbreakOrBuilder() {
-    return jailbreak_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : jailbreak_;
+  public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getJailbreakOrBuilder() {
+    return jailbreak_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : jailbreak_;
   }
 
   public static final int ERROR_FIELD_NUMBER = 7;
@@ -768,31 +768,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.azure.openai.v1.ContentFilterResult sexual_;
+    private com.azure.openai.v1.ContentFilterSeverityResult sexual_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> sexualBuilder_;
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> sexualBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      * @return Whether the sexual field is set.
      */
     public boolean hasSexual() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      * @return The sexual.
      */
-    public com.azure.openai.v1.ContentFilterResult getSexual() {
+    public com.azure.openai.v1.ContentFilterSeverityResult getSexual() {
       if (sexualBuilder_ == null) {
-        return sexual_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : sexual_;
+        return sexual_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : sexual_;
       } else {
         return sexualBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
-    public Builder setSexual(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setSexual(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (sexualBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -806,10 +806,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
     public Builder setSexual(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterSeverityResult.Builder builderForValue) {
       if (sexualBuilder_ == null) {
         sexual_ = builderForValue.build();
       } else {
@@ -820,13 +820,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
-    public Builder mergeSexual(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeSexual(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (sexualBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           sexual_ != null &&
-          sexual_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          sexual_ != com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance()) {
           getSexualBuilder().mergeFrom(value);
         } else {
           sexual_ = value;
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
     public Builder clearSexual() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -854,33 +854,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getSexualBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResult.Builder getSexualBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getSexualFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getSexualOrBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSexualOrBuilder() {
       if (sexualBuilder_ != null) {
         return sexualBuilder_.getMessageOrBuilder();
       } else {
         return sexual_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : sexual_;
+            com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : sexual_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult sexual = 1 [json_name = "sexual"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult sexual = 1 [json_name = "sexual"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> 
         getSexualFieldBuilder() {
       if (sexualBuilder_ == null) {
         sexualBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder>(
                 getSexual(),
                 getParentForChildren(),
                 isClean());
@@ -889,31 +889,31 @@ private static final long serialVersionUID = 0L;
       return sexualBuilder_;
     }
 
-    private com.azure.openai.v1.ContentFilterResult violence_;
+    private com.azure.openai.v1.ContentFilterSeverityResult violence_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> violenceBuilder_;
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> violenceBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      * @return Whether the violence field is set.
      */
     public boolean hasViolence() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      * @return The violence.
      */
-    public com.azure.openai.v1.ContentFilterResult getViolence() {
+    public com.azure.openai.v1.ContentFilterSeverityResult getViolence() {
       if (violenceBuilder_ == null) {
-        return violence_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : violence_;
+        return violence_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : violence_;
       } else {
         return violenceBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
-    public Builder setViolence(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setViolence(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (violenceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -927,10 +927,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
     public Builder setViolence(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterSeverityResult.Builder builderForValue) {
       if (violenceBuilder_ == null) {
         violence_ = builderForValue.build();
       } else {
@@ -941,13 +941,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
-    public Builder mergeViolence(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeViolence(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (violenceBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           violence_ != null &&
-          violence_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          violence_ != com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance()) {
           getViolenceBuilder().mergeFrom(value);
         } else {
           violence_ = value;
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
     public Builder clearViolence() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -975,33 +975,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getViolenceBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResult.Builder getViolenceBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getViolenceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getViolenceOrBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getViolenceOrBuilder() {
       if (violenceBuilder_ != null) {
         return violenceBuilder_.getMessageOrBuilder();
       } else {
         return violence_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : violence_;
+            com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : violence_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult violence = 2 [json_name = "violence"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult violence = 2 [json_name = "violence"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> 
         getViolenceFieldBuilder() {
       if (violenceBuilder_ == null) {
         violenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder>(
                 getViolence(),
                 getParentForChildren(),
                 isClean());
@@ -1010,31 +1010,31 @@ private static final long serialVersionUID = 0L;
       return violenceBuilder_;
     }
 
-    private com.azure.openai.v1.ContentFilterResult hate_;
+    private com.azure.openai.v1.ContentFilterSeverityResult hate_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> hateBuilder_;
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> hateBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      * @return Whether the hate field is set.
      */
     public boolean hasHate() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      * @return The hate.
      */
-    public com.azure.openai.v1.ContentFilterResult getHate() {
+    public com.azure.openai.v1.ContentFilterSeverityResult getHate() {
       if (hateBuilder_ == null) {
-        return hate_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : hate_;
+        return hate_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : hate_;
       } else {
         return hateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
-    public Builder setHate(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setHate(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (hateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1048,10 +1048,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
     public Builder setHate(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterSeverityResult.Builder builderForValue) {
       if (hateBuilder_ == null) {
         hate_ = builderForValue.build();
       } else {
@@ -1062,13 +1062,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
-    public Builder mergeHate(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeHate(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (hateBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           hate_ != null &&
-          hate_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          hate_ != com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance()) {
           getHateBuilder().mergeFrom(value);
         } else {
           hate_ = value;
@@ -1083,7 +1083,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
     public Builder clearHate() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -1096,33 +1096,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getHateBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResult.Builder getHateBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getHateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getHateOrBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getHateOrBuilder() {
       if (hateBuilder_ != null) {
         return hateBuilder_.getMessageOrBuilder();
       } else {
         return hate_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : hate_;
+            com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : hate_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult hate = 3 [json_name = "hate"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult hate = 3 [json_name = "hate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> 
         getHateFieldBuilder() {
       if (hateBuilder_ == null) {
         hateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder>(
                 getHate(),
                 getParentForChildren(),
                 isClean());
@@ -1131,31 +1131,31 @@ private static final long serialVersionUID = 0L;
       return hateBuilder_;
     }
 
-    private com.azure.openai.v1.ContentFilterResult selfHarm_;
+    private com.azure.openai.v1.ContentFilterSeverityResult selfHarm_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> selfHarmBuilder_;
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> selfHarmBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      * @return Whether the selfHarm field is set.
      */
     public boolean hasSelfHarm() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      * @return The selfHarm.
      */
-    public com.azure.openai.v1.ContentFilterResult getSelfHarm() {
+    public com.azure.openai.v1.ContentFilterSeverityResult getSelfHarm() {
       if (selfHarmBuilder_ == null) {
-        return selfHarm_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : selfHarm_;
+        return selfHarm_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : selfHarm_;
       } else {
         return selfHarmBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
-    public Builder setSelfHarm(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setSelfHarm(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (selfHarmBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1169,10 +1169,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
     public Builder setSelfHarm(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterSeverityResult.Builder builderForValue) {
       if (selfHarmBuilder_ == null) {
         selfHarm_ = builderForValue.build();
       } else {
@@ -1183,13 +1183,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
-    public Builder mergeSelfHarm(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeSelfHarm(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (selfHarmBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           selfHarm_ != null &&
-          selfHarm_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          selfHarm_ != com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance()) {
           getSelfHarmBuilder().mergeFrom(value);
         } else {
           selfHarm_ = value;
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
     public Builder clearSelfHarm() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1217,33 +1217,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getSelfHarmBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResult.Builder getSelfHarmBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getSelfHarmFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getSelfHarmOrBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSelfHarmOrBuilder() {
       if (selfHarmBuilder_ != null) {
         return selfHarmBuilder_.getMessageOrBuilder();
       } else {
         return selfHarm_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : selfHarm_;
+            com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : selfHarm_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult self_harm = 4 [json_name = "selfHarm"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult self_harm = 4 [json_name = "selfHarm"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> 
         getSelfHarmFieldBuilder() {
       if (selfHarmBuilder_ == null) {
         selfHarmBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder>(
                 getSelfHarm(),
                 getParentForChildren(),
                 isClean());
@@ -1252,31 +1252,31 @@ private static final long serialVersionUID = 0L;
       return selfHarmBuilder_;
     }
 
-    private com.azure.openai.v1.ContentFilterResult profanity_;
+    private com.azure.openai.v1.ContentFilterSeverityResult profanity_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> profanityBuilder_;
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> profanityBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      * @return Whether the profanity field is set.
      */
     public boolean hasProfanity() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      * @return The profanity.
      */
-    public com.azure.openai.v1.ContentFilterResult getProfanity() {
+    public com.azure.openai.v1.ContentFilterSeverityResult getProfanity() {
       if (profanityBuilder_ == null) {
-        return profanity_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : profanity_;
+        return profanity_ == null ? com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : profanity_;
       } else {
         return profanityBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
-    public Builder setProfanity(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setProfanity(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (profanityBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1290,10 +1290,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
     public Builder setProfanity(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterSeverityResult.Builder builderForValue) {
       if (profanityBuilder_ == null) {
         profanity_ = builderForValue.build();
       } else {
@@ -1304,13 +1304,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
-    public Builder mergeProfanity(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeProfanity(com.azure.openai.v1.ContentFilterSeverityResult value) {
       if (profanityBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           profanity_ != null &&
-          profanity_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          profanity_ != com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance()) {
           getProfanityBuilder().mergeFrom(value);
         } else {
           profanity_ = value;
@@ -1325,7 +1325,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
     public Builder clearProfanity() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1338,33 +1338,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getProfanityBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResult.Builder getProfanityBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getProfanityFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getProfanityOrBuilder() {
+    public com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getProfanityOrBuilder() {
       if (profanityBuilder_ != null) {
         return profanityBuilder_.getMessageOrBuilder();
       } else {
         return profanity_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : profanity_;
+            com.azure.openai.v1.ContentFilterSeverityResult.getDefaultInstance() : profanity_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult profanity = 5 [json_name = "profanity"];</code>
+     * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder> 
         getProfanityFieldBuilder() {
       if (profanityBuilder_ == null) {
         profanityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterSeverityResult, com.azure.openai.v1.ContentFilterSeverityResult.Builder, com.azure.openai.v1.ContentFilterSeverityResultOrBuilder>(
                 getProfanity(),
                 getParentForChildren(),
                 isClean());
@@ -1373,31 +1373,31 @@ private static final long serialVersionUID = 0L;
       return profanityBuilder_;
     }
 
-    private com.azure.openai.v1.ContentFilterResult jailbreak_;
+    private com.azure.openai.v1.ContentFilterDetectedResult jailbreak_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> jailbreakBuilder_;
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> jailbreakBuilder_;
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      * @return Whether the jailbreak field is set.
      */
     public boolean hasJailbreak() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      * @return The jailbreak.
      */
-    public com.azure.openai.v1.ContentFilterResult getJailbreak() {
+    public com.azure.openai.v1.ContentFilterDetectedResult getJailbreak() {
       if (jailbreakBuilder_ == null) {
-        return jailbreak_ == null ? com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : jailbreak_;
+        return jailbreak_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : jailbreak_;
       } else {
         return jailbreakBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
-    public Builder setJailbreak(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder setJailbreak(com.azure.openai.v1.ContentFilterDetectedResult value) {
       if (jailbreakBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1411,10 +1411,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
     public Builder setJailbreak(
-        com.azure.openai.v1.ContentFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterDetectedResult.Builder builderForValue) {
       if (jailbreakBuilder_ == null) {
         jailbreak_ = builderForValue.build();
       } else {
@@ -1425,13 +1425,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
-    public Builder mergeJailbreak(com.azure.openai.v1.ContentFilterResult value) {
+    public Builder mergeJailbreak(com.azure.openai.v1.ContentFilterDetectedResult value) {
       if (jailbreakBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
           jailbreak_ != null &&
-          jailbreak_ != com.azure.openai.v1.ContentFilterResult.getDefaultInstance()) {
+          jailbreak_ != com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance()) {
           getJailbreakBuilder().mergeFrom(value);
         } else {
           jailbreak_ = value;
@@ -1446,7 +1446,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
     public Builder clearJailbreak() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -1459,33 +1459,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResult.Builder getJailbreakBuilder() {
+    public com.azure.openai.v1.ContentFilterDetectedResult.Builder getJailbreakBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
       return getJailbreakFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
-    public com.azure.openai.v1.ContentFilterResultOrBuilder getJailbreakOrBuilder() {
+    public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getJailbreakOrBuilder() {
       if (jailbreakBuilder_ != null) {
         return jailbreakBuilder_.getMessageOrBuilder();
       } else {
         return jailbreak_ == null ?
-            com.azure.openai.v1.ContentFilterResult.getDefaultInstance() : jailbreak_;
+            com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : jailbreak_;
       }
     }
     /**
-     * <code>.azure.openai.v1.ContentFilterResult jailbreak = 6 [json_name = "jailbreak"];</code>
+     * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> 
         getJailbreakFieldBuilder() {
       if (jailbreakBuilder_ == null) {
         jailbreakBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.ContentFilterResult, com.azure.openai.v1.ContentFilterResult.Builder, com.azure.openai.v1.ContentFilterResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder>(
                 getJailbreak(),
                 getParentForChildren(),
                 isClean());

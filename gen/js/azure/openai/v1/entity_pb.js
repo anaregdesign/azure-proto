@@ -28,8 +28,7 @@ export const Error = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "param", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "inner_error", kind: "message", T: Error },
-    { no: 6, name: "content_filter_results", kind: "message", T: ContentFilterResults },
+    { no: 5, name: "inner_error", kind: "message", T: InnerError },
   ],
 );
 
@@ -39,8 +38,9 @@ export const Error = /*@__PURE__*/ proto3.makeMessageType(
 export const InnerError = /*@__PURE__*/ proto3.makeMessageType(
   "azure.openai.v1.InnerError",
   () => [
-    { no: 1, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "content_filter_results", kind: "message", T: ContentFilterResults },
+    { no: 1, name: "description", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "content_filter_results", kind: "message", T: ContentFilterResults },
   ],
 );
 
@@ -50,25 +50,35 @@ export const InnerError = /*@__PURE__*/ proto3.makeMessageType(
 export const ContentFilterResults = /*@__PURE__*/ proto3.makeMessageType(
   "azure.openai.v1.ContentFilterResults",
   () => [
-    { no: 1, name: "sexual", kind: "message", T: ContentFilterResult },
-    { no: 2, name: "violence", kind: "message", T: ContentFilterResult },
-    { no: 3, name: "hate", kind: "message", T: ContentFilterResult },
-    { no: 4, name: "self_harm", kind: "message", T: ContentFilterResult },
-    { no: 5, name: "profanity", kind: "message", T: ContentFilterResult },
-    { no: 6, name: "jailbreak", kind: "message", T: ContentFilterResult },
+    { no: 1, name: "sexual", kind: "message", T: ContentFilterSeverityResult },
+    { no: 2, name: "violence", kind: "message", T: ContentFilterSeverityResult },
+    { no: 3, name: "hate", kind: "message", T: ContentFilterSeverityResult },
+    { no: 4, name: "self_harm", kind: "message", T: ContentFilterSeverityResult },
+    { no: 5, name: "profanity", kind: "message", T: ContentFilterSeverityResult },
+    { no: 6, name: "jailbreak", kind: "message", T: ContentFilterDetectedResult },
     { no: 7, name: "error", kind: "message", T: Error },
   ],
 );
 
 /**
- * @generated from message azure.openai.v1.ContentFilterResult
+ * @generated from message azure.openai.v1.ContentFilterDetectedResult
  */
-export const ContentFilterResult = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.ContentFilterResult",
+export const ContentFilterDetectedResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterDetectedResult",
   () => [
     { no: 1, name: "filtered", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 2, name: "detected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 3, name: "severity", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+);
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterSeverityResult
+ */
+export const ContentFilterSeverityResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterSeverityResult",
+  () => [
+    { no: 1, name: "filtered", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 2, name: "severity", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

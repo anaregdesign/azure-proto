@@ -5,7 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { Choice, Error } from "./entity_pb.js";
+import type { Choice } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.CompletionRequest
@@ -56,9 +56,29 @@ export declare class CompletionRequest extends Message<CompletionRequest> {
  */
 export declare class CompletionResponse extends Message<CompletionResponse> {
   /**
-   * @generated from field: azure.openai.v1.Error error = 1;
+   * @generated from field: string model = 1;
    */
-  error?: Error;
+  model: string;
+
+  /**
+   * @generated from field: string object = 2;
+   */
+  object: string;
+
+  /**
+   * @generated from field: string id = 3;
+   */
+  id: string;
+
+  /**
+   * @generated from field: uint32 created = 4;
+   */
+  created: number;
+
+  /**
+   * @generated from field: repeated azure.openai.v1.Choice choices = 5;
+   */
+  choices: Choice[];
 
   constructor(data?: PartialMessage<CompletionResponse>);
 

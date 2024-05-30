@@ -10,17 +10,68 @@ public interface CompletionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.azure.openai.v1.Error error = 1 [json_name = "error"];</code>
-   * @return Whether the error field is set.
+   * <code>string model = 1 [json_name = "model"];</code>
+   * @return The model.
    */
-  boolean hasError();
+  java.lang.String getModel();
   /**
-   * <code>.azure.openai.v1.Error error = 1 [json_name = "error"];</code>
-   * @return The error.
+   * <code>string model = 1 [json_name = "model"];</code>
+   * @return The bytes for model.
    */
-  com.azure.openai.v1.Error getError();
+  com.google.protobuf.ByteString
+      getModelBytes();
+
   /**
-   * <code>.azure.openai.v1.Error error = 1 [json_name = "error"];</code>
+   * <code>string object = 2 [json_name = "object"];</code>
+   * @return The object.
    */
-  com.azure.openai.v1.ErrorOrBuilder getErrorOrBuilder();
+  java.lang.String getObject();
+  /**
+   * <code>string object = 2 [json_name = "object"];</code>
+   * @return The bytes for object.
+   */
+  com.google.protobuf.ByteString
+      getObjectBytes();
+
+  /**
+   * <code>string id = 3 [json_name = "id"];</code>
+   * @return The id.
+   */
+  java.lang.String getId();
+  /**
+   * <code>string id = 3 [json_name = "id"];</code>
+   * @return The bytes for id.
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
+
+  /**
+   * <code>uint32 created = 4 [json_name = "created"];</code>
+   * @return The created.
+   */
+  int getCreated();
+
+  /**
+   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   */
+  java.util.List<com.azure.openai.v1.Choice> 
+      getChoicesList();
+  /**
+   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   */
+  com.azure.openai.v1.Choice getChoices(int index);
+  /**
+   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   */
+  int getChoicesCount();
+  /**
+   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   */
+  java.util.List<? extends com.azure.openai.v1.ChoiceOrBuilder> 
+      getChoicesOrBuilderList();
+  /**
+   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   */
+  com.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
+      int index);
 }

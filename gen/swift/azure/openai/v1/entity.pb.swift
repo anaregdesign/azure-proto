@@ -63,14 +63,36 @@ public struct Azure_Openai_V1_Error {
     set {_uniqueStorage()._type = newValue}
   }
 
-  public var innerError: Azure_Openai_V1_Error {
-    get {return _storage._innerError ?? Azure_Openai_V1_Error()}
+  public var innerError: Azure_Openai_V1_InnerError {
+    get {return _storage._innerError ?? Azure_Openai_V1_InnerError()}
     set {_uniqueStorage()._innerError = newValue}
   }
   /// Returns true if `innerError` has been explicitly set.
   public var hasInnerError: Bool {return _storage._innerError != nil}
   /// Clears the value of `innerError`. Subsequent reads from it will return its default value.
   public mutating func clearInnerError() {_uniqueStorage()._innerError = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+public struct Azure_Openai_V1_InnerError {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var description_p: String {
+    get {return _storage._description_p}
+    set {_uniqueStorage()._description_p = newValue}
+  }
+
+  public var code: String {
+    get {return _storage._code}
+    set {_uniqueStorage()._code = newValue}
+  }
 
   public var contentFilterResults: Azure_Openai_V1_ContentFilterResults {
     get {return _storage._contentFilterResults ?? Azure_Openai_V1_ContentFilterResults()}
@@ -88,36 +110,13 @@ public struct Azure_Openai_V1_Error {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-public struct Azure_Openai_V1_InnerError {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var code: String = String()
-
-  public var contentFilterResults: Azure_Openai_V1_ContentFilterResults {
-    get {return _contentFilterResults ?? Azure_Openai_V1_ContentFilterResults()}
-    set {_contentFilterResults = newValue}
-  }
-  /// Returns true if `contentFilterResults` has been explicitly set.
-  public var hasContentFilterResults: Bool {return self._contentFilterResults != nil}
-  /// Clears the value of `contentFilterResults`. Subsequent reads from it will return its default value.
-  public mutating func clearContentFilterResults() {self._contentFilterResults = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _contentFilterResults: Azure_Openai_V1_ContentFilterResults? = nil
-}
-
 public struct Azure_Openai_V1_ContentFilterResults {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  public var sexual: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._sexual ?? Azure_Openai_V1_ContentFilterResult()}
+  public var sexual: Azure_Openai_V1_ContentFilterSeverityResult {
+    get {return _storage._sexual ?? Azure_Openai_V1_ContentFilterSeverityResult()}
     set {_uniqueStorage()._sexual = newValue}
   }
   /// Returns true if `sexual` has been explicitly set.
@@ -125,8 +124,8 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `sexual`. Subsequent reads from it will return its default value.
   public mutating func clearSexual() {_uniqueStorage()._sexual = nil}
 
-  public var violence: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._violence ?? Azure_Openai_V1_ContentFilterResult()}
+  public var violence: Azure_Openai_V1_ContentFilterSeverityResult {
+    get {return _storage._violence ?? Azure_Openai_V1_ContentFilterSeverityResult()}
     set {_uniqueStorage()._violence = newValue}
   }
   /// Returns true if `violence` has been explicitly set.
@@ -134,8 +133,8 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `violence`. Subsequent reads from it will return its default value.
   public mutating func clearViolence() {_uniqueStorage()._violence = nil}
 
-  public var hate: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._hate ?? Azure_Openai_V1_ContentFilterResult()}
+  public var hate: Azure_Openai_V1_ContentFilterSeverityResult {
+    get {return _storage._hate ?? Azure_Openai_V1_ContentFilterSeverityResult()}
     set {_uniqueStorage()._hate = newValue}
   }
   /// Returns true if `hate` has been explicitly set.
@@ -143,8 +142,8 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `hate`. Subsequent reads from it will return its default value.
   public mutating func clearHate() {_uniqueStorage()._hate = nil}
 
-  public var selfHarm: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._selfHarm ?? Azure_Openai_V1_ContentFilterResult()}
+  public var selfHarm: Azure_Openai_V1_ContentFilterSeverityResult {
+    get {return _storage._selfHarm ?? Azure_Openai_V1_ContentFilterSeverityResult()}
     set {_uniqueStorage()._selfHarm = newValue}
   }
   /// Returns true if `selfHarm` has been explicitly set.
@@ -152,8 +151,8 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `selfHarm`. Subsequent reads from it will return its default value.
   public mutating func clearSelfHarm() {_uniqueStorage()._selfHarm = nil}
 
-  public var profanity: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._profanity ?? Azure_Openai_V1_ContentFilterResult()}
+  public var profanity: Azure_Openai_V1_ContentFilterSeverityResult {
+    get {return _storage._profanity ?? Azure_Openai_V1_ContentFilterSeverityResult()}
     set {_uniqueStorage()._profanity = newValue}
   }
   /// Returns true if `profanity` has been explicitly set.
@@ -161,8 +160,8 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `profanity`. Subsequent reads from it will return its default value.
   public mutating func clearProfanity() {_uniqueStorage()._profanity = nil}
 
-  public var jailbreak: Azure_Openai_V1_ContentFilterResult {
-    get {return _storage._jailbreak ?? Azure_Openai_V1_ContentFilterResult()}
+  public var jailbreak: Azure_Openai_V1_ContentFilterDetectedResult {
+    get {return _storage._jailbreak ?? Azure_Openai_V1_ContentFilterDetectedResult()}
     set {_uniqueStorage()._jailbreak = newValue}
   }
   /// Returns true if `jailbreak` has been explicitly set.
@@ -186,7 +185,7 @@ public struct Azure_Openai_V1_ContentFilterResults {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-public struct Azure_Openai_V1_ContentFilterResult {
+public struct Azure_Openai_V1_ContentFilterDetectedResult {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -194,6 +193,18 @@ public struct Azure_Openai_V1_ContentFilterResult {
   public var filtered: Bool = false
 
   public var detected: Bool = false
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Azure_Openai_V1_ContentFilterSeverityResult {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var filtered: Bool = false
 
   public var severity: String = String()
 
@@ -207,7 +218,8 @@ extension Azure_Openai_V1_Choice: @unchecked Sendable {}
 extension Azure_Openai_V1_Error: @unchecked Sendable {}
 extension Azure_Openai_V1_InnerError: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterResults: @unchecked Sendable {}
-extension Azure_Openai_V1_ContentFilterResult: @unchecked Sendable {}
+extension Azure_Openai_V1_ContentFilterDetectedResult: @unchecked Sendable {}
+extension Azure_Openai_V1_ContentFilterSeverityResult: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -272,7 +284,6 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     3: .same(proto: "param"),
     4: .same(proto: "type"),
     5: .standard(proto: "inner_error"),
-    6: .standard(proto: "content_filter_results"),
   ]
 
   fileprivate class _StorageClass {
@@ -280,8 +291,7 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     var _message: String = String()
     var _param: String = String()
     var _type: String = String()
-    var _innerError: Azure_Openai_V1_Error? = nil
-    var _contentFilterResults: Azure_Openai_V1_ContentFilterResults? = nil
+    var _innerError: Azure_Openai_V1_InnerError? = nil
 
     #if swift(>=5.10)
       // This property is used as the initial default value for new instances of the type.
@@ -301,7 +311,6 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       _param = source._param
       _type = source._type
       _innerError = source._innerError
-      _contentFilterResults = source._contentFilterResults
     }
   }
 
@@ -325,7 +334,6 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
         case 3: try { try decoder.decodeSingularStringField(value: &_storage._param) }()
         case 4: try { try decoder.decodeSingularStringField(value: &_storage._type) }()
         case 5: try { try decoder.decodeSingularMessageField(value: &_storage._innerError) }()
-        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._contentFilterResults) }()
         default: break
         }
       }
@@ -353,9 +361,6 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       try { if let v = _storage._innerError {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
       } }()
-      try { if let v = _storage._contentFilterResults {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -370,7 +375,6 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
         if _storage._param != rhs_storage._param {return false}
         if _storage._type != rhs_storage._type {return false}
         if _storage._innerError != rhs_storage._innerError {return false}
-        if _storage._contentFilterResults != rhs_storage._contentFilterResults {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -383,40 +387,90 @@ extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 extension Azure_Openai_V1_InnerError: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".InnerError"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "code"),
-    2: .standard(proto: "content_filter_results"),
+    1: .same(proto: "description"),
+    2: .same(proto: "code"),
+    3: .standard(proto: "content_filter_results"),
   ]
 
+  fileprivate class _StorageClass {
+    var _description_p: String = String()
+    var _code: String = String()
+    var _contentFilterResults: Azure_Openai_V1_ContentFilterResults? = nil
+
+    #if swift(>=5.10)
+      // This property is used as the initial default value for new instances of the type.
+      // The type itself is protecting the reference to its storage via CoW semantics.
+      // This will force a copy to be made of this reference when the first mutation occurs;
+      // hence, it is safe to mark this as `nonisolated(unsafe)`.
+      static nonisolated(unsafe) let defaultInstance = _StorageClass()
+    #else
+      static let defaultInstance = _StorageClass()
+    #endif
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _description_p = source._description_p
+      _code = source._code
+      _contentFilterResults = source._contentFilterResults
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.code) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._contentFilterResults) }()
-      default: break
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._description_p) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._code) }()
+        case 3: try { try decoder.decodeSingularMessageField(value: &_storage._contentFilterResults) }()
+        default: break
+        }
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.code.isEmpty {
-      try visitor.visitSingularStringField(value: self.code, fieldNumber: 1)
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._description_p.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._description_p, fieldNumber: 1)
+      }
+      if !_storage._code.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._code, fieldNumber: 2)
+      }
+      try { if let v = _storage._contentFilterResults {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+      } }()
     }
-    try { if let v = self._contentFilterResults {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Azure_Openai_V1_InnerError, rhs: Azure_Openai_V1_InnerError) -> Bool {
-    if lhs.code != rhs.code {return false}
-    if lhs._contentFilterResults != rhs._contentFilterResults {return false}
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._description_p != rhs_storage._description_p {return false}
+        if _storage._code != rhs_storage._code {return false}
+        if _storage._contentFilterResults != rhs_storage._contentFilterResults {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -435,12 +489,12 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
   ]
 
   fileprivate class _StorageClass {
-    var _sexual: Azure_Openai_V1_ContentFilterResult? = nil
-    var _violence: Azure_Openai_V1_ContentFilterResult? = nil
-    var _hate: Azure_Openai_V1_ContentFilterResult? = nil
-    var _selfHarm: Azure_Openai_V1_ContentFilterResult? = nil
-    var _profanity: Azure_Openai_V1_ContentFilterResult? = nil
-    var _jailbreak: Azure_Openai_V1_ContentFilterResult? = nil
+    var _sexual: Azure_Openai_V1_ContentFilterSeverityResult? = nil
+    var _violence: Azure_Openai_V1_ContentFilterSeverityResult? = nil
+    var _hate: Azure_Openai_V1_ContentFilterSeverityResult? = nil
+    var _selfHarm: Azure_Openai_V1_ContentFilterSeverityResult? = nil
+    var _profanity: Azure_Openai_V1_ContentFilterSeverityResult? = nil
+    var _jailbreak: Azure_Openai_V1_ContentFilterDetectedResult? = nil
     var _error: Azure_Openai_V1_Error? = nil
 
     #if swift(>=5.10)
@@ -546,12 +600,11 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
   }
 }
 
-extension Azure_Openai_V1_ContentFilterResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ContentFilterResult"
+extension Azure_Openai_V1_ContentFilterDetectedResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".ContentFilterDetectedResult"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "filtered"),
     2: .same(proto: "detected"),
-    3: .same(proto: "severity"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -562,7 +615,6 @@ extension Azure_Openai_V1_ContentFilterResult: SwiftProtobuf.Message, SwiftProto
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularBoolField(value: &self.filtered) }()
       case 2: try { try decoder.decodeSingularBoolField(value: &self.detected) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.severity) }()
       default: break
       }
     }
@@ -575,15 +627,49 @@ extension Azure_Openai_V1_ContentFilterResult: SwiftProtobuf.Message, SwiftProto
     if self.detected != false {
       try visitor.visitSingularBoolField(value: self.detected, fieldNumber: 2)
     }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_ContentFilterDetectedResult, rhs: Azure_Openai_V1_ContentFilterDetectedResult) -> Bool {
+    if lhs.filtered != rhs.filtered {return false}
+    if lhs.detected != rhs.detected {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_ContentFilterSeverityResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".ContentFilterSeverityResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "filtered"),
+    2: .same(proto: "severity"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularBoolField(value: &self.filtered) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.severity) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.filtered != false {
+      try visitor.visitSingularBoolField(value: self.filtered, fieldNumber: 1)
+    }
     if !self.severity.isEmpty {
-      try visitor.visitSingularStringField(value: self.severity, fieldNumber: 3)
+      try visitor.visitSingularStringField(value: self.severity, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Azure_Openai_V1_ContentFilterResult, rhs: Azure_Openai_V1_ContentFilterResult) -> Bool {
+  public static func ==(lhs: Azure_Openai_V1_ContentFilterSeverityResult, rhs: Azure_Openai_V1_ContentFilterSeverityResult) -> Bool {
     if lhs.filtered != rhs.filtered {return false}
-    if lhs.detected != rhs.detected {return false}
     if lhs.severity != rhs.severity {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

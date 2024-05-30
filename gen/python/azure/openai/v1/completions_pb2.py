@@ -25,7 +25,7 @@ _sym_db = _symbol_database.Default()
 from azure.openai.v1 import entity_pb2 as azure_dot_openai_dot_v1_dot_entity__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!azure/openai/v1/completions.proto\x12\x0f\x61zure.openai.v1\x1a\x1c\x61zure/openai/v1/entity.proto\"\x9e\x01\n\x11\x43ompletionRequest\x12\x14\n\x05model\x18\x01 \x01(\tR\x05model\x12\x16\n\x06object\x18\x02 \x01(\tR\x06object\x12\x0e\n\x02id\x18\x03 \x01(\tR\x02id\x12\x18\n\x07\x63reated\x18\x04 \x01(\rR\x07\x63reated\x12\x31\n\x07\x63hoices\x18\x05 \x03(\x0b\x32\x17.azure.openai.v1.ChoiceR\x07\x63hoices\"B\n\x12\x43ompletionResponse\x12,\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x16.azure.openai.v1.ErrorR\x05\x65rrorB\xc6\x01\n\x13\x63om.azure.openai.v1B\x10\x43ompletionsProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!azure/openai/v1/completions.proto\x12\x0f\x61zure.openai.v1\x1a\x1c\x61zure/openai/v1/entity.proto\"\x9e\x01\n\x11\x43ompletionRequest\x12\x14\n\x05model\x18\x01 \x01(\tR\x05model\x12\x16\n\x06object\x18\x02 \x01(\tR\x06object\x12\x0e\n\x02id\x18\x03 \x01(\tR\x02id\x12\x18\n\x07\x63reated\x18\x04 \x01(\rR\x07\x63reated\x12\x31\n\x07\x63hoices\x18\x05 \x03(\x0b\x32\x17.azure.openai.v1.ChoiceR\x07\x63hoices\"\x9f\x01\n\x12\x43ompletionResponse\x12\x14\n\x05model\x18\x01 \x01(\tR\x05model\x12\x16\n\x06object\x18\x02 \x01(\tR\x06object\x12\x0e\n\x02id\x18\x03 \x01(\tR\x02id\x12\x18\n\x07\x63reated\x18\x04 \x01(\rR\x07\x63reated\x12\x31\n\x07\x63hoices\x18\x05 \x03(\x0b\x32\x17.azure.openai.v1.ChoiceR\x07\x63hoicesB\xc6\x01\n\x13\x63om.azure.openai.v1B\x10\x43ompletionsProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,6 +35,6 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._serialized_options = b'\n\023com.azure.openai.v1B\020CompletionsProtoP\001Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\242\002\003AOX\252\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033Azure\\Openai\\V1\\GPBMetadata\352\002\021Azure::Openai::V1'
   _globals['_COMPLETIONREQUEST']._serialized_start=85
   _globals['_COMPLETIONREQUEST']._serialized_end=243
-  _globals['_COMPLETIONRESPONSE']._serialized_start=245
-  _globals['_COMPLETIONRESPONSE']._serialized_end=311
+  _globals['_COMPLETIONRESPONSE']._serialized_start=246
+  _globals['_COMPLETIONRESPONSE']._serialized_end=405
 # @@protoc_insertion_point(module_scope)
