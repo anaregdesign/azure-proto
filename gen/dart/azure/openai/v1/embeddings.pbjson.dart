@@ -20,14 +20,14 @@ const EmbeddingRequest$json = {
     {'1': 'input', '3': 1, '4': 1, '5': 9, '10': 'input'},
     {'1': 'user', '3': 2, '4': 1, '5': 9, '10': 'user'},
     {'1': 'input_type', '3': 3, '4': 1, '5': 9, '10': 'inputType'},
-    {'1': 'additionalProp1', '3': 4, '4': 3, '5': 11, '6': '.azure.openai.v1.EmbeddingRequest.AdditionalProp1Entry', '10': 'additionalProp1'},
+    {'1': 'additional_prop', '3': 4, '4': 3, '5': 11, '6': '.azure.openai.v1.EmbeddingRequest.AdditionalPropEntry', '10': 'additionalProp1'},
   ],
-  '3': [EmbeddingRequest_AdditionalProp1Entry$json],
+  '3': [EmbeddingRequest_AdditionalPropEntry$json],
 };
 
 @$core.Deprecated('Use embeddingRequestDescriptor instead')
-const EmbeddingRequest_AdditionalProp1Entry$json = {
-  '1': 'AdditionalProp1Entry',
+const EmbeddingRequest_AdditionalPropEntry$json = {
+  '1': 'AdditionalPropEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
@@ -38,10 +38,10 @@ const EmbeddingRequest_AdditionalProp1Entry$json = {
 /// Descriptor for `EmbeddingRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List embeddingRequestDescriptor = $convert.base64Decode(
     'ChBFbWJlZGRpbmdSZXF1ZXN0EhQKBWlucHV0GAEgASgJUgVpbnB1dBISCgR1c2VyGAIgASgJUg'
-    'R1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZRJgCg9hZGRpdGlvbmFsUHJvcDEY'
-    'BCADKAsyNi5henVyZS5vcGVuYWkudjEuRW1iZWRkaW5nUmVxdWVzdC5BZGRpdGlvbmFsUHJvcD'
-    'FFbnRyeVIPYWRkaXRpb25hbFByb3AxGkIKFEFkZGl0aW9uYWxQcm9wMUVudHJ5EhAKA2tleRgB'
-    'IAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+    'R1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZRJfCg9hZGRpdGlvbmFsX3Byb3AY'
+    'BCADKAsyNS5henVyZS5vcGVuYWkudjEuRW1iZWRkaW5nUmVxdWVzdC5BZGRpdGlvbmFsUHJvcE'
+    'VudHJ5Ug9hZGRpdGlvbmFsUHJvcDEaQQoTQWRkaXRpb25hbFByb3BFbnRyeRIQCgNrZXkYASAB'
+    'KAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
 
 @$core.Deprecated('Use embeddingResponseDescriptor instead')
 const EmbeddingResponse$json = {

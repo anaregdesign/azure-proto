@@ -5,13 +5,6 @@ package azure.openai.v1;
 
 option go_package = "azure/openai/v1";
 
-message Choice {
-  uint32 index = 1;
-  string text = 2;
-  float logprobs = 3;
-  string finish_reason = 4;
-}
-
 message Error {
   string code = 1;
   string message = 2;
@@ -48,5 +41,6 @@ message ContentFilterSeverityResult {
 
 message Usage {
   uint32 prompt_tokens = 1;
-  uint32 total_tokens = 2;
+  uint32 completion_tokens = 2;
+  uint32 total_tokens = 3;
 }

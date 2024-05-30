@@ -20,24 +20,6 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-public struct Azure_Openai_V1_Choice {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var index: UInt32 = 0
-
-  public var text: String = String()
-
-  public var logprobs: Float = 0
-
-  public var finishReason: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-}
-
 public struct Azure_Openai_V1_Error {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -220,6 +202,8 @@ public struct Azure_Openai_V1_Usage {
 
   public var promptTokens: UInt32 = 0
 
+  public var completionTokens: UInt32 = 0
+
   public var totalTokens: UInt32 = 0
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -228,7 +212,6 @@ public struct Azure_Openai_V1_Usage {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Azure_Openai_V1_Choice: @unchecked Sendable {}
 extension Azure_Openai_V1_Error: @unchecked Sendable {}
 extension Azure_Openai_V1_InnerError: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterResults: @unchecked Sendable {}
@@ -240,56 +223,6 @@ extension Azure_Openai_V1_Usage: @unchecked Sendable {}
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "azure.openai.v1"
-
-extension Azure_Openai_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Choice"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "index"),
-    2: .same(proto: "text"),
-    3: .same(proto: "logprobs"),
-    4: .standard(proto: "finish_reason"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.index) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.text) }()
-      case 3: try { try decoder.decodeSingularFloatField(value: &self.logprobs) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.finishReason) }()
-      default: break
-      }
-    }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.index != 0 {
-      try visitor.visitSingularUInt32Field(value: self.index, fieldNumber: 1)
-    }
-    if !self.text.isEmpty {
-      try visitor.visitSingularStringField(value: self.text, fieldNumber: 2)
-    }
-    if self.logprobs != 0 {
-      try visitor.visitSingularFloatField(value: self.logprobs, fieldNumber: 3)
-    }
-    if !self.finishReason.isEmpty {
-      try visitor.visitSingularStringField(value: self.finishReason, fieldNumber: 4)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Azure_Openai_V1_Choice, rhs: Azure_Openai_V1_Choice) -> Bool {
-    if lhs.index != rhs.index {return false}
-    if lhs.text != rhs.text {return false}
-    if lhs.logprobs != rhs.logprobs {return false}
-    if lhs.finishReason != rhs.finishReason {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
 
 extension Azure_Openai_V1_Error: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".Error"
@@ -695,7 +628,8 @@ extension Azure_Openai_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
   public static let protoMessageName: String = _protobuf_package + ".Usage"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "prompt_tokens"),
-    2: .standard(proto: "total_tokens"),
+    2: .standard(proto: "completion_tokens"),
+    3: .standard(proto: "total_tokens"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -705,7 +639,8 @@ extension Azure_Openai_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt32Field(value: &self.promptTokens) }()
-      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.completionTokens) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
       default: break
       }
     }
@@ -715,14 +650,18 @@ extension Azure_Openai_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     if self.promptTokens != 0 {
       try visitor.visitSingularUInt32Field(value: self.promptTokens, fieldNumber: 1)
     }
+    if self.completionTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.completionTokens, fieldNumber: 2)
+    }
     if self.totalTokens != 0 {
-      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 2)
+      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 3)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Azure_Openai_V1_Usage, rhs: Azure_Openai_V1_Usage) -> Bool {
     if lhs.promptTokens != rhs.promptTokens {return false}
+    if lhs.completionTokens != rhs.completionTokens {return false}
     if lhs.totalTokens != rhs.totalTokens {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -10,68 +10,228 @@ public interface CompletionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string model = 1 [json_name = "model"];</code>
-   * @return The model.
+   * <code>repeated string prompts = 1 [json_name = "prompt"];</code>
+   * @return A list containing the prompts.
    */
-  java.lang.String getModel();
+  java.util.List<java.lang.String>
+      getPromptsList();
   /**
-   * <code>string model = 1 [json_name = "model"];</code>
-   * @return The bytes for model.
+   * <code>repeated string prompts = 1 [json_name = "prompt"];</code>
+   * @return The count of prompts.
+   */
+  int getPromptsCount();
+  /**
+   * <code>repeated string prompts = 1 [json_name = "prompt"];</code>
+   * @param index The index of the element to return.
+   * @return The prompts at the given index.
+   */
+  java.lang.String getPrompts(int index);
+  /**
+   * <code>repeated string prompts = 1 [json_name = "prompt"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the prompts at the given index.
    */
   com.google.protobuf.ByteString
-      getModelBytes();
+      getPromptsBytes(int index);
 
   /**
-   * <code>string object = 2 [json_name = "object"];</code>
-   * @return The object.
+   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+   * @return Whether the maxTokens field is set.
    */
-  java.lang.String getObject();
+  boolean hasMaxTokens();
   /**
-   * <code>string object = 2 [json_name = "object"];</code>
-   * @return The bytes for object.
+   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+   * @return The maxTokens.
+   */
+  int getMaxTokens();
+
+  /**
+   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+   * @return Whether the temperature field is set.
+   */
+  boolean hasTemperature();
+  /**
+   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+   * @return The temperature.
+   */
+  float getTemperature();
+
+  /**
+   * <code>optional float top_p = 4 [json_name = "topP"];</code>
+   * @return Whether the topP field is set.
+   */
+  boolean hasTopP();
+  /**
+   * <code>optional float top_p = 4 [json_name = "topP"];</code>
+   * @return The topP.
+   */
+  float getTopP();
+
+  /**
+   * <code>map&lt;string, float&gt; logit_bias = 5 [json_name = "logitBias"];</code>
+   */
+  int getLogitBiasCount();
+  /**
+   * <code>map&lt;string, float&gt; logit_bias = 5 [json_name = "logitBias"];</code>
+   */
+  boolean containsLogitBias(
+      java.lang.String key);
+  /**
+   * Use {@link #getLogitBiasMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Float>
+  getLogitBias();
+  /**
+   * <code>map&lt;string, float&gt; logit_bias = 5 [json_name = "logitBias"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Float>
+  getLogitBiasMap();
+  /**
+   * <code>map&lt;string, float&gt; logit_bias = 5 [json_name = "logitBias"];</code>
+   */
+  float getLogitBiasOrDefault(
+      java.lang.String key,
+      float defaultValue);
+  /**
+   * <code>map&lt;string, float&gt; logit_bias = 5 [json_name = "logitBias"];</code>
+   */
+  float getLogitBiasOrThrow(
+      java.lang.String key);
+
+  /**
+   * <code>optional string user = 6 [json_name = "user"];</code>
+   * @return Whether the user field is set.
+   */
+  boolean hasUser();
+  /**
+   * <code>optional string user = 6 [json_name = "user"];</code>
+   * @return The user.
+   */
+  java.lang.String getUser();
+  /**
+   * <code>optional string user = 6 [json_name = "user"];</code>
+   * @return The bytes for user.
    */
   com.google.protobuf.ByteString
-      getObjectBytes();
+      getUserBytes();
 
   /**
-   * <code>string id = 3 [json_name = "id"];</code>
-   * @return The id.
+   * <code>optional uint32 n = 7 [json_name = "n"];</code>
+   * @return Whether the n field is set.
    */
-  java.lang.String getId();
+  boolean hasN();
   /**
-   * <code>string id = 3 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>optional uint32 n = 7 [json_name = "n"];</code>
+   * @return The n.
+   */
+  int getN();
+
+  /**
+   * <code>optional bool stream = 8 [json_name = "stream"];</code>
+   * @return Whether the stream field is set.
+   */
+  boolean hasStream();
+  /**
+   * <code>optional bool stream = 8 [json_name = "stream"];</code>
+   * @return The stream.
+   */
+  boolean getStream();
+
+  /**
+   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+   * @return Whether the logprobs field is set.
+   */
+  boolean hasLogprobs();
+  /**
+   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+   * @return The logprobs.
+   */
+  int getLogprobs();
+
+  /**
+   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * @return Whether the suffix field is set.
+   */
+  boolean hasSuffix();
+  /**
+   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * @return The suffix.
+   */
+  java.lang.String getSuffix();
+  /**
+   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * @return The bytes for suffix.
    */
   com.google.protobuf.ByteString
-      getIdBytes();
+      getSuffixBytes();
 
   /**
-   * <code>uint32 created = 4 [json_name = "created"];</code>
-   * @return The created.
+   * <code>optional bool echo = 11 [json_name = "echo"];</code>
+   * @return Whether the echo field is set.
    */
-  int getCreated();
+  boolean hasEcho();
+  /**
+   * <code>optional bool echo = 11 [json_name = "echo"];</code>
+   * @return The echo.
+   */
+  boolean getEcho();
 
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated string stops = 12 [json_name = "stop"];</code>
+   * @return A list containing the stops.
    */
-  java.util.List<com.azure.openai.v1.Choice> 
-      getChoicesList();
+  java.util.List<java.lang.String>
+      getStopsList();
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated string stops = 12 [json_name = "stop"];</code>
+   * @return The count of stops.
    */
-  com.azure.openai.v1.Choice getChoices(int index);
+  int getStopsCount();
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated string stops = 12 [json_name = "stop"];</code>
+   * @param index The index of the element to return.
+   * @return The stops at the given index.
    */
-  int getChoicesCount();
+  java.lang.String getStops(int index);
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated string stops = 12 [json_name = "stop"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the stops at the given index.
    */
-  java.util.List<? extends com.azure.openai.v1.ChoiceOrBuilder> 
-      getChoicesOrBuilderList();
+  com.google.protobuf.ByteString
+      getStopsBytes(int index);
+
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+   * @return Whether the presencePenalty field is set.
    */
-  com.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
-      int index);
+  boolean hasPresencePenalty();
+  /**
+   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+   * @return The presencePenalty.
+   */
+  float getPresencePenalty();
+
+  /**
+   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+   * @return Whether the frequencyPenalty field is set.
+   */
+  boolean hasFrequencyPenalty();
+  /**
+   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+   * @return The frequencyPenalty.
+   */
+  float getFrequencyPenalty();
+
+  /**
+   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+   * @return Whether the bestOf field is set.
+   */
+  boolean hasBestOf();
+  /**
+   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+   * @return The bestOf.
+   */
+  int getBestOf();
 }

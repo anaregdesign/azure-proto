@@ -7,45 +7,6 @@ import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialM
 import { Message, proto3 } from "@bufbuild/protobuf";
 
 /**
- * @generated from message azure.openai.v1.Choice
- */
-export declare class Choice extends Message<Choice> {
-  /**
-   * @generated from field: uint32 index = 1;
-   */
-  index: number;
-
-  /**
-   * @generated from field: string text = 2;
-   */
-  text: string;
-
-  /**
-   * @generated from field: float logprobs = 3;
-   */
-  logprobs: number;
-
-  /**
-   * @generated from field: string finish_reason = 4;
-   */
-  finishReason: string;
-
-  constructor(data?: PartialMessage<Choice>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.Choice";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice;
-
-  static equals(a: Choice | PlainMessage<Choice> | undefined, b: Choice | PlainMessage<Choice> | undefined): boolean;
-}
-
-/**
  * @generated from message azure.openai.v1.Error
  */
 export declare class Error extends Message<Error> {
@@ -245,7 +206,12 @@ export declare class Usage extends Message<Usage> {
   promptTokens: number;
 
   /**
-   * @generated from field: uint32 total_tokens = 2;
+   * @generated from field: uint32 completion_tokens = 2;
+   */
+  completionTokens: number;
+
+  /**
+   * @generated from field: uint32 total_tokens = 3;
    */
   totalTokens: number;
 

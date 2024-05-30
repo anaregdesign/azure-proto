@@ -5,36 +5,85 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { Choice } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.CompletionRequest
  */
 export declare class CompletionRequest extends Message<CompletionRequest> {
   /**
-   * @generated from field: string model = 1;
+   * @generated from field: repeated string prompts = 1 [json_name = "prompt"];
    */
-  model: string;
+  prompts: string[];
 
   /**
-   * @generated from field: string object = 2;
+   * @generated from field: optional uint32 max_tokens = 2;
    */
-  object: string;
+  maxTokens?: number;
 
   /**
-   * @generated from field: string id = 3;
+   * @generated from field: optional float temperature = 3;
    */
-  id: string;
+  temperature?: number;
 
   /**
-   * @generated from field: uint32 created = 4;
+   * @generated from field: optional float top_p = 4;
    */
-  created: number;
+  topP?: number;
 
   /**
-   * @generated from field: repeated azure.openai.v1.Choice choices = 5;
+   * @generated from field: map<string, float> logit_bias = 5;
    */
-  choices: Choice[];
+  logitBias: { [key: string]: number };
+
+  /**
+   * @generated from field: optional string user = 6;
+   */
+  user?: string;
+
+  /**
+   * @generated from field: optional uint32 n = 7;
+   */
+  n?: number;
+
+  /**
+   * @generated from field: optional bool stream = 8;
+   */
+  stream?: boolean;
+
+  /**
+   * @generated from field: optional uint32 logprobs = 9;
+   */
+  logprobs?: number;
+
+  /**
+   * @generated from field: optional string suffix = 10;
+   */
+  suffix?: string;
+
+  /**
+   * @generated from field: optional bool echo = 11;
+   */
+  echo?: boolean;
+
+  /**
+   * @generated from field: repeated string stops = 12 [json_name = "stop"];
+   */
+  stops: string[];
+
+  /**
+   * @generated from field: optional float presence_penalty = 13;
+   */
+  presencePenalty?: number;
+
+  /**
+   * @generated from field: optional float frequency_penalty = 14;
+   */
+  frequencyPenalty?: number;
+
+  /**
+   * @generated from field: optional uint32 best_of = 15;
+   */
+  bestOf?: number;
 
   constructor(data?: PartialMessage<CompletionRequest>);
 
@@ -76,9 +125,9 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
   created: number;
 
   /**
-   * @generated from field: repeated azure.openai.v1.Choice choices = 5;
+   * @generated from field: repeated azure.openai.v1.CompletionChoice choices = 5;
    */
-  choices: Choice[];
+  choices: CompletionChoice[];
 
   constructor(data?: PartialMessage<CompletionResponse>);
 
@@ -93,5 +142,44 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse;
 
   static equals(a: CompletionResponse | PlainMessage<CompletionResponse> | undefined, b: CompletionResponse | PlainMessage<CompletionResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.CompletionChoice
+ */
+export declare class CompletionChoice extends Message<CompletionChoice> {
+  /**
+   * @generated from field: uint32 index = 1;
+   */
+  index: number;
+
+  /**
+   * @generated from field: string text = 2;
+   */
+  text: string;
+
+  /**
+   * @generated from field: float logprobs = 3;
+   */
+  logprobs: number;
+
+  /**
+   * @generated from field: string finish_reason = 4;
+   */
+  finishReason: string;
+
+  constructor(data?: PartialMessage<CompletionChoice>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.CompletionChoice";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionChoice;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionChoice;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionChoice;
+
+  static equals(a: CompletionChoice | PlainMessage<CompletionChoice> | undefined, b: CompletionChoice | PlainMessage<CompletionChoice> | undefined): boolean;
 }
 

@@ -27,9 +27,9 @@ export declare class EmbeddingRequest extends Message<EmbeddingRequest> {
   inputType: string;
 
   /**
-   * @generated from field: map<string, string> additionalProp1 = 4;
+   * @generated from field: map<string, string> additional_prop = 4 [json_name = "additionalProp1"];
    */
-  additionalProp1: { [key: string]: string };
+  additionalProp: { [key: string]: string };
 
   constructor(data?: PartialMessage<EmbeddingRequest>);
 

@@ -52,26 +52,26 @@ public interface CompletionResponseOrBuilder extends
   int getCreated();
 
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
    */
-  java.util.List<com.azure.openai.v1.Choice> 
+  java.util.List<com.azure.openai.v1.CompletionChoice> 
       getChoicesList();
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
    */
-  com.azure.openai.v1.Choice getChoices(int index);
+  com.azure.openai.v1.CompletionChoice getChoices(int index);
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
    */
   int getChoicesCount();
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
    */
-  java.util.List<? extends com.azure.openai.v1.ChoiceOrBuilder> 
+  java.util.List<? extends com.azure.openai.v1.CompletionChoiceOrBuilder> 
       getChoicesOrBuilderList();
   /**
-   * <code>repeated .azure.openai.v1.Choice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
    */
-  com.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
+  com.azure.openai.v1.CompletionChoiceOrBuilder getChoicesOrBuilder(
       int index);
 }

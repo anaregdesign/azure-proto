@@ -13,23 +13,6 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use choiceDescriptor instead')
-const Choice$json = {
-  '1': 'Choice',
-  '2': [
-    {'1': 'index', '3': 1, '4': 1, '5': 13, '10': 'index'},
-    {'1': 'text', '3': 2, '4': 1, '5': 9, '10': 'text'},
-    {'1': 'logprobs', '3': 3, '4': 1, '5': 2, '10': 'logprobs'},
-    {'1': 'finish_reason', '3': 4, '4': 1, '5': 9, '10': 'finishReason'},
-  ],
-};
-
-/// Descriptor for `Choice`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List choiceDescriptor = $convert.base64Decode(
-    'CgZDaG9pY2USFAoFaW5kZXgYASABKA1SBWluZGV4EhIKBHRleHQYAiABKAlSBHRleHQSGgoIbG'
-    '9ncHJvYnMYAyABKAJSCGxvZ3Byb2JzEiMKDWZpbmlzaF9yZWFzb24YBCABKAlSDGZpbmlzaFJl'
-    'YXNvbg==');
-
 @$core.Deprecated('Use errorDescriptor instead')
 const Error$json = {
   '1': 'Error',
@@ -124,12 +107,14 @@ const Usage$json = {
   '1': 'Usage',
   '2': [
     {'1': 'prompt_tokens', '3': 1, '4': 1, '5': 13, '10': 'promptTokens'},
-    {'1': 'total_tokens', '3': 2, '4': 1, '5': 13, '10': 'totalTokens'},
+    {'1': 'completion_tokens', '3': 2, '4': 1, '5': 13, '10': 'completionTokens'},
+    {'1': 'total_tokens', '3': 3, '4': 1, '5': 13, '10': 'totalTokens'},
   ],
 };
 
 /// Descriptor for `Usage`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List usageDescriptor = $convert.base64Decode(
-    'CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgNUgxwcm9tcHRUb2tlbnMSIQoMdG90YWxfdG'
-    '9rZW5zGAIgASgNUgt0b3RhbFRva2Vucw==');
+    'CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgNUgxwcm9tcHRUb2tlbnMSKwoRY29tcGxldG'
+    'lvbl90b2tlbnMYAiABKA1SEGNvbXBsZXRpb25Ub2tlbnMSIQoMdG90YWxfdG9rZW5zGAMgASgN'
+    'Ugt0b3RhbFRva2Vucw==');
 

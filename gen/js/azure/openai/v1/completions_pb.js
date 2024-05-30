@@ -4,7 +4,6 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { Choice } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.CompletionRequest
@@ -12,11 +11,21 @@ import { Choice } from "./entity_pb.js";
 export const CompletionRequest = /*@__PURE__*/ proto3.makeMessageType(
   "azure.openai.v1.CompletionRequest",
   () => [
-    { no: 1, name: "model", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "created", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 5, name: "choices", kind: "message", T: Choice, repeated: true },
+    { no: 1, name: "prompts", jsonName: "prompt", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 2, name: "max_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */, opt: true },
+    { no: 3, name: "temperature", kind: "scalar", T: 2 /* ScalarType.FLOAT */, opt: true },
+    { no: 4, name: "top_p", kind: "scalar", T: 2 /* ScalarType.FLOAT */, opt: true },
+    { no: 5, name: "logit_bias", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 2 /* ScalarType.FLOAT */} },
+    { no: 6, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 7, name: "n", kind: "scalar", T: 13 /* ScalarType.UINT32 */, opt: true },
+    { no: 8, name: "stream", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
+    { no: 9, name: "logprobs", kind: "scalar", T: 13 /* ScalarType.UINT32 */, opt: true },
+    { no: 10, name: "suffix", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 11, name: "echo", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
+    { no: 12, name: "stops", jsonName: "stop", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 13, name: "presence_penalty", kind: "scalar", T: 2 /* ScalarType.FLOAT */, opt: true },
+    { no: 14, name: "frequency_penalty", kind: "scalar", T: 2 /* ScalarType.FLOAT */, opt: true },
+    { no: 15, name: "best_of", kind: "scalar", T: 13 /* ScalarType.UINT32 */, opt: true },
   ],
 );
 
@@ -30,7 +39,20 @@ export const CompletionResponse = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "created", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 5, name: "choices", kind: "message", T: Choice, repeated: true },
+    { no: 5, name: "choices", kind: "message", T: CompletionChoice, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message azure.openai.v1.CompletionChoice
+ */
+export const CompletionChoice = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.CompletionChoice",
+  () => [
+    { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "logprobs", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
+    { no: 4, name: "finish_reason", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
 );
 

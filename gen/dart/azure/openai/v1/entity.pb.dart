@@ -13,98 +13,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Choice extends $pb.GeneratedMessage {
-  factory Choice({
-    $core.int? index,
-    $core.String? text,
-    $core.double? logprobs,
-    $core.String? finishReason,
-  }) {
-    final $result = create();
-    if (index != null) {
-      $result.index = index;
-    }
-    if (text != null) {
-      $result.text = text;
-    }
-    if (logprobs != null) {
-      $result.logprobs = logprobs;
-    }
-    if (finishReason != null) {
-      $result.finishReason = finishReason;
-    }
-    return $result;
-  }
-  Choice._() : super();
-  factory Choice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Choice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Choice', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOS(2, _omitFieldNames ? '' : 'text')
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'logprobs', $pb.PbFieldType.OF)
-    ..aOS(4, _omitFieldNames ? '' : 'finishReason')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Choice clone() => Choice()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Choice copyWith(void Function(Choice) updates) => super.copyWith((message) => updates(message as Choice)) as Choice;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static Choice create() => Choice._();
-  Choice createEmptyInstance() => create();
-  static $pb.PbList<Choice> createRepeated() => $pb.PbList<Choice>();
-  @$core.pragma('dart2js:noInline')
-  static Choice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Choice>(create);
-  static Choice? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get index => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set index($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasIndex() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearIndex() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get text => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set text($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasText() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearText() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.double get logprobs => $_getN(2);
-  @$pb.TagNumber(3)
-  set logprobs($core.double v) { $_setFloat(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasLogprobs() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearLogprobs() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get finishReason => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set finishReason($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasFinishReason() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearFinishReason() => clearField(4);
-}
-
 class Error extends $pb.GeneratedMessage {
   factory Error({
     $core.String? code,
@@ -572,11 +480,15 @@ class ContentFilterSeverityResult extends $pb.GeneratedMessage {
 class Usage extends $pb.GeneratedMessage {
   factory Usage({
     $core.int? promptTokens,
+    $core.int? completionTokens,
     $core.int? totalTokens,
   }) {
     final $result = create();
     if (promptTokens != null) {
       $result.promptTokens = promptTokens;
+    }
+    if (completionTokens != null) {
+      $result.completionTokens = completionTokens;
     }
     if (totalTokens != null) {
       $result.totalTokens = totalTokens;
@@ -589,7 +501,8 @@ class Usage extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Usage', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'promptTokens', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'totalTokens', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'completionTokens', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'totalTokens', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -624,13 +537,22 @@ class Usage extends $pb.GeneratedMessage {
   void clearPromptTokens() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.int get totalTokens => $_getIZ(1);
+  $core.int get completionTokens => $_getIZ(1);
   @$pb.TagNumber(2)
-  set totalTokens($core.int v) { $_setUnsignedInt32(1, v); }
+  set completionTokens($core.int v) { $_setUnsignedInt32(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasTotalTokens() => $_has(1);
+  $core.bool hasCompletionTokens() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTotalTokens() => clearField(2);
+  void clearCompletionTokens() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get totalTokens => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set totalTokens($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTotalTokens() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTotalTokens() => clearField(3);
 }
 
 

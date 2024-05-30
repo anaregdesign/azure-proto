@@ -15,7 +15,7 @@ export const EmbeddingRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "input", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "input_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "additionalProp1", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
+    { no: 4, name: "additional_prop", jsonName: "additionalProp1", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
   ],
 );
 

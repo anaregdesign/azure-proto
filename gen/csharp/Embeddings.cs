@@ -25,27 +25,27 @@ namespace Azure.Openai.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBhenVyZS9vcGVuYWkvdjEvZW1iZWRkaW5ncy5wcm90bxIPYXp1cmUub3Bl",
-            "bmFpLnYxGhxhenVyZS9vcGVuYWkvdjEvZW50aXR5LnByb3RvIoECChBFbWJl",
+            "bmFpLnYxGhxhenVyZS9vcGVuYWkvdjEvZW50aXR5LnByb3RvIv8BChBFbWJl",
             "ZGRpbmdSZXF1ZXN0EhQKBWlucHV0GAEgASgJUgVpbnB1dBISCgR1c2VyGAIg",
-            "ASgJUgR1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZRJgCg9h",
-            "ZGRpdGlvbmFsUHJvcDEYBCADKAsyNi5henVyZS5vcGVuYWkudjEuRW1iZWRk",
-            "aW5nUmVxdWVzdC5BZGRpdGlvbmFsUHJvcDFFbnRyeVIPYWRkaXRpb25hbFBy",
-            "b3AxGkIKFEFkZGl0aW9uYWxQcm9wMUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5",
-            "EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEimgEKEUVtYmVkZGluZ1Jlc3Bv",
-            "bnNlEhYKBm9iamVjdBgBIAEoCVIGb2JqZWN0EhQKBW1vZGVsGAIgASgJUgVt",
-            "b2RlbBIpCgRkYXRhGAMgAygLMhUuYXp1cmUub3BlbmFpLnYxLkRhdGFSBGRh",
-            "dGESLAoFdXNhZ2UYBCABKAsyFi5henVyZS5vcGVuYWkudjEuVXNhZ2VSBXVz",
-            "YWdlIlIKBERhdGESFAoFaW5kZXgYASABKA1SBWluZGV4EhYKBm9iamVjdBgC",
-            "IAEoCVIGb2JqZWN0EhwKCWVtYmVkZGluZxgDIAMoAlIJZW1iZWRkaW5nQsUB",
-            "ChNjb20uYXp1cmUub3BlbmFpLnYxQg9FbWJlZGRpbmdzUHJvdG9QAVo/Z2l0",
-            "aHViLmNvbS9hbmFyZWdkZXNpZ24vYXp1cmUtcHJvdG8vZ28vYXp1cmUvb3Bl",
-            "bmFpL3YxO29wZW5haXYxogIDQU9YqgIPQXp1cmUuT3BlbmFpLlYxygIPQXp1",
-            "cmVcT3BlbmFpXFYx4gIbQXp1cmVcT3BlbmFpXFYxXEdQQk1ldGFkYXRh6gIR",
-            "QXp1cmU6Ok9wZW5haTo6VjFiBnByb3RvMw=="));
+            "ASgJUgR1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZRJfCg9h",
+            "ZGRpdGlvbmFsX3Byb3AYBCADKAsyNS5henVyZS5vcGVuYWkudjEuRW1iZWRk",
+            "aW5nUmVxdWVzdC5BZGRpdGlvbmFsUHJvcEVudHJ5Ug9hZGRpdGlvbmFsUHJv",
+            "cDEaQQoTQWRkaXRpb25hbFByb3BFbnRyeRIQCgNrZXkYASABKAlSA2tleRIU",
+            "CgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIpoBChFFbWJlZGRpbmdSZXNwb25z",
+            "ZRIWCgZvYmplY3QYASABKAlSBm9iamVjdBIUCgVtb2RlbBgCIAEoCVIFbW9k",
+            "ZWwSKQoEZGF0YRgDIAMoCzIVLmF6dXJlLm9wZW5haS52MS5EYXRhUgRkYXRh",
+            "EiwKBXVzYWdlGAQgASgLMhYuYXp1cmUub3BlbmFpLnYxLlVzYWdlUgV1c2Fn",
+            "ZSJSCgREYXRhEhQKBWluZGV4GAEgASgNUgVpbmRleBIWCgZvYmplY3QYAiAB",
+            "KAlSBm9iamVjdBIcCgllbWJlZGRpbmcYAyADKAJSCWVtYmVkZGluZ0LFAQoT",
+            "Y29tLmF6dXJlLm9wZW5haS52MUIPRW1iZWRkaW5nc1Byb3RvUAFaP2dpdGh1",
+            "Yi5jb20vYW5hcmVnZGVzaWduL2F6dXJlLXByb3RvL2dvL2F6dXJlL29wZW5h",
+            "aS92MTtvcGVuYWl2MaICA0FPWKoCD0F6dXJlLk9wZW5haS5WMcoCD0F6dXJl",
+            "XE9wZW5haVxWMeICG0F6dXJlXE9wZW5haVxWMVxHUEJNZXRhZGF0YeoCEUF6",
+            "dXJlOjpPcGVuYWk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Azure.Openai.V1.EntityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.EmbeddingRequest), global::Azure.Openai.V1.EmbeddingRequest.Parser, new[]{ "Input", "User", "InputType", "AdditionalProp1" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.EmbeddingRequest), global::Azure.Openai.V1.EmbeddingRequest.Parser, new[]{ "Input", "User", "InputType", "AdditionalProp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.EmbeddingResponse), global::Azure.Openai.V1.EmbeddingResponse.Parser, new[]{ "Object", "Model", "Data", "Usage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Data), global::Azure.Openai.V1.Data.Parser, new[]{ "Index", "Object", "Embedding" }, null, null, null, null)
           }));
@@ -92,7 +92,7 @@ namespace Azure.Openai.V1 {
       input_ = other.input_;
       user_ = other.user_;
       inputType_ = other.inputType_;
-      additionalProp1_ = other.additionalProp1_.Clone();
+      additionalProp_ = other.additionalProp_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -138,15 +138,15 @@ namespace Azure.Openai.V1 {
       }
     }
 
-    /// <summary>Field number for the "additionalProp1" field.</summary>
-    public const int AdditionalProp1FieldNumber = 4;
-    private static readonly pbc::MapField<string, string>.Codec _map_additionalProp1_codec
+    /// <summary>Field number for the "additional_prop" field.</summary>
+    public const int AdditionalPropFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_additionalProp_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
-    private readonly pbc::MapField<string, string> additionalProp1_ = new pbc::MapField<string, string>();
+    private readonly pbc::MapField<string, string> additionalProp_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> AdditionalProp1 {
-      get { return additionalProp1_; }
+    public pbc::MapField<string, string> AdditionalProp {
+      get { return additionalProp_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,7 +167,7 @@ namespace Azure.Openai.V1 {
       if (Input != other.Input) return false;
       if (User != other.User) return false;
       if (InputType != other.InputType) return false;
-      if (!AdditionalProp1.Equals(other.AdditionalProp1)) return false;
+      if (!AdditionalProp.Equals(other.AdditionalProp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -178,7 +178,7 @@ namespace Azure.Openai.V1 {
       if (Input.Length != 0) hash ^= Input.GetHashCode();
       if (User.Length != 0) hash ^= User.GetHashCode();
       if (InputType.Length != 0) hash ^= InputType.GetHashCode();
-      hash ^= AdditionalProp1.GetHashCode();
+      hash ^= AdditionalProp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -209,7 +209,7 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(26);
         output.WriteString(InputType);
       }
-      additionalProp1_.WriteTo(output, _map_additionalProp1_codec);
+      additionalProp_.WriteTo(output, _map_additionalProp_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -232,7 +232,7 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(26);
         output.WriteString(InputType);
       }
-      additionalProp1_.WriteTo(ref output, _map_additionalProp1_codec);
+      additionalProp_.WriteTo(ref output, _map_additionalProp_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -252,7 +252,7 @@ namespace Azure.Openai.V1 {
       if (InputType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InputType);
       }
-      size += additionalProp1_.CalculateSize(_map_additionalProp1_codec);
+      size += additionalProp_.CalculateSize(_map_additionalProp_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -274,7 +274,7 @@ namespace Azure.Openai.V1 {
       if (other.InputType.Length != 0) {
         InputType = other.InputType;
       }
-      additionalProp1_.MergeFrom(other.additionalProp1_);
+      additionalProp_.MergeFrom(other.additionalProp_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -307,7 +307,7 @@ namespace Azure.Openai.V1 {
             break;
           }
           case 34: {
-            additionalProp1_.AddEntriesFrom(input, _map_additionalProp1_codec);
+            additionalProp_.AddEntriesFrom(input, _map_additionalProp_codec);
             break;
           }
         }
@@ -342,7 +342,7 @@ namespace Azure.Openai.V1 {
             break;
           }
           case 34: {
-            additionalProp1_.AddEntriesFrom(ref input, _map_additionalProp1_codec);
+            additionalProp_.AddEntriesFrom(ref input, _map_additionalProp_codec);
             break;
           }
         }

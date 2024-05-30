@@ -6,5 +6,3 @@ modules:
 lint:
   use:
     - DEFAULT
-  except:
-    - FIELD_LOWER_SNAKE_CASE

@@ -25,19 +25,136 @@ public struct Azure_Openai_V1_CompletionRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  public var model: String = String()
+  public var prompts: [String] = []
 
-  public var object: String = String()
+  public var maxTokens: UInt32 {
+    get {return _maxTokens ?? 0}
+    set {_maxTokens = newValue}
+  }
+  /// Returns true if `maxTokens` has been explicitly set.
+  public var hasMaxTokens: Bool {return self._maxTokens != nil}
+  /// Clears the value of `maxTokens`. Subsequent reads from it will return its default value.
+  public mutating func clearMaxTokens() {self._maxTokens = nil}
 
-  public var id: String = String()
+  public var temperature: Float {
+    get {return _temperature ?? 0}
+    set {_temperature = newValue}
+  }
+  /// Returns true if `temperature` has been explicitly set.
+  public var hasTemperature: Bool {return self._temperature != nil}
+  /// Clears the value of `temperature`. Subsequent reads from it will return its default value.
+  public mutating func clearTemperature() {self._temperature = nil}
 
-  public var created: UInt32 = 0
+  public var topP: Float {
+    get {return _topP ?? 0}
+    set {_topP = newValue}
+  }
+  /// Returns true if `topP` has been explicitly set.
+  public var hasTopP: Bool {return self._topP != nil}
+  /// Clears the value of `topP`. Subsequent reads from it will return its default value.
+  public mutating func clearTopP() {self._topP = nil}
 
-  public var choices: [Azure_Openai_V1_Choice] = []
+  public var logitBias: Dictionary<String,Float> = [:]
+
+  public var user: String {
+    get {return _user ?? String()}
+    set {_user = newValue}
+  }
+  /// Returns true if `user` has been explicitly set.
+  public var hasUser: Bool {return self._user != nil}
+  /// Clears the value of `user`. Subsequent reads from it will return its default value.
+  public mutating func clearUser() {self._user = nil}
+
+  public var n: UInt32 {
+    get {return _n ?? 0}
+    set {_n = newValue}
+  }
+  /// Returns true if `n` has been explicitly set.
+  public var hasN: Bool {return self._n != nil}
+  /// Clears the value of `n`. Subsequent reads from it will return its default value.
+  public mutating func clearN() {self._n = nil}
+
+  public var stream: Bool {
+    get {return _stream ?? false}
+    set {_stream = newValue}
+  }
+  /// Returns true if `stream` has been explicitly set.
+  public var hasStream: Bool {return self._stream != nil}
+  /// Clears the value of `stream`. Subsequent reads from it will return its default value.
+  public mutating func clearStream() {self._stream = nil}
+
+  public var logprobs: UInt32 {
+    get {return _logprobs ?? 0}
+    set {_logprobs = newValue}
+  }
+  /// Returns true if `logprobs` has been explicitly set.
+  public var hasLogprobs: Bool {return self._logprobs != nil}
+  /// Clears the value of `logprobs`. Subsequent reads from it will return its default value.
+  public mutating func clearLogprobs() {self._logprobs = nil}
+
+  public var suffix: String {
+    get {return _suffix ?? String()}
+    set {_suffix = newValue}
+  }
+  /// Returns true if `suffix` has been explicitly set.
+  public var hasSuffix: Bool {return self._suffix != nil}
+  /// Clears the value of `suffix`. Subsequent reads from it will return its default value.
+  public mutating func clearSuffix() {self._suffix = nil}
+
+  public var echo: Bool {
+    get {return _echo ?? false}
+    set {_echo = newValue}
+  }
+  /// Returns true if `echo` has been explicitly set.
+  public var hasEcho: Bool {return self._echo != nil}
+  /// Clears the value of `echo`. Subsequent reads from it will return its default value.
+  public mutating func clearEcho() {self._echo = nil}
+
+  public var stops: [String] = []
+
+  public var presencePenalty: Float {
+    get {return _presencePenalty ?? 0}
+    set {_presencePenalty = newValue}
+  }
+  /// Returns true if `presencePenalty` has been explicitly set.
+  public var hasPresencePenalty: Bool {return self._presencePenalty != nil}
+  /// Clears the value of `presencePenalty`. Subsequent reads from it will return its default value.
+  public mutating func clearPresencePenalty() {self._presencePenalty = nil}
+
+  public var frequencyPenalty: Float {
+    get {return _frequencyPenalty ?? 0}
+    set {_frequencyPenalty = newValue}
+  }
+  /// Returns true if `frequencyPenalty` has been explicitly set.
+  public var hasFrequencyPenalty: Bool {return self._frequencyPenalty != nil}
+  /// Clears the value of `frequencyPenalty`. Subsequent reads from it will return its default value.
+  public mutating func clearFrequencyPenalty() {self._frequencyPenalty = nil}
+
+  public var bestOf: UInt32 {
+    get {return _bestOf ?? 0}
+    set {_bestOf = newValue}
+  }
+  /// Returns true if `bestOf` has been explicitly set.
+  public var hasBestOf: Bool {return self._bestOf != nil}
+  /// Clears the value of `bestOf`. Subsequent reads from it will return its default value.
+  public mutating func clearBestOf() {self._bestOf = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _maxTokens: UInt32? = nil
+  fileprivate var _temperature: Float? = nil
+  fileprivate var _topP: Float? = nil
+  fileprivate var _user: String? = nil
+  fileprivate var _n: UInt32? = nil
+  fileprivate var _stream: Bool? = nil
+  fileprivate var _logprobs: UInt32? = nil
+  fileprivate var _suffix: String? = nil
+  fileprivate var _echo: Bool? = nil
+  fileprivate var _presencePenalty: Float? = nil
+  fileprivate var _frequencyPenalty: Float? = nil
+  fileprivate var _bestOf: UInt32? = nil
 }
 
 public struct Azure_Openai_V1_CompletionResponse {
@@ -53,7 +170,25 @@ public struct Azure_Openai_V1_CompletionResponse {
 
   public var created: UInt32 = 0
 
-  public var choices: [Azure_Openai_V1_Choice] = []
+  public var choices: [Azure_Openai_V1_CompletionChoice] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Azure_Openai_V1_CompletionChoice {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var index: UInt32 = 0
+
+  public var text: String = String()
+
+  public var logprobs: Float = 0
+
+  public var finishReason: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -63,6 +198,7 @@ public struct Azure_Openai_V1_CompletionResponse {
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Azure_Openai_V1_CompletionRequest: @unchecked Sendable {}
 extension Azure_Openai_V1_CompletionResponse: @unchecked Sendable {}
+extension Azure_Openai_V1_CompletionChoice: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -72,11 +208,21 @@ fileprivate let _protobuf_package = "azure.openai.v1"
 extension Azure_Openai_V1_CompletionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".CompletionRequest"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "model"),
-    2: .same(proto: "object"),
-    3: .same(proto: "id"),
-    4: .same(proto: "created"),
-    5: .same(proto: "choices"),
+    1: .unique(proto: "prompts", json: "prompt"),
+    2: .standard(proto: "max_tokens"),
+    3: .same(proto: "temperature"),
+    4: .standard(proto: "top_p"),
+    5: .standard(proto: "logit_bias"),
+    6: .same(proto: "user"),
+    7: .same(proto: "n"),
+    8: .same(proto: "stream"),
+    9: .same(proto: "logprobs"),
+    10: .same(proto: "suffix"),
+    11: .same(proto: "echo"),
+    12: .unique(proto: "stops", json: "stop"),
+    13: .standard(proto: "presence_penalty"),
+    14: .standard(proto: "frequency_penalty"),
+    15: .standard(proto: "best_of"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -85,41 +231,95 @@ extension Azure_Openai_V1_CompletionRequest: SwiftProtobuf.Message, SwiftProtobu
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.model) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.object) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.id) }()
-      case 4: try { try decoder.decodeSingularUInt32Field(value: &self.created) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.choices) }()
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.prompts) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self._maxTokens) }()
+      case 3: try { try decoder.decodeSingularFloatField(value: &self._temperature) }()
+      case 4: try { try decoder.decodeSingularFloatField(value: &self._topP) }()
+      case 5: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufFloat>.self, value: &self.logitBias) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self._user) }()
+      case 7: try { try decoder.decodeSingularUInt32Field(value: &self._n) }()
+      case 8: try { try decoder.decodeSingularBoolField(value: &self._stream) }()
+      case 9: try { try decoder.decodeSingularUInt32Field(value: &self._logprobs) }()
+      case 10: try { try decoder.decodeSingularStringField(value: &self._suffix) }()
+      case 11: try { try decoder.decodeSingularBoolField(value: &self._echo) }()
+      case 12: try { try decoder.decodeRepeatedStringField(value: &self.stops) }()
+      case 13: try { try decoder.decodeSingularFloatField(value: &self._presencePenalty) }()
+      case 14: try { try decoder.decodeSingularFloatField(value: &self._frequencyPenalty) }()
+      case 15: try { try decoder.decodeSingularUInt32Field(value: &self._bestOf) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.model.isEmpty {
-      try visitor.visitSingularStringField(value: self.model, fieldNumber: 1)
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.prompts.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.prompts, fieldNumber: 1)
     }
-    if !self.object.isEmpty {
-      try visitor.visitSingularStringField(value: self.object, fieldNumber: 2)
+    try { if let v = self._maxTokens {
+      try visitor.visitSingularUInt32Field(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._temperature {
+      try visitor.visitSingularFloatField(value: v, fieldNumber: 3)
+    } }()
+    try { if let v = self._topP {
+      try visitor.visitSingularFloatField(value: v, fieldNumber: 4)
+    } }()
+    if !self.logitBias.isEmpty {
+      try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufFloat>.self, value: self.logitBias, fieldNumber: 5)
     }
-    if !self.id.isEmpty {
-      try visitor.visitSingularStringField(value: self.id, fieldNumber: 3)
+    try { if let v = self._user {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 6)
+    } }()
+    try { if let v = self._n {
+      try visitor.visitSingularUInt32Field(value: v, fieldNumber: 7)
+    } }()
+    try { if let v = self._stream {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 8)
+    } }()
+    try { if let v = self._logprobs {
+      try visitor.visitSingularUInt32Field(value: v, fieldNumber: 9)
+    } }()
+    try { if let v = self._suffix {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 10)
+    } }()
+    try { if let v = self._echo {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 11)
+    } }()
+    if !self.stops.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.stops, fieldNumber: 12)
     }
-    if self.created != 0 {
-      try visitor.visitSingularUInt32Field(value: self.created, fieldNumber: 4)
-    }
-    if !self.choices.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.choices, fieldNumber: 5)
-    }
+    try { if let v = self._presencePenalty {
+      try visitor.visitSingularFloatField(value: v, fieldNumber: 13)
+    } }()
+    try { if let v = self._frequencyPenalty {
+      try visitor.visitSingularFloatField(value: v, fieldNumber: 14)
+    } }()
+    try { if let v = self._bestOf {
+      try visitor.visitSingularUInt32Field(value: v, fieldNumber: 15)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Azure_Openai_V1_CompletionRequest, rhs: Azure_Openai_V1_CompletionRequest) -> Bool {
-    if lhs.model != rhs.model {return false}
-    if lhs.object != rhs.object {return false}
-    if lhs.id != rhs.id {return false}
-    if lhs.created != rhs.created {return false}
-    if lhs.choices != rhs.choices {return false}
+    if lhs.prompts != rhs.prompts {return false}
+    if lhs._maxTokens != rhs._maxTokens {return false}
+    if lhs._temperature != rhs._temperature {return false}
+    if lhs._topP != rhs._topP {return false}
+    if lhs.logitBias != rhs.logitBias {return false}
+    if lhs._user != rhs._user {return false}
+    if lhs._n != rhs._n {return false}
+    if lhs._stream != rhs._stream {return false}
+    if lhs._logprobs != rhs._logprobs {return false}
+    if lhs._suffix != rhs._suffix {return false}
+    if lhs._echo != rhs._echo {return false}
+    if lhs.stops != rhs.stops {return false}
+    if lhs._presencePenalty != rhs._presencePenalty {return false}
+    if lhs._frequencyPenalty != rhs._frequencyPenalty {return false}
+    if lhs._bestOf != rhs._bestOf {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -176,6 +376,56 @@ extension Azure_Openai_V1_CompletionResponse: SwiftProtobuf.Message, SwiftProtob
     if lhs.id != rhs.id {return false}
     if lhs.created != rhs.created {return false}
     if lhs.choices != rhs.choices {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_CompletionChoice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".CompletionChoice"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "index"),
+    2: .same(proto: "text"),
+    3: .same(proto: "logprobs"),
+    4: .standard(proto: "finish_reason"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.index) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.text) }()
+      case 3: try { try decoder.decodeSingularFloatField(value: &self.logprobs) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.finishReason) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.index != 0 {
+      try visitor.visitSingularUInt32Field(value: self.index, fieldNumber: 1)
+    }
+    if !self.text.isEmpty {
+      try visitor.visitSingularStringField(value: self.text, fieldNumber: 2)
+    }
+    if self.logprobs != 0 {
+      try visitor.visitSingularFloatField(value: self.logprobs, fieldNumber: 3)
+    }
+    if !self.finishReason.isEmpty {
+      try visitor.visitSingularStringField(value: self.finishReason, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_CompletionChoice, rhs: Azure_Openai_V1_CompletionChoice) -> Bool {
+    if lhs.index != rhs.index {return false}
+    if lhs.text != rhs.text {return false}
+    if lhs.logprobs != rhs.logprobs {return false}
+    if lhs.finishReason != rhs.finishReason {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -53,10 +53,21 @@ private static final long serialVersionUID = 0L;
     return promptTokens_;
   }
 
-  public static final int TOTAL_TOKENS_FIELD_NUMBER = 2;
+  public static final int COMPLETION_TOKENS_FIELD_NUMBER = 2;
+  private int completionTokens_ = 0;
+  /**
+   * <code>uint32 completion_tokens = 2 [json_name = "completionTokens"];</code>
+   * @return The completionTokens.
+   */
+  @java.lang.Override
+  public int getCompletionTokens() {
+    return completionTokens_;
+  }
+
+  public static final int TOTAL_TOKENS_FIELD_NUMBER = 3;
   private int totalTokens_ = 0;
   /**
-   * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+   * <code>uint32 total_tokens = 3 [json_name = "totalTokens"];</code>
    * @return The totalTokens.
    */
   @java.lang.Override
@@ -81,8 +92,11 @@ private static final long serialVersionUID = 0L;
     if (promptTokens_ != 0) {
       output.writeUInt32(1, promptTokens_);
     }
+    if (completionTokens_ != 0) {
+      output.writeUInt32(2, completionTokens_);
+    }
     if (totalTokens_ != 0) {
-      output.writeUInt32(2, totalTokens_);
+      output.writeUInt32(3, totalTokens_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -97,9 +111,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(1, promptTokens_);
     }
+    if (completionTokens_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(2, completionTokens_);
+    }
     if (totalTokens_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, totalTokens_);
+        .computeUInt32Size(3, totalTokens_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -118,6 +136,8 @@ private static final long serialVersionUID = 0L;
 
     if (getPromptTokens()
         != other.getPromptTokens()) return false;
+    if (getCompletionTokens()
+        != other.getCompletionTokens()) return false;
     if (getTotalTokens()
         != other.getTotalTokens()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -133,6 +153,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_TOKENS_FIELD_NUMBER;
     hash = (53 * hash) + getPromptTokens();
+    hash = (37 * hash) + COMPLETION_TOKENS_FIELD_NUMBER;
+    hash = (53 * hash) + getCompletionTokens();
     hash = (37 * hash) + TOTAL_TOKENS_FIELD_NUMBER;
     hash = (53 * hash) + getTotalTokens();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -267,6 +289,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       promptTokens_ = 0;
+      completionTokens_ = 0;
       totalTokens_ = 0;
       return this;
     }
@@ -305,6 +328,9 @@ private static final long serialVersionUID = 0L;
         result.promptTokens_ = promptTokens_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.completionTokens_ = completionTokens_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.totalTokens_ = totalTokens_;
       }
     }
@@ -323,6 +349,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.azure.openai.v1.Usage.getDefaultInstance()) return this;
       if (other.getPromptTokens() != 0) {
         setPromptTokens(other.getPromptTokens());
+      }
+      if (other.getCompletionTokens() != 0) {
+        setCompletionTokens(other.getCompletionTokens());
       }
       if (other.getTotalTokens() != 0) {
         setTotalTokens(other.getTotalTokens());
@@ -359,10 +388,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              totalTokens_ = input.readUInt32();
+              completionTokens_ = input.readUInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              totalTokens_ = input.readUInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -412,9 +446,41 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int completionTokens_ ;
+    /**
+     * <code>uint32 completion_tokens = 2 [json_name = "completionTokens"];</code>
+     * @return The completionTokens.
+     */
+    @java.lang.Override
+    public int getCompletionTokens() {
+      return completionTokens_;
+    }
+    /**
+     * <code>uint32 completion_tokens = 2 [json_name = "completionTokens"];</code>
+     * @param value The completionTokens to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCompletionTokens(int value) {
+
+      completionTokens_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 completion_tokens = 2 [json_name = "completionTokens"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCompletionTokens() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      completionTokens_ = 0;
+      onChanged();
+      return this;
+    }
+
     private int totalTokens_ ;
     /**
-     * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+     * <code>uint32 total_tokens = 3 [json_name = "totalTokens"];</code>
      * @return The totalTokens.
      */
     @java.lang.Override
@@ -422,23 +488,23 @@ private static final long serialVersionUID = 0L;
       return totalTokens_;
     }
     /**
-     * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+     * <code>uint32 total_tokens = 3 [json_name = "totalTokens"];</code>
      * @param value The totalTokens to set.
      * @return This builder for chaining.
      */
     public Builder setTotalTokens(int value) {
 
       totalTokens_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+     * <code>uint32 total_tokens = 3 [json_name = "totalTokens"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalTokens() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       totalTokens_ = 0;
       onChanged();
       return this;

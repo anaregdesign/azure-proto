@@ -20,7 +20,7 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
     $core.String? input,
     $core.String? user,
     $core.String? inputType,
-    $core.Map<$core.String, $core.String>? additionalProp1,
+    $core.Map<$core.String, $core.String>? additionalProp,
   }) {
     final $result = create();
     if (input != null) {
@@ -32,8 +32,8 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
     if (inputType != null) {
       $result.inputType = inputType;
     }
-    if (additionalProp1 != null) {
-      $result.additionalProp1.addAll(additionalProp1);
+    if (additionalProp != null) {
+      $result.additionalProp.addAll(additionalProp);
     }
     return $result;
   }
@@ -45,7 +45,7 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'input')
     ..aOS(2, _omitFieldNames ? '' : 'user')
     ..aOS(3, _omitFieldNames ? '' : 'inputType')
-    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'additionalProp1', protoName: 'additionalProp1', entryClassName: 'EmbeddingRequest.AdditionalProp1Entry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('azure.openai.v1'))
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'additionalProp1', protoName: 'additional_prop', entryClassName: 'EmbeddingRequest.AdditionalPropEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('azure.openai.v1'))
     ..hasRequiredFields = false
   ;
 
@@ -98,7 +98,7 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
   void clearInputType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.Map<$core.String, $core.String> get additionalProp1 => $_getMap(3);
+  $core.Map<$core.String, $core.String> get additionalProp => $_getMap(3);
 }
 
 class EmbeddingResponse extends $pb.GeneratedMessage {

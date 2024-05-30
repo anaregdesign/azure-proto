@@ -16,7 +16,13 @@ public interface UsageOrBuilder extends
   int getPromptTokens();
 
   /**
-   * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+   * <code>uint32 completion_tokens = 2 [json_name = "completionTokens"];</code>
+   * @return The completionTokens.
+   */
+  int getCompletionTokens();
+
+  /**
+   * <code>uint32 total_tokens = 3 [json_name = "totalTokens"];</code>
    * @return The totalTokens.
    */
   int getTotalTokens();

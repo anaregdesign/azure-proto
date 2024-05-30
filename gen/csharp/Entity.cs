@@ -25,363 +25,51 @@ namespace Azure.Openai.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxhenVyZS9vcGVuYWkvdjEvZW50aXR5LnByb3RvEg9henVyZS5vcGVuYWku",
-            "djEicwoGQ2hvaWNlEhQKBWluZGV4GAEgASgNUgVpbmRleBISCgR0ZXh0GAIg",
-            "ASgJUgR0ZXh0EhoKCGxvZ3Byb2JzGAMgASgCUghsb2dwcm9icxIjCg1maW5p",
-            "c2hfcmVhc29uGAQgASgJUgxmaW5pc2hSZWFzb24inQEKBUVycm9yEhIKBGNv",
-            "ZGUYASABKAlSBGNvZGUSGAoHbWVzc2FnZRgCIAEoCVIHbWVzc2FnZRIUCgVw",
-            "YXJhbRgDIAEoCVIFcGFyYW0SEgoEdHlwZRgEIAEoCVIEdHlwZRI8Cgtpbm5l",
-            "cl9lcnJvchgFIAEoCzIbLmF6dXJlLm9wZW5haS52MS5Jbm5lckVycm9yUgpp",
-            "bm5lckVycm9yIp8BCgpJbm5lckVycm9yEiAKC2Rlc2NyaXB0aW9uGAEgASgJ",
-            "UgtkZXNjcmlwdGlvbhISCgRjb2RlGAIgASgJUgRjb2RlElsKFmNvbnRlbnRf",
-            "ZmlsdGVyX3Jlc3VsdHMYAyABKAsyJS5henVyZS5vcGVuYWkudjEuQ29udGVu",
-            "dEZpbHRlclJlc3VsdHNSFGNvbnRlbnRGaWx0ZXJSZXN1bHRzIvkDChRDb250",
-            "ZW50RmlsdGVyUmVzdWx0cxJECgZzZXh1YWwYASABKAsyLC5henVyZS5vcGVu",
-            "YWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5UmVzdWx0UgZzZXh1YWwSSAoI",
-            "dmlvbGVuY2UYAiABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRl",
-            "clNldmVyaXR5UmVzdWx0Ugh2aW9sZW5jZRJACgRoYXRlGAMgASgLMiwuYXp1",
-            "cmUub3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJTZXZlcml0eVJlc3VsdFIEaGF0",
-            "ZRJJCglzZWxmX2hhcm0YBCABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVu",
-            "dEZpbHRlclNldmVyaXR5UmVzdWx0UghzZWxmSGFybRJKCglwcm9mYW5pdHkY",
-            "BSABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5",
-            "UmVzdWx0Uglwcm9mYW5pdHkSSgoJamFpbGJyZWFrGAYgASgLMiwuYXp1cmUu",
-            "b3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJEZXRlY3RlZFJlc3VsdFIJamFpbGJy",
-            "ZWFrEiwKBWVycm9yGAcgASgLMhYuYXp1cmUub3BlbmFpLnYxLkVycm9yUgVl",
-            "cnJvciJVChtDb250ZW50RmlsdGVyRGV0ZWN0ZWRSZXN1bHQSGgoIZmlsdGVy",
-            "ZWQYASABKAhSCGZpbHRlcmVkEhoKCGRldGVjdGVkGAIgASgIUghkZXRlY3Rl",
-            "ZCJVChtDb250ZW50RmlsdGVyU2V2ZXJpdHlSZXN1bHQSGgoIZmlsdGVyZWQY",
-            "ASABKAhSCGZpbHRlcmVkEhoKCHNldmVyaXR5GAIgASgJUghzZXZlcml0eSJP",
-            "CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgNUgxwcm9tcHRUb2tlbnMS",
-            "IQoMdG90YWxfdG9rZW5zGAIgASgNUgt0b3RhbFRva2Vuc0LBAQoTY29tLmF6",
-            "dXJlLm9wZW5haS52MUILRW50aXR5UHJvdG9QAVo/Z2l0aHViLmNvbS9hbmFy",
-            "ZWdkZXNpZ24vYXp1cmUtcHJvdG8vZ28vYXp1cmUvb3BlbmFpL3YxO29wZW5h",
-            "aXYxogIDQU9YqgIPQXp1cmUuT3BlbmFpLlYxygIPQXp1cmVcT3BlbmFpXFYx",
-            "4gIbQXp1cmVcT3BlbmFpXFYxXEdQQk1ldGFkYXRh6gIRQXp1cmU6Ok9wZW5h",
-            "aTo6VjFiBnByb3RvMw=="));
+            "djEinQEKBUVycm9yEhIKBGNvZGUYASABKAlSBGNvZGUSGAoHbWVzc2FnZRgC",
+            "IAEoCVIHbWVzc2FnZRIUCgVwYXJhbRgDIAEoCVIFcGFyYW0SEgoEdHlwZRgE",
+            "IAEoCVIEdHlwZRI8Cgtpbm5lcl9lcnJvchgFIAEoCzIbLmF6dXJlLm9wZW5h",
+            "aS52MS5Jbm5lckVycm9yUgppbm5lckVycm9yIp8BCgpJbm5lckVycm9yEiAK",
+            "C2Rlc2NyaXB0aW9uGAEgASgJUgtkZXNjcmlwdGlvbhISCgRjb2RlGAIgASgJ",
+            "UgRjb2RlElsKFmNvbnRlbnRfZmlsdGVyX3Jlc3VsdHMYAyABKAsyJS5henVy",
+            "ZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclJlc3VsdHNSFGNvbnRlbnRGaWx0",
+            "ZXJSZXN1bHRzIvkDChRDb250ZW50RmlsdGVyUmVzdWx0cxJECgZzZXh1YWwY",
+            "ASABKAsyLC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5",
+            "UmVzdWx0UgZzZXh1YWwSSAoIdmlvbGVuY2UYAiABKAsyLC5henVyZS5vcGVu",
+            "YWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5UmVzdWx0Ugh2aW9sZW5jZRJA",
+            "CgRoYXRlGAMgASgLMiwuYXp1cmUub3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJT",
+            "ZXZlcml0eVJlc3VsdFIEaGF0ZRJJCglzZWxmX2hhcm0YBCABKAsyLC5henVy",
+            "ZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5UmVzdWx0UghzZWxm",
+            "SGFybRJKCglwcm9mYW5pdHkYBSABKAsyLC5henVyZS5vcGVuYWkudjEuQ29u",
+            "dGVudEZpbHRlclNldmVyaXR5UmVzdWx0Uglwcm9mYW5pdHkSSgoJamFpbGJy",
+            "ZWFrGAYgASgLMiwuYXp1cmUub3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJEZXRl",
+            "Y3RlZFJlc3VsdFIJamFpbGJyZWFrEiwKBWVycm9yGAcgASgLMhYuYXp1cmUu",
+            "b3BlbmFpLnYxLkVycm9yUgVlcnJvciJVChtDb250ZW50RmlsdGVyRGV0ZWN0",
+            "ZWRSZXN1bHQSGgoIZmlsdGVyZWQYASABKAhSCGZpbHRlcmVkEhoKCGRldGVj",
+            "dGVkGAIgASgIUghkZXRlY3RlZCJVChtDb250ZW50RmlsdGVyU2V2ZXJpdHlS",
+            "ZXN1bHQSGgoIZmlsdGVyZWQYASABKAhSCGZpbHRlcmVkEhoKCHNldmVyaXR5",
+            "GAIgASgJUghzZXZlcml0eSJ8CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEg",
+            "ASgNUgxwcm9tcHRUb2tlbnMSKwoRY29tcGxldGlvbl90b2tlbnMYAiABKA1S",
+            "EGNvbXBsZXRpb25Ub2tlbnMSIQoMdG90YWxfdG9rZW5zGAMgASgNUgt0b3Rh",
+            "bFRva2Vuc0LBAQoTY29tLmF6dXJlLm9wZW5haS52MUILRW50aXR5UHJvdG9Q",
+            "AVo/Z2l0aHViLmNvbS9hbmFyZWdkZXNpZ24vYXp1cmUtcHJvdG8vZ28vYXp1",
+            "cmUvb3BlbmFpL3YxO29wZW5haXYxogIDQU9YqgIPQXp1cmUuT3BlbmFpLlYx",
+            "ygIPQXp1cmVcT3BlbmFpXFYx4gIbQXp1cmVcT3BlbmFpXFYxXEdQQk1ldGFk",
+            "YXRh6gIRQXp1cmU6Ok9wZW5haTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Choice), global::Azure.Openai.V1.Choice.Parser, new[]{ "Index", "Text", "Logprobs", "FinishReason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Error), global::Azure.Openai.V1.Error.Parser, new[]{ "Code", "Message", "Param", "Type", "InnerError" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.InnerError), global::Azure.Openai.V1.InnerError.Parser, new[]{ "Description", "Code", "ContentFilterResults" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterResults), global::Azure.Openai.V1.ContentFilterResults.Parser, new[]{ "Sexual", "Violence", "Hate", "SelfHarm", "Profanity", "Jailbreak", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterDetectedResult), global::Azure.Openai.V1.ContentFilterDetectedResult.Parser, new[]{ "Filtered", "Detected" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.ContentFilterSeverityResult), global::Azure.Openai.V1.ContentFilterSeverityResult.Parser, new[]{ "Filtered", "Severity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Usage), global::Azure.Openai.V1.Usage.Parser, new[]{ "PromptTokens", "TotalTokens" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Azure.Openai.V1.Usage), global::Azure.Openai.V1.Usage.Parser, new[]{ "PromptTokens", "CompletionTokens", "TotalTokens" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class Choice : pb::IMessage<Choice>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Choice> _parser = new pb::MessageParser<Choice>(() => new Choice());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Choice> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Choice() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Choice(Choice other) : this() {
-      index_ = other.index_;
-      text_ = other.text_;
-      logprobs_ = other.logprobs_;
-      finishReason_ = other.finishReason_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Choice Clone() {
-      return new Choice(this);
-    }
-
-    /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 1;
-    private uint index_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Index {
-      get { return index_; }
-      set {
-        index_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "text" field.</summary>
-    public const int TextFieldNumber = 2;
-    private string text_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Text {
-      get { return text_; }
-      set {
-        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "logprobs" field.</summary>
-    public const int LogprobsFieldNumber = 3;
-    private float logprobs_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float Logprobs {
-      get { return logprobs_; }
-      set {
-        logprobs_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "finish_reason" field.</summary>
-    public const int FinishReasonFieldNumber = 4;
-    private string finishReason_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FinishReason {
-      get { return finishReason_; }
-      set {
-        finishReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Choice);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Choice other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Index != other.Index) return false;
-      if (Text != other.Text) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Logprobs, other.Logprobs)) return false;
-      if (FinishReason != other.FinishReason) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Index != 0) hash ^= Index.GetHashCode();
-      if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (Logprobs != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Logprobs);
-      if (FinishReason.Length != 0) hash ^= FinishReason.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Index != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Index);
-      }
-      if (Text.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Text);
-      }
-      if (Logprobs != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(Logprobs);
-      }
-      if (FinishReason.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(FinishReason);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Index != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Index);
-      }
-      if (Text.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Text);
-      }
-      if (Logprobs != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(Logprobs);
-      }
-      if (FinishReason.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(FinishReason);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Index != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
-      }
-      if (Text.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
-      }
-      if (Logprobs != 0F) {
-        size += 1 + 4;
-      }
-      if (FinishReason.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FinishReason);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Choice other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Index != 0) {
-        Index = other.Index;
-      }
-      if (other.Text.Length != 0) {
-        Text = other.Text;
-      }
-      if (other.Logprobs != 0F) {
-        Logprobs = other.Logprobs;
-      }
-      if (other.FinishReason.Length != 0) {
-        FinishReason = other.FinishReason;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 18: {
-            Text = input.ReadString();
-            break;
-          }
-          case 29: {
-            Logprobs = input.ReadFloat();
-            break;
-          }
-          case 34: {
-            FinishReason = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 18: {
-            Text = input.ReadString();
-            break;
-          }
-          case 29: {
-            Logprobs = input.ReadFloat();
-            break;
-          }
-          case 34: {
-            FinishReason = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Error : pb::IMessage<Error>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -397,7 +85,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -752,7 +440,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1033,7 +721,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1516,7 +1204,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1751,7 +1439,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1986,7 +1674,7 @@ namespace Azure.Openai.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Azure.Openai.V1.EntityReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2007,6 +1695,7 @@ namespace Azure.Openai.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Usage(Usage other) : this() {
       promptTokens_ = other.promptTokens_;
+      completionTokens_ = other.completionTokens_;
       totalTokens_ = other.totalTokens_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2029,8 +1718,20 @@ namespace Azure.Openai.V1 {
       }
     }
 
+    /// <summary>Field number for the "completion_tokens" field.</summary>
+    public const int CompletionTokensFieldNumber = 2;
+    private uint completionTokens_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CompletionTokens {
+      get { return completionTokens_; }
+      set {
+        completionTokens_ = value;
+      }
+    }
+
     /// <summary>Field number for the "total_tokens" field.</summary>
-    public const int TotalTokensFieldNumber = 2;
+    public const int TotalTokensFieldNumber = 3;
     private uint totalTokens_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2057,6 +1758,7 @@ namespace Azure.Openai.V1 {
         return true;
       }
       if (PromptTokens != other.PromptTokens) return false;
+      if (CompletionTokens != other.CompletionTokens) return false;
       if (TotalTokens != other.TotalTokens) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2066,6 +1768,7 @@ namespace Azure.Openai.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (PromptTokens != 0) hash ^= PromptTokens.GetHashCode();
+      if (CompletionTokens != 0) hash ^= CompletionTokens.GetHashCode();
       if (TotalTokens != 0) hash ^= TotalTokens.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2089,8 +1792,12 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(8);
         output.WriteUInt32(PromptTokens);
       }
-      if (TotalTokens != 0) {
+      if (CompletionTokens != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(CompletionTokens);
+      }
+      if (TotalTokens != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(TotalTokens);
       }
       if (_unknownFields != null) {
@@ -2107,8 +1814,12 @@ namespace Azure.Openai.V1 {
         output.WriteRawTag(8);
         output.WriteUInt32(PromptTokens);
       }
-      if (TotalTokens != 0) {
+      if (CompletionTokens != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(CompletionTokens);
+      }
+      if (TotalTokens != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(TotalTokens);
       }
       if (_unknownFields != null) {
@@ -2123,6 +1834,9 @@ namespace Azure.Openai.V1 {
       int size = 0;
       if (PromptTokens != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PromptTokens);
+      }
+      if (CompletionTokens != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CompletionTokens);
       }
       if (TotalTokens != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalTokens);
@@ -2141,6 +1855,9 @@ namespace Azure.Openai.V1 {
       }
       if (other.PromptTokens != 0) {
         PromptTokens = other.PromptTokens;
+      }
+      if (other.CompletionTokens != 0) {
+        CompletionTokens = other.CompletionTokens;
       }
       if (other.TotalTokens != 0) {
         TotalTokens = other.TotalTokens;
@@ -2169,6 +1886,10 @@ namespace Azure.Openai.V1 {
             break;
           }
           case 16: {
+            CompletionTokens = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             TotalTokens = input.ReadUInt32();
             break;
           }
@@ -2196,6 +1917,10 @@ namespace Azure.Openai.V1 {
             break;
           }
           case 16: {
+            CompletionTokens = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             TotalTokens = input.ReadUInt32();
             break;
           }

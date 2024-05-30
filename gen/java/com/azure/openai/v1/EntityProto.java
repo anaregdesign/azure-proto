@@ -26,11 +26,6 @@ public final class EntityProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_v1_Choice_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_v1_Choice_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_azure_openai_v1_Error_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -70,89 +65,81 @@ public final class EntityProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034azure/openai/v1/entity.proto\022\017azure.op" +
-      "enai.v1\"s\n\006Choice\022\024\n\005index\030\001 \001(\rR\005index\022" +
-      "\022\n\004text\030\002 \001(\tR\004text\022\032\n\010logprobs\030\003 \001(\002R\010l" +
-      "ogprobs\022#\n\rfinish_reason\030\004 \001(\tR\014finishRe" +
-      "ason\"\235\001\n\005Error\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007me" +
-      "ssage\030\002 \001(\tR\007message\022\024\n\005param\030\003 \001(\tR\005par" +
-      "am\022\022\n\004type\030\004 \001(\tR\004type\022<\n\013inner_error\030\005 " +
-      "\001(\0132\033.azure.openai.v1.InnerErrorR\ninnerE" +
-      "rror\"\237\001\n\nInnerError\022 \n\013description\030\001 \001(\t" +
-      "R\013description\022\022\n\004code\030\002 \001(\tR\004code\022[\n\026con" +
-      "tent_filter_results\030\003 \001(\0132%.azure.openai" +
-      ".v1.ContentFilterResultsR\024contentFilterR" +
-      "esults\"\371\003\n\024ContentFilterResults\022D\n\006sexua" +
-      "l\030\001 \001(\0132,.azure.openai.v1.ContentFilterS" +
-      "everityResultR\006sexual\022H\n\010violence\030\002 \001(\0132" +
-      ",.azure.openai.v1.ContentFilterSeverityR" +
-      "esultR\010violence\022@\n\004hate\030\003 \001(\0132,.azure.op" +
-      "enai.v1.ContentFilterSeverityResultR\004hat" +
-      "e\022I\n\tself_harm\030\004 \001(\0132,.azure.openai.v1.C" +
-      "ontentFilterSeverityResultR\010selfHarm\022J\n\t" +
-      "profanity\030\005 \001(\0132,.azure.openai.v1.Conten" +
-      "tFilterSeverityResultR\tprofanity\022J\n\tjail" +
-      "break\030\006 \001(\0132,.azure.openai.v1.ContentFil" +
-      "terDetectedResultR\tjailbreak\022,\n\005error\030\007 " +
-      "\001(\0132\026.azure.openai.v1.ErrorR\005error\"U\n\033Co" +
-      "ntentFilterDetectedResult\022\032\n\010filtered\030\001 " +
-      "\001(\010R\010filtered\022\032\n\010detected\030\002 \001(\010R\010detecte" +
-      "d\"U\n\033ContentFilterSeverityResult\022\032\n\010filt" +
-      "ered\030\001 \001(\010R\010filtered\022\032\n\010severity\030\002 \001(\tR\010" +
-      "severity\"O\n\005Usage\022#\n\rprompt_tokens\030\001 \001(\r" +
-      "R\014promptTokens\022!\n\014total_tokens\030\002 \001(\rR\013to" +
-      "talTokensB\301\001\n\023com.azure.openai.v1B\013Entit" +
-      "yProtoP\001Z?github.com/anaregdesign/azure-" +
-      "proto/go/azure/openai/v1;openaiv1\242\002\003AOX\252" +
-      "\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033Az" +
-      "ure\\Openai\\V1\\GPBMetadata\352\002\021Azure::Opena" +
-      "i::V1b\006proto3"
+      "enai.v1\"\235\001\n\005Error\022\022\n\004code\030\001 \001(\tR\004code\022\030\n" +
+      "\007message\030\002 \001(\tR\007message\022\024\n\005param\030\003 \001(\tR\005" +
+      "param\022\022\n\004type\030\004 \001(\tR\004type\022<\n\013inner_error" +
+      "\030\005 \001(\0132\033.azure.openai.v1.InnerErrorR\ninn" +
+      "erError\"\237\001\n\nInnerError\022 \n\013description\030\001 " +
+      "\001(\tR\013description\022\022\n\004code\030\002 \001(\tR\004code\022[\n\026" +
+      "content_filter_results\030\003 \001(\0132%.azure.ope" +
+      "nai.v1.ContentFilterResultsR\024contentFilt" +
+      "erResults\"\371\003\n\024ContentFilterResults\022D\n\006se" +
+      "xual\030\001 \001(\0132,.azure.openai.v1.ContentFilt" +
+      "erSeverityResultR\006sexual\022H\n\010violence\030\002 \001" +
+      "(\0132,.azure.openai.v1.ContentFilterSeveri" +
+      "tyResultR\010violence\022@\n\004hate\030\003 \001(\0132,.azure" +
+      ".openai.v1.ContentFilterSeverityResultR\004" +
+      "hate\022I\n\tself_harm\030\004 \001(\0132,.azure.openai.v" +
+      "1.ContentFilterSeverityResultR\010selfHarm\022" +
+      "J\n\tprofanity\030\005 \001(\0132,.azure.openai.v1.Con" +
+      "tentFilterSeverityResultR\tprofanity\022J\n\tj" +
+      "ailbreak\030\006 \001(\0132,.azure.openai.v1.Content" +
+      "FilterDetectedResultR\tjailbreak\022,\n\005error" +
+      "\030\007 \001(\0132\026.azure.openai.v1.ErrorR\005error\"U\n" +
+      "\033ContentFilterDetectedResult\022\032\n\010filtered" +
+      "\030\001 \001(\010R\010filtered\022\032\n\010detected\030\002 \001(\010R\010dete" +
+      "cted\"U\n\033ContentFilterSeverityResult\022\032\n\010f" +
+      "iltered\030\001 \001(\010R\010filtered\022\032\n\010severity\030\002 \001(" +
+      "\tR\010severity\"|\n\005Usage\022#\n\rprompt_tokens\030\001 " +
+      "\001(\rR\014promptTokens\022+\n\021completion_tokens\030\002" +
+      " \001(\rR\020completionTokens\022!\n\014total_tokens\030\003" +
+      " \001(\rR\013totalTokensB\301\001\n\023com.azure.openai.v" +
+      "1B\013EntityProtoP\001Z?github.com/anaregdesig" +
+      "n/azure-proto/go/azure/openai/v1;openaiv" +
+      "1\242\002\003AOX\252\002\017Azure.Openai.V1\312\002\017Azure\\Openai" +
+      "\\V1\342\002\033Azure\\Openai\\V1\\GPBMetadata\352\002\021Azur" +
+      "e::Openai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_azure_openai_v1_Choice_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_azure_openai_v1_Choice_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_v1_Choice_descriptor,
-        new java.lang.String[] { "Index", "Text", "Logprobs", "FinishReason", });
     internal_static_azure_openai_v1_Error_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_azure_openai_v1_Error_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_Error_descriptor,
         new java.lang.String[] { "Code", "Message", "Param", "Type", "InnerError", });
     internal_static_azure_openai_v1_InnerError_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_azure_openai_v1_InnerError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_InnerError_descriptor,
         new java.lang.String[] { "Description", "Code", "ContentFilterResults", });
     internal_static_azure_openai_v1_ContentFilterResults_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_azure_openai_v1_ContentFilterResults_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_ContentFilterResults_descriptor,
         new java.lang.String[] { "Sexual", "Violence", "Hate", "SelfHarm", "Profanity", "Jailbreak", "Error", });
     internal_static_azure_openai_v1_ContentFilterDetectedResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_azure_openai_v1_ContentFilterDetectedResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_ContentFilterDetectedResult_descriptor,
         new java.lang.String[] { "Filtered", "Detected", });
     internal_static_azure_openai_v1_ContentFilterSeverityResult_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_azure_openai_v1_ContentFilterSeverityResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_ContentFilterSeverityResult_descriptor,
         new java.lang.String[] { "Filtered", "Severity", });
     internal_static_azure_openai_v1_Usage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_azure_openai_v1_Usage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_Usage_descriptor,
-        new java.lang.String[] { "PromptTokens", "TotalTokens", });
+        new java.lang.String[] { "PromptTokens", "CompletionTokens", "TotalTokens", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

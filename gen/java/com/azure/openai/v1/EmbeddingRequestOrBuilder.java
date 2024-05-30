@@ -46,36 +46,36 @@ public interface EmbeddingRequestOrBuilder extends
       getInputTypeBytes();
 
   /**
-   * <code>map&lt;string, string&gt; additionalProp1 = 4 [json_name = "additionalProp1"];</code>
+   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
    */
-  int getAdditionalProp1Count();
+  int getAdditionalPropCount();
   /**
-   * <code>map&lt;string, string&gt; additionalProp1 = 4 [json_name = "additionalProp1"];</code>
+   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
    */
-  boolean containsAdditionalProp1(
+  boolean containsAdditionalProp(
       java.lang.String key);
   /**
-   * Use {@link #getAdditionalProp1Map()} instead.
+   * Use {@link #getAdditionalPropMap()} instead.
    */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String>
-  getAdditionalProp1();
+  getAdditionalProp();
   /**
-   * <code>map&lt;string, string&gt; additionalProp1 = 4 [json_name = "additionalProp1"];</code>
+   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
-  getAdditionalProp1Map();
+  getAdditionalPropMap();
   /**
-   * <code>map&lt;string, string&gt; additionalProp1 = 4 [json_name = "additionalProp1"];</code>
+   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
    */
   /* nullable */
-java.lang.String getAdditionalProp1OrDefault(
+java.lang.String getAdditionalPropOrDefault(
       java.lang.String key,
       /* nullable */
 java.lang.String defaultValue);
   /**
-   * <code>map&lt;string, string&gt; additionalProp1 = 4 [json_name = "additionalProp1"];</code>
+   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
    */
-  java.lang.String getAdditionalProp1OrThrow(
+  java.lang.String getAdditionalPropOrThrow(
       java.lang.String key);
 }

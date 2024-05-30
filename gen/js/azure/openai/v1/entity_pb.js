@@ -6,19 +6,6 @@
 import { proto3 } from "@bufbuild/protobuf";
 
 /**
- * @generated from message azure.openai.v1.Choice
- */
-export const Choice = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.Choice",
-  () => [
-    { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 2, name: "text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "logprobs", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
-    { no: 4, name: "finish_reason", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
-);
-
-/**
  * @generated from message azure.openai.v1.Error
  */
 export const Error = /*@__PURE__*/ proto3.makeMessageType(
@@ -89,7 +76,8 @@ export const Usage = /*@__PURE__*/ proto3.makeMessageType(
   "azure.openai.v1.Usage",
   () => [
     { no: 1, name: "prompt_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 2, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "completion_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 3, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
   ],
 );
 

@@ -31,7 +31,7 @@ public struct Azure_Openai_V1_EmbeddingRequest {
 
   public var inputType: String = String()
 
-  public var additionalProp1: Dictionary<String,String> = [:]
+  public var additionalProp: Dictionary<String,String> = [:]
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -97,7 +97,7 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     1: .same(proto: "input"),
     2: .same(proto: "user"),
     3: .standard(proto: "input_type"),
-    4: .same(proto: "additionalProp1"),
+    4: .unique(proto: "additional_prop", json: "additionalProp1"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -109,7 +109,7 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
       case 1: try { try decoder.decodeSingularStringField(value: &self.input) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.user) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.inputType) }()
-      case 4: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &self.additionalProp1) }()
+      case 4: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &self.additionalProp) }()
       default: break
       }
     }
@@ -125,8 +125,8 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     if !self.inputType.isEmpty {
       try visitor.visitSingularStringField(value: self.inputType, fieldNumber: 3)
     }
-    if !self.additionalProp1.isEmpty {
-      try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: self.additionalProp1, fieldNumber: 4)
+    if !self.additionalProp.isEmpty {
+      try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: self.additionalProp, fieldNumber: 4)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -135,7 +135,7 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     if lhs.input != rhs.input {return false}
     if lhs.user != rhs.user {return false}
     if lhs.inputType != rhs.inputType {return false}
-    if lhs.additionalProp1 != rhs.additionalProp1 {return false}
+    if lhs.additionalProp != rhs.additionalProp {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
