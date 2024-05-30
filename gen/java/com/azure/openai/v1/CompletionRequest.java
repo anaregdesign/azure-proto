@@ -33,6 +33,7 @@ private static final long serialVersionUID = 0L;
     suffix_ = "";
     stops_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    completionConfig_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -60,7 +61,6 @@ private static final long serialVersionUID = 0L;
             com.azure.openai.v1.CompletionRequest.class, com.azure.openai.v1.CompletionRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PROMPTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList prompts_ =
@@ -101,15 +101,7 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_TOKENS_FIELD_NUMBER = 2;
   private int maxTokens_ = 0;
   /**
-   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
-   * @return Whether the maxTokens field is set.
-   */
-  @java.lang.Override
-  public boolean hasMaxTokens() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+   * <code>uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
    * @return The maxTokens.
    */
   @java.lang.Override
@@ -120,15 +112,7 @@ private static final long serialVersionUID = 0L;
   public static final int TEMPERATURE_FIELD_NUMBER = 3;
   private float temperature_ = 0F;
   /**
-   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
-   * @return Whether the temperature field is set.
-   */
-  @java.lang.Override
-  public boolean hasTemperature() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+   * <code>float temperature = 3 [json_name = "temperature"];</code>
    * @return The temperature.
    */
   @java.lang.Override
@@ -139,15 +123,7 @@ private static final long serialVersionUID = 0L;
   public static final int TOP_P_FIELD_NUMBER = 4;
   private float topP_ = 0F;
   /**
-   * <code>optional float top_p = 4 [json_name = "topP"];</code>
-   * @return Whether the topP field is set.
-   */
-  @java.lang.Override
-  public boolean hasTopP() {
-    return ((bitField0_ & 0x00000004) != 0);
-  }
-  /**
-   * <code>optional float top_p = 4 [json_name = "topP"];</code>
+   * <code>float top_p = 4 [json_name = "topP"];</code>
    * @return The topP.
    */
   @java.lang.Override
@@ -236,15 +212,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object user_ = "";
   /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
-   * @return Whether the user field is set.
-   */
-  @java.lang.Override
-  public boolean hasUser() {
-    return ((bitField0_ & 0x00000008) != 0);
-  }
-  /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
+   * <code>string user = 6 [json_name = "user"];</code>
    * @return The user.
    */
   @java.lang.Override
@@ -261,7 +229,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
+   * <code>string user = 6 [json_name = "user"];</code>
    * @return The bytes for user.
    */
   @java.lang.Override
@@ -282,15 +250,7 @@ private static final long serialVersionUID = 0L;
   public static final int N_FIELD_NUMBER = 7;
   private int n_ = 0;
   /**
-   * <code>optional uint32 n = 7 [json_name = "n"];</code>
-   * @return Whether the n field is set.
-   */
-  @java.lang.Override
-  public boolean hasN() {
-    return ((bitField0_ & 0x00000010) != 0);
-  }
-  /**
-   * <code>optional uint32 n = 7 [json_name = "n"];</code>
+   * <code>uint32 n = 7 [json_name = "n"];</code>
    * @return The n.
    */
   @java.lang.Override
@@ -301,15 +261,7 @@ private static final long serialVersionUID = 0L;
   public static final int STREAM_FIELD_NUMBER = 8;
   private boolean stream_ = false;
   /**
-   * <code>optional bool stream = 8 [json_name = "stream"];</code>
-   * @return Whether the stream field is set.
-   */
-  @java.lang.Override
-  public boolean hasStream() {
-    return ((bitField0_ & 0x00000020) != 0);
-  }
-  /**
-   * <code>optional bool stream = 8 [json_name = "stream"];</code>
+   * <code>bool stream = 8 [json_name = "stream"];</code>
    * @return The stream.
    */
   @java.lang.Override
@@ -320,15 +272,7 @@ private static final long serialVersionUID = 0L;
   public static final int LOGPROBS_FIELD_NUMBER = 9;
   private int logprobs_ = 0;
   /**
-   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
-   * @return Whether the logprobs field is set.
-   */
-  @java.lang.Override
-  public boolean hasLogprobs() {
-    return ((bitField0_ & 0x00000040) != 0);
-  }
-  /**
-   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+   * <code>uint32 logprobs = 9 [json_name = "logprobs"];</code>
    * @return The logprobs.
    */
   @java.lang.Override
@@ -340,15 +284,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object suffix_ = "";
   /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
-   * @return Whether the suffix field is set.
-   */
-  @java.lang.Override
-  public boolean hasSuffix() {
-    return ((bitField0_ & 0x00000080) != 0);
-  }
-  /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * <code>string suffix = 10 [json_name = "suffix"];</code>
    * @return The suffix.
    */
   @java.lang.Override
@@ -365,7 +301,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * <code>string suffix = 10 [json_name = "suffix"];</code>
    * @return The bytes for suffix.
    */
   @java.lang.Override
@@ -386,15 +322,7 @@ private static final long serialVersionUID = 0L;
   public static final int ECHO_FIELD_NUMBER = 11;
   private boolean echo_ = false;
   /**
-   * <code>optional bool echo = 11 [json_name = "echo"];</code>
-   * @return Whether the echo field is set.
-   */
-  @java.lang.Override
-  public boolean hasEcho() {
-    return ((bitField0_ & 0x00000100) != 0);
-  }
-  /**
-   * <code>optional bool echo = 11 [json_name = "echo"];</code>
+   * <code>bool echo = 11 [json_name = "echo"];</code>
    * @return The echo.
    */
   @java.lang.Override
@@ -439,18 +367,49 @@ private static final long serialVersionUID = 0L;
     return stops_.getByteString(index);
   }
 
-  public static final int PRESENCE_PENALTY_FIELD_NUMBER = 13;
-  private float presencePenalty_ = 0F;
+  public static final int COMPLETION_CONFIG_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object completionConfig_ = "";
   /**
-   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
-   * @return Whether the presencePenalty field is set.
+   * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+   * @return The completionConfig.
    */
   @java.lang.Override
-  public boolean hasPresencePenalty() {
-    return ((bitField0_ & 0x00000200) != 0);
+  public java.lang.String getCompletionConfig() {
+    java.lang.Object ref = completionConfig_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      completionConfig_ = s;
+      return s;
+    }
   }
   /**
-   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+   * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+   * @return The bytes for completionConfig.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCompletionConfigBytes() {
+    java.lang.Object ref = completionConfig_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      completionConfig_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PRESENCE_PENALTY_FIELD_NUMBER = 14;
+  private float presencePenalty_ = 0F;
+  /**
+   * <code>float presence_penalty = 14 [json_name = "presencePenalty"];</code>
    * @return The presencePenalty.
    */
   @java.lang.Override
@@ -458,18 +417,10 @@ private static final long serialVersionUID = 0L;
     return presencePenalty_;
   }
 
-  public static final int FREQUENCY_PENALTY_FIELD_NUMBER = 14;
+  public static final int FREQUENCY_PENALTY_FIELD_NUMBER = 15;
   private float frequencyPenalty_ = 0F;
   /**
-   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
-   * @return Whether the frequencyPenalty field is set.
-   */
-  @java.lang.Override
-  public boolean hasFrequencyPenalty() {
-    return ((bitField0_ & 0x00000400) != 0);
-  }
-  /**
-   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+   * <code>float frequency_penalty = 15 [json_name = "frequencyPenalty"];</code>
    * @return The frequencyPenalty.
    */
   @java.lang.Override
@@ -477,18 +428,10 @@ private static final long serialVersionUID = 0L;
     return frequencyPenalty_;
   }
 
-  public static final int BEST_OF_FIELD_NUMBER = 15;
+  public static final int BEST_OF_FIELD_NUMBER = 16;
   private int bestOf_ = 0;
   /**
-   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
-   * @return Whether the bestOf field is set.
-   */
-  @java.lang.Override
-  public boolean hasBestOf() {
-    return ((bitField0_ & 0x00000800) != 0);
-  }
-  /**
-   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+   * <code>uint32 best_of = 16 [json_name = "bestOf"];</code>
    * @return The bestOf.
    */
   @java.lang.Override
@@ -513,13 +456,13 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < prompts_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, prompts_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (maxTokens_ != 0) {
       output.writeUInt32(2, maxTokens_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(temperature_) != 0) {
       output.writeFloat(3, temperature_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(topP_) != 0) {
       output.writeFloat(4, topP_);
     }
     com.google.protobuf.GeneratedMessage
@@ -528,35 +471,38 @@ private static final long serialVersionUID = 0L;
         internalGetLogitBias(),
         LogitBiasDefaultEntryHolder.defaultEntry,
         5);
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(user_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, user_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (n_ != 0) {
       output.writeUInt32(7, n_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (stream_ != false) {
       output.writeBool(8, stream_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (logprobs_ != 0) {
       output.writeUInt32(9, logprobs_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(suffix_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 10, suffix_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (echo_ != false) {
       output.writeBool(11, echo_);
     }
     for (int i = 0; i < stops_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 12, stops_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
-      output.writeFloat(13, presencePenalty_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(completionConfig_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 13, completionConfig_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
-      output.writeFloat(14, frequencyPenalty_);
+    if (java.lang.Float.floatToRawIntBits(presencePenalty_) != 0) {
+      output.writeFloat(14, presencePenalty_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
-      output.writeUInt32(15, bestOf_);
+    if (java.lang.Float.floatToRawIntBits(frequencyPenalty_) != 0) {
+      output.writeFloat(15, frequencyPenalty_);
+    }
+    if (bestOf_ != 0) {
+      output.writeUInt32(16, bestOf_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -575,15 +521,15 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getPromptsList().size();
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (maxTokens_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(2, maxTokens_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(temperature_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, temperature_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(topP_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, topP_);
     }
@@ -597,25 +543,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, logitBias__);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(user_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, user_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (n_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(7, n_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (stream_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, stream_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (logprobs_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(9, logprobs_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(suffix_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(10, suffix_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (echo_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, echo_);
     }
@@ -627,17 +573,20 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getStopsList().size();
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(13, presencePenalty_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(completionConfig_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(13, completionConfig_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(presencePenalty_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(14, frequencyPenalty_);
+        .computeFloatSize(14, presencePenalty_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (java.lang.Float.floatToRawIntBits(frequencyPenalty_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(15, bestOf_);
+        .computeFloatSize(15, frequencyPenalty_);
+    }
+    if (bestOf_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(16, bestOf_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -656,74 +605,40 @@ private static final long serialVersionUID = 0L;
 
     if (!getPromptsList()
         .equals(other.getPromptsList())) return false;
-    if (hasMaxTokens() != other.hasMaxTokens()) return false;
-    if (hasMaxTokens()) {
-      if (getMaxTokens()
-          != other.getMaxTokens()) return false;
-    }
-    if (hasTemperature() != other.hasTemperature()) return false;
-    if (hasTemperature()) {
-      if (java.lang.Float.floatToIntBits(getTemperature())
-          != java.lang.Float.floatToIntBits(
-              other.getTemperature())) return false;
-    }
-    if (hasTopP() != other.hasTopP()) return false;
-    if (hasTopP()) {
-      if (java.lang.Float.floatToIntBits(getTopP())
-          != java.lang.Float.floatToIntBits(
-              other.getTopP())) return false;
-    }
+    if (getMaxTokens()
+        != other.getMaxTokens()) return false;
+    if (java.lang.Float.floatToIntBits(getTemperature())
+        != java.lang.Float.floatToIntBits(
+            other.getTemperature())) return false;
+    if (java.lang.Float.floatToIntBits(getTopP())
+        != java.lang.Float.floatToIntBits(
+            other.getTopP())) return false;
     if (!internalGetLogitBias().equals(
         other.internalGetLogitBias())) return false;
-    if (hasUser() != other.hasUser()) return false;
-    if (hasUser()) {
-      if (!getUser()
-          .equals(other.getUser())) return false;
-    }
-    if (hasN() != other.hasN()) return false;
-    if (hasN()) {
-      if (getN()
-          != other.getN()) return false;
-    }
-    if (hasStream() != other.hasStream()) return false;
-    if (hasStream()) {
-      if (getStream()
-          != other.getStream()) return false;
-    }
-    if (hasLogprobs() != other.hasLogprobs()) return false;
-    if (hasLogprobs()) {
-      if (getLogprobs()
-          != other.getLogprobs()) return false;
-    }
-    if (hasSuffix() != other.hasSuffix()) return false;
-    if (hasSuffix()) {
-      if (!getSuffix()
-          .equals(other.getSuffix())) return false;
-    }
-    if (hasEcho() != other.hasEcho()) return false;
-    if (hasEcho()) {
-      if (getEcho()
-          != other.getEcho()) return false;
-    }
+    if (!getUser()
+        .equals(other.getUser())) return false;
+    if (getN()
+        != other.getN()) return false;
+    if (getStream()
+        != other.getStream()) return false;
+    if (getLogprobs()
+        != other.getLogprobs()) return false;
+    if (!getSuffix()
+        .equals(other.getSuffix())) return false;
+    if (getEcho()
+        != other.getEcho()) return false;
     if (!getStopsList()
         .equals(other.getStopsList())) return false;
-    if (hasPresencePenalty() != other.hasPresencePenalty()) return false;
-    if (hasPresencePenalty()) {
-      if (java.lang.Float.floatToIntBits(getPresencePenalty())
-          != java.lang.Float.floatToIntBits(
-              other.getPresencePenalty())) return false;
-    }
-    if (hasFrequencyPenalty() != other.hasFrequencyPenalty()) return false;
-    if (hasFrequencyPenalty()) {
-      if (java.lang.Float.floatToIntBits(getFrequencyPenalty())
-          != java.lang.Float.floatToIntBits(
-              other.getFrequencyPenalty())) return false;
-    }
-    if (hasBestOf() != other.hasBestOf()) return false;
-    if (hasBestOf()) {
-      if (getBestOf()
-          != other.getBestOf()) return false;
-    }
+    if (!getCompletionConfig()
+        .equals(other.getCompletionConfig())) return false;
+    if (java.lang.Float.floatToIntBits(getPresencePenalty())
+        != java.lang.Float.floatToIntBits(
+            other.getPresencePenalty())) return false;
+    if (java.lang.Float.floatToIntBits(getFrequencyPenalty())
+        != java.lang.Float.floatToIntBits(
+            other.getFrequencyPenalty())) return false;
+    if (getBestOf()
+        != other.getBestOf()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -739,68 +654,46 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PROMPTS_FIELD_NUMBER;
       hash = (53 * hash) + getPromptsList().hashCode();
     }
-    if (hasMaxTokens()) {
-      hash = (37 * hash) + MAX_TOKENS_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxTokens();
-    }
-    if (hasTemperature()) {
-      hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getTemperature());
-    }
-    if (hasTopP()) {
-      hash = (37 * hash) + TOP_P_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getTopP());
-    }
+    hash = (37 * hash) + MAX_TOKENS_FIELD_NUMBER;
+    hash = (53 * hash) + getMaxTokens();
+    hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTemperature());
+    hash = (37 * hash) + TOP_P_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTopP());
     if (!internalGetLogitBias().getMap().isEmpty()) {
       hash = (37 * hash) + LOGIT_BIAS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetLogitBias().hashCode();
     }
-    if (hasUser()) {
-      hash = (37 * hash) + USER_FIELD_NUMBER;
-      hash = (53 * hash) + getUser().hashCode();
-    }
-    if (hasN()) {
-      hash = (37 * hash) + N_FIELD_NUMBER;
-      hash = (53 * hash) + getN();
-    }
-    if (hasStream()) {
-      hash = (37 * hash) + STREAM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getStream());
-    }
-    if (hasLogprobs()) {
-      hash = (37 * hash) + LOGPROBS_FIELD_NUMBER;
-      hash = (53 * hash) + getLogprobs();
-    }
-    if (hasSuffix()) {
-      hash = (37 * hash) + SUFFIX_FIELD_NUMBER;
-      hash = (53 * hash) + getSuffix().hashCode();
-    }
-    if (hasEcho()) {
-      hash = (37 * hash) + ECHO_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getEcho());
-    }
+    hash = (37 * hash) + USER_FIELD_NUMBER;
+    hash = (53 * hash) + getUser().hashCode();
+    hash = (37 * hash) + N_FIELD_NUMBER;
+    hash = (53 * hash) + getN();
+    hash = (37 * hash) + STREAM_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getStream());
+    hash = (37 * hash) + LOGPROBS_FIELD_NUMBER;
+    hash = (53 * hash) + getLogprobs();
+    hash = (37 * hash) + SUFFIX_FIELD_NUMBER;
+    hash = (53 * hash) + getSuffix().hashCode();
+    hash = (37 * hash) + ECHO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEcho());
     if (getStopsCount() > 0) {
       hash = (37 * hash) + STOPS_FIELD_NUMBER;
       hash = (53 * hash) + getStopsList().hashCode();
     }
-    if (hasPresencePenalty()) {
-      hash = (37 * hash) + PRESENCE_PENALTY_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getPresencePenalty());
-    }
-    if (hasFrequencyPenalty()) {
-      hash = (37 * hash) + FREQUENCY_PENALTY_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getFrequencyPenalty());
-    }
-    if (hasBestOf()) {
-      hash = (37 * hash) + BEST_OF_FIELD_NUMBER;
-      hash = (53 * hash) + getBestOf();
-    }
+    hash = (37 * hash) + COMPLETION_CONFIG_FIELD_NUMBER;
+    hash = (53 * hash) + getCompletionConfig().hashCode();
+    hash = (37 * hash) + PRESENCE_PENALTY_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getPresencePenalty());
+    hash = (37 * hash) + FREQUENCY_PENALTY_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getFrequencyPenalty());
+    hash = (37 * hash) + BEST_OF_FIELD_NUMBER;
+    hash = (53 * hash) + getBestOf();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -968,6 +861,7 @@ private static final long serialVersionUID = 0L;
       echo_ = false;
       stops_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      completionConfig_ = "";
       presencePenalty_ = 0F;
       frequencyPenalty_ = 0F;
       bestOf_ = 0;
@@ -1008,18 +902,14 @@ private static final long serialVersionUID = 0L;
         prompts_.makeImmutable();
         result.prompts_ = prompts_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.maxTokens_ = maxTokens_;
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.temperature_ = temperature_;
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.topP_ = topP_;
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.logitBias_ = internalGetLogitBias();
@@ -1027,45 +917,38 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.user_ = user_;
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.n_ = n_;
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.stream_ = stream_;
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.logprobs_ = logprobs_;
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.suffix_ = suffix_;
-        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.echo_ = echo_;
-        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         stops_.makeImmutable();
         result.stops_ = stops_;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.presencePenalty_ = presencePenalty_;
-        to_bitField0_ |= 0x00000200;
+        result.completionConfig_ = completionConfig_;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.frequencyPenalty_ = frequencyPenalty_;
-        to_bitField0_ |= 0x00000400;
+        result.presencePenalty_ = presencePenalty_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.bestOf_ = bestOf_;
-        to_bitField0_ |= 0x00000800;
+        result.frequencyPenalty_ = frequencyPenalty_;
       }
-      result.bitField0_ |= to_bitField0_;
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.bestOf_ = bestOf_;
+      }
     }
 
     @java.lang.Override
@@ -1090,38 +973,38 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.hasMaxTokens()) {
+      if (other.getMaxTokens() != 0) {
         setMaxTokens(other.getMaxTokens());
       }
-      if (other.hasTemperature()) {
+      if (other.getTemperature() != 0F) {
         setTemperature(other.getTemperature());
       }
-      if (other.hasTopP()) {
+      if (other.getTopP() != 0F) {
         setTopP(other.getTopP());
       }
       internalGetMutableLogitBias().mergeFrom(
           other.internalGetLogitBias());
       bitField0_ |= 0x00000010;
-      if (other.hasUser()) {
+      if (!other.getUser().isEmpty()) {
         user_ = other.user_;
         bitField0_ |= 0x00000020;
         onChanged();
       }
-      if (other.hasN()) {
+      if (other.getN() != 0) {
         setN(other.getN());
       }
-      if (other.hasStream()) {
+      if (other.getStream() != false) {
         setStream(other.getStream());
       }
-      if (other.hasLogprobs()) {
+      if (other.getLogprobs() != 0) {
         setLogprobs(other.getLogprobs());
       }
-      if (other.hasSuffix()) {
+      if (!other.getSuffix().isEmpty()) {
         suffix_ = other.suffix_;
         bitField0_ |= 0x00000200;
         onChanged();
       }
-      if (other.hasEcho()) {
+      if (other.getEcho() != false) {
         setEcho(other.getEcho());
       }
       if (!other.stops_.isEmpty()) {
@@ -1134,13 +1017,18 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.hasPresencePenalty()) {
+      if (!other.getCompletionConfig().isEmpty()) {
+        completionConfig_ = other.completionConfig_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      if (other.getPresencePenalty() != 0F) {
         setPresencePenalty(other.getPresencePenalty());
       }
-      if (other.hasFrequencyPenalty()) {
+      if (other.getFrequencyPenalty() != 0F) {
         setFrequencyPenalty(other.getFrequencyPenalty());
       }
-      if (other.hasBestOf()) {
+      if (other.getBestOf() != 0) {
         setBestOf(other.getBestOf());
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1235,21 +1123,26 @@ private static final long serialVersionUID = 0L;
               stops_.add(s);
               break;
             } // case 98
-            case 109: {
-              presencePenalty_ = input.readFloat();
+            case 106: {
+              completionConfig_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00001000;
               break;
-            } // case 109
+            } // case 106
             case 117: {
-              frequencyPenalty_ = input.readFloat();
+              presencePenalty_ = input.readFloat();
               bitField0_ |= 0x00002000;
               break;
             } // case 117
-            case 120: {
-              bestOf_ = input.readUInt32();
+            case 125: {
+              frequencyPenalty_ = input.readFloat();
               bitField0_ |= 0x00004000;
               break;
-            } // case 120
+            } // case 125
+            case 128: {
+              bestOf_ = input.readUInt32();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1380,15 +1273,7 @@ private static final long serialVersionUID = 0L;
 
     private int maxTokens_ ;
     /**
-     * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
-     * @return Whether the maxTokens field is set.
-     */
-    @java.lang.Override
-    public boolean hasMaxTokens() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+     * <code>uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
      * @return The maxTokens.
      */
     @java.lang.Override
@@ -1396,7 +1281,7 @@ private static final long serialVersionUID = 0L;
       return maxTokens_;
     }
     /**
-     * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+     * <code>uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
      * @param value The maxTokens to set.
      * @return This builder for chaining.
      */
@@ -1408,7 +1293,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+     * <code>uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxTokens() {
@@ -1420,15 +1305,7 @@ private static final long serialVersionUID = 0L;
 
     private float temperature_ ;
     /**
-     * <code>optional float temperature = 3 [json_name = "temperature"];</code>
-     * @return Whether the temperature field is set.
-     */
-    @java.lang.Override
-    public boolean hasTemperature() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+     * <code>float temperature = 3 [json_name = "temperature"];</code>
      * @return The temperature.
      */
     @java.lang.Override
@@ -1436,7 +1313,7 @@ private static final long serialVersionUID = 0L;
       return temperature_;
     }
     /**
-     * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+     * <code>float temperature = 3 [json_name = "temperature"];</code>
      * @param value The temperature to set.
      * @return This builder for chaining.
      */
@@ -1448,7 +1325,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+     * <code>float temperature = 3 [json_name = "temperature"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTemperature() {
@@ -1460,15 +1337,7 @@ private static final long serialVersionUID = 0L;
 
     private float topP_ ;
     /**
-     * <code>optional float top_p = 4 [json_name = "topP"];</code>
-     * @return Whether the topP field is set.
-     */
-    @java.lang.Override
-    public boolean hasTopP() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>optional float top_p = 4 [json_name = "topP"];</code>
+     * <code>float top_p = 4 [json_name = "topP"];</code>
      * @return The topP.
      */
     @java.lang.Override
@@ -1476,7 +1345,7 @@ private static final long serialVersionUID = 0L;
       return topP_;
     }
     /**
-     * <code>optional float top_p = 4 [json_name = "topP"];</code>
+     * <code>float top_p = 4 [json_name = "topP"];</code>
      * @param value The topP to set.
      * @return This builder for chaining.
      */
@@ -1488,7 +1357,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional float top_p = 4 [json_name = "topP"];</code>
+     * <code>float top_p = 4 [json_name = "topP"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTopP() {
@@ -1625,14 +1494,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object user_ = "";
     /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
-     * @return Whether the user field is set.
-     */
-    public boolean hasUser() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
+     * <code>string user = 6 [json_name = "user"];</code>
      * @return The user.
      */
     public java.lang.String getUser() {
@@ -1648,7 +1510,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
+     * <code>string user = 6 [json_name = "user"];</code>
      * @return The bytes for user.
      */
     public com.google.protobuf.ByteString
@@ -1665,7 +1527,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
+     * <code>string user = 6 [json_name = "user"];</code>
      * @param value The user to set.
      * @return This builder for chaining.
      */
@@ -1678,7 +1540,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
+     * <code>string user = 6 [json_name = "user"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUser() {
@@ -1688,7 +1550,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string user = 6 [json_name = "user"];</code>
+     * <code>string user = 6 [json_name = "user"];</code>
      * @param value The bytes for user to set.
      * @return This builder for chaining.
      */
@@ -1704,15 +1566,7 @@ private static final long serialVersionUID = 0L;
 
     private int n_ ;
     /**
-     * <code>optional uint32 n = 7 [json_name = "n"];</code>
-     * @return Whether the n field is set.
-     */
-    @java.lang.Override
-    public boolean hasN() {
-      return ((bitField0_ & 0x00000040) != 0);
-    }
-    /**
-     * <code>optional uint32 n = 7 [json_name = "n"];</code>
+     * <code>uint32 n = 7 [json_name = "n"];</code>
      * @return The n.
      */
     @java.lang.Override
@@ -1720,7 +1574,7 @@ private static final long serialVersionUID = 0L;
       return n_;
     }
     /**
-     * <code>optional uint32 n = 7 [json_name = "n"];</code>
+     * <code>uint32 n = 7 [json_name = "n"];</code>
      * @param value The n to set.
      * @return This builder for chaining.
      */
@@ -1732,7 +1586,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 n = 7 [json_name = "n"];</code>
+     * <code>uint32 n = 7 [json_name = "n"];</code>
      * @return This builder for chaining.
      */
     public Builder clearN() {
@@ -1744,15 +1598,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean stream_ ;
     /**
-     * <code>optional bool stream = 8 [json_name = "stream"];</code>
-     * @return Whether the stream field is set.
-     */
-    @java.lang.Override
-    public boolean hasStream() {
-      return ((bitField0_ & 0x00000080) != 0);
-    }
-    /**
-     * <code>optional bool stream = 8 [json_name = "stream"];</code>
+     * <code>bool stream = 8 [json_name = "stream"];</code>
      * @return The stream.
      */
     @java.lang.Override
@@ -1760,7 +1606,7 @@ private static final long serialVersionUID = 0L;
       return stream_;
     }
     /**
-     * <code>optional bool stream = 8 [json_name = "stream"];</code>
+     * <code>bool stream = 8 [json_name = "stream"];</code>
      * @param value The stream to set.
      * @return This builder for chaining.
      */
@@ -1772,7 +1618,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional bool stream = 8 [json_name = "stream"];</code>
+     * <code>bool stream = 8 [json_name = "stream"];</code>
      * @return This builder for chaining.
      */
     public Builder clearStream() {
@@ -1784,15 +1630,7 @@ private static final long serialVersionUID = 0L;
 
     private int logprobs_ ;
     /**
-     * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
-     * @return Whether the logprobs field is set.
-     */
-    @java.lang.Override
-    public boolean hasLogprobs() {
-      return ((bitField0_ & 0x00000100) != 0);
-    }
-    /**
-     * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+     * <code>uint32 logprobs = 9 [json_name = "logprobs"];</code>
      * @return The logprobs.
      */
     @java.lang.Override
@@ -1800,7 +1638,7 @@ private static final long serialVersionUID = 0L;
       return logprobs_;
     }
     /**
-     * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+     * <code>uint32 logprobs = 9 [json_name = "logprobs"];</code>
      * @param value The logprobs to set.
      * @return This builder for chaining.
      */
@@ -1812,7 +1650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+     * <code>uint32 logprobs = 9 [json_name = "logprobs"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLogprobs() {
@@ -1824,14 +1662,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object suffix_ = "";
     /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
-     * @return Whether the suffix field is set.
-     */
-    public boolean hasSuffix() {
-      return ((bitField0_ & 0x00000200) != 0);
-    }
-    /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+     * <code>string suffix = 10 [json_name = "suffix"];</code>
      * @return The suffix.
      */
     public java.lang.String getSuffix() {
@@ -1847,7 +1678,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+     * <code>string suffix = 10 [json_name = "suffix"];</code>
      * @return The bytes for suffix.
      */
     public com.google.protobuf.ByteString
@@ -1864,7 +1695,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+     * <code>string suffix = 10 [json_name = "suffix"];</code>
      * @param value The suffix to set.
      * @return This builder for chaining.
      */
@@ -1877,7 +1708,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+     * <code>string suffix = 10 [json_name = "suffix"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSuffix() {
@@ -1887,7 +1718,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+     * <code>string suffix = 10 [json_name = "suffix"];</code>
      * @param value The bytes for suffix to set.
      * @return This builder for chaining.
      */
@@ -1903,15 +1734,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean echo_ ;
     /**
-     * <code>optional bool echo = 11 [json_name = "echo"];</code>
-     * @return Whether the echo field is set.
-     */
-    @java.lang.Override
-    public boolean hasEcho() {
-      return ((bitField0_ & 0x00000400) != 0);
-    }
-    /**
-     * <code>optional bool echo = 11 [json_name = "echo"];</code>
+     * <code>bool echo = 11 [json_name = "echo"];</code>
      * @return The echo.
      */
     @java.lang.Override
@@ -1919,7 +1742,7 @@ private static final long serialVersionUID = 0L;
       return echo_;
     }
     /**
-     * <code>optional bool echo = 11 [json_name = "echo"];</code>
+     * <code>bool echo = 11 [json_name = "echo"];</code>
      * @param value The echo to set.
      * @return This builder for chaining.
      */
@@ -1931,7 +1754,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional bool echo = 11 [json_name = "echo"];</code>
+     * <code>bool echo = 11 [json_name = "echo"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEcho() {
@@ -2052,17 +1875,81 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private float presencePenalty_ ;
+    private java.lang.Object completionConfig_ = "";
     /**
-     * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
-     * @return Whether the presencePenalty field is set.
+     * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+     * @return The completionConfig.
      */
-    @java.lang.Override
-    public boolean hasPresencePenalty() {
-      return ((bitField0_ & 0x00001000) != 0);
+    public java.lang.String getCompletionConfig() {
+      java.lang.Object ref = completionConfig_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        completionConfig_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+     * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+     * @return The bytes for completionConfig.
+     */
+    public com.google.protobuf.ByteString
+        getCompletionConfigBytes() {
+      java.lang.Object ref = completionConfig_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        completionConfig_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+     * @param value The completionConfig to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCompletionConfig(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      completionConfig_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCompletionConfig() {
+      completionConfig_ = getDefaultInstance().getCompletionConfig();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+     * @param value The bytes for completionConfig to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCompletionConfigBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      completionConfig_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+
+    private float presencePenalty_ ;
+    /**
+     * <code>float presence_penalty = 14 [json_name = "presencePenalty"];</code>
      * @return The presencePenalty.
      */
     @java.lang.Override
@@ -2070,23 +1957,23 @@ private static final long serialVersionUID = 0L;
       return presencePenalty_;
     }
     /**
-     * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+     * <code>float presence_penalty = 14 [json_name = "presencePenalty"];</code>
      * @param value The presencePenalty to set.
      * @return This builder for chaining.
      */
     public Builder setPresencePenalty(float value) {
 
       presencePenalty_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
-     * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+     * <code>float presence_penalty = 14 [json_name = "presencePenalty"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPresencePenalty() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       presencePenalty_ = 0F;
       onChanged();
       return this;
@@ -2094,15 +1981,7 @@ private static final long serialVersionUID = 0L;
 
     private float frequencyPenalty_ ;
     /**
-     * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
-     * @return Whether the frequencyPenalty field is set.
-     */
-    @java.lang.Override
-    public boolean hasFrequencyPenalty() {
-      return ((bitField0_ & 0x00002000) != 0);
-    }
-    /**
-     * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+     * <code>float frequency_penalty = 15 [json_name = "frequencyPenalty"];</code>
      * @return The frequencyPenalty.
      */
     @java.lang.Override
@@ -2110,23 +1989,23 @@ private static final long serialVersionUID = 0L;
       return frequencyPenalty_;
     }
     /**
-     * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+     * <code>float frequency_penalty = 15 [json_name = "frequencyPenalty"];</code>
      * @param value The frequencyPenalty to set.
      * @return This builder for chaining.
      */
     public Builder setFrequencyPenalty(float value) {
 
       frequencyPenalty_ = value;
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
-     * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+     * <code>float frequency_penalty = 15 [json_name = "frequencyPenalty"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFrequencyPenalty() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       frequencyPenalty_ = 0F;
       onChanged();
       return this;
@@ -2134,15 +2013,7 @@ private static final long serialVersionUID = 0L;
 
     private int bestOf_ ;
     /**
-     * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
-     * @return Whether the bestOf field is set.
-     */
-    @java.lang.Override
-    public boolean hasBestOf() {
-      return ((bitField0_ & 0x00004000) != 0);
-    }
-    /**
-     * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+     * <code>uint32 best_of = 16 [json_name = "bestOf"];</code>
      * @return The bestOf.
      */
     @java.lang.Override
@@ -2150,23 +2021,23 @@ private static final long serialVersionUID = 0L;
       return bestOf_;
     }
     /**
-     * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+     * <code>uint32 best_of = 16 [json_name = "bestOf"];</code>
      * @param value The bestOf to set.
      * @return This builder for chaining.
      */
     public Builder setBestOf(int value) {
 
       bestOf_ = value;
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
     /**
-     * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+     * <code>uint32 best_of = 16 [json_name = "bestOf"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBestOf() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       bestOf_ = 0;
       onChanged();
       return this;

@@ -31,8 +31,6 @@ public struct Azure_Openai_V1_EmbeddingRequest {
 
   public var inputType: String = String()
 
-  public var additionalProp: Dictionary<String,String> = [:]
-
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -49,8 +47,8 @@ public struct Azure_Openai_V1_EmbeddingResponse {
 
   public var data: [Azure_Openai_V1_Data] = []
 
-  public var usage: Azure_Openai_V1_Usage {
-    get {return _usage ?? Azure_Openai_V1_Usage()}
+  public var usage: Azure_Openai_V1_EmbeddingResponse.Usage {
+    get {return _usage ?? Azure_Openai_V1_EmbeddingResponse.Usage()}
     set {_usage = newValue}
   }
   /// Returns true if `usage` has been explicitly set.
@@ -60,9 +58,23 @@ public struct Azure_Openai_V1_EmbeddingResponse {
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
+  public struct Usage {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    public var promptTokens: UInt32 = 0
+
+    public var totalTokens: UInt32 = 0
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+  }
+
   public init() {}
 
-  fileprivate var _usage: Azure_Openai_V1_Usage? = nil
+  fileprivate var _usage: Azure_Openai_V1_EmbeddingResponse.Usage? = nil
 }
 
 public struct Azure_Openai_V1_Data {
@@ -84,6 +96,7 @@ public struct Azure_Openai_V1_Data {
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Azure_Openai_V1_EmbeddingRequest: @unchecked Sendable {}
 extension Azure_Openai_V1_EmbeddingResponse: @unchecked Sendable {}
+extension Azure_Openai_V1_EmbeddingResponse.Usage: @unchecked Sendable {}
 extension Azure_Openai_V1_Data: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -97,7 +110,6 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     1: .same(proto: "input"),
     2: .same(proto: "user"),
     3: .standard(proto: "input_type"),
-    4: .unique(proto: "additional_prop", json: "additionalProp1"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -109,7 +121,6 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
       case 1: try { try decoder.decodeSingularStringField(value: &self.input) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.user) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.inputType) }()
-      case 4: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &self.additionalProp) }()
       default: break
       }
     }
@@ -125,9 +136,6 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     if !self.inputType.isEmpty {
       try visitor.visitSingularStringField(value: self.inputType, fieldNumber: 3)
     }
-    if !self.additionalProp.isEmpty {
-      try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: self.additionalProp, fieldNumber: 4)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -135,7 +143,6 @@ extension Azure_Openai_V1_EmbeddingRequest: SwiftProtobuf.Message, SwiftProtobuf
     if lhs.input != rhs.input {return false}
     if lhs.user != rhs.user {return false}
     if lhs.inputType != rhs.inputType {return false}
-    if lhs.additionalProp != rhs.additionalProp {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -190,6 +197,44 @@ extension Azure_Openai_V1_EmbeddingResponse: SwiftProtobuf.Message, SwiftProtobu
     if lhs.model != rhs.model {return false}
     if lhs.data != rhs.data {return false}
     if lhs._usage != rhs._usage {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_EmbeddingResponse.Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Azure_Openai_V1_EmbeddingResponse.protoMessageName + ".Usage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "prompt_tokens"),
+    2: .standard(proto: "total_tokens"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.promptTokens) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.promptTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.promptTokens, fieldNumber: 1)
+    }
+    if self.totalTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_EmbeddingResponse.Usage, rhs: Azure_Openai_V1_EmbeddingResponse.Usage) -> Bool {
+    if lhs.promptTokens != rhs.promptTokens {return false}
+    if lhs.totalTokens != rhs.totalTokens {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

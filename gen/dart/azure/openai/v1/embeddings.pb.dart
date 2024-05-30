@@ -13,14 +13,11 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart' as $0;
-
 class EmbeddingRequest extends $pb.GeneratedMessage {
   factory EmbeddingRequest({
     $core.String? input,
     $core.String? user,
     $core.String? inputType,
-    $core.Map<$core.String, $core.String>? additionalProp,
   }) {
     final $result = create();
     if (input != null) {
@@ -32,9 +29,6 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
     if (inputType != null) {
       $result.inputType = inputType;
     }
-    if (additionalProp != null) {
-      $result.additionalProp.addAll(additionalProp);
-    }
     return $result;
   }
   EmbeddingRequest._() : super();
@@ -45,7 +39,6 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'input')
     ..aOS(2, _omitFieldNames ? '' : 'user')
     ..aOS(3, _omitFieldNames ? '' : 'inputType')
-    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'additionalProp1', protoName: 'additional_prop', entryClassName: 'EmbeddingRequest.AdditionalPropEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('azure.openai.v1'))
     ..hasRequiredFields = false
   ;
 
@@ -96,9 +89,70 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
   $core.bool hasInputType() => $_has(2);
   @$pb.TagNumber(3)
   void clearInputType() => clearField(3);
+}
 
-  @$pb.TagNumber(4)
-  $core.Map<$core.String, $core.String> get additionalProp => $_getMap(3);
+class EmbeddingResponse_Usage extends $pb.GeneratedMessage {
+  factory EmbeddingResponse_Usage({
+    $core.int? promptTokens,
+    $core.int? totalTokens,
+  }) {
+    final $result = create();
+    if (promptTokens != null) {
+      $result.promptTokens = promptTokens;
+    }
+    if (totalTokens != null) {
+      $result.totalTokens = totalTokens;
+    }
+    return $result;
+  }
+  EmbeddingResponse_Usage._() : super();
+  factory EmbeddingResponse_Usage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EmbeddingResponse_Usage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EmbeddingResponse.Usage', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'promptTokens', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'totalTokens', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EmbeddingResponse_Usage clone() => EmbeddingResponse_Usage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EmbeddingResponse_Usage copyWith(void Function(EmbeddingResponse_Usage) updates) => super.copyWith((message) => updates(message as EmbeddingResponse_Usage)) as EmbeddingResponse_Usage;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EmbeddingResponse_Usage create() => EmbeddingResponse_Usage._();
+  EmbeddingResponse_Usage createEmptyInstance() => create();
+  static $pb.PbList<EmbeddingResponse_Usage> createRepeated() => $pb.PbList<EmbeddingResponse_Usage>();
+  @$core.pragma('dart2js:noInline')
+  static EmbeddingResponse_Usage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmbeddingResponse_Usage>(create);
+  static EmbeddingResponse_Usage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get promptTokens => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set promptTokens($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPromptTokens() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPromptTokens() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get totalTokens => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set totalTokens($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTotalTokens() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalTokens() => clearField(2);
 }
 
 class EmbeddingResponse extends $pb.GeneratedMessage {
@@ -106,7 +160,7 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
     $core.String? object,
     $core.String? model,
     $core.Iterable<Data>? data,
-    $0.Usage? usage,
+    EmbeddingResponse_Usage? usage,
   }) {
     final $result = create();
     if (object != null) {
@@ -131,7 +185,7 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'object')
     ..aOS(2, _omitFieldNames ? '' : 'model')
     ..pc<Data>(3, _omitFieldNames ? '' : 'data', $pb.PbFieldType.PM, subBuilder: Data.create)
-    ..aOM<$0.Usage>(4, _omitFieldNames ? '' : 'usage', subBuilder: $0.Usage.create)
+    ..aOM<EmbeddingResponse_Usage>(4, _omitFieldNames ? '' : 'usage', subBuilder: EmbeddingResponse_Usage.create)
     ..hasRequiredFields = false
   ;
 
@@ -178,15 +232,15 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
   $core.List<Data> get data => $_getList(2);
 
   @$pb.TagNumber(4)
-  $0.Usage get usage => $_getN(3);
+  EmbeddingResponse_Usage get usage => $_getN(3);
   @$pb.TagNumber(4)
-  set usage($0.Usage v) { setField(4, v); }
+  set usage(EmbeddingResponse_Usage v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasUsage() => $_has(3);
   @$pb.TagNumber(4)
   void clearUsage() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Usage ensureUsage() => $_ensure(3);
+  EmbeddingResponse_Usage ensureUsage() => $_ensure(3);
 }
 
 class Data extends $pb.GeneratedMessage {

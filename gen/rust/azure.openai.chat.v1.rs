@@ -57,7 +57,7 @@ pub struct ChatCompletionResponse {
     #[prost(string, tag="6")]
     pub system_fingerprint: ::prost::alloc::string::String,
     #[prost(message, repeated, tag="7")]
-    pub prompt_filter_results: ::prost::alloc::vec::Vec<PromptFilterResult>,
+    pub prompt_filter_results: ::prost::alloc::vec::Vec<super::super::v1::PromptFilterResult>,
     #[prost(message, repeated, tag="8")]
     pub choices: ::prost::alloc::vec::Vec<Choice>,
 }
@@ -73,56 +73,6 @@ pub struct Usage {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct PromptFilterResult {
-    #[prost(uint32, tag="1")]
-    pub index: u32,
-    #[prost(message, optional, tag="2")]
-    pub content_filter_result: ::core::option::Option<ContentFilterPromptResult>,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ErrorBase {
-    #[prost(string, tag="1")]
-    pub code: ::prost::alloc::string::String,
-    #[prost(string, tag="2")]
-    pub message: ::prost::alloc::string::String,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ContentFilterPromptResult {
-    #[prost(message, optional, tag="1")]
-    pub sexual: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="2")]
-    pub violence: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="3")]
-    pub hate: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="4")]
-    pub self_harm: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="5")]
-    pub profanity: ::core::option::Option<ContentFilterDetectedResult>,
-    #[prost(message, optional, tag="6")]
-    pub jailbreak: ::core::option::Option<ContentFilterDetectedResult>,
-    #[prost(message, optional, tag="99")]
-    pub error: ::core::option::Option<ErrorBase>,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ContentFilterSeverityResult {
-    #[prost(bool, tag="1")]
-    pub filtered: bool,
-    #[prost(string, tag="2")]
-    pub severity: ::prost::alloc::string::String,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ContentFilterDetectedResult {
-    #[prost(bool, tag="1")]
-    pub filtered: bool,
-    #[prost(string, tag="2")]
-    pub detected: ::prost::alloc::string::String,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Choice {
     #[prost(uint32, tag="1")]
     pub index: u32,
@@ -131,7 +81,7 @@ pub struct Choice {
     #[prost(message, optional, tag="3")]
     pub message: ::core::option::Option<ChatCompletionResponseMessage>,
     #[prost(message, optional, tag="4")]
-    pub content_filter_result: ::core::option::Option<ContentFilterChoiceResult>,
+    pub content_filter_result: ::core::option::Option<super::super::v1::ContentFilterChoiceResult>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -203,47 +153,6 @@ pub mod azure_chat_extensions_message_context {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ContentFilterChoiceResult {
-    #[prost(message, optional, tag="1")]
-    pub sexual: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="2")]
-    pub violence: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="3")]
-    pub hate: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="4")]
-    pub self_harm: ::core::option::Option<ContentFilterSeverityResult>,
-    #[prost(message, optional, tag="5")]
-    pub profanity: ::core::option::Option<ContentFilterDetectedResult>,
-    #[prost(message, optional, tag="6")]
-    pub protected_material_text: ::core::option::Option<ContentFilterDetectedResult>,
-    #[prost(message, optional, tag="7")]
-    pub protected_material_code: ::core::option::Option<ContentFilterDetectedWithCitationResult>,
-    #[prost(message, optional, tag="99")]
-    pub error: ::core::option::Option<ErrorBase>,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ContentFilterDetectedWithCitationResult {
-    #[prost(bool, tag="1")]
-    pub filtered: bool,
-    #[prost(bool, tag="2")]
-    pub detected: bool,
-    #[prost(message, optional, tag="3")]
-    pub citation: ::core::option::Option<content_filter_detected_with_citation_result::Citation>,
-}
-/// Nested message and enum types in `ContentFilterDetectedWithCitationResult`.
-pub mod content_filter_detected_with_citation_result {
-    #[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-    pub struct Citation {
-        #[prost(string, tag="1")]
-        pub url: ::prost::alloc::string::String,
-        #[prost(string, tag="2")]
-        pub license: ::prost::alloc::string::String,
-    }
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ErrorResponse {
     #[prost(string, tag="1")]
     pub code: ::prost::alloc::string::String,
@@ -264,7 +173,7 @@ pub mod error_response {
         #[prost(string, tag="1")]
         pub code: ::prost::alloc::string::String,
         #[prost(message, optional, tag="2")]
-        pub content_filter_result: ::core::option::Option<super::ContentFilterPromptResult>,
+        pub content_filter_result: ::core::option::Option<super::super::super::v1::ContentFilterPromptResult>,
     }
 }
 // @@protoc_insertion_point(module)

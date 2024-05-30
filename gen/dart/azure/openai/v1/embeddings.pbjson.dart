@@ -20,28 +20,13 @@ const EmbeddingRequest$json = {
     {'1': 'input', '3': 1, '4': 1, '5': 9, '10': 'input'},
     {'1': 'user', '3': 2, '4': 1, '5': 9, '10': 'user'},
     {'1': 'input_type', '3': 3, '4': 1, '5': 9, '10': 'inputType'},
-    {'1': 'additional_prop', '3': 4, '4': 3, '5': 11, '6': '.azure.openai.v1.EmbeddingRequest.AdditionalPropEntry', '10': 'additionalProp1'},
   ],
-  '3': [EmbeddingRequest_AdditionalPropEntry$json],
-};
-
-@$core.Deprecated('Use embeddingRequestDescriptor instead')
-const EmbeddingRequest_AdditionalPropEntry$json = {
-  '1': 'AdditionalPropEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': {'7': true},
 };
 
 /// Descriptor for `EmbeddingRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List embeddingRequestDescriptor = $convert.base64Decode(
     'ChBFbWJlZGRpbmdSZXF1ZXN0EhQKBWlucHV0GAEgASgJUgVpbnB1dBISCgR1c2VyGAIgASgJUg'
-    'R1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZRJfCg9hZGRpdGlvbmFsX3Byb3AY'
-    'BCADKAsyNS5henVyZS5vcGVuYWkudjEuRW1iZWRkaW5nUmVxdWVzdC5BZGRpdGlvbmFsUHJvcE'
-    'VudHJ5Ug9hZGRpdGlvbmFsUHJvcDEaQQoTQWRkaXRpb25hbFByb3BFbnRyeRIQCgNrZXkYASAB'
-    'KAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+    'R1c2VyEh0KCmlucHV0X3R5cGUYAyABKAlSCWlucHV0VHlwZQ==');
 
 @$core.Deprecated('Use embeddingResponseDescriptor instead')
 const EmbeddingResponse$json = {
@@ -50,15 +35,27 @@ const EmbeddingResponse$json = {
     {'1': 'object', '3': 1, '4': 1, '5': 9, '10': 'object'},
     {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
     {'1': 'data', '3': 3, '4': 3, '5': 11, '6': '.azure.openai.v1.Data', '10': 'data'},
-    {'1': 'usage', '3': 4, '4': 1, '5': 11, '6': '.azure.openai.v1.Usage', '10': 'usage'},
+    {'1': 'usage', '3': 4, '4': 1, '5': 11, '6': '.azure.openai.v1.EmbeddingResponse.Usage', '10': 'usage'},
+  ],
+  '3': [EmbeddingResponse_Usage$json],
+};
+
+@$core.Deprecated('Use embeddingResponseDescriptor instead')
+const EmbeddingResponse_Usage$json = {
+  '1': 'Usage',
+  '2': [
+    {'1': 'prompt_tokens', '3': 1, '4': 1, '5': 13, '10': 'promptTokens'},
+    {'1': 'total_tokens', '3': 2, '4': 1, '5': 13, '10': 'totalTokens'},
   ],
 };
 
 /// Descriptor for `EmbeddingResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List embeddingResponseDescriptor = $convert.base64Decode(
     'ChFFbWJlZGRpbmdSZXNwb25zZRIWCgZvYmplY3QYASABKAlSBm9iamVjdBIUCgVtb2RlbBgCIA'
-    'EoCVIFbW9kZWwSKQoEZGF0YRgDIAMoCzIVLmF6dXJlLm9wZW5haS52MS5EYXRhUgRkYXRhEiwK'
-    'BXVzYWdlGAQgASgLMhYuYXp1cmUub3BlbmFpLnYxLlVzYWdlUgV1c2FnZQ==');
+    'EoCVIFbW9kZWwSKQoEZGF0YRgDIAMoCzIVLmF6dXJlLm9wZW5haS52MS5EYXRhUgRkYXRhEj4K'
+    'BXVzYWdlGAQgASgLMiguYXp1cmUub3BlbmFpLnYxLkVtYmVkZGluZ1Jlc3BvbnNlLlVzYWdlUg'
+    'V1c2FnZRpPCgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgNUgxwcm9tcHRUb2tlbnMSIQoM'
+    'dG90YWxfdG9rZW5zGAIgASgNUgt0b3RhbFRva2Vucw==');
 
 @$core.Deprecated('Use dataDescriptor instead')
 const Data$json = {

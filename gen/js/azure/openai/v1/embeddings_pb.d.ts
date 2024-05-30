@@ -5,7 +5,6 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { Usage } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.EmbeddingRequest
@@ -25,11 +24,6 @@ export declare class EmbeddingRequest extends Message<EmbeddingRequest> {
    * @generated from field: string input_type = 3;
    */
   inputType: string;
-
-  /**
-   * @generated from field: map<string, string> additional_prop = 4 [json_name = "additionalProp1"];
-   */
-  additionalProp: { [key: string]: string };
 
   constructor(data?: PartialMessage<EmbeddingRequest>);
 
@@ -66,9 +60,9 @@ export declare class EmbeddingResponse extends Message<EmbeddingResponse> {
   data: Data[];
 
   /**
-   * @generated from field: azure.openai.v1.Usage usage = 4;
+   * @generated from field: azure.openai.v1.EmbeddingResponse.Usage usage = 4;
    */
-  usage?: Usage;
+  usage?: EmbeddingResponse_Usage;
 
   constructor(data?: PartialMessage<EmbeddingResponse>);
 
@@ -83,6 +77,35 @@ export declare class EmbeddingResponse extends Message<EmbeddingResponse> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmbeddingResponse;
 
   static equals(a: EmbeddingResponse | PlainMessage<EmbeddingResponse> | undefined, b: EmbeddingResponse | PlainMessage<EmbeddingResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.EmbeddingResponse.Usage
+ */
+export declare class EmbeddingResponse_Usage extends Message<EmbeddingResponse_Usage> {
+  /**
+   * @generated from field: uint32 prompt_tokens = 1;
+   */
+  promptTokens: number;
+
+  /**
+   * @generated from field: uint32 total_tokens = 2;
+   */
+  totalTokens: number;
+
+  constructor(data?: PartialMessage<EmbeddingResponse_Usage>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.EmbeddingResponse.Usage";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmbeddingResponse_Usage;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EmbeddingResponse_Usage;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmbeddingResponse_Usage;
+
+  static equals(a: EmbeddingResponse_Usage | PlainMessage<EmbeddingResponse_Usage> | undefined, b: EmbeddingResponse_Usage | PlainMessage<EmbeddingResponse_Usage> | undefined): boolean;
 }
 
 /**

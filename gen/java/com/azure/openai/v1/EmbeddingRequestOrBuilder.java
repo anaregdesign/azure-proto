@@ -44,38 +44,4 @@ public interface EmbeddingRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInputTypeBytes();
-
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  int getAdditionalPropCount();
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  boolean containsAdditionalProp(
-      java.lang.String key);
-  /**
-   * Use {@link #getAdditionalPropMap()} instead.
-   */
-  @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.String>
-  getAdditionalProp();
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  java.util.Map<java.lang.String, java.lang.String>
-  getAdditionalPropMap();
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  /* nullable */
-java.lang.String getAdditionalPropOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  java.lang.String getAdditionalPropOrThrow(
-      java.lang.String key);
 }

@@ -51,31 +51,6 @@ public final class CompletionsProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_azure_openai_chat_v1_Usage_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_PromptFilterResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_PromptFilterResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ErrorBase_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ErrorBase_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterPromptResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterPromptResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterSeverityResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterSeverityResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterDetectedResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_azure_openai_chat_v1_Choice_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -111,21 +86,6 @@ public final class CompletionsProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_azure_openai_chat_v1_AzureChatExtensionsMessageContext_Citation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterChoiceResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterChoiceResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_Citation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_Citation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_azure_openai_chat_v1_ErrorResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -145,129 +105,83 @@ public final class CompletionsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n&azure/openai/chat/v1/completions.proto" +
-      "\022\024azure.openai.chat.v1\"\221\004\n\025ChatCompletio" +
-      "nRequest\022 \n\013temperature\030\001 \001(\002R\013temperatu" +
-      "re\022\023\n\005top_p\030\002 \001(\002R\004topP\022\026\n\006stream\030\003 \001(\010R" +
-      "\006stream\022\023\n\005stops\030\004 \003(\tR\004stop\022\035\n\nmax_toke" +
-      "ns\030\005 \001(\rR\tmaxTokens\022)\n\020presence_penalty\030" +
-      "\006 \001(\002R\017presencePenalty\022+\n\021frequency_pena" +
-      "lty\030\007 \001(\002R\020frequencyPenalty\022Y\n\nlogit_bia" +
-      "s\030\010 \003(\0132:.azure.openai.chat.v1.ChatCompl" +
-      "etionRequest.LogitBiasEntryR\tlogitBias\022\022" +
-      "\n\004user\030\t \001(\tR\004user\022N\n\010messages\030\n \003(\01322.a" +
-      "zure.openai.chat.v1.ChatCompletionReques" +
-      "tMessageR\010messages\022\014\n\001n\030\014 \001(\rR\001n\022\022\n\004seed" +
-      "\030\r \001(\003R\004seed\032<\n\016LogitBiasEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\002R\005value:\0028\001\"L\n\034Ch" +
-      "atCompletionRequestMessage\022\022\n\004role\030\001 \001(\t" +
-      "R\004role\022\030\n\007content\030\002 \001(\tR\007content\"\350\002\n\026Cha" +
-      "tCompletionResponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006o" +
-      "bject\030\002 \001(\tR\006object\022\030\n\007created\030\003 \001(\004R\007cr" +
-      "eated\022\024\n\005model\030\004 \001(\tR\005model\0221\n\005usage\030\005 \001" +
-      "(\0132\033.azure.openai.chat.v1.UsageR\005usage\022-" +
-      "\n\022system_fingerprint\030\006 \001(\tR\021systemFinger" +
-      "print\022\\\n\025prompt_filter_results\030\007 \003(\0132(.a" +
-      "zure.openai.chat.v1.PromptFilterResultR\023" +
-      "promptFilterResults\0226\n\007choices\030\010 \003(\0132\034.a" +
-      "zure.openai.chat.v1.ChoiceR\007choices\"|\n\005U" +
-      "sage\022#\n\rprompt_tokens\030\001 \001(\004R\014promptToken" +
-      "s\022+\n\021completion_tokens\030\002 \001(\004R\020completion" +
-      "Tokens\022!\n\014total_tokens\030\003 \001(\004R\013totalToken" +
-      "s\"\222\001\n\022PromptFilterResult\022\024\n\005index\030\001 \001(\rR" +
-      "\005index\022f\n\025content_filter_result\030\002 \001(\0132/." +
-      "azure.openai.chat.v1.ContentFilterPrompt" +
-      "ResultR\026content_filter_results\"9\n\tErrorB" +
-      "ase\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007message\030\002 \001(\t" +
-      "R\007message\"\245\004\n\031ContentFilterPromptResult\022" +
-      "I\n\006sexual\030\001 \001(\01321.azure.openai.chat.v1.C" +
-      "ontentFilterSeverityResultR\006sexual\022M\n\010vi" +
-      "olence\030\002 \001(\01321.azure.openai.chat.v1.Cont" +
-      "entFilterSeverityResultR\010violence\022E\n\004hat" +
-      "e\030\003 \001(\01321.azure.openai.chat.v1.ContentFi" +
-      "lterSeverityResultR\004hate\022N\n\tself_harm\030\004 " +
-      "\001(\01321.azure.openai.chat.v1.ContentFilter" +
-      "SeverityResultR\010selfHarm\022O\n\tprofanity\030\005 " +
-      "\001(\01321.azure.openai.chat.v1.ContentFilter" +
-      "DetectedResultR\tprofanity\022O\n\tjailbreak\030\006" +
-      " \001(\01321.azure.openai.chat.v1.ContentFilte" +
-      "rDetectedResultR\tjailbreak\0225\n\005error\030c \001(" +
-      "\0132\037.azure.openai.chat.v1.ErrorBaseR\005erro" +
-      "r\"U\n\033ContentFilterSeverityResult\022\032\n\010filt" +
-      "ered\030\001 \001(\010R\010filtered\022\032\n\010severity\030\002 \001(\tR\010" +
-      "severity\"U\n\033ContentFilterDetectedResult\022" +
-      "\032\n\010filtered\030\001 \001(\010R\010filtered\022\032\n\010detected\030" +
-      "\002 \001(\tR\010detected\"\372\001\n\006Choice\022\024\n\005index\030\001 \001(" +
-      "\rR\005index\022#\n\rfinish_reason\030\002 \001(\tR\014finishR" +
-      "eason\022M\n\007message\030\003 \001(\01323.azure.openai.ch" +
-      "at.v1.ChatCompletionResponseMessageR\007mes" +
-      "sage\022f\n\025content_filter_result\030\004 \001(\0132/.az" +
-      "ure.openai.chat.v1.ContentFilterChoiceRe" +
-      "sultR\026content_filter_results\"\313\002\n\035ChatCom" +
-      "pletionResponseMessage\022\022\n\004role\030\001 \001(\tR\004ro" +
-      "le\022\030\n\007content\030\002 \001(\tR\007content\022R\n\ntool_cal" +
-      "ls\030\003 \003(\01323.azure.openai.chat.v1.ChatComp" +
-      "letionMessageToolCallR\ttoolCalls\022U\n\rfunc" +
-      "tion_call\030\004 \001(\01320.azure.openai.chat.v1.C" +
-      "hatCompletionFunctionCallR\014functionCall\022" +
-      "Q\n\007context\030\005 \001(\01327.azure.openai.chat.v1." +
-      "AzureChatExtensionsMessageContextR\007conte" +
-      "xt\"\332\001\n\035ChatCompletionMessageToolCall\022\016\n\002" +
-      "id\030\001 \001(\tR\002id\022\022\n\004type\030\002 \001(\tR\004type\022X\n\010func" +
-      "tion\030\003 \001(\0132<.azure.openai.chat.v1.ChatCo" +
-      "mpletionMessageToolCall.FunctionR\010functi" +
-      "on\032;\n\010Function\022\022\n\004name\030\001 \001(\tR\004name\022\033\n\010ar" +
-      "gument\030\002 \001(\tR\targuments\"M\n\032ChatCompletio" +
-      "nFunctionCall\022\022\n\004name\030\001 \001(\tR\004name\022\033\n\010arg" +
-      "ument\030\002 \001(\tR\targuments\"\241\002\n!AzureChatExte" +
-      "nsionsMessageContext\022^\n\tcitations\030\001 \003(\0132" +
-      "@.azure.openai.chat.v1.AzureChatExtensio" +
-      "nsMessageContext.CitationR\tcitations\022\026\n\006" +
-      "intent\030\002 \001(\tR\006intent\032\203\001\n\010Citation\022\030\n\007con" +
-      "tent\030\001 \001(\tR\007content\022\024\n\005title\030\002 \001(\tR\005titl" +
-      "e\022\020\n\003url\030\003 \001(\tR\003url\022\032\n\010filepath\030\004 \001(\tR\010f" +
-      "ilepath\022\031\n\010chunk_id\030\005 \001(\tR\007chunkId\"\266\005\n\031C" +
-      "ontentFilterChoiceResult\022I\n\006sexual\030\001 \001(\013" +
-      "21.azure.openai.chat.v1.ContentFilterSev" +
-      "erityResultR\006sexual\022M\n\010violence\030\002 \001(\01321." +
-      "azure.openai.chat.v1.ContentFilterSeveri" +
-      "tyResultR\010violence\022E\n\004hate\030\003 \001(\01321.azure" +
-      ".openai.chat.v1.ContentFilterSeverityRes" +
-      "ultR\004hate\022N\n\tself_harm\030\004 \001(\01321.azure.ope" +
-      "nai.chat.v1.ContentFilterSeverityResultR" +
-      "\010selfHarm\022O\n\tprofanity\030\005 \001(\01321.azure.ope" +
-      "nai.chat.v1.ContentFilterDetectedResultR" +
-      "\tprofanity\022i\n\027protected_material_text\030\006 " +
-      "\001(\01321.azure.openai.chat.v1.ContentFilter" +
-      "DetectedResultR\025protectedMaterialText\022u\n" +
-      "\027protected_material_code\030\007 \001(\0132=.azure.o" +
-      "penai.chat.v1.ContentFilterDetectedWithC" +
-      "itationResultR\025protectedMaterialCode\0225\n\005" +
-      "error\030c \001(\0132\037.azure.openai.chat.v1.Error" +
-      "BaseR\005error\"\375\001\n\'ContentFilterDetectedWit" +
-      "hCitationResult\022\032\n\010filtered\030\001 \001(\010R\010filte" +
-      "red\022\032\n\010detected\030\002 \001(\010R\010detected\022b\n\010citat" +
-      "ion\030\003 \001(\0132F.azure.openai.chat.v1.Content" +
-      "FilterDetectedWithCitationResult.Citatio" +
-      "nR\010citation\0326\n\010Citation\022\020\n\003url\030\001 \001(\tR\003ur" +
-      "l\022\030\n\007license\030\002 \001(\tR\007license\"\303\002\n\rErrorRes" +
-      "ponse\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007message\030\002 \001" +
-      "(\tR\007message\022\024\n\005param\030\003 \001(\tR\005param\022\022\n\004typ" +
-      "e\030\004 \001(\tR\004type\022O\n\013inner_error\030\005 \001(\0132..azu" +
-      "re.openai.chat.v1.ErrorResponse.InnerErr" +
-      "orR\ninnerError\032\210\001\n\nInnerError\022\022\n\004code\030\001 " +
-      "\001(\tR\004code\022f\n\025content_filter_result\030\002 \001(\013" +
-      "2/.azure.openai.chat.v1.ContentFilterPro" +
-      "mptResultR\026content_filter_resultsB\343\001\n\030co" +
-      "m.azure.openai.chat.v1B\020CompletionsProto" +
-      "P\001ZBgithub.com/anaregdesign/azure-proto/" +
-      "go/azure/openai/chat/v1;chatv1\242\002\003AOC\252\002\024A" +
-      "zure.Openai.Chat.V1\312\002\024Azure\\Openai\\Chat\\" +
-      "V1\342\002 Azure\\Openai\\Chat\\V1\\GPBMetadata\352\002\027" +
-      "Azure::Openai::Chat::V1b\006proto3"
+      "\022\024azure.openai.chat.v1\032\034azure/openai/v1/" +
+      "entity.proto\"\221\004\n\025ChatCompletionRequest\022 " +
+      "\n\013temperature\030\001 \001(\002R\013temperature\022\023\n\005top_" +
+      "p\030\002 \001(\002R\004topP\022\026\n\006stream\030\003 \001(\010R\006stream\022\023\n" +
+      "\005stops\030\004 \003(\tR\004stop\022\035\n\nmax_tokens\030\005 \001(\rR\t" +
+      "maxTokens\022)\n\020presence_penalty\030\006 \001(\002R\017pre" +
+      "sencePenalty\022+\n\021frequency_penalty\030\007 \001(\002R" +
+      "\020frequencyPenalty\022Y\n\nlogit_bias\030\010 \003(\0132:." +
+      "azure.openai.chat.v1.ChatCompletionReque" +
+      "st.LogitBiasEntryR\tlogitBias\022\022\n\004user\030\t \001" +
+      "(\tR\004user\022N\n\010messages\030\n \003(\01322.azure.opena" +
+      "i.chat.v1.ChatCompletionRequestMessageR\010" +
+      "messages\022\014\n\001n\030\014 \001(\rR\001n\022\022\n\004seed\030\r \001(\003R\004se" +
+      "ed\032<\n\016LogitBiasEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
+      "\n\005value\030\002 \001(\002R\005value:\0028\001\"L\n\034ChatCompleti" +
+      "onRequestMessage\022\022\n\004role\030\001 \001(\tR\004role\022\030\n\007" +
+      "content\030\002 \001(\tR\007content\"\343\002\n\026ChatCompletio" +
+      "nResponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006object\030\002 \001(" +
+      "\tR\006object\022\030\n\007created\030\003 \001(\004R\007created\022\024\n\005m" +
+      "odel\030\004 \001(\tR\005model\0221\n\005usage\030\005 \001(\0132\033.azure" +
+      ".openai.chat.v1.UsageR\005usage\022-\n\022system_f" +
+      "ingerprint\030\006 \001(\tR\021systemFingerprint\022W\n\025p" +
+      "rompt_filter_results\030\007 \003(\0132#.azure.opena" +
+      "i.v1.PromptFilterResultR\023promptFilterRes" +
+      "ults\0226\n\007choices\030\010 \003(\0132\034.azure.openai.cha" +
+      "t.v1.ChoiceR\007choices\"|\n\005Usage\022#\n\rprompt_" +
+      "tokens\030\001 \001(\004R\014promptTokens\022+\n\021completion" +
+      "_tokens\030\002 \001(\004R\020completionTokens\022!\n\014total" +
+      "_tokens\030\003 \001(\004R\013totalTokens\"\365\001\n\006Choice\022\024\n" +
+      "\005index\030\001 \001(\rR\005index\022#\n\rfinish_reason\030\002 \001" +
+      "(\tR\014finishReason\022M\n\007message\030\003 \001(\01323.azur" +
+      "e.openai.chat.v1.ChatCompletionResponseM" +
+      "essageR\007message\022a\n\025content_filter_result" +
+      "\030\004 \001(\0132*.azure.openai.v1.ContentFilterCh" +
+      "oiceResultR\026content_filter_results\"\313\002\n\035C" +
+      "hatCompletionResponseMessage\022\022\n\004role\030\001 \001" +
+      "(\tR\004role\022\030\n\007content\030\002 \001(\tR\007content\022R\n\nto" +
+      "ol_calls\030\003 \003(\01323.azure.openai.chat.v1.Ch" +
+      "atCompletionMessageToolCallR\ttoolCalls\022U" +
+      "\n\rfunction_call\030\004 \001(\01320.azure.openai.cha" +
+      "t.v1.ChatCompletionFunctionCallR\014functio" +
+      "nCall\022Q\n\007context\030\005 \001(\01327.azure.openai.ch" +
+      "at.v1.AzureChatExtensionsMessageContextR" +
+      "\007context\"\332\001\n\035ChatCompletionMessageToolCa" +
+      "ll\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004type\030\002 \001(\tR\004type\022X" +
+      "\n\010function\030\003 \001(\0132<.azure.openai.chat.v1." +
+      "ChatCompletionMessageToolCall.FunctionR\010" +
+      "function\032;\n\010Function\022\022\n\004name\030\001 \001(\tR\004name" +
+      "\022\033\n\010argument\030\002 \001(\tR\targuments\"M\n\032ChatCom" +
+      "pletionFunctionCall\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "\033\n\010argument\030\002 \001(\tR\targuments\"\241\002\n!AzureCh" +
+      "atExtensionsMessageContext\022^\n\tcitations\030" +
+      "\001 \003(\0132@.azure.openai.chat.v1.AzureChatEx" +
+      "tensionsMessageContext.CitationR\tcitatio" +
+      "ns\022\026\n\006intent\030\002 \001(\tR\006intent\032\203\001\n\010Citation\022" +
+      "\030\n\007content\030\001 \001(\tR\007content\022\024\n\005title\030\002 \001(\t" +
+      "R\005title\022\020\n\003url\030\003 \001(\tR\003url\022\032\n\010filepath\030\004 " +
+      "\001(\tR\010filepath\022\031\n\010chunk_id\030\005 \001(\tR\007chunkId" +
+      "\"\276\002\n\rErrorResponse\022\022\n\004code\030\001 \001(\tR\004code\022\030" +
+      "\n\007message\030\002 \001(\tR\007message\022\024\n\005param\030\003 \001(\tR" +
+      "\005param\022\022\n\004type\030\004 \001(\tR\004type\022O\n\013inner_erro" +
+      "r\030\005 \001(\0132..azure.openai.chat.v1.ErrorResp" +
+      "onse.InnerErrorR\ninnerError\032\203\001\n\nInnerErr" +
+      "or\022\022\n\004code\030\001 \001(\tR\004code\022a\n\025content_filter" +
+      "_result\030\002 \001(\0132*.azure.openai.v1.ContentF" +
+      "ilterPromptResultR\026content_filter_result" +
+      "sB\343\001\n\030com.azure.openai.chat.v1B\020Completi" +
+      "onsProtoP\001ZBgithub.com/anaregdesign/azur" +
+      "e-proto/go/azure/openai/chat/v1;chatv1\242\002" +
+      "\003AOC\252\002\024Azure.Openai.Chat.V1\312\002\024Azure\\Open" +
+      "ai\\Chat\\V1\342\002 Azure\\Openai\\Chat\\V1\\GPBMet" +
+      "adata\352\002\027Azure::Openai::Chat::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.azure.openai.v1.EntityProto.getDescriptor(),
         });
     internal_static_azure_openai_chat_v1_ChatCompletionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -299,50 +213,20 @@ public final class CompletionsProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_Usage_descriptor,
         new java.lang.String[] { "PromptTokens", "CompletionTokens", "TotalTokens", });
-    internal_static_azure_openai_chat_v1_PromptFilterResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_azure_openai_chat_v1_PromptFilterResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_PromptFilterResult_descriptor,
-        new java.lang.String[] { "Index", "ContentFilterResult", });
-    internal_static_azure_openai_chat_v1_ErrorBase_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_azure_openai_chat_v1_ErrorBase_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ErrorBase_descriptor,
-        new java.lang.String[] { "Code", "Message", });
-    internal_static_azure_openai_chat_v1_ContentFilterPromptResult_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_azure_openai_chat_v1_ContentFilterPromptResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterPromptResult_descriptor,
-        new java.lang.String[] { "Sexual", "Violence", "Hate", "SelfHarm", "Profanity", "Jailbreak", "Error", });
-    internal_static_azure_openai_chat_v1_ContentFilterSeverityResult_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_azure_openai_chat_v1_ContentFilterSeverityResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterSeverityResult_descriptor,
-        new java.lang.String[] { "Filtered", "Severity", });
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedResult_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterDetectedResult_descriptor,
-        new java.lang.String[] { "Filtered", "Detected", });
     internal_static_azure_openai_chat_v1_Choice_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_azure_openai_chat_v1_Choice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_Choice_descriptor,
         new java.lang.String[] { "Index", "FinishReason", "Message", "ContentFilterResult", });
     internal_static_azure_openai_chat_v1_ChatCompletionResponseMessage_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_azure_openai_chat_v1_ChatCompletionResponseMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_ChatCompletionResponseMessage_descriptor,
         new java.lang.String[] { "Role", "Content", "ToolCalls", "FunctionCall", "Context", });
     internal_static_azure_openai_chat_v1_ChatCompletionMessageToolCall_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_azure_openai_chat_v1_ChatCompletionMessageToolCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_ChatCompletionMessageToolCall_descriptor,
@@ -354,13 +238,13 @@ public final class CompletionsProto {
         internal_static_azure_openai_chat_v1_ChatCompletionMessageToolCall_Function_descriptor,
         new java.lang.String[] { "Name", "Argument", });
     internal_static_azure_openai_chat_v1_ChatCompletionFunctionCall_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_azure_openai_chat_v1_ChatCompletionFunctionCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_ChatCompletionFunctionCall_descriptor,
         new java.lang.String[] { "Name", "Argument", });
     internal_static_azure_openai_chat_v1_AzureChatExtensionsMessageContext_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_azure_openai_chat_v1_AzureChatExtensionsMessageContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_AzureChatExtensionsMessageContext_descriptor,
@@ -371,26 +255,8 @@ public final class CompletionsProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_AzureChatExtensionsMessageContext_Citation_descriptor,
         new java.lang.String[] { "Content", "Title", "Url", "Filepath", "ChunkId", });
-    internal_static_azure_openai_chat_v1_ContentFilterChoiceResult_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_azure_openai_chat_v1_ContentFilterChoiceResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterChoiceResult_descriptor,
-        new java.lang.String[] { "Sexual", "Violence", "Hate", "SelfHarm", "Profanity", "ProtectedMaterialText", "ProtectedMaterialCode", "Error", });
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_descriptor,
-        new java.lang.String[] { "Filtered", "Detected", "Citation", });
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_Citation_descriptor =
-      internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_descriptor.getNestedTypes().get(0);
-    internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_Citation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_chat_v1_ContentFilterDetectedWithCitationResult_Citation_descriptor,
-        new java.lang.String[] { "Url", "License", });
     internal_static_azure_openai_chat_v1_ErrorResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_azure_openai_chat_v1_ErrorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_chat_v1_ErrorResponse_descriptor,
@@ -402,6 +268,7 @@ public final class CompletionsProto {
         internal_static_azure_openai_chat_v1_ErrorResponse_InnerError_descriptor,
         new java.lang.String[] { "Code", "ContentFilterResult", });
     descriptor.resolveAllFeaturesImmutable();
+    com.azure.openai.v1.EntityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

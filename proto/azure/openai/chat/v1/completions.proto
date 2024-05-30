@@ -3,6 +3,8 @@ syntax = "proto3";
 package azure.openai.chat.v1;
 //v1: 2024-02-01
 
+import "azure/openai/v1/entity.proto";
+
 option go_package = "azure/openai/chat/v1";
 
 message ChatCompletionRequest {
@@ -38,7 +40,7 @@ message ChatCompletionResponse {
   string model = 4;
   Usage usage = 5;
   string system_fingerprint = 6;
-  repeated PromptFilterResult prompt_filter_results = 7;
+  repeated azure.openai.v1.PromptFilterResult prompt_filter_results = 7;
   repeated Choice choices = 8;
 }
 
@@ -48,41 +50,11 @@ message Usage {
   uint64 total_tokens = 3;
 }
 
-message PromptFilterResult {
-  uint32 index = 1;
-  ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
-}
-
-message ErrorBase {
-  string code = 1;
-  string message = 2;
-}
-
-message ContentFilterPromptResult {
-  ContentFilterSeverityResult sexual = 1;
-  ContentFilterSeverityResult violence = 2;
-  ContentFilterSeverityResult hate = 3;
-  ContentFilterSeverityResult self_harm = 4;
-  ContentFilterDetectedResult profanity = 5;
-  ContentFilterDetectedResult jailbreak = 6;
-  ErrorBase error = 99;
-}
-
-message ContentFilterSeverityResult {
-  bool filtered = 1;
-  string severity = 2;
-}
-
-message ContentFilterDetectedResult {
-  bool filtered = 1;
-  string detected = 2;
-}
-
 message Choice {
   uint32 index = 1;
   string finish_reason = 2;
   ChatCompletionResponseMessage message = 3;
-  ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];
+  azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];
 }
 
 message ChatCompletionResponseMessage {
@@ -121,33 +93,10 @@ message AzureChatExtensionsMessageContext {
   string intent = 2;
 }
 
-message ContentFilterChoiceResult {
-  ContentFilterSeverityResult sexual = 1;
-  ContentFilterSeverityResult violence = 2;
-  ContentFilterSeverityResult hate = 3;
-  ContentFilterSeverityResult self_harm = 4;
-  ContentFilterDetectedResult profanity = 5;
-  ContentFilterDetectedResult protected_material_text = 6;
-  ContentFilterDetectedWithCitationResult protected_material_code = 7;
-
-  ErrorBase error = 99;
-}
-
-message ContentFilterDetectedWithCitationResult {
-  message Citation {
-    string url = 1;
-    string license = 2;
-  }
-
-  bool filtered = 1;
-  bool detected = 2;
-  Citation citation = 3;
-}
-
 message ErrorResponse {
   message InnerError {
     string code = 1;
-    ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
+    azure.openai.v1.ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
   }
 
   string code = 1;

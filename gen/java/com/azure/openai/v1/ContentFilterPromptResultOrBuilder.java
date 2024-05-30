@@ -5,8 +5,8 @@
 
 package com.azure.openai.v1;
 
-public interface ContentFilterResultsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:azure.openai.v1.ContentFilterResults)
+public interface ContentFilterPromptResultOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:azure.openai.v1.ContentFilterPromptResult)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -70,19 +70,19 @@ public interface ContentFilterResultsOrBuilder extends
   com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getSelfHarmOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult profanity = 5 [json_name = "profanity"];</code>
    * @return Whether the profanity field is set.
    */
   boolean hasProfanity();
   /**
-   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult profanity = 5 [json_name = "profanity"];</code>
    * @return The profanity.
    */
-  com.azure.openai.v1.ContentFilterSeverityResult getProfanity();
+  com.azure.openai.v1.ContentFilterDetectedResult getProfanity();
   /**
-   * <code>.azure.openai.v1.ContentFilterSeverityResult profanity = 5 [json_name = "profanity"];</code>
+   * <code>.azure.openai.v1.ContentFilterDetectedResult profanity = 5 [json_name = "profanity"];</code>
    */
-  com.azure.openai.v1.ContentFilterSeverityResultOrBuilder getProfanityOrBuilder();
+  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProfanityOrBuilder();
 
   /**
    * <code>.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6 [json_name = "jailbreak"];</code>
@@ -100,58 +100,17 @@ public interface ContentFilterResultsOrBuilder extends
   com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getJailbreakOrBuilder();
 
   /**
-   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
-   * @return Whether the promptIndex field is set.
-   */
-  boolean hasPromptIndex();
-  /**
-   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
-   * @return The promptIndex.
-   */
-  int getPromptIndex();
-
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
-   * @return Whether the protectedMaterialText field is set.
-   */
-  boolean hasProtectedMaterialText();
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
-   * @return The protectedMaterialText.
-   */
-  com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialText();
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
-   */
-  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialTextOrBuilder();
-
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
-   * @return Whether the protectedMaterialCode field is set.
-   */
-  boolean hasProtectedMaterialCode();
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
-   * @return The protectedMaterialCode.
-   */
-  com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialCode();
-  /**
-   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
-   */
-  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialCodeOrBuilder();
-
-  /**
-   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.ErrorBase error = 99 [json_name = "error"];</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.ErrorBase error = 99 [json_name = "error"];</code>
    * @return The error.
    */
-  com.azure.openai.v1.Error getError();
+  com.azure.openai.v1.ErrorBase getError();
   /**
-   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.ErrorBase error = 99 [json_name = "error"];</code>
    */
-  com.azure.openai.v1.ErrorOrBuilder getErrorOrBuilder();
+  com.azure.openai.v1.ErrorBaseOrBuilder getErrorOrBuilder();
 }

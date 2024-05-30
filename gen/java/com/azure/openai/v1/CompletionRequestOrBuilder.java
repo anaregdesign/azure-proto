@@ -35,34 +35,19 @@ public interface CompletionRequestOrBuilder extends
       getPromptsBytes(int index);
 
   /**
-   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
-   * @return Whether the maxTokens field is set.
-   */
-  boolean hasMaxTokens();
-  /**
-   * <code>optional uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
+   * <code>uint32 max_tokens = 2 [json_name = "maxTokens"];</code>
    * @return The maxTokens.
    */
   int getMaxTokens();
 
   /**
-   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
-   * @return Whether the temperature field is set.
-   */
-  boolean hasTemperature();
-  /**
-   * <code>optional float temperature = 3 [json_name = "temperature"];</code>
+   * <code>float temperature = 3 [json_name = "temperature"];</code>
    * @return The temperature.
    */
   float getTemperature();
 
   /**
-   * <code>optional float top_p = 4 [json_name = "topP"];</code>
-   * @return Whether the topP field is set.
-   */
-  boolean hasTopP();
-  /**
-   * <code>optional float top_p = 4 [json_name = "topP"];</code>
+   * <code>float top_p = 4 [json_name = "topP"];</code>
    * @return The topP.
    */
   float getTopP();
@@ -100,79 +85,49 @@ public interface CompletionRequestOrBuilder extends
       java.lang.String key);
 
   /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
-   * @return Whether the user field is set.
-   */
-  boolean hasUser();
-  /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
+   * <code>string user = 6 [json_name = "user"];</code>
    * @return The user.
    */
   java.lang.String getUser();
   /**
-   * <code>optional string user = 6 [json_name = "user"];</code>
+   * <code>string user = 6 [json_name = "user"];</code>
    * @return The bytes for user.
    */
   com.google.protobuf.ByteString
       getUserBytes();
 
   /**
-   * <code>optional uint32 n = 7 [json_name = "n"];</code>
-   * @return Whether the n field is set.
-   */
-  boolean hasN();
-  /**
-   * <code>optional uint32 n = 7 [json_name = "n"];</code>
+   * <code>uint32 n = 7 [json_name = "n"];</code>
    * @return The n.
    */
   int getN();
 
   /**
-   * <code>optional bool stream = 8 [json_name = "stream"];</code>
-   * @return Whether the stream field is set.
-   */
-  boolean hasStream();
-  /**
-   * <code>optional bool stream = 8 [json_name = "stream"];</code>
+   * <code>bool stream = 8 [json_name = "stream"];</code>
    * @return The stream.
    */
   boolean getStream();
 
   /**
-   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
-   * @return Whether the logprobs field is set.
-   */
-  boolean hasLogprobs();
-  /**
-   * <code>optional uint32 logprobs = 9 [json_name = "logprobs"];</code>
+   * <code>uint32 logprobs = 9 [json_name = "logprobs"];</code>
    * @return The logprobs.
    */
   int getLogprobs();
 
   /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
-   * @return Whether the suffix field is set.
-   */
-  boolean hasSuffix();
-  /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * <code>string suffix = 10 [json_name = "suffix"];</code>
    * @return The suffix.
    */
   java.lang.String getSuffix();
   /**
-   * <code>optional string suffix = 10 [json_name = "suffix"];</code>
+   * <code>string suffix = 10 [json_name = "suffix"];</code>
    * @return The bytes for suffix.
    */
   com.google.protobuf.ByteString
       getSuffixBytes();
 
   /**
-   * <code>optional bool echo = 11 [json_name = "echo"];</code>
-   * @return Whether the echo field is set.
-   */
-  boolean hasEcho();
-  /**
-   * <code>optional bool echo = 11 [json_name = "echo"];</code>
+   * <code>bool echo = 11 [json_name = "echo"];</code>
    * @return The echo.
    */
   boolean getEcho();
@@ -203,34 +158,31 @@ public interface CompletionRequestOrBuilder extends
       getStopsBytes(int index);
 
   /**
-   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
-   * @return Whether the presencePenalty field is set.
+   * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+   * @return The completionConfig.
    */
-  boolean hasPresencePenalty();
+  java.lang.String getCompletionConfig();
   /**
-   * <code>optional float presence_penalty = 13 [json_name = "presencePenalty"];</code>
+   * <code>string completion_config = 13 [json_name = "completionConfig"];</code>
+   * @return The bytes for completionConfig.
+   */
+  com.google.protobuf.ByteString
+      getCompletionConfigBytes();
+
+  /**
+   * <code>float presence_penalty = 14 [json_name = "presencePenalty"];</code>
    * @return The presencePenalty.
    */
   float getPresencePenalty();
 
   /**
-   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
-   * @return Whether the frequencyPenalty field is set.
-   */
-  boolean hasFrequencyPenalty();
-  /**
-   * <code>optional float frequency_penalty = 14 [json_name = "frequencyPenalty"];</code>
+   * <code>float frequency_penalty = 15 [json_name = "frequencyPenalty"];</code>
    * @return The frequencyPenalty.
    */
   float getFrequencyPenalty();
 
   /**
-   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
-   * @return Whether the bestOf field is set.
-   */
-  boolean hasBestOf();
-  /**
-   * <code>optional uint32 best_of = 15 [json_name = "bestOf"];</code>
+   * <code>uint32 best_of = 16 [json_name = "bestOf"];</code>
    * @return The bestOf.
    */
   int getBestOf();

@@ -79,27 +79,27 @@ public interface ChatCompletionResponseOrBuilder extends
       getSystemFingerprintBytes();
 
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
-  java.util.List<com.azure.openai.chat.v1.PromptFilterResult> 
+  java.util.List<com.azure.openai.v1.PromptFilterResult> 
       getPromptFilterResultsList();
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
-  com.azure.openai.chat.v1.PromptFilterResult getPromptFilterResults(int index);
+  com.azure.openai.v1.PromptFilterResult getPromptFilterResults(int index);
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   int getPromptFilterResultsCount();
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
-  java.util.List<? extends com.azure.openai.chat.v1.PromptFilterResultOrBuilder> 
+  java.util.List<? extends com.azure.openai.v1.PromptFilterResultOrBuilder> 
       getPromptFilterResultsOrBuilderList();
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
-  com.azure.openai.chat.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
+  com.azure.openai.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
       int index);
 
   /**

@@ -43,17 +43,17 @@ public interface ChoiceOrBuilder extends
   com.azure.openai.chat.v1.ChatCompletionResponseMessageOrBuilder getMessageOrBuilder();
 
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    * @return Whether the contentFilterResult field is set.
    */
   boolean hasContentFilterResult();
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    * @return The contentFilterResult.
    */
-  com.azure.openai.chat.v1.ContentFilterChoiceResult getContentFilterResult();
+  com.azure.openai.v1.ContentFilterChoiceResult getContentFilterResult();
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    */
-  com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder();
+  com.azure.openai.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder();
 }

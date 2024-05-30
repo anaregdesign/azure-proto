@@ -41,10 +41,20 @@ public final class CompletionsProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_azure_openai_v1_CompletionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_azure_openai_v1_CompletionChoice_descriptor;
+    internal_static_azure_openai_v1_Choice_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_azure_openai_v1_CompletionChoice_fieldAccessorTable;
+      internal_static_azure_openai_v1_Choice_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_azure_openai_v1_Choice_LogProbs_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_azure_openai_v1_Choice_LogProbs_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_azure_openai_v1_Usage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_azure_openai_v1_Usage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55,49 +65,60 @@ public final class CompletionsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n!azure/openai/v1/completions.proto\022\017azu" +
-      "re.openai.v1\"\361\005\n\021CompletionRequest\022\027\n\007pr" +
-      "ompts\030\001 \003(\tR\006prompt\022\"\n\nmax_tokens\030\002 \001(\rH" +
-      "\000R\tmaxTokens\210\001\001\022%\n\013temperature\030\003 \001(\002H\001R\013" +
-      "temperature\210\001\001\022\030\n\005top_p\030\004 \001(\002H\002R\004topP\210\001\001" +
-      "\022P\n\nlogit_bias\030\005 \003(\01321.azure.openai.v1.C" +
-      "ompletionRequest.LogitBiasEntryR\tlogitBi" +
-      "as\022\027\n\004user\030\006 \001(\tH\003R\004user\210\001\001\022\021\n\001n\030\007 \001(\rH\004" +
-      "R\001n\210\001\001\022\033\n\006stream\030\010 \001(\010H\005R\006stream\210\001\001\022\037\n\010l" +
-      "ogprobs\030\t \001(\rH\006R\010logprobs\210\001\001\022\033\n\006suffix\030\n" +
-      " \001(\tH\007R\006suffix\210\001\001\022\027\n\004echo\030\013 \001(\010H\010R\004echo\210" +
-      "\001\001\022\023\n\005stops\030\014 \003(\tR\004stop\022.\n\020presence_pena" +
-      "lty\030\r \001(\002H\tR\017presencePenalty\210\001\001\0220\n\021frequ" +
-      "ency_penalty\030\016 \001(\002H\nR\020frequencyPenalty\210\001" +
-      "\001\022\034\n\007best_of\030\017 \001(\rH\013R\006bestOf\210\001\001\032<\n\016Logit" +
-      "BiasEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
-      "(\002R\005value:\0028\001B\r\n\013_max_tokensB\016\n\014_tempera" +
-      "tureB\010\n\006_top_pB\007\n\005_userB\004\n\002_nB\t\n\007_stream" +
-      "B\013\n\t_logprobsB\t\n\007_suffixB\007\n\005_echoB\023\n\021_pr" +
-      "esence_penaltyB\024\n\022_frequency_penaltyB\n\n\010" +
-      "_best_of\"\251\001\n\022CompletionResponse\022\024\n\005model" +
-      "\030\001 \001(\tR\005model\022\026\n\006object\030\002 \001(\tR\006object\022\016\n" +
-      "\002id\030\003 \001(\tR\002id\022\030\n\007created\030\004 \001(\rR\007created\022" +
-      ";\n\007choices\030\005 \003(\0132!.azure.openai.v1.Compl" +
-      "etionChoiceR\007choices\"}\n\020CompletionChoice" +
-      "\022\024\n\005index\030\001 \001(\rR\005index\022\022\n\004text\030\002 \001(\tR\004te" +
-      "xt\022\032\n\010logprobs\030\003 \001(\002R\010logprobs\022#\n\rfinish" +
-      "_reason\030\004 \001(\tR\014finishReasonB\306\001\n\023com.azur" +
-      "e.openai.v1B\020CompletionsProtoP\001Z?github." +
-      "com/anaregdesign/azure-proto/go/azure/op" +
-      "enai/v1;openaiv1\242\002\003AOX\252\002\017Azure.Openai.V1" +
-      "\312\002\017Azure\\Openai\\V1\342\002\033Azure\\Openai\\V1\\GPB" +
-      "Metadata\352\002\021Azure::Openai::V1b\006proto3"
+      "re.openai.v1\032\034azure/openai/v1/entity.pro" +
+      "to\"\307\004\n\021CompletionRequest\022\027\n\007prompts\030\001 \003(" +
+      "\tR\006prompt\022\035\n\nmax_tokens\030\002 \001(\rR\tmaxTokens" +
+      "\022 \n\013temperature\030\003 \001(\002R\013temperature\022\023\n\005to" +
+      "p_p\030\004 \001(\002R\004topP\022P\n\nlogit_bias\030\005 \003(\01321.az" +
+      "ure.openai.v1.CompletionRequest.LogitBia" +
+      "sEntryR\tlogitBias\022\022\n\004user\030\006 \001(\tR\004user\022\014\n" +
+      "\001n\030\007 \001(\rR\001n\022\026\n\006stream\030\010 \001(\010R\006stream\022\032\n\010l" +
+      "ogprobs\030\t \001(\rR\010logprobs\022\026\n\006suffix\030\n \001(\tR" +
+      "\006suffix\022\022\n\004echo\030\013 \001(\010R\004echo\022\023\n\005stops\030\014 \003" +
+      "(\tR\004stop\022+\n\021completion_config\030\r \001(\tR\020com" +
+      "pletionConfig\022)\n\020presence_penalty\030\016 \001(\002R" +
+      "\017presencePenalty\022+\n\021frequency_penalty\030\017 " +
+      "\001(\002R\020frequencyPenalty\022\027\n\007best_of\030\020 \001(\rR\006" +
+      "bestOf\032<\n\016LogitBiasEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022\024\n\005value\030\002 \001(\002R\005value:\0028\001\"\246\002\n\022Complet" +
+      "ionResponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006object\030\002 " +
+      "\001(\tR\006object\022\030\n\007created\030\003 \001(\004R\007created\022\024\n" +
+      "\005model\030\004 \001(\tR\005model\022W\n\025prompt_filter_res" +
+      "ults\030\005 \003(\0132#.azure.openai.v1.PromptFilte" +
+      "rResultR\023promptFilterResults\0221\n\007choices\030" +
+      "\006 \003(\0132\027.azure.openai.v1.ChoiceR\007choices\022" +
+      ",\n\005usage\030\007 \001(\0132\026.azure.openai.v1.UsageR\005" +
+      "usage\"\212\003\n\006Choice\022\022\n\004text\030\001 \001(\tR\004text\022\024\n\005" +
+      "index\030\002 \001(\rR\005index\022<\n\010logprobs\030\003 \001(\0132 .a" +
+      "zure.openai.v1.Choice.LogProbsR\010logprobs" +
+      "\022#\n\rfinish_reason\030\004 \001(\tR\014finishReason\022a\n" +
+      "\025content_filter_result\030\005 \001(\0132*.azure.ope" +
+      "nai.v1.ContentFilterChoiceResultR\026conten" +
+      "t_filter_results\032\217\001\n\010LogProbs\022\026\n\006tokens\030" +
+      "\001 \003(\tR\006tokens\022%\n\016token_logprobs\030\002 \003(\002R\rt" +
+      "okenLogprobs\022!\n\014top_logprobs\030\003 \003(\002R\013topL" +
+      "ogprobs\022!\n\014text_offsets\030\004 \003(\rR\013text_offs" +
+      "et\"|\n\005Usage\022+\n\021completion_tokens\030\001 \001(\rR\020" +
+      "completionTokens\022#\n\rprompt_tokens\030\002 \001(\rR" +
+      "\014promptTokens\022!\n\014total_tokens\030\003 \001(\rR\013tot" +
+      "alTokensB\306\001\n\023com.azure.openai.v1B\020Comple" +
+      "tionsProtoP\001Z?github.com/anaregdesign/az" +
+      "ure-proto/go/azure/openai/v1;openaiv1\242\002\003" +
+      "AOX\252\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342" +
+      "\002\033Azure\\Openai\\V1\\GPBMetadata\352\002\021Azure::O" +
+      "penai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.azure.openai.v1.EntityProto.getDescriptor(),
         });
     internal_static_azure_openai_v1_CompletionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_azure_openai_v1_CompletionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_CompletionRequest_descriptor,
-        new java.lang.String[] { "Prompts", "MaxTokens", "Temperature", "TopP", "LogitBias", "User", "N", "Stream", "Logprobs", "Suffix", "Echo", "Stops", "PresencePenalty", "FrequencyPenalty", "BestOf", });
+        new java.lang.String[] { "Prompts", "MaxTokens", "Temperature", "TopP", "LogitBias", "User", "N", "Stream", "Logprobs", "Suffix", "Echo", "Stops", "CompletionConfig", "PresencePenalty", "FrequencyPenalty", "BestOf", });
     internal_static_azure_openai_v1_CompletionRequest_LogitBiasEntry_descriptor =
       internal_static_azure_openai_v1_CompletionRequest_descriptor.getNestedTypes().get(0);
     internal_static_azure_openai_v1_CompletionRequest_LogitBiasEntry_fieldAccessorTable = new
@@ -109,14 +130,27 @@ public final class CompletionsProto {
     internal_static_azure_openai_v1_CompletionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_CompletionResponse_descriptor,
-        new java.lang.String[] { "Model", "Object", "Id", "Created", "Choices", });
-    internal_static_azure_openai_v1_CompletionChoice_descriptor =
+        new java.lang.String[] { "Id", "Object", "Created", "Model", "PromptFilterResults", "Choices", "Usage", });
+    internal_static_azure_openai_v1_Choice_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_azure_openai_v1_CompletionChoice_fieldAccessorTable = new
+    internal_static_azure_openai_v1_Choice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_azure_openai_v1_CompletionChoice_descriptor,
-        new java.lang.String[] { "Index", "Text", "Logprobs", "FinishReason", });
+        internal_static_azure_openai_v1_Choice_descriptor,
+        new java.lang.String[] { "Text", "Index", "Logprobs", "FinishReason", "ContentFilterResult", });
+    internal_static_azure_openai_v1_Choice_LogProbs_descriptor =
+      internal_static_azure_openai_v1_Choice_descriptor.getNestedTypes().get(0);
+    internal_static_azure_openai_v1_Choice_LogProbs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_azure_openai_v1_Choice_LogProbs_descriptor,
+        new java.lang.String[] { "Tokens", "TokenLogprobs", "TopLogprobs", "TextOffsets", });
+    internal_static_azure_openai_v1_Usage_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_azure_openai_v1_Usage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_azure_openai_v1_Usage_descriptor,
+        new java.lang.String[] { "CompletionTokens", "PromptTokens", "TotalTokens", });
     descriptor.resolveAllFeaturesImmutable();
+    com.azure.openai.v1.EntityProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -27,9 +27,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CompletionResponse() {
-    model_ = "";
-    object_ = "";
     id_ = "";
+    object_ = "";
+    model_ = "";
+    promptFilterResults_ = java.util.Collections.emptyList();
     choices_ = java.util.Collections.emptyList();
   }
 
@@ -46,39 +47,40 @@ private static final long serialVersionUID = 0L;
             com.azure.openai.v1.CompletionResponse.class, com.azure.openai.v1.CompletionResponse.Builder.class);
   }
 
-  public static final int MODEL_FIELD_NUMBER = 1;
+  private int bitField0_;
+  public static final int ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object model_ = "";
+  private volatile java.lang.Object id_ = "";
   /**
-   * <code>string model = 1 [json_name = "model"];</code>
-   * @return The model.
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The id.
    */
   @java.lang.Override
-  public java.lang.String getModel() {
-    java.lang.Object ref = model_;
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      model_ = s;
+      id_ = s;
       return s;
     }
   }
   /**
-   * <code>string model = 1 [json_name = "model"];</code>
-   * @return The bytes for model.
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The bytes for id.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getModelBytes() {
-    java.lang.Object ref = model_;
+      getIdBytes() {
+    java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      model_ = b;
+      id_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -124,95 +126,162 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  public static final int CREATED_FIELD_NUMBER = 3;
+  private long created_ = 0L;
   /**
-   * <code>string id = 3 [json_name = "id"];</code>
-   * @return The id.
+   * <code>uint64 created = 3 [json_name = "created"];</code>
+   * @return The created.
    */
   @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
+  public long getCreated() {
+    return created_;
+  }
+
+  public static final int MODEL_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object model_ = "";
+  /**
+   * <code>string model = 4 [json_name = "model"];</code>
+   * @return The model.
+   */
+  @java.lang.Override
+  public java.lang.String getModel() {
+    java.lang.Object ref = model_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      id_ = s;
+      model_ = s;
       return s;
     }
   }
   /**
-   * <code>string id = 3 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string model = 4 [json_name = "model"];</code>
+   * @return The bytes for model.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
+      getModelBytes() {
+    java.lang.Object ref = model_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      id_ = b;
+      model_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CREATED_FIELD_NUMBER = 4;
-  private int created_ = 0;
+  public static final int PROMPT_FILTER_RESULTS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.azure.openai.v1.PromptFilterResult> promptFilterResults_;
   /**
-   * <code>uint32 created = 4 [json_name = "created"];</code>
-   * @return The created.
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
-  public int getCreated() {
-    return created_;
+  public java.util.List<com.azure.openai.v1.PromptFilterResult> getPromptFilterResultsList() {
+    return promptFilterResults_;
+  }
+  /**
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.azure.openai.v1.PromptFilterResultOrBuilder> 
+      getPromptFilterResultsOrBuilderList() {
+    return promptFilterResults_;
+  }
+  /**
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+   */
+  @java.lang.Override
+  public int getPromptFilterResultsCount() {
+    return promptFilterResults_.size();
+  }
+  /**
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.PromptFilterResult getPromptFilterResults(int index) {
+    return promptFilterResults_.get(index);
+  }
+  /**
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
+      int index) {
+    return promptFilterResults_.get(index);
   }
 
-  public static final int CHOICES_FIELD_NUMBER = 5;
+  public static final int CHOICES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.azure.openai.v1.CompletionChoice> choices_;
+  private java.util.List<com.azure.openai.v1.Choice> choices_;
   /**
-   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.azure.openai.v1.CompletionChoice> getChoicesList() {
+  public java.util.List<com.azure.openai.v1.Choice> getChoicesList() {
     return choices_;
   }
   /**
-   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.azure.openai.v1.CompletionChoiceOrBuilder> 
+  public java.util.List<? extends com.azure.openai.v1.ChoiceOrBuilder> 
       getChoicesOrBuilderList() {
     return choices_;
   }
   /**
-   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
    */
   @java.lang.Override
   public int getChoicesCount() {
     return choices_.size();
   }
   /**
-   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.CompletionChoice getChoices(int index) {
+  public com.azure.openai.v1.Choice getChoices(int index) {
     return choices_.get(index);
   }
   /**
-   * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+   * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.CompletionChoiceOrBuilder getChoicesOrBuilder(
+  public com.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
       int index) {
     return choices_.get(index);
+  }
+
+  public static final int USAGE_FIELD_NUMBER = 7;
+  private com.azure.openai.v1.Usage usage_;
+  /**
+   * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   * @return Whether the usage field is set.
+   */
+  @java.lang.Override
+  public boolean hasUsage() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   * @return The usage.
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.Usage getUsage() {
+    return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+  }
+  /**
+   * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.UsageOrBuilder getUsageOrBuilder() {
+    return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -229,20 +298,26 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(model_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, model_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(object_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, object_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, id_);
+    if (created_ != 0L) {
+      output.writeUInt64(3, created_);
     }
-    if (created_ != 0) {
-      output.writeUInt32(4, created_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(model_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, model_);
+    }
+    for (int i = 0; i < promptFilterResults_.size(); i++) {
+      output.writeMessage(5, promptFilterResults_.get(i));
     }
     for (int i = 0; i < choices_.size(); i++) {
-      output.writeMessage(5, choices_.get(i));
+      output.writeMessage(6, choices_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(7, getUsage());
     }
     getUnknownFields().writeTo(output);
   }
@@ -253,22 +328,30 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(model_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, model_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(object_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, object_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, id_);
-    }
-    if (created_ != 0) {
+    if (created_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(4, created_);
+        .computeUInt64Size(3, created_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(model_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, model_);
+    }
+    for (int i = 0; i < promptFilterResults_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, promptFilterResults_.get(i));
     }
     for (int i = 0; i < choices_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, choices_.get(i));
+        .computeMessageSize(6, choices_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getUsage());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -285,16 +368,23 @@ private static final long serialVersionUID = 0L;
     }
     com.azure.openai.v1.CompletionResponse other = (com.azure.openai.v1.CompletionResponse) obj;
 
-    if (!getModel()
-        .equals(other.getModel())) return false;
-    if (!getObject()
-        .equals(other.getObject())) return false;
     if (!getId()
         .equals(other.getId())) return false;
+    if (!getObject()
+        .equals(other.getObject())) return false;
     if (getCreated()
         != other.getCreated()) return false;
+    if (!getModel()
+        .equals(other.getModel())) return false;
+    if (!getPromptFilterResultsList()
+        .equals(other.getPromptFilterResultsList())) return false;
     if (!getChoicesList()
         .equals(other.getChoicesList())) return false;
+    if (hasUsage() != other.hasUsage()) return false;
+    if (hasUsage()) {
+      if (!getUsage()
+          .equals(other.getUsage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -306,17 +396,26 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MODEL_FIELD_NUMBER;
-    hash = (53 * hash) + getModel().hashCode();
-    hash = (37 * hash) + OBJECT_FIELD_NUMBER;
-    hash = (53 * hash) + getObject().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + OBJECT_FIELD_NUMBER;
+    hash = (53 * hash) + getObject().hashCode();
     hash = (37 * hash) + CREATED_FIELD_NUMBER;
-    hash = (53 * hash) + getCreated();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCreated());
+    hash = (37 * hash) + MODEL_FIELD_NUMBER;
+    hash = (53 * hash) + getModel().hashCode();
+    if (getPromptFilterResultsCount() > 0) {
+      hash = (37 * hash) + PROMPT_FILTER_RESULTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPromptFilterResultsList().hashCode();
+    }
     if (getChoicesCount() > 0) {
       hash = (37 * hash) + CHOICES_FIELD_NUMBER;
       hash = (53 * hash) + getChoicesList().hashCode();
+    }
+    if (hasUsage()) {
+      hash = (37 * hash) + USAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getUsage().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -437,29 +536,49 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.azure.openai.v1.CompletionResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getPromptFilterResultsFieldBuilder();
+        getChoicesFieldBuilder();
+        getUsageFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      model_ = "";
-      object_ = "";
       id_ = "";
-      created_ = 0;
+      object_ = "";
+      created_ = 0L;
+      model_ = "";
+      if (promptFilterResultsBuilder_ == null) {
+        promptFilterResults_ = java.util.Collections.emptyList();
+      } else {
+        promptFilterResults_ = null;
+        promptFilterResultsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (choicesBuilder_ == null) {
         choices_ = java.util.Collections.emptyList();
       } else {
         choices_ = null;
         choicesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
+      usage_ = null;
+      if (usageBuilder_ != null) {
+        usageBuilder_.dispose();
+        usageBuilder_ = null;
+      }
       return this;
     }
 
@@ -493,10 +612,19 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.azure.openai.v1.CompletionResponse result) {
-      if (choicesBuilder_ == null) {
+      if (promptFilterResultsBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0)) {
-          choices_ = java.util.Collections.unmodifiableList(choices_);
+          promptFilterResults_ = java.util.Collections.unmodifiableList(promptFilterResults_);
           bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.promptFilterResults_ = promptFilterResults_;
+      } else {
+        result.promptFilterResults_ = promptFilterResultsBuilder_.build();
+      }
+      if (choicesBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          choices_ = java.util.Collections.unmodifiableList(choices_);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.choices_ = choices_;
       } else {
@@ -507,17 +635,25 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.azure.openai.v1.CompletionResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.model_ = model_;
+        result.id_ = id_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.object_ = object_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.id_ = id_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.created_ = created_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.model_ = model_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.usage_ = usageBuilder_ == null
+            ? usage_
+            : usageBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -532,8 +668,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.azure.openai.v1.CompletionResponse other) {
       if (other == com.azure.openai.v1.CompletionResponse.getDefaultInstance()) return this;
-      if (!other.getModel().isEmpty()) {
-        model_ = other.model_;
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -542,19 +678,45 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
-        bitField0_ |= 0x00000004;
+      if (other.getCreated() != 0L) {
+        setCreated(other.getCreated());
+      }
+      if (!other.getModel().isEmpty()) {
+        model_ = other.model_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.getCreated() != 0) {
-        setCreated(other.getCreated());
+      if (promptFilterResultsBuilder_ == null) {
+        if (!other.promptFilterResults_.isEmpty()) {
+          if (promptFilterResults_.isEmpty()) {
+            promptFilterResults_ = other.promptFilterResults_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensurePromptFilterResultsIsMutable();
+            promptFilterResults_.addAll(other.promptFilterResults_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.promptFilterResults_.isEmpty()) {
+          if (promptFilterResultsBuilder_.isEmpty()) {
+            promptFilterResultsBuilder_.dispose();
+            promptFilterResultsBuilder_ = null;
+            promptFilterResults_ = other.promptFilterResults_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            promptFilterResultsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getPromptFilterResultsFieldBuilder() : null;
+          } else {
+            promptFilterResultsBuilder_.addAllMessages(other.promptFilterResults_);
+          }
+        }
       }
       if (choicesBuilder_ == null) {
         if (!other.choices_.isEmpty()) {
           if (choices_.isEmpty()) {
             choices_ = other.choices_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureChoicesIsMutable();
             choices_.addAll(other.choices_);
@@ -567,7 +729,7 @@ private static final long serialVersionUID = 0L;
             choicesBuilder_.dispose();
             choicesBuilder_ = null;
             choices_ = other.choices_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             choicesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getChoicesFieldBuilder() : null;
@@ -575,6 +737,9 @@ private static final long serialVersionUID = 0L;
             choicesBuilder_.addAllMessages(other.choices_);
           }
         }
+      }
+      if (other.hasUsage()) {
+        mergeUsage(other.getUsage());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -603,7 +768,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              model_ = input.readStringRequireUtf8();
+              id_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -612,20 +777,33 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              id_ = input.readStringRequireUtf8();
+            case 24: {
+              created_ = input.readUInt64();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 32: {
-              created_ = input.readUInt32();
+            } // case 24
+            case 34: {
+              model_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
+            } // case 34
             case 42: {
-              com.azure.openai.v1.CompletionChoice m =
+              com.azure.openai.v1.PromptFilterResult m =
                   input.readMessage(
-                      com.azure.openai.v1.CompletionChoice.parser(),
+                      com.azure.openai.v1.PromptFilterResult.parser(),
+                      extensionRegistry);
+              if (promptFilterResultsBuilder_ == null) {
+                ensurePromptFilterResultsIsMutable();
+                promptFilterResults_.add(m);
+              } else {
+                promptFilterResultsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.azure.openai.v1.Choice m =
+                  input.readMessage(
+                      com.azure.openai.v1.Choice.parser(),
                       extensionRegistry);
               if (choicesBuilder_ == null) {
                 ensureChoicesIsMutable();
@@ -634,7 +812,14 @@ private static final long serialVersionUID = 0L;
                 choicesBuilder_.addMessage(m);
               }
               break;
-            } // case 42
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getUsageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -652,73 +837,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object model_ = "";
+    private java.lang.Object id_ = "";
     /**
-     * <code>string model = 1 [json_name = "model"];</code>
-     * @return The model.
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
      */
-    public java.lang.String getModel() {
-      java.lang.Object ref = model_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        model_ = s;
+        id_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string model = 1 [json_name = "model"];</code>
-     * @return The bytes for model.
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
-        getModelBytes() {
-      java.lang.Object ref = model_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        model_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string model = 1 [json_name = "model"];</code>
-     * @param value The model to set.
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
      * @return This builder for chaining.
      */
-    public Builder setModel(
+    public Builder setId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      model_ = value;
+      id_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string model = 1 [json_name = "model"];</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearModel() {
-      model_ = getDefaultInstance().getModel();
+    public Builder clearId() {
+      id_ = getDefaultInstance().getId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string model = 1 [json_name = "model"];</code>
-     * @param value The bytes for model to set.
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
-    public Builder setModelBytes(
+    public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      model_ = value;
+      id_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -796,126 +981,366 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object id_ = "";
+    private long created_ ;
     /**
-     * <code>string id = 3 [json_name = "id"];</code>
-     * @return The id.
+     * <code>uint64 created = 3 [json_name = "created"];</code>
+     * @return The created.
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    @java.lang.Override
+    public long getCreated() {
+      return created_;
+    }
+    /**
+     * <code>uint64 created = 3 [json_name = "created"];</code>
+     * @param value The created to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreated(long value) {
+
+      created_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint64 created = 3 [json_name = "created"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreated() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      created_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object model_ = "";
+    /**
+     * <code>string model = 4 [json_name = "model"];</code>
+     * @return The model.
+     */
+    public java.lang.String getModel() {
+      java.lang.Object ref = model_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        model_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string id = 3 [json_name = "id"];</code>
-     * @return The bytes for id.
+     * <code>string model = 4 [json_name = "model"];</code>
+     * @return The bytes for model.
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getModelBytes() {
+      java.lang.Object ref = model_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        model_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string id = 3 [json_name = "id"];</code>
-     * @param value The id to set.
+     * <code>string model = 4 [json_name = "model"];</code>
+     * @param value The model to set.
      * @return This builder for chaining.
      */
-    public Builder setId(
+    public Builder setModel(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      id_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 3 [json_name = "id"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string id = 3 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      id_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private int created_ ;
-    /**
-     * <code>uint32 created = 4 [json_name = "created"];</code>
-     * @return The created.
-     */
-    @java.lang.Override
-    public int getCreated() {
-      return created_;
-    }
-    /**
-     * <code>uint32 created = 4 [json_name = "created"];</code>
-     * @param value The created to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCreated(int value) {
-
-      created_ = value;
+      model_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 created = 4 [json_name = "created"];</code>
+     * <code>string model = 4 [json_name = "model"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearCreated() {
+    public Builder clearModel() {
+      model_ = getDefaultInstance().getModel();
       bitField0_ = (bitField0_ & ~0x00000008);
-      created_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string model = 4 [json_name = "model"];</code>
+     * @param value The bytes for model to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      model_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.azure.openai.v1.CompletionChoice> choices_ =
+    private java.util.List<com.azure.openai.v1.PromptFilterResult> promptFilterResults_ =
       java.util.Collections.emptyList();
-    private void ensureChoicesIsMutable() {
+    private void ensurePromptFilterResultsIsMutable() {
       if (!((bitField0_ & 0x00000010) != 0)) {
-        choices_ = new java.util.ArrayList<com.azure.openai.v1.CompletionChoice>(choices_);
+        promptFilterResults_ = new java.util.ArrayList<com.azure.openai.v1.PromptFilterResult>(promptFilterResults_);
         bitField0_ |= 0x00000010;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.azure.openai.v1.CompletionChoice, com.azure.openai.v1.CompletionChoice.Builder, com.azure.openai.v1.CompletionChoiceOrBuilder> choicesBuilder_;
+        com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder> promptFilterResultsBuilder_;
 
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
      */
-    public java.util.List<com.azure.openai.v1.CompletionChoice> getChoicesList() {
+    public java.util.List<com.azure.openai.v1.PromptFilterResult> getPromptFilterResultsList() {
+      if (promptFilterResultsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(promptFilterResults_);
+      } else {
+        return promptFilterResultsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public int getPromptFilterResultsCount() {
+      if (promptFilterResultsBuilder_ == null) {
+        return promptFilterResults_.size();
+      } else {
+        return promptFilterResultsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public com.azure.openai.v1.PromptFilterResult getPromptFilterResults(int index) {
+      if (promptFilterResultsBuilder_ == null) {
+        return promptFilterResults_.get(index);
+      } else {
+        return promptFilterResultsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder setPromptFilterResults(
+        int index, com.azure.openai.v1.PromptFilterResult value) {
+      if (promptFilterResultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.set(index, value);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder setPromptFilterResults(
+        int index, com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
+      if (promptFilterResultsBuilder_ == null) {
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder addPromptFilterResults(com.azure.openai.v1.PromptFilterResult value) {
+      if (promptFilterResultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.add(value);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder addPromptFilterResults(
+        int index, com.azure.openai.v1.PromptFilterResult value) {
+      if (promptFilterResultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.add(index, value);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder addPromptFilterResults(
+        com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
+      if (promptFilterResultsBuilder_ == null) {
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.add(builderForValue.build());
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder addPromptFilterResults(
+        int index, com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
+      if (promptFilterResultsBuilder_ == null) {
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder addAllPromptFilterResults(
+        java.lang.Iterable<? extends com.azure.openai.v1.PromptFilterResult> values) {
+      if (promptFilterResultsBuilder_ == null) {
+        ensurePromptFilterResultsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, promptFilterResults_);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder clearPromptFilterResults() {
+      if (promptFilterResultsBuilder_ == null) {
+        promptFilterResults_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public Builder removePromptFilterResults(int index) {
+      if (promptFilterResultsBuilder_ == null) {
+        ensurePromptFilterResultsIsMutable();
+        promptFilterResults_.remove(index);
+        onChanged();
+      } else {
+        promptFilterResultsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public com.azure.openai.v1.PromptFilterResult.Builder getPromptFilterResultsBuilder(
+        int index) {
+      return getPromptFilterResultsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public com.azure.openai.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
+        int index) {
+      if (promptFilterResultsBuilder_ == null) {
+        return promptFilterResults_.get(index);  } else {
+        return promptFilterResultsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public java.util.List<? extends com.azure.openai.v1.PromptFilterResultOrBuilder> 
+         getPromptFilterResultsOrBuilderList() {
+      if (promptFilterResultsBuilder_ != null) {
+        return promptFilterResultsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(promptFilterResults_);
+      }
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public com.azure.openai.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder() {
+      return getPromptFilterResultsFieldBuilder().addBuilder(
+          com.azure.openai.v1.PromptFilterResult.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public com.azure.openai.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder(
+        int index) {
+      return getPromptFilterResultsFieldBuilder().addBuilder(
+          index, com.azure.openai.v1.PromptFilterResult.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 5 [json_name = "promptFilterResults"];</code>
+     */
+    public java.util.List<com.azure.openai.v1.PromptFilterResult.Builder> 
+         getPromptFilterResultsBuilderList() {
+      return getPromptFilterResultsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder> 
+        getPromptFilterResultsFieldBuilder() {
+      if (promptFilterResultsBuilder_ == null) {
+        promptFilterResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder>(
+                promptFilterResults_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        promptFilterResults_ = null;
+      }
+      return promptFilterResultsBuilder_;
+    }
+
+    private java.util.List<com.azure.openai.v1.Choice> choices_ =
+      java.util.Collections.emptyList();
+    private void ensureChoicesIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        choices_ = new java.util.ArrayList<com.azure.openai.v1.Choice>(choices_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.azure.openai.v1.Choice, com.azure.openai.v1.Choice.Builder, com.azure.openai.v1.ChoiceOrBuilder> choicesBuilder_;
+
+    /**
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+     */
+    public java.util.List<com.azure.openai.v1.Choice> getChoicesList() {
       if (choicesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(choices_);
       } else {
@@ -923,7 +1348,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public int getChoicesCount() {
       if (choicesBuilder_ == null) {
@@ -933,9 +1358,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public com.azure.openai.v1.CompletionChoice getChoices(int index) {
+    public com.azure.openai.v1.Choice getChoices(int index) {
       if (choicesBuilder_ == null) {
         return choices_.get(index);
       } else {
@@ -943,10 +1368,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder setChoices(
-        int index, com.azure.openai.v1.CompletionChoice value) {
+        int index, com.azure.openai.v1.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -960,10 +1385,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder setChoices(
-        int index, com.azure.openai.v1.CompletionChoice.Builder builderForValue) {
+        int index, com.azure.openai.v1.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.set(index, builderForValue.build());
@@ -974,9 +1399,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public Builder addChoices(com.azure.openai.v1.CompletionChoice value) {
+    public Builder addChoices(com.azure.openai.v1.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -990,10 +1415,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        int index, com.azure.openai.v1.CompletionChoice value) {
+        int index, com.azure.openai.v1.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1007,10 +1432,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        com.azure.openai.v1.CompletionChoice.Builder builderForValue) {
+        com.azure.openai.v1.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.add(builderForValue.build());
@@ -1021,10 +1446,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        int index, com.azure.openai.v1.CompletionChoice.Builder builderForValue) {
+        int index, com.azure.openai.v1.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.add(index, builderForValue.build());
@@ -1035,10 +1460,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder addAllChoices(
-        java.lang.Iterable<? extends com.azure.openai.v1.CompletionChoice> values) {
+        java.lang.Iterable<? extends com.azure.openai.v1.Choice> values) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1050,12 +1475,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder clearChoices() {
       if (choicesBuilder_ == null) {
         choices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         choicesBuilder_.clear();
@@ -1063,7 +1488,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
     public Builder removeChoices(int index) {
       if (choicesBuilder_ == null) {
@@ -1076,16 +1501,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public com.azure.openai.v1.CompletionChoice.Builder getChoicesBuilder(
+    public com.azure.openai.v1.Choice.Builder getChoicesBuilder(
         int index) {
       return getChoicesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public com.azure.openai.v1.CompletionChoiceOrBuilder getChoicesOrBuilder(
+    public com.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
         int index) {
       if (choicesBuilder_ == null) {
         return choices_.get(index);  } else {
@@ -1093,9 +1518,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public java.util.List<? extends com.azure.openai.v1.CompletionChoiceOrBuilder> 
+    public java.util.List<? extends com.azure.openai.v1.ChoiceOrBuilder> 
          getChoicesOrBuilderList() {
       if (choicesBuilder_ != null) {
         return choicesBuilder_.getMessageOrBuilderList();
@@ -1104,40 +1529,161 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public com.azure.openai.v1.CompletionChoice.Builder addChoicesBuilder() {
+    public com.azure.openai.v1.Choice.Builder addChoicesBuilder() {
       return getChoicesFieldBuilder().addBuilder(
-          com.azure.openai.v1.CompletionChoice.getDefaultInstance());
+          com.azure.openai.v1.Choice.getDefaultInstance());
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public com.azure.openai.v1.CompletionChoice.Builder addChoicesBuilder(
+    public com.azure.openai.v1.Choice.Builder addChoicesBuilder(
         int index) {
       return getChoicesFieldBuilder().addBuilder(
-          index, com.azure.openai.v1.CompletionChoice.getDefaultInstance());
+          index, com.azure.openai.v1.Choice.getDefaultInstance());
     }
     /**
-     * <code>repeated .azure.openai.v1.CompletionChoice choices = 5 [json_name = "choices"];</code>
+     * <code>repeated .azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
      */
-    public java.util.List<com.azure.openai.v1.CompletionChoice.Builder> 
+    public java.util.List<com.azure.openai.v1.Choice.Builder> 
          getChoicesBuilderList() {
       return getChoicesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.azure.openai.v1.CompletionChoice, com.azure.openai.v1.CompletionChoice.Builder, com.azure.openai.v1.CompletionChoiceOrBuilder> 
+        com.azure.openai.v1.Choice, com.azure.openai.v1.Choice.Builder, com.azure.openai.v1.ChoiceOrBuilder> 
         getChoicesFieldBuilder() {
       if (choicesBuilder_ == null) {
         choicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            com.azure.openai.v1.CompletionChoice, com.azure.openai.v1.CompletionChoice.Builder, com.azure.openai.v1.CompletionChoiceOrBuilder>(
+            com.azure.openai.v1.Choice, com.azure.openai.v1.Choice.Builder, com.azure.openai.v1.ChoiceOrBuilder>(
                 choices_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         choices_ = null;
       }
       return choicesBuilder_;
+    }
+
+    private com.azure.openai.v1.Usage usage_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder> usageBuilder_;
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     * @return Whether the usage field is set.
+     */
+    public boolean hasUsage() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     * @return The usage.
+     */
+    public com.azure.openai.v1.Usage getUsage() {
+      if (usageBuilder_ == null) {
+        return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+      } else {
+        return usageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public Builder setUsage(com.azure.openai.v1.Usage value) {
+      if (usageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        usage_ = value;
+      } else {
+        usageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public Builder setUsage(
+        com.azure.openai.v1.Usage.Builder builderForValue) {
+      if (usageBuilder_ == null) {
+        usage_ = builderForValue.build();
+      } else {
+        usageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public Builder mergeUsage(com.azure.openai.v1.Usage value) {
+      if (usageBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          usage_ != null &&
+          usage_ != com.azure.openai.v1.Usage.getDefaultInstance()) {
+          getUsageBuilder().mergeFrom(value);
+        } else {
+          usage_ = value;
+        }
+      } else {
+        usageBuilder_.mergeFrom(value);
+      }
+      if (usage_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public Builder clearUsage() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      usage_ = null;
+      if (usageBuilder_ != null) {
+        usageBuilder_.dispose();
+        usageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public com.azure.openai.v1.Usage.Builder getUsageBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getUsageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    public com.azure.openai.v1.UsageOrBuilder getUsageOrBuilder() {
+      if (usageBuilder_ != null) {
+        return usageBuilder_.getMessageOrBuilder();
+      } else {
+        return usage_ == null ?
+            com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+      }
+    }
+    /**
+     * <code>.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder> 
+        getUsageFieldBuilder() {
+      if (usageBuilder_ == null) {
+        usageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder>(
+                getUsage(),
+                getParentForChildren(),
+                isClean());
+        usage_ = null;
+      }
+      return usageBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:azure.openai.v1.CompletionResponse)

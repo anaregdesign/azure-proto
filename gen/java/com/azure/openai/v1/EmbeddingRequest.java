@@ -37,18 +37,6 @@ private static final long serialVersionUID = 0L;
     return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingRequest_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-      int number) {
-    switch (number) {
-      case 4:
-        return internalGetAdditionalProp();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -174,85 +162,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ADDITIONAL_PROP_FIELD_NUMBER = 4;
-  private static final class AdditionalPropDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingRequest_AdditionalPropEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> additionalProp_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetAdditionalProp() {
-    if (additionalProp_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          AdditionalPropDefaultEntryHolder.defaultEntry);
-    }
-    return additionalProp_;
-  }
-  public int getAdditionalPropCount() {
-    return internalGetAdditionalProp().getMap().size();
-  }
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  @java.lang.Override
-  public boolean containsAdditionalProp(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetAdditionalProp().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getAdditionalPropMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getAdditionalProp() {
-    return getAdditionalPropMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropMap() {
-    return internalGetAdditionalProp().getMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getAdditionalPropOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetAdditionalProp().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getAdditionalPropOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetAdditionalProp().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -276,12 +185,6 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(inputType_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, inputType_);
     }
-    com.google.protobuf.GeneratedMessage
-      .serializeStringMapTo(
-        output,
-        internalGetAdditionalProp(),
-        AdditionalPropDefaultEntryHolder.defaultEntry,
-        4);
     getUnknownFields().writeTo(output);
   }
 
@@ -299,16 +202,6 @@ java.lang.String defaultValue) {
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(inputType_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, inputType_);
-    }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetAdditionalProp().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      additionalProp__ = AdditionalPropDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, additionalProp__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -331,8 +224,6 @@ java.lang.String defaultValue) {
         .equals(other.getUser())) return false;
     if (!getInputType()
         .equals(other.getInputType())) return false;
-    if (!internalGetAdditionalProp().equals(
-        other.internalGetAdditionalProp())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -350,10 +241,6 @@ java.lang.String defaultValue) {
     hash = (53 * hash) + getUser().hashCode();
     hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getInputType().hashCode();
-    if (!internalGetAdditionalProp().getMap().isEmpty()) {
-      hash = (37 * hash) + ADDITIONAL_PROP_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetAdditionalProp().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -463,28 +350,6 @@ java.lang.String defaultValue) {
       return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingRequest_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetAdditionalProp();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetMutableAdditionalProp();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -510,7 +375,6 @@ java.lang.String defaultValue) {
       input_ = "";
       user_ = "";
       inputType_ = "";
-      internalGetMutableAdditionalProp().clear();
       return this;
     }
 
@@ -553,10 +417,6 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.inputType_ = inputType_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.additionalProp_ = internalGetAdditionalProp();
-        result.additionalProp_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -586,9 +446,6 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      internalGetMutableAdditionalProp().mergeFrom(
-          other.internalGetAdditionalProp());
-      bitField0_ |= 0x00000008;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -630,15 +487,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              additionalProp__ = input.readMessage(
-                  AdditionalPropDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableAdditionalProp().getMutableMap().put(
-                  additionalProp__.getKey(), additionalProp__.getValue());
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -869,133 +717,6 @@ java.lang.String defaultValue) {
       inputType_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> additionalProp_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetAdditionalProp() {
-      if (additionalProp_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            AdditionalPropDefaultEntryHolder.defaultEntry);
-      }
-      return additionalProp_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableAdditionalProp() {
-      if (additionalProp_ == null) {
-        additionalProp_ = com.google.protobuf.MapField.newMapField(
-            AdditionalPropDefaultEntryHolder.defaultEntry);
-      }
-      if (!additionalProp_.isMutable()) {
-        additionalProp_ = additionalProp_.copy();
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return additionalProp_;
-    }
-    public int getAdditionalPropCount() {
-      return internalGetAdditionalProp().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    @java.lang.Override
-    public boolean containsAdditionalProp(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetAdditionalProp().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getAdditionalPropMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getAdditionalProp() {
-      return getAdditionalPropMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropMap() {
-      return internalGetAdditionalProp().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getAdditionalPropOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetAdditionalProp().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getAdditionalPropOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetAdditionalProp().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearAdditionalProp() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      internalGetMutableAdditionalProp().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    public Builder removeAdditionalProp(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableAdditionalProp().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableAdditionalProp() {
-      bitField0_ |= 0x00000008;
-      return internalGetMutableAdditionalProp().getMutableMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    public Builder putAdditionalProp(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableAdditionalProp().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-    /**
-     * <code>map&lt;string, string&gt; additional_prop = 4 [json_name = "additionalProp1"];</code>
-     */
-    public Builder putAllAdditionalProp(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableAdditionalProp().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000008;
       return this;
     }
 

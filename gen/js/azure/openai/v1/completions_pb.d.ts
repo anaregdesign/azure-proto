@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
+import type { ContentFilterChoiceResult, PromptFilterResult } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.CompletionRequest
@@ -16,19 +17,19 @@ export declare class CompletionRequest extends Message<CompletionRequest> {
   prompts: string[];
 
   /**
-   * @generated from field: optional uint32 max_tokens = 2;
+   * @generated from field: uint32 max_tokens = 2;
    */
-  maxTokens?: number;
+  maxTokens: number;
 
   /**
-   * @generated from field: optional float temperature = 3;
+   * @generated from field: float temperature = 3;
    */
-  temperature?: number;
+  temperature: number;
 
   /**
-   * @generated from field: optional float top_p = 4;
+   * @generated from field: float top_p = 4;
    */
-  topP?: number;
+  topP: number;
 
   /**
    * @generated from field: map<string, float> logit_bias = 5;
@@ -36,34 +37,34 @@ export declare class CompletionRequest extends Message<CompletionRequest> {
   logitBias: { [key: string]: number };
 
   /**
-   * @generated from field: optional string user = 6;
+   * @generated from field: string user = 6;
    */
-  user?: string;
+  user: string;
 
   /**
-   * @generated from field: optional uint32 n = 7;
+   * @generated from field: uint32 n = 7;
    */
-  n?: number;
+  n: number;
 
   /**
-   * @generated from field: optional bool stream = 8;
+   * @generated from field: bool stream = 8;
    */
-  stream?: boolean;
+  stream: boolean;
 
   /**
-   * @generated from field: optional uint32 logprobs = 9;
+   * @generated from field: uint32 logprobs = 9;
    */
-  logprobs?: number;
+  logprobs: number;
 
   /**
-   * @generated from field: optional string suffix = 10;
+   * @generated from field: string suffix = 10;
    */
-  suffix?: string;
+  suffix: string;
 
   /**
-   * @generated from field: optional bool echo = 11;
+   * @generated from field: bool echo = 11;
    */
-  echo?: boolean;
+  echo: boolean;
 
   /**
    * @generated from field: repeated string stops = 12 [json_name = "stop"];
@@ -71,19 +72,24 @@ export declare class CompletionRequest extends Message<CompletionRequest> {
   stops: string[];
 
   /**
-   * @generated from field: optional float presence_penalty = 13;
+   * @generated from field: string completion_config = 13;
    */
-  presencePenalty?: number;
+  completionConfig: string;
 
   /**
-   * @generated from field: optional float frequency_penalty = 14;
+   * @generated from field: float presence_penalty = 14;
    */
-  frequencyPenalty?: number;
+  presencePenalty: number;
 
   /**
-   * @generated from field: optional uint32 best_of = 15;
+   * @generated from field: float frequency_penalty = 15;
    */
-  bestOf?: number;
+  frequencyPenalty: number;
+
+  /**
+   * @generated from field: uint32 best_of = 16;
+   */
+  bestOf: number;
 
   constructor(data?: PartialMessage<CompletionRequest>);
 
@@ -105,9 +111,9 @@ export declare class CompletionRequest extends Message<CompletionRequest> {
  */
 export declare class CompletionResponse extends Message<CompletionResponse> {
   /**
-   * @generated from field: string model = 1;
+   * @generated from field: string id = 1;
    */
-  model: string;
+  id: string;
 
   /**
    * @generated from field: string object = 2;
@@ -115,19 +121,29 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
   object: string;
 
   /**
-   * @generated from field: string id = 3;
+   * @generated from field: uint64 created = 3;
    */
-  id: string;
+  created: bigint;
 
   /**
-   * @generated from field: uint32 created = 4;
+   * @generated from field: string model = 4;
    */
-  created: number;
+  model: string;
 
   /**
-   * @generated from field: repeated azure.openai.v1.CompletionChoice choices = 5;
+   * @generated from field: repeated azure.openai.v1.PromptFilterResult prompt_filter_results = 5;
    */
-  choices: CompletionChoice[];
+  promptFilterResults: PromptFilterResult[];
+
+  /**
+   * @generated from field: repeated azure.openai.v1.Choice choices = 6;
+   */
+  choices: Choice[];
+
+  /**
+   * @generated from field: azure.openai.v1.Usage usage = 7;
+   */
+  usage?: Usage;
 
   constructor(data?: PartialMessage<CompletionResponse>);
 
@@ -145,41 +161,119 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
 }
 
 /**
- * @generated from message azure.openai.v1.CompletionChoice
+ * @generated from message azure.openai.v1.Choice
  */
-export declare class CompletionChoice extends Message<CompletionChoice> {
+export declare class Choice extends Message<Choice> {
   /**
-   * @generated from field: uint32 index = 1;
-   */
-  index: number;
-
-  /**
-   * @generated from field: string text = 2;
+   * @generated from field: string text = 1;
    */
   text: string;
 
   /**
-   * @generated from field: float logprobs = 3;
+   * @generated from field: uint32 index = 2;
    */
-  logprobs: number;
+  index: number;
+
+  /**
+   * @generated from field: azure.openai.v1.Choice.LogProbs logprobs = 3;
+   */
+  logprobs?: Choice_LogProbs;
 
   /**
    * @generated from field: string finish_reason = 4;
    */
   finishReason: string;
 
-  constructor(data?: PartialMessage<CompletionChoice>);
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterChoiceResult content_filter_result = 5 [json_name = "content_filter_results"];
+   */
+  contentFilterResult?: ContentFilterChoiceResult;
+
+  constructor(data?: PartialMessage<Choice>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.CompletionChoice";
+  static readonly typeName = "azure.openai.v1.Choice";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionChoice;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionChoice;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionChoice;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice;
 
-  static equals(a: CompletionChoice | PlainMessage<CompletionChoice> | undefined, b: CompletionChoice | PlainMessage<CompletionChoice> | undefined): boolean;
+  static equals(a: Choice | PlainMessage<Choice> | undefined, b: Choice | PlainMessage<Choice> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.Choice.LogProbs
+ */
+export declare class Choice_LogProbs extends Message<Choice_LogProbs> {
+  /**
+   * @generated from field: repeated string tokens = 1;
+   */
+  tokens: string[];
+
+  /**
+   * @generated from field: repeated float token_logprobs = 2;
+   */
+  tokenLogprobs: number[];
+
+  /**
+   * @generated from field: repeated float top_logprobs = 3;
+   */
+  topLogprobs: number[];
+
+  /**
+   * @generated from field: repeated uint32 text_offsets = 4 [json_name = "text_offset"];
+   */
+  textOffsets: number[];
+
+  constructor(data?: PartialMessage<Choice_LogProbs>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.Choice.LogProbs";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice_LogProbs;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice_LogProbs;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice_LogProbs;
+
+  static equals(a: Choice_LogProbs | PlainMessage<Choice_LogProbs> | undefined, b: Choice_LogProbs | PlainMessage<Choice_LogProbs> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.Usage
+ */
+export declare class Usage extends Message<Usage> {
+  /**
+   * @generated from field: uint32 completion_tokens = 1;
+   */
+  completionTokens: number;
+
+  /**
+   * @generated from field: uint32 prompt_tokens = 2;
+   */
+  promptTokens: number;
+
+  /**
+   * @generated from field: uint32 total_tokens = 3;
+   */
+  totalTokens: number;
+
+  constructor(data?: PartialMessage<Usage>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.Usage";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Usage;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Usage;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Usage;
+
+  static equals(a: Usage | PlainMessage<Usage> | undefined, b: Usage | PlainMessage<Usage> | undefined): boolean;
 }
 

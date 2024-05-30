@@ -5,51 +5,36 @@ package azure.openai.v1;
 
 option go_package = "azure/openai/v1";
 
-message Error {
+message PromptFilterResult {
+  uint32 index = 1;
+  ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
+}
+
+message ErrorBase {
   string code = 1;
   string message = 2;
-  string param = 3;
-  string type = 4;
-  InnerError inner_error = 5;
 }
 
-message InnerError {
-  string description = 1;
-  string code = 2;
-  ContentFilterResults content_filter_results = 3;
-}
-
-message ContentFilterResults {
+message ContentFilterPromptResult {
   ContentFilterSeverityResult sexual = 1;
   ContentFilterSeverityResult violence = 2;
   ContentFilterSeverityResult hate = 3;
   ContentFilterSeverityResult self_harm = 4;
-  ContentFilterSeverityResult profanity = 5;
+  ContentFilterDetectedResult profanity = 5;
   ContentFilterDetectedResult jailbreak = 6;
-  optional uint32 prompt_index = 7;
-  optional ContentFilterDetectedResult protected_material_text = 8;
-  optional ContentFilterDetectedResult protected_material_code = 9;
-  Error error = 99;
+  ErrorBase error = 99;
 }
 
-message ContentFilterDetectedResult {
-  bool filtered = 1;
-  bool detected = 2;
-  optional Citation citation = 3;
-}
+message ContentFilterChoiceResult {
+  ContentFilterSeverityResult sexual = 1;
+  ContentFilterSeverityResult violence = 2;
+  ContentFilterSeverityResult hate = 3;
+  ContentFilterSeverityResult self_harm = 4;
+  ContentFilterDetectedResult profanity = 5;
+  ContentFilterDetectedResult protected_material_text = 6;
+  ContentFilterDetectedWithCitationResult protected_material_code = 7;
 
-message Citation {
-  string url = 1;
-  string license = 2;
-  string content = 3;
-  string title = 4;
-  string filepath = 5;
-  string chunk_id = 6;
-}
-
-message Context {
-  repeated Citation citations = 1;
-  string intent = 2;
+  ErrorBase error = 99;
 }
 
 message ContentFilterSeverityResult {
@@ -57,8 +42,18 @@ message ContentFilterSeverityResult {
   string severity = 2;
 }
 
-message Usage {
-  uint32 prompt_tokens = 1;
-  uint32 completion_tokens = 2;
-  uint32 total_tokens = 3;
+message ContentFilterDetectedResult {
+  bool filtered = 1;
+  string detected = 2;
+}
+
+message ContentFilterDetectedWithCitationResult {
+  message Citation {
+    string url = 1;
+    string license = 2;
+  }
+
+  bool filtered = 1;
+  bool detected = 2;
+  Citation citation = 3;
 }

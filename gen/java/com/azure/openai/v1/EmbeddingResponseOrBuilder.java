@@ -58,17 +58,17 @@ public interface EmbeddingResponseOrBuilder extends
       int index);
 
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    * @return Whether the usage field is set.
    */
   boolean hasUsage();
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    * @return The usage.
    */
-  com.azure.openai.v1.Usage getUsage();
+  com.azure.openai.v1.EmbeddingResponse.Usage getUsage();
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    */
-  com.azure.openai.v1.UsageOrBuilder getUsageOrBuilder();
+  com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder getUsageOrBuilder();
 }

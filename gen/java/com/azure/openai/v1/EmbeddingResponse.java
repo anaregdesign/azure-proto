@@ -45,6 +45,512 @@ private static final long serialVersionUID = 0L;
             com.azure.openai.v1.EmbeddingResponse.class, com.azure.openai.v1.EmbeddingResponse.Builder.class);
   }
 
+  public interface UsageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:azure.openai.v1.EmbeddingResponse.Usage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 prompt_tokens = 1 [json_name = "promptTokens"];</code>
+     * @return The promptTokens.
+     */
+    int getPromptTokens();
+
+    /**
+     * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+     * @return The totalTokens.
+     */
+    int getTotalTokens();
+  }
+  /**
+   * Protobuf type {@code azure.openai.v1.EmbeddingResponse.Usage}
+   */
+  public static final class Usage extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:azure.openai.v1.EmbeddingResponse.Usage)
+      UsageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 27,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        Usage.class.getName());
+    }
+    // Use Usage.newBuilder() to construct.
+    private Usage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Usage() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingResponse_Usage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingResponse_Usage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.azure.openai.v1.EmbeddingResponse.Usage.class, com.azure.openai.v1.EmbeddingResponse.Usage.Builder.class);
+    }
+
+    public static final int PROMPT_TOKENS_FIELD_NUMBER = 1;
+    private int promptTokens_ = 0;
+    /**
+     * <code>uint32 prompt_tokens = 1 [json_name = "promptTokens"];</code>
+     * @return The promptTokens.
+     */
+    @java.lang.Override
+    public int getPromptTokens() {
+      return promptTokens_;
+    }
+
+    public static final int TOTAL_TOKENS_FIELD_NUMBER = 2;
+    private int totalTokens_ = 0;
+    /**
+     * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+     * @return The totalTokens.
+     */
+    @java.lang.Override
+    public int getTotalTokens() {
+      return totalTokens_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (promptTokens_ != 0) {
+        output.writeUInt32(1, promptTokens_);
+      }
+      if (totalTokens_ != 0) {
+        output.writeUInt32(2, totalTokens_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (promptTokens_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, promptTokens_);
+      }
+      if (totalTokens_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, totalTokens_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.azure.openai.v1.EmbeddingResponse.Usage)) {
+        return super.equals(obj);
+      }
+      com.azure.openai.v1.EmbeddingResponse.Usage other = (com.azure.openai.v1.EmbeddingResponse.Usage) obj;
+
+      if (getPromptTokens()
+          != other.getPromptTokens()) return false;
+      if (getTotalTokens()
+          != other.getTotalTokens()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROMPT_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + getPromptTokens();
+      hash = (37 * hash) + TOTAL_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalTokens();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.azure.openai.v1.EmbeddingResponse.Usage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.azure.openai.v1.EmbeddingResponse.Usage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code azure.openai.v1.EmbeddingResponse.Usage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:azure.openai.v1.EmbeddingResponse.Usage)
+        com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingResponse_Usage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingResponse_Usage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.azure.openai.v1.EmbeddingResponse.Usage.class, com.azure.openai.v1.EmbeddingResponse.Usage.Builder.class);
+      }
+
+      // Construct using com.azure.openai.v1.EmbeddingResponse.Usage.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        promptTokens_ = 0;
+        totalTokens_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.azure.openai.v1.EmbeddingsProto.internal_static_azure_openai_v1_EmbeddingResponse_Usage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.azure.openai.v1.EmbeddingResponse.Usage getDefaultInstanceForType() {
+        return com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.azure.openai.v1.EmbeddingResponse.Usage build() {
+        com.azure.openai.v1.EmbeddingResponse.Usage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.azure.openai.v1.EmbeddingResponse.Usage buildPartial() {
+        com.azure.openai.v1.EmbeddingResponse.Usage result = new com.azure.openai.v1.EmbeddingResponse.Usage(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.azure.openai.v1.EmbeddingResponse.Usage result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.promptTokens_ = promptTokens_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalTokens_ = totalTokens_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.azure.openai.v1.EmbeddingResponse.Usage) {
+          return mergeFrom((com.azure.openai.v1.EmbeddingResponse.Usage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.azure.openai.v1.EmbeddingResponse.Usage other) {
+        if (other == com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance()) return this;
+        if (other.getPromptTokens() != 0) {
+          setPromptTokens(other.getPromptTokens());
+        }
+        if (other.getTotalTokens() != 0) {
+          setTotalTokens(other.getTotalTokens());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                promptTokens_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                totalTokens_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int promptTokens_ ;
+      /**
+       * <code>uint32 prompt_tokens = 1 [json_name = "promptTokens"];</code>
+       * @return The promptTokens.
+       */
+      @java.lang.Override
+      public int getPromptTokens() {
+        return promptTokens_;
+      }
+      /**
+       * <code>uint32 prompt_tokens = 1 [json_name = "promptTokens"];</code>
+       * @param value The promptTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPromptTokens(int value) {
+
+        promptTokens_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 prompt_tokens = 1 [json_name = "promptTokens"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPromptTokens() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        promptTokens_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalTokens_ ;
+      /**
+       * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+       * @return The totalTokens.
+       */
+      @java.lang.Override
+      public int getTotalTokens() {
+        return totalTokens_;
+      }
+      /**
+       * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+       * @param value The totalTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalTokens(int value) {
+
+        totalTokens_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 total_tokens = 2 [json_name = "totalTokens"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalTokens() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalTokens_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:azure.openai.v1.EmbeddingResponse.Usage)
+    }
+
+    // @@protoc_insertion_point(class_scope:azure.openai.v1.EmbeddingResponse.Usage)
+    private static final com.azure.openai.v1.EmbeddingResponse.Usage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.azure.openai.v1.EmbeddingResponse.Usage();
+    }
+
+    public static com.azure.openai.v1.EmbeddingResponse.Usage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Usage>
+        PARSER = new com.google.protobuf.AbstractParser<Usage>() {
+      @java.lang.Override
+      public Usage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Usage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Usage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.azure.openai.v1.EmbeddingResponse.Usage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   public static final int OBJECT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
@@ -166,9 +672,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USAGE_FIELD_NUMBER = 4;
-  private com.azure.openai.v1.Usage usage_;
+  private com.azure.openai.v1.EmbeddingResponse.Usage usage_;
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    * @return Whether the usage field is set.
    */
   @java.lang.Override
@@ -176,19 +682,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    * @return The usage.
    */
   @java.lang.Override
-  public com.azure.openai.v1.Usage getUsage() {
-    return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+  public com.azure.openai.v1.EmbeddingResponse.Usage getUsage() {
+    return usage_ == null ? com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance() : usage_;
   }
   /**
-   * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+   * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.v1.UsageOrBuilder getUsageOrBuilder() {
-    return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+  public com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder getUsageOrBuilder() {
+    return usage_ == null ? com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance() : usage_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1011,31 +1517,31 @@ private static final long serialVersionUID = 0L;
       return dataBuilder_;
     }
 
-    private com.azure.openai.v1.Usage usage_;
+    private com.azure.openai.v1.EmbeddingResponse.Usage usage_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder> usageBuilder_;
+        com.azure.openai.v1.EmbeddingResponse.Usage, com.azure.openai.v1.EmbeddingResponse.Usage.Builder, com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder> usageBuilder_;
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      * @return Whether the usage field is set.
      */
     public boolean hasUsage() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      * @return The usage.
      */
-    public com.azure.openai.v1.Usage getUsage() {
+    public com.azure.openai.v1.EmbeddingResponse.Usage getUsage() {
       if (usageBuilder_ == null) {
-        return usage_ == null ? com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+        return usage_ == null ? com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance() : usage_;
       } else {
         return usageBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
-    public Builder setUsage(com.azure.openai.v1.Usage value) {
+    public Builder setUsage(com.azure.openai.v1.EmbeddingResponse.Usage value) {
       if (usageBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1049,10 +1555,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
     public Builder setUsage(
-        com.azure.openai.v1.Usage.Builder builderForValue) {
+        com.azure.openai.v1.EmbeddingResponse.Usage.Builder builderForValue) {
       if (usageBuilder_ == null) {
         usage_ = builderForValue.build();
       } else {
@@ -1063,13 +1569,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
-    public Builder mergeUsage(com.azure.openai.v1.Usage value) {
+    public Builder mergeUsage(com.azure.openai.v1.EmbeddingResponse.Usage value) {
       if (usageBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           usage_ != null &&
-          usage_ != com.azure.openai.v1.Usage.getDefaultInstance()) {
+          usage_ != com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance()) {
           getUsageBuilder().mergeFrom(value);
         } else {
           usage_ = value;
@@ -1084,7 +1590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
     public Builder clearUsage() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1097,33 +1603,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
-    public com.azure.openai.v1.Usage.Builder getUsageBuilder() {
+    public com.azure.openai.v1.EmbeddingResponse.Usage.Builder getUsageBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getUsageFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
-    public com.azure.openai.v1.UsageOrBuilder getUsageOrBuilder() {
+    public com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder getUsageOrBuilder() {
       if (usageBuilder_ != null) {
         return usageBuilder_.getMessageOrBuilder();
       } else {
         return usage_ == null ?
-            com.azure.openai.v1.Usage.getDefaultInstance() : usage_;
+            com.azure.openai.v1.EmbeddingResponse.Usage.getDefaultInstance() : usage_;
       }
     }
     /**
-     * <code>.azure.openai.v1.Usage usage = 4 [json_name = "usage"];</code>
+     * <code>.azure.openai.v1.EmbeddingResponse.Usage usage = 4 [json_name = "usage"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder> 
+        com.azure.openai.v1.EmbeddingResponse.Usage, com.azure.openai.v1.EmbeddingResponse.Usage.Builder, com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder> 
         getUsageFieldBuilder() {
       if (usageBuilder_ == null) {
         usageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.Usage, com.azure.openai.v1.Usage.Builder, com.azure.openai.v1.UsageOrBuilder>(
+            com.azure.openai.v1.EmbeddingResponse.Usage, com.azure.openai.v1.EmbeddingResponse.Usage.Builder, com.azure.openai.v1.EmbeddingResponse.UsageOrBuilder>(
                 getUsage(),
                 getParentForChildren(),
                 isClean());

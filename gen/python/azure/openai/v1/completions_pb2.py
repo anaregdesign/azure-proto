@@ -22,9 +22,10 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
+from azure.openai.v1 import entity_pb2 as azure_dot_openai_dot_v1_dot_entity__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!azure/openai/v1/completions.proto\x12\x0f\x61zure.openai.v1\"\xf1\x05\n\x11\x43ompletionRequest\x12\x17\n\x07prompts\x18\x01 \x03(\tR\x06prompt\x12\"\n\nmax_tokens\x18\x02 \x01(\rH\x00R\tmaxTokens\x88\x01\x01\x12%\n\x0btemperature\x18\x03 \x01(\x02H\x01R\x0btemperature\x88\x01\x01\x12\x18\n\x05top_p\x18\x04 \x01(\x02H\x02R\x04topP\x88\x01\x01\x12P\n\nlogit_bias\x18\x05 \x03(\x0b\x32\x31.azure.openai.v1.CompletionRequest.LogitBiasEntryR\tlogitBias\x12\x17\n\x04user\x18\x06 \x01(\tH\x03R\x04user\x88\x01\x01\x12\x11\n\x01n\x18\x07 \x01(\rH\x04R\x01n\x88\x01\x01\x12\x1b\n\x06stream\x18\x08 \x01(\x08H\x05R\x06stream\x88\x01\x01\x12\x1f\n\x08logprobs\x18\t \x01(\rH\x06R\x08logprobs\x88\x01\x01\x12\x1b\n\x06suffix\x18\n \x01(\tH\x07R\x06suffix\x88\x01\x01\x12\x17\n\x04\x65\x63ho\x18\x0b \x01(\x08H\x08R\x04\x65\x63ho\x88\x01\x01\x12\x13\n\x05stops\x18\x0c \x03(\tR\x04stop\x12.\n\x10presence_penalty\x18\r \x01(\x02H\tR\x0fpresencePenalty\x88\x01\x01\x12\x30\n\x11\x66requency_penalty\x18\x0e \x01(\x02H\nR\x10\x66requencyPenalty\x88\x01\x01\x12\x1c\n\x07\x62\x65st_of\x18\x0f \x01(\rH\x0bR\x06\x62\x65stOf\x88\x01\x01\x1a<\n\x0eLogitBiasEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x02R\x05value:\x02\x38\x01\x42\r\n\x0b_max_tokensB\x0e\n\x0c_temperatureB\x08\n\x06_top_pB\x07\n\x05_userB\x04\n\x02_nB\t\n\x07_streamB\x0b\n\t_logprobsB\t\n\x07_suffixB\x07\n\x05_echoB\x13\n\x11_presence_penaltyB\x14\n\x12_frequency_penaltyB\n\n\x08_best_of\"\xa9\x01\n\x12\x43ompletionResponse\x12\x14\n\x05model\x18\x01 \x01(\tR\x05model\x12\x16\n\x06object\x18\x02 \x01(\tR\x06object\x12\x0e\n\x02id\x18\x03 \x01(\tR\x02id\x12\x18\n\x07\x63reated\x18\x04 \x01(\rR\x07\x63reated\x12;\n\x07\x63hoices\x18\x05 \x03(\x0b\x32!.azure.openai.v1.CompletionChoiceR\x07\x63hoices\"}\n\x10\x43ompletionChoice\x12\x14\n\x05index\x18\x01 \x01(\rR\x05index\x12\x12\n\x04text\x18\x02 \x01(\tR\x04text\x12\x1a\n\x08logprobs\x18\x03 \x01(\x02R\x08logprobs\x12#\n\rfinish_reason\x18\x04 \x01(\tR\x0c\x66inishReasonB\xc6\x01\n\x13\x63om.azure.openai.v1B\x10\x43ompletionsProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!azure/openai/v1/completions.proto\x12\x0f\x61zure.openai.v1\x1a\x1c\x61zure/openai/v1/entity.proto\"\xc7\x04\n\x11\x43ompletionRequest\x12\x17\n\x07prompts\x18\x01 \x03(\tR\x06prompt\x12\x1d\n\nmax_tokens\x18\x02 \x01(\rR\tmaxTokens\x12 \n\x0btemperature\x18\x03 \x01(\x02R\x0btemperature\x12\x13\n\x05top_p\x18\x04 \x01(\x02R\x04topP\x12P\n\nlogit_bias\x18\x05 \x03(\x0b\x32\x31.azure.openai.v1.CompletionRequest.LogitBiasEntryR\tlogitBias\x12\x12\n\x04user\x18\x06 \x01(\tR\x04user\x12\x0c\n\x01n\x18\x07 \x01(\rR\x01n\x12\x16\n\x06stream\x18\x08 \x01(\x08R\x06stream\x12\x1a\n\x08logprobs\x18\t \x01(\rR\x08logprobs\x12\x16\n\x06suffix\x18\n \x01(\tR\x06suffix\x12\x12\n\x04\x65\x63ho\x18\x0b \x01(\x08R\x04\x65\x63ho\x12\x13\n\x05stops\x18\x0c \x03(\tR\x04stop\x12+\n\x11\x63ompletion_config\x18\r \x01(\tR\x10\x63ompletionConfig\x12)\n\x10presence_penalty\x18\x0e \x01(\x02R\x0fpresencePenalty\x12+\n\x11\x66requency_penalty\x18\x0f \x01(\x02R\x10\x66requencyPenalty\x12\x17\n\x07\x62\x65st_of\x18\x10 \x01(\rR\x06\x62\x65stOf\x1a<\n\x0eLogitBiasEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x02R\x05value:\x02\x38\x01\"\xa6\x02\n\x12\x43ompletionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n\x06object\x18\x02 \x01(\tR\x06object\x12\x18\n\x07\x63reated\x18\x03 \x01(\x04R\x07\x63reated\x12\x14\n\x05model\x18\x04 \x01(\tR\x05model\x12W\n\x15prompt_filter_results\x18\x05 \x03(\x0b\x32#.azure.openai.v1.PromptFilterResultR\x13promptFilterResults\x12\x31\n\x07\x63hoices\x18\x06 \x03(\x0b\x32\x17.azure.openai.v1.ChoiceR\x07\x63hoices\x12,\n\x05usage\x18\x07 \x01(\x0b\x32\x16.azure.openai.v1.UsageR\x05usage\"\x8a\x03\n\x06\x43hoice\x12\x12\n\x04text\x18\x01 \x01(\tR\x04text\x12\x14\n\x05index\x18\x02 \x01(\rR\x05index\x12<\n\x08logprobs\x18\x03 \x01(\x0b\x32 .azure.openai.v1.Choice.LogProbsR\x08logprobs\x12#\n\rfinish_reason\x18\x04 \x01(\tR\x0c\x66inishReason\x12\x61\n\x15\x63ontent_filter_result\x18\x05 \x01(\x0b\x32*.azure.openai.v1.ContentFilterChoiceResultR\x16\x63ontent_filter_results\x1a\x8f\x01\n\x08LogProbs\x12\x16\n\x06tokens\x18\x01 \x03(\tR\x06tokens\x12%\n\x0etoken_logprobs\x18\x02 \x03(\x02R\rtokenLogprobs\x12!\n\x0ctop_logprobs\x18\x03 \x03(\x02R\x0btopLogprobs\x12!\n\x0ctext_offsets\x18\x04 \x03(\rR\x0btext_offset\"|\n\x05Usage\x12+\n\x11\x63ompletion_tokens\x18\x01 \x01(\rR\x10\x63ompletionTokens\x12#\n\rprompt_tokens\x18\x02 \x01(\rR\x0cpromptTokens\x12!\n\x0ctotal_tokens\x18\x03 \x01(\rR\x0btotalTokensB\xc6\x01\n\x13\x63om.azure.openai.v1B\x10\x43ompletionsProtoP\x01Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\xa2\x02\x03\x41OX\xaa\x02\x0f\x41zure.Openai.V1\xca\x02\x0f\x41zure\\Openai\\V1\xe2\x02\x1b\x41zure\\Openai\\V1\\GPBMetadata\xea\x02\x11\x41zure::Openai::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -34,12 +35,16 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._serialized_options = b'\n\023com.azure.openai.v1B\020CompletionsProtoP\001Z?github.com/anaregdesign/azure-proto/go/azure/openai/v1;openaiv1\242\002\003AOX\252\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033Azure\\Openai\\V1\\GPBMetadata\352\002\021Azure::Openai::V1'
   _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._loaded_options = None
   _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._serialized_options = b'8\001'
-  _globals['_COMPLETIONREQUEST']._serialized_start=55
-  _globals['_COMPLETIONREQUEST']._serialized_end=808
-  _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._serialized_start=593
-  _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._serialized_end=653
-  _globals['_COMPLETIONRESPONSE']._serialized_start=811
-  _globals['_COMPLETIONRESPONSE']._serialized_end=980
-  _globals['_COMPLETIONCHOICE']._serialized_start=982
-  _globals['_COMPLETIONCHOICE']._serialized_end=1107
+  _globals['_COMPLETIONREQUEST']._serialized_start=85
+  _globals['_COMPLETIONREQUEST']._serialized_end=668
+  _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._serialized_start=608
+  _globals['_COMPLETIONREQUEST_LOGITBIASENTRY']._serialized_end=668
+  _globals['_COMPLETIONRESPONSE']._serialized_start=671
+  _globals['_COMPLETIONRESPONSE']._serialized_end=965
+  _globals['_CHOICE']._serialized_start=968
+  _globals['_CHOICE']._serialized_end=1362
+  _globals['_CHOICE_LOGPROBS']._serialized_start=1219
+  _globals['_CHOICE_LOGPROBS']._serialized_end=1362
+  _globals['_USAGE']._serialized_start=1364
+  _globals['_USAGE']._serialized_end=1488
 # @@protoc_insertion_point(module_scope)

@@ -6,85 +6,57 @@
 import { proto3 } from "@bufbuild/protobuf";
 
 /**
- * @generated from message azure.openai.v1.Error
+ * @generated from message azure.openai.v1.PromptFilterResult
  */
-export const Error = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.Error",
+export const PromptFilterResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.PromptFilterResult",
+  () => [
+    { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "content_filter_result", jsonName: "content_filter_results", kind: "message", T: ContentFilterPromptResult },
+  ],
+);
+
+/**
+ * @generated from message azure.openai.v1.ErrorBase
+ */
+export const ErrorBase = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ErrorBase",
   () => [
     { no: 1, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "param", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "inner_error", kind: "message", T: InnerError },
   ],
 );
 
 /**
- * @generated from message azure.openai.v1.InnerError
+ * @generated from message azure.openai.v1.ContentFilterPromptResult
  */
-export const InnerError = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.InnerError",
-  () => [
-    { no: 1, name: "description", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "content_filter_results", kind: "message", T: ContentFilterResults },
-  ],
-);
-
-/**
- * @generated from message azure.openai.v1.ContentFilterResults
- */
-export const ContentFilterResults = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.ContentFilterResults",
+export const ContentFilterPromptResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterPromptResult",
   () => [
     { no: 1, name: "sexual", kind: "message", T: ContentFilterSeverityResult },
     { no: 2, name: "violence", kind: "message", T: ContentFilterSeverityResult },
     { no: 3, name: "hate", kind: "message", T: ContentFilterSeverityResult },
     { no: 4, name: "self_harm", kind: "message", T: ContentFilterSeverityResult },
-    { no: 5, name: "profanity", kind: "message", T: ContentFilterSeverityResult },
+    { no: 5, name: "profanity", kind: "message", T: ContentFilterDetectedResult },
     { no: 6, name: "jailbreak", kind: "message", T: ContentFilterDetectedResult },
-    { no: 7, name: "prompt_index", kind: "scalar", T: 13 /* ScalarType.UINT32 */, opt: true },
-    { no: 8, name: "protected_material_text", kind: "message", T: ContentFilterDetectedResult, opt: true },
-    { no: 9, name: "protected_material_code", kind: "message", T: ContentFilterDetectedResult, opt: true },
-    { no: 99, name: "error", kind: "message", T: Error },
+    { no: 99, name: "error", kind: "message", T: ErrorBase },
   ],
 );
 
 /**
- * @generated from message azure.openai.v1.ContentFilterDetectedResult
+ * @generated from message azure.openai.v1.ContentFilterChoiceResult
  */
-export const ContentFilterDetectedResult = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.ContentFilterDetectedResult",
+export const ContentFilterChoiceResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterChoiceResult",
   () => [
-    { no: 1, name: "filtered", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 2, name: "detected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 3, name: "citation", kind: "message", T: Citation, opt: true },
-  ],
-);
-
-/**
- * @generated from message azure.openai.v1.Citation
- */
-export const Citation = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.Citation",
-  () => [
-    { no: 1, name: "url", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "license", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "content", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "title", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "filepath", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 6, name: "chunk_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ],
-);
-
-/**
- * @generated from message azure.openai.v1.Context
- */
-export const Context = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.Context",
-  () => [
-    { no: 1, name: "citations", kind: "message", T: Citation, repeated: true },
-    { no: 2, name: "intent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "sexual", kind: "message", T: ContentFilterSeverityResult },
+    { no: 2, name: "violence", kind: "message", T: ContentFilterSeverityResult },
+    { no: 3, name: "hate", kind: "message", T: ContentFilterSeverityResult },
+    { no: 4, name: "self_harm", kind: "message", T: ContentFilterSeverityResult },
+    { no: 5, name: "profanity", kind: "message", T: ContentFilterDetectedResult },
+    { no: 6, name: "protected_material_text", kind: "message", T: ContentFilterDetectedResult },
+    { no: 7, name: "protected_material_code", kind: "message", T: ContentFilterDetectedWithCitationResult },
+    { no: 99, name: "error", kind: "message", T: ErrorBase },
   ],
 );
 
@@ -100,14 +72,37 @@ export const ContentFilterSeverityResult = /*@__PURE__*/ proto3.makeMessageType(
 );
 
 /**
- * @generated from message azure.openai.v1.Usage
+ * @generated from message azure.openai.v1.ContentFilterDetectedResult
  */
-export const Usage = /*@__PURE__*/ proto3.makeMessageType(
-  "azure.openai.v1.Usage",
+export const ContentFilterDetectedResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterDetectedResult",
   () => [
-    { no: 1, name: "prompt_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 2, name: "completion_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 3, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 1, name: "filtered", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 2, name: "detected", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
+);
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterDetectedWithCitationResult
+ */
+export const ContentFilterDetectedWithCitationResult = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterDetectedWithCitationResult",
+  () => [
+    { no: 1, name: "filtered", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 2, name: "detected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 3, name: "citation", kind: "message", T: ContentFilterDetectedWithCitationResult_Citation },
+  ],
+);
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterDetectedWithCitationResult.Citation
+ */
+export const ContentFilterDetectedWithCitationResult_Citation = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.ContentFilterDetectedWithCitationResult.Citation",
+  () => [
+    { no: 1, name: "url", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "license", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ],
+  {localName: "ContentFilterDetectedWithCitationResult_Citation"},
 );
 

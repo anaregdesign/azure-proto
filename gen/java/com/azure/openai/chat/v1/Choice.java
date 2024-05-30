@@ -121,9 +121,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_FILTER_RESULT_FIELD_NUMBER = 4;
-  private com.azure.openai.chat.v1.ContentFilterChoiceResult contentFilterResult_;
+  private com.azure.openai.v1.ContentFilterChoiceResult contentFilterResult_;
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    * @return Whether the contentFilterResult field is set.
    */
   @java.lang.Override
@@ -131,19 +131,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    * @return The contentFilterResult.
    */
   @java.lang.Override
-  public com.azure.openai.chat.v1.ContentFilterChoiceResult getContentFilterResult() {
-    return contentFilterResult_ == null ? com.azure.openai.chat.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
+  public com.azure.openai.v1.ContentFilterChoiceResult getContentFilterResult() {
+    return contentFilterResult_ == null ? com.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
   }
   /**
-   * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+   * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder() {
-    return contentFilterResult_ == null ? com.azure.openai.chat.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
+  public com.azure.openai.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder() {
+    return contentFilterResult_ == null ? com.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -771,31 +771,31 @@ private static final long serialVersionUID = 0L;
       return messageBuilder_;
     }
 
-    private com.azure.openai.chat.v1.ContentFilterChoiceResult contentFilterResult_;
+    private com.azure.openai.v1.ContentFilterChoiceResult contentFilterResult_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.chat.v1.ContentFilterChoiceResult, com.azure.openai.chat.v1.ContentFilterChoiceResult.Builder, com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder> contentFilterResultBuilder_;
+        com.azure.openai.v1.ContentFilterChoiceResult, com.azure.openai.v1.ContentFilterChoiceResult.Builder, com.azure.openai.v1.ContentFilterChoiceResultOrBuilder> contentFilterResultBuilder_;
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      * @return Whether the contentFilterResult field is set.
      */
     public boolean hasContentFilterResult() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      * @return The contentFilterResult.
      */
-    public com.azure.openai.chat.v1.ContentFilterChoiceResult getContentFilterResult() {
+    public com.azure.openai.v1.ContentFilterChoiceResult getContentFilterResult() {
       if (contentFilterResultBuilder_ == null) {
-        return contentFilterResult_ == null ? com.azure.openai.chat.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
+        return contentFilterResult_ == null ? com.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
       } else {
         return contentFilterResultBuilder_.getMessage();
       }
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
-    public Builder setContentFilterResult(com.azure.openai.chat.v1.ContentFilterChoiceResult value) {
+    public Builder setContentFilterResult(com.azure.openai.v1.ContentFilterChoiceResult value) {
       if (contentFilterResultBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -809,10 +809,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
     public Builder setContentFilterResult(
-        com.azure.openai.chat.v1.ContentFilterChoiceResult.Builder builderForValue) {
+        com.azure.openai.v1.ContentFilterChoiceResult.Builder builderForValue) {
       if (contentFilterResultBuilder_ == null) {
         contentFilterResult_ = builderForValue.build();
       } else {
@@ -823,13 +823,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
-    public Builder mergeContentFilterResult(com.azure.openai.chat.v1.ContentFilterChoiceResult value) {
+    public Builder mergeContentFilterResult(com.azure.openai.v1.ContentFilterChoiceResult value) {
       if (contentFilterResultBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           contentFilterResult_ != null &&
-          contentFilterResult_ != com.azure.openai.chat.v1.ContentFilterChoiceResult.getDefaultInstance()) {
+          contentFilterResult_ != com.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance()) {
           getContentFilterResultBuilder().mergeFrom(value);
         } else {
           contentFilterResult_ = value;
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
     public Builder clearContentFilterResult() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -857,33 +857,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
-    public com.azure.openai.chat.v1.ContentFilterChoiceResult.Builder getContentFilterResultBuilder() {
+    public com.azure.openai.v1.ContentFilterChoiceResult.Builder getContentFilterResultBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getContentFilterResultFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
-    public com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder() {
+    public com.azure.openai.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder() {
       if (contentFilterResultBuilder_ != null) {
         return contentFilterResultBuilder_.getMessageOrBuilder();
       } else {
         return contentFilterResult_ == null ?
-            com.azure.openai.chat.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
+            com.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
       }
     }
     /**
-     * <code>.azure.openai.chat.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
+     * <code>.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.chat.v1.ContentFilterChoiceResult, com.azure.openai.chat.v1.ContentFilterChoiceResult.Builder, com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder> 
+        com.azure.openai.v1.ContentFilterChoiceResult, com.azure.openai.v1.ContentFilterChoiceResult.Builder, com.azure.openai.v1.ContentFilterChoiceResultOrBuilder> 
         getContentFilterResultFieldBuilder() {
       if (contentFilterResultBuilder_ == null) {
         contentFilterResultBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.chat.v1.ContentFilterChoiceResult, com.azure.openai.chat.v1.ContentFilterChoiceResult.Builder, com.azure.openai.chat.v1.ContentFilterChoiceResultOrBuilder>(
+            com.azure.openai.v1.ContentFilterChoiceResult, com.azure.openai.v1.ContentFilterChoiceResult.Builder, com.azure.openai.v1.ContentFilterChoiceResultOrBuilder>(
                 getContentFilterResult(),
                 getParentForChildren(),
                 isClean());

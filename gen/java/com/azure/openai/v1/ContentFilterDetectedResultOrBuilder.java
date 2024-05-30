@@ -16,23 +16,14 @@ public interface ContentFilterDetectedResultOrBuilder extends
   boolean getFiltered();
 
   /**
-   * <code>bool detected = 2 [json_name = "detected"];</code>
+   * <code>string detected = 2 [json_name = "detected"];</code>
    * @return The detected.
    */
-  boolean getDetected();
-
+  java.lang.String getDetected();
   /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   * @return Whether the citation field is set.
+   * <code>string detected = 2 [json_name = "detected"];</code>
+   * @return The bytes for detected.
    */
-  boolean hasCitation();
-  /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   * @return The citation.
-   */
-  com.azure.openai.v1.Citation getCitation();
-  /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   */
-  com.azure.openai.v1.CitationOrBuilder getCitationOrBuilder();
+  com.google.protobuf.ByteString
+      getDetectedBytes();
 }

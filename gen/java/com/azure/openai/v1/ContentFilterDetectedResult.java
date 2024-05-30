@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ContentFilterDetectedResult() {
+    detected_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -42,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.azure.openai.v1.ContentFilterDetectedResult.class, com.azure.openai.v1.ContentFilterDetectedResult.Builder.class);
   }
 
-  private int bitField0_;
   public static final int FILTERED_FIELD_NUMBER = 1;
   private boolean filtered_ = false;
   /**
@@ -55,40 +55,42 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DETECTED_FIELD_NUMBER = 2;
-  private boolean detected_ = false;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object detected_ = "";
   /**
-   * <code>bool detected = 2 [json_name = "detected"];</code>
+   * <code>string detected = 2 [json_name = "detected"];</code>
    * @return The detected.
    */
   @java.lang.Override
-  public boolean getDetected() {
-    return detected_;
-  }
-
-  public static final int CITATION_FIELD_NUMBER = 3;
-  private com.azure.openai.v1.Citation citation_;
-  /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   * @return Whether the citation field is set.
-   */
-  @java.lang.Override
-  public boolean hasCitation() {
-    return ((bitField0_ & 0x00000001) != 0);
+  public java.lang.String getDetected() {
+    java.lang.Object ref = detected_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      detected_ = s;
+      return s;
+    }
   }
   /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   * @return The citation.
+   * <code>string detected = 2 [json_name = "detected"];</code>
+   * @return The bytes for detected.
    */
   @java.lang.Override
-  public com.azure.openai.v1.Citation getCitation() {
-    return citation_ == null ? com.azure.openai.v1.Citation.getDefaultInstance() : citation_;
-  }
-  /**
-   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-   */
-  @java.lang.Override
-  public com.azure.openai.v1.CitationOrBuilder getCitationOrBuilder() {
-    return citation_ == null ? com.azure.openai.v1.Citation.getDefaultInstance() : citation_;
+  public com.google.protobuf.ByteString
+      getDetectedBytes() {
+    java.lang.Object ref = detected_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      detected_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -108,11 +110,8 @@ private static final long serialVersionUID = 0L;
     if (filtered_ != false) {
       output.writeBool(1, filtered_);
     }
-    if (detected_ != false) {
-      output.writeBool(2, detected_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(3, getCitation());
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(detected_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, detected_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -127,13 +126,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, filtered_);
     }
-    if (detected_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, detected_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getCitation());
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(detected_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, detected_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,13 +146,8 @@ private static final long serialVersionUID = 0L;
 
     if (getFiltered()
         != other.getFiltered()) return false;
-    if (getDetected()
-        != other.getDetected()) return false;
-    if (hasCitation() != other.hasCitation()) return false;
-    if (hasCitation()) {
-      if (!getCitation()
-          .equals(other.getCitation())) return false;
-    }
+    if (!getDetected()
+        .equals(other.getDetected())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -174,12 +163,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getFiltered());
     hash = (37 * hash) + DETECTED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getDetected());
-    if (hasCitation()) {
-      hash = (37 * hash) + CITATION_FIELD_NUMBER;
-      hash = (53 * hash) + getCitation().hashCode();
-    }
+    hash = (53 * hash) + getDetected().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -299,31 +283,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.azure.openai.v1.ContentFilterDetectedResult.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getCitationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
       filtered_ = false;
-      detected_ = false;
-      citation_ = null;
-      if (citationBuilder_ != null) {
-        citationBuilder_.dispose();
-        citationBuilder_ = null;
-      }
+      detected_ = "";
       return this;
     }
 
@@ -363,14 +336,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.detected_ = detected_;
       }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.citation_ = citationBuilder_ == null
-            ? citation_
-            : citationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -388,11 +353,10 @@ private static final long serialVersionUID = 0L;
       if (other.getFiltered() != false) {
         setFiltered(other.getFiltered());
       }
-      if (other.getDetected() != false) {
-        setDetected(other.getDetected());
-      }
-      if (other.hasCitation()) {
-        mergeCitation(other.getCitation());
+      if (!other.getDetected().isEmpty()) {
+        detected_ = other.detected_;
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -425,18 +389,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              detected_ = input.readBool();
+            case 18: {
+              detected_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
-            case 26: {
-              input.readMessage(
-                  getCitationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -486,157 +443,76 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean detected_ ;
+    private java.lang.Object detected_ = "";
     /**
-     * <code>bool detected = 2 [json_name = "detected"];</code>
+     * <code>string detected = 2 [json_name = "detected"];</code>
      * @return The detected.
      */
-    @java.lang.Override
-    public boolean getDetected() {
-      return detected_;
+    public java.lang.String getDetected() {
+      java.lang.Object ref = detected_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        detected_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bool detected = 2 [json_name = "detected"];</code>
+     * <code>string detected = 2 [json_name = "detected"];</code>
+     * @return The bytes for detected.
+     */
+    public com.google.protobuf.ByteString
+        getDetectedBytes() {
+      java.lang.Object ref = detected_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        detected_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string detected = 2 [json_name = "detected"];</code>
      * @param value The detected to set.
      * @return This builder for chaining.
      */
-    public Builder setDetected(boolean value) {
-
+    public Builder setDetected(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       detected_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>bool detected = 2 [json_name = "detected"];</code>
+     * <code>string detected = 2 [json_name = "detected"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDetected() {
+      detected_ = getDefaultInstance().getDetected();
       bitField0_ = (bitField0_ & ~0x00000002);
-      detected_ = false;
-      onChanged();
-      return this;
-    }
-
-    private com.azure.openai.v1.Citation citation_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Citation, com.azure.openai.v1.Citation.Builder, com.azure.openai.v1.CitationOrBuilder> citationBuilder_;
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     * @return Whether the citation field is set.
-     */
-    public boolean hasCitation() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     * @return The citation.
-     */
-    public com.azure.openai.v1.Citation getCitation() {
-      if (citationBuilder_ == null) {
-        return citation_ == null ? com.azure.openai.v1.Citation.getDefaultInstance() : citation_;
-      } else {
-        return citationBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    public Builder setCitation(com.azure.openai.v1.Citation value) {
-      if (citationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        citation_ = value;
-      } else {
-        citationBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
+     * <code>string detected = 2 [json_name = "detected"];</code>
+     * @param value The bytes for detected to set.
+     * @return This builder for chaining.
      */
-    public Builder setCitation(
-        com.azure.openai.v1.Citation.Builder builderForValue) {
-      if (citationBuilder_ == null) {
-        citation_ = builderForValue.build();
-      } else {
-        citationBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
+    public Builder setDetectedBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      detected_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    public Builder mergeCitation(com.azure.openai.v1.Citation value) {
-      if (citationBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          citation_ != null &&
-          citation_ != com.azure.openai.v1.Citation.getDefaultInstance()) {
-          getCitationBuilder().mergeFrom(value);
-        } else {
-          citation_ = value;
-        }
-      } else {
-        citationBuilder_.mergeFrom(value);
-      }
-      if (citation_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    public Builder clearCitation() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      citation_ = null;
-      if (citationBuilder_ != null) {
-        citationBuilder_.dispose();
-        citationBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    public com.azure.openai.v1.Citation.Builder getCitationBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getCitationFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    public com.azure.openai.v1.CitationOrBuilder getCitationOrBuilder() {
-      if (citationBuilder_ != null) {
-        return citationBuilder_.getMessageOrBuilder();
-      } else {
-        return citation_ == null ?
-            com.azure.openai.v1.Citation.getDefaultInstance() : citation_;
-      }
-    }
-    /**
-     * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.azure.openai.v1.Citation, com.azure.openai.v1.Citation.Builder, com.azure.openai.v1.CitationOrBuilder> 
-        getCitationFieldBuilder() {
-      if (citationBuilder_ == null) {
-        citationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.azure.openai.v1.Citation, com.azure.openai.v1.Citation.Builder, com.azure.openai.v1.CitationOrBuilder>(
-                getCitation(),
-                getParentForChildren(),
-                isClean());
-        citation_ = null;
-      }
-      return citationBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:azure.openai.v1.ContentFilterDetectedResult)

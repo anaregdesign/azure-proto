@@ -4,7 +4,6 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { Usage } from "./entity_pb.js";
 
 /**
  * @generated from message azure.openai.v1.EmbeddingRequest
@@ -15,7 +14,6 @@ export const EmbeddingRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "input", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "input_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "additional_prop", jsonName: "additionalProp1", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
   ],
 );
 
@@ -28,8 +26,20 @@ export const EmbeddingResponse = /*@__PURE__*/ proto3.makeMessageType(
     { no: 1, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "model", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "data", kind: "message", T: Data, repeated: true },
-    { no: 4, name: "usage", kind: "message", T: Usage },
+    { no: 4, name: "usage", kind: "message", T: EmbeddingResponse_Usage },
   ],
+);
+
+/**
+ * @generated from message azure.openai.v1.EmbeddingResponse.Usage
+ */
+export const EmbeddingResponse_Usage = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.EmbeddingResponse.Usage",
+  () => [
+    { no: 1, name: "prompt_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+  ],
+  {localName: "EmbeddingResponse_Usage"},
 );
 
 /**

@@ -7,9 +7,38 @@ import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialM
 import { Message, proto3 } from "@bufbuild/protobuf";
 
 /**
- * @generated from message azure.openai.v1.Error
+ * @generated from message azure.openai.v1.PromptFilterResult
  */
-export declare class Error extends Message<Error> {
+export declare class PromptFilterResult extends Message<PromptFilterResult> {
+  /**
+   * @generated from field: uint32 index = 1;
+   */
+  index: number;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
+   */
+  contentFilterResult?: ContentFilterPromptResult;
+
+  constructor(data?: PartialMessage<PromptFilterResult>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.PromptFilterResult";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PromptFilterResult;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PromptFilterResult;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PromptFilterResult;
+
+  static equals(a: PromptFilterResult | PlainMessage<PromptFilterResult> | undefined, b: PromptFilterResult | PlainMessage<PromptFilterResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.ErrorBase
+ */
+export declare class ErrorBase extends Message<ErrorBase> {
   /**
    * @generated from field: string code = 1;
    */
@@ -20,74 +49,25 @@ export declare class Error extends Message<Error> {
    */
   message: string;
 
-  /**
-   * @generated from field: string param = 3;
-   */
-  param: string;
-
-  /**
-   * @generated from field: string type = 4;
-   */
-  type: string;
-
-  /**
-   * @generated from field: azure.openai.v1.InnerError inner_error = 5;
-   */
-  innerError?: InnerError;
-
-  constructor(data?: PartialMessage<Error>);
+  constructor(data?: PartialMessage<ErrorBase>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.Error";
+  static readonly typeName = "azure.openai.v1.ErrorBase";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Error;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ErrorBase;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Error;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ErrorBase;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Error;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ErrorBase;
 
-  static equals(a: Error | PlainMessage<Error> | undefined, b: Error | PlainMessage<Error> | undefined): boolean;
+  static equals(a: ErrorBase | PlainMessage<ErrorBase> | undefined, b: ErrorBase | PlainMessage<ErrorBase> | undefined): boolean;
 }
 
 /**
- * @generated from message azure.openai.v1.InnerError
+ * @generated from message azure.openai.v1.ContentFilterPromptResult
  */
-export declare class InnerError extends Message<InnerError> {
-  /**
-   * @generated from field: string description = 1;
-   */
-  description: string;
-
-  /**
-   * @generated from field: string code = 2;
-   */
-  code: string;
-
-  /**
-   * @generated from field: azure.openai.v1.ContentFilterResults content_filter_results = 3;
-   */
-  contentFilterResults?: ContentFilterResults;
-
-  constructor(data?: PartialMessage<InnerError>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.InnerError";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): InnerError;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): InnerError;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): InnerError;
-
-  static equals(a: InnerError | PlainMessage<InnerError> | undefined, b: InnerError | PlainMessage<InnerError> | undefined): boolean;
-}
-
-/**
- * @generated from message azure.openai.v1.ContentFilterResults
- */
-export declare class ContentFilterResults extends Message<ContentFilterResults> {
+export declare class ContentFilterPromptResult extends Message<ContentFilterPromptResult> {
   /**
    * @generated from field: azure.openai.v1.ContentFilterSeverityResult sexual = 1;
    */
@@ -109,9 +89,9 @@ export declare class ContentFilterResults extends Message<ContentFilterResults> 
   selfHarm?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: azure.openai.v1.ContentFilterSeverityResult profanity = 5;
+   * @generated from field: azure.openai.v1.ContentFilterDetectedResult profanity = 5;
    */
-  profanity?: ContentFilterSeverityResult;
+  profanity?: ContentFilterDetectedResult;
 
   /**
    * @generated from field: azure.openai.v1.ContentFilterDetectedResult jailbreak = 6;
@@ -119,150 +99,82 @@ export declare class ContentFilterResults extends Message<ContentFilterResults> 
   jailbreak?: ContentFilterDetectedResult;
 
   /**
-   * @generated from field: optional uint32 prompt_index = 7;
+   * @generated from field: azure.openai.v1.ErrorBase error = 99;
    */
-  promptIndex?: number;
+  error?: ErrorBase;
+
+  constructor(data?: PartialMessage<ContentFilterPromptResult>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.ContentFilterPromptResult";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterPromptResult;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterPromptResult;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterPromptResult;
+
+  static equals(a: ContentFilterPromptResult | PlainMessage<ContentFilterPromptResult> | undefined, b: ContentFilterPromptResult | PlainMessage<ContentFilterPromptResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterChoiceResult
+ */
+export declare class ContentFilterChoiceResult extends Message<ContentFilterChoiceResult> {
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult sexual = 1;
+   */
+  sexual?: ContentFilterSeverityResult;
 
   /**
-   * @generated from field: optional azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8;
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult violence = 2;
+   */
+  violence?: ContentFilterSeverityResult;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult hate = 3;
+   */
+  hate?: ContentFilterSeverityResult;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterSeverityResult self_harm = 4;
+   */
+  selfHarm?: ContentFilterSeverityResult;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterDetectedResult profanity = 5;
+   */
+  profanity?: ContentFilterDetectedResult;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterDetectedResult protected_material_text = 6;
    */
   protectedMaterialText?: ContentFilterDetectedResult;
 
   /**
-   * @generated from field: optional azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9;
+   * @generated from field: azure.openai.v1.ContentFilterDetectedWithCitationResult protected_material_code = 7;
    */
-  protectedMaterialCode?: ContentFilterDetectedResult;
+  protectedMaterialCode?: ContentFilterDetectedWithCitationResult;
 
   /**
-   * @generated from field: azure.openai.v1.Error error = 99;
+   * @generated from field: azure.openai.v1.ErrorBase error = 99;
    */
-  error?: Error;
+  error?: ErrorBase;
 
-  constructor(data?: PartialMessage<ContentFilterResults>);
+  constructor(data?: PartialMessage<ContentFilterChoiceResult>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.ContentFilterResults";
+  static readonly typeName = "azure.openai.v1.ContentFilterChoiceResult";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterResults;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterChoiceResult;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterResults;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterChoiceResult;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterResults;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterChoiceResult;
 
-  static equals(a: ContentFilterResults | PlainMessage<ContentFilterResults> | undefined, b: ContentFilterResults | PlainMessage<ContentFilterResults> | undefined): boolean;
-}
-
-/**
- * @generated from message azure.openai.v1.ContentFilterDetectedResult
- */
-export declare class ContentFilterDetectedResult extends Message<ContentFilterDetectedResult> {
-  /**
-   * @generated from field: bool filtered = 1;
-   */
-  filtered: boolean;
-
-  /**
-   * @generated from field: bool detected = 2;
-   */
-  detected: boolean;
-
-  /**
-   * @generated from field: optional azure.openai.v1.Citation citation = 3;
-   */
-  citation?: Citation;
-
-  constructor(data?: PartialMessage<ContentFilterDetectedResult>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.ContentFilterDetectedResult";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterDetectedResult;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
-
-  static equals(a: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined, b: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined): boolean;
-}
-
-/**
- * @generated from message azure.openai.v1.Citation
- */
-export declare class Citation extends Message<Citation> {
-  /**
-   * @generated from field: string url = 1;
-   */
-  url: string;
-
-  /**
-   * @generated from field: string license = 2;
-   */
-  license: string;
-
-  /**
-   * @generated from field: string content = 3;
-   */
-  content: string;
-
-  /**
-   * @generated from field: string title = 4;
-   */
-  title: string;
-
-  /**
-   * @generated from field: string filepath = 5;
-   */
-  filepath: string;
-
-  /**
-   * @generated from field: string chunk_id = 6;
-   */
-  chunkId: string;
-
-  constructor(data?: PartialMessage<Citation>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.Citation";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Citation;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Citation;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Citation;
-
-  static equals(a: Citation | PlainMessage<Citation> | undefined, b: Citation | PlainMessage<Citation> | undefined): boolean;
-}
-
-/**
- * @generated from message azure.openai.v1.Context
- */
-export declare class Context extends Message<Context> {
-  /**
-   * @generated from field: repeated azure.openai.v1.Citation citations = 1;
-   */
-  citations: Citation[];
-
-  /**
-   * @generated from field: string intent = 2;
-   */
-  intent: string;
-
-  constructor(data?: PartialMessage<Context>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.Context";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Context;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Context;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Context;
-
-  static equals(a: Context | PlainMessage<Context> | undefined, b: Context | PlainMessage<Context> | undefined): boolean;
+  static equals(a: ContentFilterChoiceResult | PlainMessage<ContentFilterChoiceResult> | undefined, b: ContentFilterChoiceResult | PlainMessage<ContentFilterChoiceResult> | undefined): boolean;
 }
 
 /**
@@ -295,36 +207,94 @@ export declare class ContentFilterSeverityResult extends Message<ContentFilterSe
 }
 
 /**
- * @generated from message azure.openai.v1.Usage
+ * @generated from message azure.openai.v1.ContentFilterDetectedResult
  */
-export declare class Usage extends Message<Usage> {
+export declare class ContentFilterDetectedResult extends Message<ContentFilterDetectedResult> {
   /**
-   * @generated from field: uint32 prompt_tokens = 1;
+   * @generated from field: bool filtered = 1;
    */
-  promptTokens: number;
+  filtered: boolean;
 
   /**
-   * @generated from field: uint32 completion_tokens = 2;
+   * @generated from field: string detected = 2;
    */
-  completionTokens: number;
+  detected: string;
 
-  /**
-   * @generated from field: uint32 total_tokens = 3;
-   */
-  totalTokens: number;
-
-  constructor(data?: PartialMessage<Usage>);
+  constructor(data?: PartialMessage<ContentFilterDetectedResult>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "azure.openai.v1.Usage";
+  static readonly typeName = "azure.openai.v1.ContentFilterDetectedResult";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Usage;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterDetectedResult;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Usage;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Usage;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
 
-  static equals(a: Usage | PlainMessage<Usage> | undefined, b: Usage | PlainMessage<Usage> | undefined): boolean;
+  static equals(a: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined, b: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterDetectedWithCitationResult
+ */
+export declare class ContentFilterDetectedWithCitationResult extends Message<ContentFilterDetectedWithCitationResult> {
+  /**
+   * @generated from field: bool filtered = 1;
+   */
+  filtered: boolean;
+
+  /**
+   * @generated from field: bool detected = 2;
+   */
+  detected: boolean;
+
+  /**
+   * @generated from field: azure.openai.v1.ContentFilterDetectedWithCitationResult.Citation citation = 3;
+   */
+  citation?: ContentFilterDetectedWithCitationResult_Citation;
+
+  constructor(data?: PartialMessage<ContentFilterDetectedWithCitationResult>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.ContentFilterDetectedWithCitationResult";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterDetectedWithCitationResult;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterDetectedWithCitationResult;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedWithCitationResult;
+
+  static equals(a: ContentFilterDetectedWithCitationResult | PlainMessage<ContentFilterDetectedWithCitationResult> | undefined, b: ContentFilterDetectedWithCitationResult | PlainMessage<ContentFilterDetectedWithCitationResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.ContentFilterDetectedWithCitationResult.Citation
+ */
+export declare class ContentFilterDetectedWithCitationResult_Citation extends Message<ContentFilterDetectedWithCitationResult_Citation> {
+  /**
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * @generated from field: string license = 2;
+   */
+  license: string;
+
+  constructor(data?: PartialMessage<ContentFilterDetectedWithCitationResult_Citation>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.ContentFilterDetectedWithCitationResult.Citation";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ContentFilterDetectedWithCitationResult_Citation;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ContentFilterDetectedWithCitationResult_Citation;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedWithCitationResult_Citation;
+
+  static equals(a: ContentFilterDetectedWithCitationResult_Citation | PlainMessage<ContentFilterDetectedWithCitationResult_Citation> | undefined, b: ContentFilterDetectedWithCitationResult_Citation | PlainMessage<ContentFilterDetectedWithCitationResult_Citation> | undefined): boolean;
 }
 

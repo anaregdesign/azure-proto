@@ -244,41 +244,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int PROMPT_FILTER_RESULTS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private java.util.List<com.azure.openai.chat.v1.PromptFilterResult> promptFilterResults_;
+  private java.util.List<com.azure.openai.v1.PromptFilterResult> promptFilterResults_;
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.azure.openai.chat.v1.PromptFilterResult> getPromptFilterResultsList() {
+  public java.util.List<com.azure.openai.v1.PromptFilterResult> getPromptFilterResultsList() {
     return promptFilterResults_;
   }
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.azure.openai.chat.v1.PromptFilterResultOrBuilder> 
+  public java.util.List<? extends com.azure.openai.v1.PromptFilterResultOrBuilder> 
       getPromptFilterResultsOrBuilderList() {
     return promptFilterResults_;
   }
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
   public int getPromptFilterResultsCount() {
     return promptFilterResults_.size();
   }
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.chat.v1.PromptFilterResult getPromptFilterResults(int index) {
+  public com.azure.openai.v1.PromptFilterResult getPromptFilterResults(int index) {
     return promptFilterResults_.get(index);
   }
   /**
-   * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+   * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
    */
   @java.lang.Override
-  public com.azure.openai.chat.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
+  public com.azure.openai.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
       int index) {
     return promptFilterResults_.get(index);
   }
@@ -859,9 +859,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 50
             case 58: {
-              com.azure.openai.chat.v1.PromptFilterResult m =
+              com.azure.openai.v1.PromptFilterResult m =
                   input.readMessage(
-                      com.azure.openai.chat.v1.PromptFilterResult.parser(),
+                      com.azure.openai.v1.PromptFilterResult.parser(),
                       extensionRegistry);
               if (promptFilterResultsBuilder_ == null) {
                 ensurePromptFilterResultsIsMutable();
@@ -1342,22 +1342,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.azure.openai.chat.v1.PromptFilterResult> promptFilterResults_ =
+    private java.util.List<com.azure.openai.v1.PromptFilterResult> promptFilterResults_ =
       java.util.Collections.emptyList();
     private void ensurePromptFilterResultsIsMutable() {
       if (!((bitField0_ & 0x00000040) != 0)) {
-        promptFilterResults_ = new java.util.ArrayList<com.azure.openai.chat.v1.PromptFilterResult>(promptFilterResults_);
+        promptFilterResults_ = new java.util.ArrayList<com.azure.openai.v1.PromptFilterResult>(promptFilterResults_);
         bitField0_ |= 0x00000040;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.azure.openai.chat.v1.PromptFilterResult, com.azure.openai.chat.v1.PromptFilterResult.Builder, com.azure.openai.chat.v1.PromptFilterResultOrBuilder> promptFilterResultsBuilder_;
+        com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder> promptFilterResultsBuilder_;
 
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public java.util.List<com.azure.openai.chat.v1.PromptFilterResult> getPromptFilterResultsList() {
+    public java.util.List<com.azure.openai.v1.PromptFilterResult> getPromptFilterResultsList() {
       if (promptFilterResultsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(promptFilterResults_);
       } else {
@@ -1365,7 +1365,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public int getPromptFilterResultsCount() {
       if (promptFilterResultsBuilder_ == null) {
@@ -1375,9 +1375,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public com.azure.openai.chat.v1.PromptFilterResult getPromptFilterResults(int index) {
+    public com.azure.openai.v1.PromptFilterResult getPromptFilterResults(int index) {
       if (promptFilterResultsBuilder_ == null) {
         return promptFilterResults_.get(index);
       } else {
@@ -1385,10 +1385,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder setPromptFilterResults(
-        int index, com.azure.openai.chat.v1.PromptFilterResult value) {
+        int index, com.azure.openai.v1.PromptFilterResult value) {
       if (promptFilterResultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1402,10 +1402,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder setPromptFilterResults(
-        int index, com.azure.openai.chat.v1.PromptFilterResult.Builder builderForValue) {
+        int index, com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
       if (promptFilterResultsBuilder_ == null) {
         ensurePromptFilterResultsIsMutable();
         promptFilterResults_.set(index, builderForValue.build());
@@ -1416,9 +1416,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public Builder addPromptFilterResults(com.azure.openai.chat.v1.PromptFilterResult value) {
+    public Builder addPromptFilterResults(com.azure.openai.v1.PromptFilterResult value) {
       if (promptFilterResultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1432,10 +1432,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder addPromptFilterResults(
-        int index, com.azure.openai.chat.v1.PromptFilterResult value) {
+        int index, com.azure.openai.v1.PromptFilterResult value) {
       if (promptFilterResultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1449,10 +1449,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder addPromptFilterResults(
-        com.azure.openai.chat.v1.PromptFilterResult.Builder builderForValue) {
+        com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
       if (promptFilterResultsBuilder_ == null) {
         ensurePromptFilterResultsIsMutable();
         promptFilterResults_.add(builderForValue.build());
@@ -1463,10 +1463,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder addPromptFilterResults(
-        int index, com.azure.openai.chat.v1.PromptFilterResult.Builder builderForValue) {
+        int index, com.azure.openai.v1.PromptFilterResult.Builder builderForValue) {
       if (promptFilterResultsBuilder_ == null) {
         ensurePromptFilterResultsIsMutable();
         promptFilterResults_.add(index, builderForValue.build());
@@ -1477,10 +1477,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder addAllPromptFilterResults(
-        java.lang.Iterable<? extends com.azure.openai.chat.v1.PromptFilterResult> values) {
+        java.lang.Iterable<? extends com.azure.openai.v1.PromptFilterResult> values) {
       if (promptFilterResultsBuilder_ == null) {
         ensurePromptFilterResultsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder clearPromptFilterResults() {
       if (promptFilterResultsBuilder_ == null) {
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
     public Builder removePromptFilterResults(int index) {
       if (promptFilterResultsBuilder_ == null) {
@@ -1518,16 +1518,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public com.azure.openai.chat.v1.PromptFilterResult.Builder getPromptFilterResultsBuilder(
+    public com.azure.openai.v1.PromptFilterResult.Builder getPromptFilterResultsBuilder(
         int index) {
       return getPromptFilterResultsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public com.azure.openai.chat.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
+    public com.azure.openai.v1.PromptFilterResultOrBuilder getPromptFilterResultsOrBuilder(
         int index) {
       if (promptFilterResultsBuilder_ == null) {
         return promptFilterResults_.get(index);  } else {
@@ -1535,9 +1535,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public java.util.List<? extends com.azure.openai.chat.v1.PromptFilterResultOrBuilder> 
+    public java.util.List<? extends com.azure.openai.v1.PromptFilterResultOrBuilder> 
          getPromptFilterResultsOrBuilderList() {
       if (promptFilterResultsBuilder_ != null) {
         return promptFilterResultsBuilder_.getMessageOrBuilderList();
@@ -1546,33 +1546,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public com.azure.openai.chat.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder() {
+    public com.azure.openai.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder() {
       return getPromptFilterResultsFieldBuilder().addBuilder(
-          com.azure.openai.chat.v1.PromptFilterResult.getDefaultInstance());
+          com.azure.openai.v1.PromptFilterResult.getDefaultInstance());
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public com.azure.openai.chat.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder(
+    public com.azure.openai.v1.PromptFilterResult.Builder addPromptFilterResultsBuilder(
         int index) {
       return getPromptFilterResultsFieldBuilder().addBuilder(
-          index, com.azure.openai.chat.v1.PromptFilterResult.getDefaultInstance());
+          index, com.azure.openai.v1.PromptFilterResult.getDefaultInstance());
     }
     /**
-     * <code>repeated .azure.openai.chat.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
+     * <code>repeated .azure.openai.v1.PromptFilterResult prompt_filter_results = 7 [json_name = "promptFilterResults"];</code>
      */
-    public java.util.List<com.azure.openai.chat.v1.PromptFilterResult.Builder> 
+    public java.util.List<com.azure.openai.v1.PromptFilterResult.Builder> 
          getPromptFilterResultsBuilderList() {
       return getPromptFilterResultsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.azure.openai.chat.v1.PromptFilterResult, com.azure.openai.chat.v1.PromptFilterResult.Builder, com.azure.openai.chat.v1.PromptFilterResultOrBuilder> 
+        com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder> 
         getPromptFilterResultsFieldBuilder() {
       if (promptFilterResultsBuilder_ == null) {
         promptFilterResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            com.azure.openai.chat.v1.PromptFilterResult, com.azure.openai.chat.v1.PromptFilterResult.Builder, com.azure.openai.chat.v1.PromptFilterResultOrBuilder>(
+            com.azure.openai.v1.PromptFilterResult, com.azure.openai.v1.PromptFilterResult.Builder, com.azure.openai.v1.PromptFilterResultOrBuilder>(
                 promptFilterResults_,
                 ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
