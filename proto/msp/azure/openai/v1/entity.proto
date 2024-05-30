@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package msp.azure.openai.v1;
+//v1: 2024-02-01
+
+option go_package = "msp/azure/openai/v1";
+
+message PromptFilterResult {
+  uint32 index = 1;
+  ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
+}
+
+message ErrorBase {
+  string code = 1;
+  string message = 2;
+}
+
+message ContentFilterPromptResult {
+  ContentFilterSeverityResult sexual = 1;
+  ContentFilterSeverityResult violence = 2;
+  ContentFilterSeverityResult hate = 3;
+  ContentFilterSeverityResult self_harm = 4;
+  ContentFilterDetectedResult profanity = 5;
+  ContentFilterDetectedResult jailbreak = 6;
+  ErrorBase error = 99;
+}
+
+message ContentFilterChoiceResult {
+  ContentFilterSeverityResult sexual = 1;
+  ContentFilterSeverityResult violence = 2;
+  ContentFilterSeverityResult hate = 3;
+  ContentFilterSeverityResult self_harm = 4;
+  ContentFilterDetectedResult profanity = 5;
+  ContentFilterDetectedResult protected_material_text = 6;
+  ContentFilterDetectedWithCitationResult protected_material_code = 7;
+
+  ErrorBase error = 99;
+}
+
+message ContentFilterSeverityResult {
+  bool filtered = 1;
+  string severity = 2;
+}
+
+message ContentFilterDetectedResult {
+  bool filtered = 1;
+  string detected = 2;
+}
+
+message ContentFilterDetectedWithCitationResult {
+  message Citation {
+    string url = 1;
+    string license = 2;
+  }
+
+  bool filtered = 1;
+  bool detected = 2;
+  Citation citation = 3;
+}

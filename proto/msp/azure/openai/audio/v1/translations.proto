@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+package msp.azure.openai.audio.v1;
+//v1: 2024-02-01
+
+option go_package = "msp/azure/openai/audio/v1";

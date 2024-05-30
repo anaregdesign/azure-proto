@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-package azure.openai.audio.v1;
-//v1: 2024-02-01
-
-option go_package = "azure/openai/audio/v1";
