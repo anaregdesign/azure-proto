@@ -15,6 +15,6 @@ format: lint
 .PHONY: generate
 generate: format
 	@echo "Running code generator..."
-	rm -rf go
+	rm -rf gen
 	buf generate
 	@echo "Code generator finished successfully"
