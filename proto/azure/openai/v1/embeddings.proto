@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package azure.openai.v1;
+
+import "azure/openai/v1/entity.proto";
+//v1: 2024-02-01
+
+option go_package = "azure/openai/v1";
+
+message EmbeddingRequest {
+  string input = 1;
+  string user = 2;
+  string input_type = 3;
+  map<string, string> additionalProp1 = 4;
+}
+
+message EmbeddingResponse {
+  string object = 1;
+  string model = 2;
+  repeated Data data = 3;
+  Usage usage = 4;
+}
+
+message Data {
+  uint32 index = 1;
+  string object = 2;
+  repeated float embedding = 3;
+}

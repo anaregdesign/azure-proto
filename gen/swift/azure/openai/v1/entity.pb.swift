@@ -213,6 +213,20 @@ public struct Azure_Openai_V1_ContentFilterSeverityResult {
   public init() {}
 }
 
+public struct Azure_Openai_V1_Usage {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var promptTokens: UInt32 = 0
+
+  public var totalTokens: UInt32 = 0
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Azure_Openai_V1_Choice: @unchecked Sendable {}
 extension Azure_Openai_V1_Error: @unchecked Sendable {}
@@ -220,6 +234,7 @@ extension Azure_Openai_V1_InnerError: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterResults: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterDetectedResult: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterSeverityResult: @unchecked Sendable {}
+extension Azure_Openai_V1_Usage: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -671,6 +686,44 @@ extension Azure_Openai_V1_ContentFilterSeverityResult: SwiftProtobuf.Message, Sw
   public static func ==(lhs: Azure_Openai_V1_ContentFilterSeverityResult, rhs: Azure_Openai_V1_ContentFilterSeverityResult) -> Bool {
     if lhs.filtered != rhs.filtered {return false}
     if lhs.severity != rhs.severity {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".Usage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "prompt_tokens"),
+    2: .standard(proto: "total_tokens"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.promptTokens) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.promptTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.promptTokens, fieldNumber: 1)
+    }
+    if self.totalTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_Usage, rhs: Azure_Openai_V1_Usage) -> Bool {
+    if lhs.promptTokens != rhs.promptTokens {return false}
+    if lhs.totalTokens != rhs.totalTokens {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

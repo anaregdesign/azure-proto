@@ -82,3 +82,14 @@ export const ContentFilterSeverityResult = /*@__PURE__*/ proto3.makeMessageType(
   ],
 );
 
+/**
+ * @generated from message azure.openai.v1.Usage
+ */
+export const Usage = /*@__PURE__*/ proto3.makeMessageType(
+  "azure.openai.v1.Usage",
+  () => [
+    { no: 1, name: "prompt_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+  ],
+);
+

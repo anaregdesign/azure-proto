@@ -45,3 +45,8 @@ message ContentFilterSeverityResult {
   bool filtered = 1;
   string severity = 2;
 }
+
+message Usage {
+  uint32 prompt_tokens = 1;
+  uint32 total_tokens = 2;
+}

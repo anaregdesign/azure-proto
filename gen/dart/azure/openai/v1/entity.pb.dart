@@ -569,6 +569,70 @@ class ContentFilterSeverityResult extends $pb.GeneratedMessage {
   void clearSeverity() => clearField(2);
 }
 
+class Usage extends $pb.GeneratedMessage {
+  factory Usage({
+    $core.int? promptTokens,
+    $core.int? totalTokens,
+  }) {
+    final $result = create();
+    if (promptTokens != null) {
+      $result.promptTokens = promptTokens;
+    }
+    if (totalTokens != null) {
+      $result.totalTokens = totalTokens;
+    }
+    return $result;
+  }
+  Usage._() : super();
+  factory Usage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Usage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Usage', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'promptTokens', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'totalTokens', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Usage clone() => Usage()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Usage copyWith(void Function(Usage) updates) => super.copyWith((message) => updates(message as Usage)) as Usage;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Usage create() => Usage._();
+  Usage createEmptyInstance() => create();
+  static $pb.PbList<Usage> createRepeated() => $pb.PbList<Usage>();
+  @$core.pragma('dart2js:noInline')
+  static Usage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Usage>(create);
+  static Usage? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get promptTokens => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set promptTokens($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPromptTokens() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPromptTokens() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get totalTokens => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set totalTokens($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTotalTokens() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalTokens() => clearField(2);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

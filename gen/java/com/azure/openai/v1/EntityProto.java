@@ -55,6 +55,11 @@ public final class EntityProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_azure_openai_v1_ContentFilterSeverityResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_azure_openai_v1_Usage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_azure_openai_v1_Usage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -93,12 +98,14 @@ public final class EntityProto {
       "\001(\010R\010filtered\022\032\n\010detected\030\002 \001(\010R\010detecte" +
       "d\"U\n\033ContentFilterSeverityResult\022\032\n\010filt" +
       "ered\030\001 \001(\010R\010filtered\022\032\n\010severity\030\002 \001(\tR\010" +
-      "severityB\301\001\n\023com.azure.openai.v1B\013Entity" +
-      "ProtoP\001Z?github.com/anaregdesign/azure-p" +
-      "roto/go/azure/openai/v1;openaiv1\242\002\003AOX\252\002" +
-      "\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033Azu" +
-      "re\\Openai\\V1\\GPBMetadata\352\002\021Azure::Openai" +
-      "::V1b\006proto3"
+      "severity\"O\n\005Usage\022#\n\rprompt_tokens\030\001 \001(\r" +
+      "R\014promptTokens\022!\n\014total_tokens\030\002 \001(\rR\013to" +
+      "talTokensB\301\001\n\023com.azure.openai.v1B\013Entit" +
+      "yProtoP\001Z?github.com/anaregdesign/azure-" +
+      "proto/go/azure/openai/v1;openaiv1\242\002\003AOX\252" +
+      "\002\017Azure.Openai.V1\312\002\017Azure\\Openai\\V1\342\002\033Az" +
+      "ure\\Openai\\V1\\GPBMetadata\352\002\021Azure::Opena" +
+      "i::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -140,6 +147,12 @@ public final class EntityProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_azure_openai_v1_ContentFilterSeverityResult_descriptor,
         new java.lang.String[] { "Filtered", "Severity", });
+    internal_static_azure_openai_v1_Usage_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_azure_openai_v1_Usage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_azure_openai_v1_Usage_descriptor,
+        new java.lang.String[] { "PromptTokens", "TotalTokens", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

@@ -235,3 +235,32 @@ export declare class ContentFilterSeverityResult extends Message<ContentFilterSe
   static equals(a: ContentFilterSeverityResult | PlainMessage<ContentFilterSeverityResult> | undefined, b: ContentFilterSeverityResult | PlainMessage<ContentFilterSeverityResult> | undefined): boolean;
 }
 
+/**
+ * @generated from message azure.openai.v1.Usage
+ */
+export declare class Usage extends Message<Usage> {
+  /**
+   * @generated from field: uint32 prompt_tokens = 1;
+   */
+  promptTokens: number;
+
+  /**
+   * @generated from field: uint32 total_tokens = 2;
+   */
+  totalTokens: number;
+
+  constructor(data?: PartialMessage<Usage>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.Usage";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Usage;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Usage;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Usage;
+
+  static equals(a: Usage | PlainMessage<Usage> | undefined, b: Usage | PlainMessage<Usage> | undefined): boolean;
+}
+

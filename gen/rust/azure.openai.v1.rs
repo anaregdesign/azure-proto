@@ -71,6 +71,14 @@ pub struct ContentFilterSeverityResult {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Usage {
+    #[prost(uint32, tag="1")]
+    pub prompt_tokens: u32,
+    #[prost(uint32, tag="2")]
+    pub total_tokens: u32,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletionRequest {
     #[prost(string, tag="1")]
     pub model: ::prost::alloc::string::String,
@@ -96,5 +104,39 @@ pub struct CompletionResponse {
     pub created: u32,
     #[prost(message, repeated, tag="5")]
     pub choices: ::prost::alloc::vec::Vec<Choice>,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct EmbeddingRequest {
+    #[prost(string, tag="1")]
+    pub input: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub user: ::prost::alloc::string::String,
+    #[prost(string, tag="3")]
+    pub input_type: ::prost::alloc::string::String,
+    #[prost(map="string, string", tag="4")]
+    pub additional_prop1: ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct EmbeddingResponse {
+    #[prost(string, tag="1")]
+    pub object: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub model: ::prost::alloc::string::String,
+    #[prost(message, repeated, tag="3")]
+    pub data: ::prost::alloc::vec::Vec<Data>,
+    #[prost(message, optional, tag="4")]
+    pub usage: ::core::option::Option<Usage>,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Data {
+    #[prost(uint32, tag="1")]
+    pub index: u32,
+    #[prost(string, tag="2")]
+    pub object: ::prost::alloc::string::String,
+    #[prost(float, repeated, tag="3")]
+    pub embedding: ::prost::alloc::vec::Vec<f32>,
 }
 // @@protoc_insertion_point(module)

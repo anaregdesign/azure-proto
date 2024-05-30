@@ -119,3 +119,17 @@ final $typed_data.Uint8List contentFilterSeverityResultDescriptor = $convert.bas
     'ChtDb250ZW50RmlsdGVyU2V2ZXJpdHlSZXN1bHQSGgoIZmlsdGVyZWQYASABKAhSCGZpbHRlcm'
     'VkEhoKCHNldmVyaXR5GAIgASgJUghzZXZlcml0eQ==');
 
+@$core.Deprecated('Use usageDescriptor instead')
+const Usage$json = {
+  '1': 'Usage',
+  '2': [
+    {'1': 'prompt_tokens', '3': 1, '4': 1, '5': 13, '10': 'promptTokens'},
+    {'1': 'total_tokens', '3': 2, '4': 1, '5': 13, '10': 'totalTokens'},
+  ],
+};
+
+/// Descriptor for `Usage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List usageDescriptor = $convert.base64Decode(
+    'CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgNUgxwcm9tcHRUb2tlbnMSIQoMdG90YWxfdG'
+    '9rZW5zGAIgASgNUgt0b3RhbFRva2Vucw==');
+
