@@ -7,6 +7,3 @@ lint:
 breaking:
   use:
     - FILE
-    - WIRE
-    - WIRE_JSON
-  ignore_unstable_packages: true
