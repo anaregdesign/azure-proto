@@ -13,26 +13,6 @@ pub struct Choice {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CompletionRequest {
-    #[prost(string, tag="1")]
-    pub model: ::prost::alloc::string::String,
-    #[prost(string, tag="2")]
-    pub object: ::prost::alloc::string::String,
-    #[prost(string, tag="3")]
-    pub id: ::prost::alloc::string::String,
-    #[prost(uint32, tag="4")]
-    pub created: u32,
-    #[prost(message, repeated, tag="5")]
-    pub choices: ::prost::alloc::vec::Vec<Choice>,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CompletionResponse {
-    #[prost(message, optional, tag="1")]
-    pub error: ::core::option::Option<Error>,
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Error {
     #[prost(string, tag="1")]
     pub code: ::prost::alloc::string::String,
@@ -43,15 +23,17 @@ pub struct Error {
     #[prost(string, tag="4")]
     pub r#type: ::prost::alloc::string::String,
     #[prost(message, optional, boxed, tag="5")]
-    pub inner_error: ::core::option::Option<::prost::alloc::boxed::Box<InnerError>>,
+    pub inner_error: ::core::option::Option<::prost::alloc::boxed::Box<Error>>,
+    #[prost(message, optional, boxed, tag="6")]
+    pub content_filter_results: ::core::option::Option<::prost::alloc::boxed::Box<ContentFilterResults>>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InnerError {
     #[prost(string, tag="1")]
     pub code: ::prost::alloc::string::String,
-    #[prost(message, optional, boxed, tag="2")]
-    pub content_filter_results: ::core::option::Option<::prost::alloc::boxed::Box<ContentFilterResults>>,
+    #[prost(message, optional, tag="2")]
+    pub content_filter_results: ::core::option::Option<ContentFilterResults>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -80,5 +62,25 @@ pub struct ContentFilterResult {
     pub detected: bool,
     #[prost(string, tag="3")]
     pub severity: ::prost::alloc::string::String,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CompletionRequest {
+    #[prost(string, tag="1")]
+    pub model: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub object: ::prost::alloc::string::String,
+    #[prost(string, tag="3")]
+    pub id: ::prost::alloc::string::String,
+    #[prost(uint32, tag="4")]
+    pub created: u32,
+    #[prost(message, repeated, tag="5")]
+    pub choices: ::prost::alloc::vec::Vec<Choice>,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CompletionResponse {
+    #[prost(message, optional, tag="1")]
+    pub error: ::core::option::Option<Error>,
 }
 // @@protoc_insertion_point(module)
