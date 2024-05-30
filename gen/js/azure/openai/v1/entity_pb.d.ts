@@ -119,7 +119,22 @@ export declare class ContentFilterResults extends Message<ContentFilterResults> 
   jailbreak?: ContentFilterDetectedResult;
 
   /**
-   * @generated from field: azure.openai.v1.Error error = 7;
+   * @generated from field: optional uint32 prompt_index = 7;
+   */
+  promptIndex?: number;
+
+  /**
+   * @generated from field: optional azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8;
+   */
+  protectedMaterialText?: ContentFilterDetectedResult;
+
+  /**
+   * @generated from field: optional azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9;
+   */
+  protectedMaterialCode?: ContentFilterDetectedResult;
+
+  /**
+   * @generated from field: azure.openai.v1.Error error = 99;
    */
   error?: Error;
 
@@ -152,6 +167,11 @@ export declare class ContentFilterDetectedResult extends Message<ContentFilterDe
    */
   detected: boolean;
 
+  /**
+   * @generated from field: optional azure.openai.v1.Citation citation = 3;
+   */
+  citation?: Citation;
+
   constructor(data?: PartialMessage<ContentFilterDetectedResult>);
 
   static readonly runtime: typeof proto3;
@@ -165,6 +185,84 @@ export declare class ContentFilterDetectedResult extends Message<ContentFilterDe
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ContentFilterDetectedResult;
 
   static equals(a: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined, b: ContentFilterDetectedResult | PlainMessage<ContentFilterDetectedResult> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.Citation
+ */
+export declare class Citation extends Message<Citation> {
+  /**
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * @generated from field: string license = 2;
+   */
+  license: string;
+
+  /**
+   * @generated from field: string content = 3;
+   */
+  content: string;
+
+  /**
+   * @generated from field: string title = 4;
+   */
+  title: string;
+
+  /**
+   * @generated from field: string filepath = 5;
+   */
+  filepath: string;
+
+  /**
+   * @generated from field: string chunk_id = 6;
+   */
+  chunkId: string;
+
+  constructor(data?: PartialMessage<Citation>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.Citation";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Citation;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Citation;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Citation;
+
+  static equals(a: Citation | PlainMessage<Citation> | undefined, b: Citation | PlainMessage<Citation> | undefined): boolean;
+}
+
+/**
+ * @generated from message azure.openai.v1.Context
+ */
+export declare class Context extends Message<Context> {
+  /**
+   * @generated from field: repeated azure.openai.v1.Citation citations = 1;
+   */
+  citations: Citation[];
+
+  /**
+   * @generated from field: string intent = 2;
+   */
+  intent: string;
+
+  constructor(data?: PartialMessage<Context>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "azure.openai.v1.Context";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Context;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Context;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Context;
+
+  static equals(a: Context | PlainMessage<Context> | undefined, b: Context | PlainMessage<Context> | undefined): boolean;
 }
 
 /**

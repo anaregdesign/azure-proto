@@ -100,17 +100,58 @@ public interface ContentFilterResultsOrBuilder extends
   com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getJailbreakOrBuilder();
 
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+   * @return Whether the promptIndex field is set.
+   */
+  boolean hasPromptIndex();
+  /**
+   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+   * @return The promptIndex.
+   */
+  int getPromptIndex();
+
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   * @return Whether the protectedMaterialText field is set.
+   */
+  boolean hasProtectedMaterialText();
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   * @return The protectedMaterialText.
+   */
+  com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialText();
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   */
+  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialTextOrBuilder();
+
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   * @return Whether the protectedMaterialCode field is set.
+   */
+  boolean hasProtectedMaterialCode();
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   * @return The protectedMaterialCode.
+   */
+  com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialCode();
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   */
+  com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialCodeOrBuilder();
+
+  /**
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    * @return The error.
    */
   com.azure.openai.v1.Error getError();
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    */
   com.azure.openai.v1.ErrorOrBuilder getErrorOrBuilder();
 }

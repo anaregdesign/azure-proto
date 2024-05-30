@@ -151,6 +151,33 @@ public struct Azure_Openai_V1_ContentFilterResults {
   /// Clears the value of `jailbreak`. Subsequent reads from it will return its default value.
   public mutating func clearJailbreak() {_uniqueStorage()._jailbreak = nil}
 
+  public var promptIndex: UInt32 {
+    get {return _storage._promptIndex ?? 0}
+    set {_uniqueStorage()._promptIndex = newValue}
+  }
+  /// Returns true if `promptIndex` has been explicitly set.
+  public var hasPromptIndex: Bool {return _storage._promptIndex != nil}
+  /// Clears the value of `promptIndex`. Subsequent reads from it will return its default value.
+  public mutating func clearPromptIndex() {_uniqueStorage()._promptIndex = nil}
+
+  public var protectedMaterialText: Azure_Openai_V1_ContentFilterDetectedResult {
+    get {return _storage._protectedMaterialText ?? Azure_Openai_V1_ContentFilterDetectedResult()}
+    set {_uniqueStorage()._protectedMaterialText = newValue}
+  }
+  /// Returns true if `protectedMaterialText` has been explicitly set.
+  public var hasProtectedMaterialText: Bool {return _storage._protectedMaterialText != nil}
+  /// Clears the value of `protectedMaterialText`. Subsequent reads from it will return its default value.
+  public mutating func clearProtectedMaterialText() {_uniqueStorage()._protectedMaterialText = nil}
+
+  public var protectedMaterialCode: Azure_Openai_V1_ContentFilterDetectedResult {
+    get {return _storage._protectedMaterialCode ?? Azure_Openai_V1_ContentFilterDetectedResult()}
+    set {_uniqueStorage()._protectedMaterialCode = newValue}
+  }
+  /// Returns true if `protectedMaterialCode` has been explicitly set.
+  public var hasProtectedMaterialCode: Bool {return _storage._protectedMaterialCode != nil}
+  /// Clears the value of `protectedMaterialCode`. Subsequent reads from it will return its default value.
+  public mutating func clearProtectedMaterialCode() {_uniqueStorage()._protectedMaterialCode = nil}
+
   public var error: Azure_Openai_V1_Error {
     get {return _storage._error ?? Azure_Openai_V1_Error()}
     set {_uniqueStorage()._error = newValue}
@@ -175,6 +202,53 @@ public struct Azure_Openai_V1_ContentFilterDetectedResult {
   public var filtered: Bool = false
 
   public var detected: Bool = false
+
+  public var citation: Azure_Openai_V1_Citation {
+    get {return _citation ?? Azure_Openai_V1_Citation()}
+    set {_citation = newValue}
+  }
+  /// Returns true if `citation` has been explicitly set.
+  public var hasCitation: Bool {return self._citation != nil}
+  /// Clears the value of `citation`. Subsequent reads from it will return its default value.
+  public mutating func clearCitation() {self._citation = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _citation: Azure_Openai_V1_Citation? = nil
+}
+
+public struct Azure_Openai_V1_Citation {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var url: String = String()
+
+  public var license: String = String()
+
+  public var content: String = String()
+
+  public var title: String = String()
+
+  public var filepath: String = String()
+
+  public var chunkID: String = String()
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Azure_Openai_V1_Context {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var citations: [Azure_Openai_V1_Citation] = []
+
+  public var intent: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -216,6 +290,8 @@ extension Azure_Openai_V1_Error: @unchecked Sendable {}
 extension Azure_Openai_V1_InnerError: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterResults: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterDetectedResult: @unchecked Sendable {}
+extension Azure_Openai_V1_Citation: @unchecked Sendable {}
+extension Azure_Openai_V1_Context: @unchecked Sendable {}
 extension Azure_Openai_V1_ContentFilterSeverityResult: @unchecked Sendable {}
 extension Azure_Openai_V1_Usage: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
@@ -433,7 +509,10 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
     4: .standard(proto: "self_harm"),
     5: .same(proto: "profanity"),
     6: .same(proto: "jailbreak"),
-    7: .same(proto: "error"),
+    7: .standard(proto: "prompt_index"),
+    8: .standard(proto: "protected_material_text"),
+    9: .standard(proto: "protected_material_code"),
+    99: .same(proto: "error"),
   ]
 
   fileprivate class _StorageClass {
@@ -443,6 +522,9 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
     var _selfHarm: Azure_Openai_V1_ContentFilterSeverityResult? = nil
     var _profanity: Azure_Openai_V1_ContentFilterSeverityResult? = nil
     var _jailbreak: Azure_Openai_V1_ContentFilterDetectedResult? = nil
+    var _promptIndex: UInt32? = nil
+    var _protectedMaterialText: Azure_Openai_V1_ContentFilterDetectedResult? = nil
+    var _protectedMaterialCode: Azure_Openai_V1_ContentFilterDetectedResult? = nil
     var _error: Azure_Openai_V1_Error? = nil
 
     #if swift(>=5.10)
@@ -464,6 +546,9 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
       _selfHarm = source._selfHarm
       _profanity = source._profanity
       _jailbreak = source._jailbreak
+      _promptIndex = source._promptIndex
+      _protectedMaterialText = source._protectedMaterialText
+      _protectedMaterialCode = source._protectedMaterialCode
       _error = source._error
     }
   }
@@ -489,7 +574,10 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
         case 4: try { try decoder.decodeSingularMessageField(value: &_storage._selfHarm) }()
         case 5: try { try decoder.decodeSingularMessageField(value: &_storage._profanity) }()
         case 6: try { try decoder.decodeSingularMessageField(value: &_storage._jailbreak) }()
-        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._error) }()
+        case 7: try { try decoder.decodeSingularUInt32Field(value: &_storage._promptIndex) }()
+        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._protectedMaterialText) }()
+        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._protectedMaterialCode) }()
+        case 99: try { try decoder.decodeSingularMessageField(value: &_storage._error) }()
         default: break
         }
       }
@@ -520,8 +608,17 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
       try { if let v = _storage._jailbreak {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
       } }()
+      try { if let v = _storage._promptIndex {
+        try visitor.visitSingularUInt32Field(value: v, fieldNumber: 7)
+      } }()
+      try { if let v = _storage._protectedMaterialText {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+      } }()
+      try { if let v = _storage._protectedMaterialCode {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+      } }()
       try { if let v = _storage._error {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 99)
       } }()
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -538,6 +635,9 @@ extension Azure_Openai_V1_ContentFilterResults: SwiftProtobuf.Message, SwiftProt
         if _storage._selfHarm != rhs_storage._selfHarm {return false}
         if _storage._profanity != rhs_storage._profanity {return false}
         if _storage._jailbreak != rhs_storage._jailbreak {return false}
+        if _storage._promptIndex != rhs_storage._promptIndex {return false}
+        if _storage._protectedMaterialText != rhs_storage._protectedMaterialText {return false}
+        if _storage._protectedMaterialCode != rhs_storage._protectedMaterialCode {return false}
         if _storage._error != rhs_storage._error {return false}
         return true
       }
@@ -553,6 +653,7 @@ extension Azure_Openai_V1_ContentFilterDetectedResult: SwiftProtobuf.Message, Sw
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "filtered"),
     2: .same(proto: "detected"),
+    3: .same(proto: "citation"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -563,24 +664,133 @@ extension Azure_Openai_V1_ContentFilterDetectedResult: SwiftProtobuf.Message, Sw
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularBoolField(value: &self.filtered) }()
       case 2: try { try decoder.decodeSingularBoolField(value: &self.detected) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._citation) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.filtered != false {
       try visitor.visitSingularBoolField(value: self.filtered, fieldNumber: 1)
     }
     if self.detected != false {
       try visitor.visitSingularBoolField(value: self.detected, fieldNumber: 2)
     }
+    try { if let v = self._citation {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Azure_Openai_V1_ContentFilterDetectedResult, rhs: Azure_Openai_V1_ContentFilterDetectedResult) -> Bool {
     if lhs.filtered != rhs.filtered {return false}
     if lhs.detected != rhs.detected {return false}
+    if lhs._citation != rhs._citation {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_Citation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".Citation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "url"),
+    2: .same(proto: "license"),
+    3: .same(proto: "content"),
+    4: .same(proto: "title"),
+    5: .same(proto: "filepath"),
+    6: .standard(proto: "chunk_id"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.url) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.license) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.content) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.title) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.filepath) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.chunkID) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.url.isEmpty {
+      try visitor.visitSingularStringField(value: self.url, fieldNumber: 1)
+    }
+    if !self.license.isEmpty {
+      try visitor.visitSingularStringField(value: self.license, fieldNumber: 2)
+    }
+    if !self.content.isEmpty {
+      try visitor.visitSingularStringField(value: self.content, fieldNumber: 3)
+    }
+    if !self.title.isEmpty {
+      try visitor.visitSingularStringField(value: self.title, fieldNumber: 4)
+    }
+    if !self.filepath.isEmpty {
+      try visitor.visitSingularStringField(value: self.filepath, fieldNumber: 5)
+    }
+    if !self.chunkID.isEmpty {
+      try visitor.visitSingularStringField(value: self.chunkID, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_Citation, rhs: Azure_Openai_V1_Citation) -> Bool {
+    if lhs.url != rhs.url {return false}
+    if lhs.license != rhs.license {return false}
+    if lhs.content != rhs.content {return false}
+    if lhs.title != rhs.title {return false}
+    if lhs.filepath != rhs.filepath {return false}
+    if lhs.chunkID != rhs.chunkID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Azure_Openai_V1_Context: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".Context"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "citations"),
+    2: .same(proto: "intent"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.citations) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.intent) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.citations.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.citations, fieldNumber: 1)
+    }
+    if !self.intent.isEmpty {
+      try visitor.visitSingularStringField(value: self.intent, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Azure_Openai_V1_Context, rhs: Azure_Openai_V1_Context) -> Bool {
+    if lhs.citations != rhs.citations {return false}
+    if lhs.intent != rhs.intent {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

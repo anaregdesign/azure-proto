@@ -20,4 +20,19 @@ public interface ContentFilterDetectedResultOrBuilder extends
    * @return The detected.
    */
   boolean getDetected();
+
+  /**
+   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
+   * @return Whether the citation field is set.
+   */
+  boolean hasCitation();
+  /**
+   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
+   * @return The citation.
+   */
+  com.azure.openai.v1.Citation getCitation();
+  /**
+   * <code>optional .azure.openai.v1.Citation citation = 3 [json_name = "citation"];</code>
+   */
+  com.azure.openai.v1.CitationOrBuilder getCitationOrBuilder();
 }

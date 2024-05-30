@@ -199,18 +199,89 @@ private static final long serialVersionUID = 0L;
     return jailbreak_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : jailbreak_;
   }
 
-  public static final int ERROR_FIELD_NUMBER = 7;
+  public static final int PROMPT_INDEX_FIELD_NUMBER = 7;
+  private int promptIndex_ = 0;
+  /**
+   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+   * @return Whether the promptIndex field is set.
+   */
+  @java.lang.Override
+  public boolean hasPromptIndex() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+   * @return The promptIndex.
+   */
+  @java.lang.Override
+  public int getPromptIndex() {
+    return promptIndex_;
+  }
+
+  public static final int PROTECTED_MATERIAL_TEXT_FIELD_NUMBER = 8;
+  private com.azure.openai.v1.ContentFilterDetectedResult protectedMaterialText_;
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   * @return Whether the protectedMaterialText field is set.
+   */
+  @java.lang.Override
+  public boolean hasProtectedMaterialText() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   * @return The protectedMaterialText.
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialText() {
+    return protectedMaterialText_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialText_;
+  }
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialTextOrBuilder() {
+    return protectedMaterialText_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialText_;
+  }
+
+  public static final int PROTECTED_MATERIAL_CODE_FIELD_NUMBER = 9;
+  private com.azure.openai.v1.ContentFilterDetectedResult protectedMaterialCode_;
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   * @return Whether the protectedMaterialCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasProtectedMaterialCode() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   * @return The protectedMaterialCode.
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialCode() {
+    return protectedMaterialCode_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialCode_;
+  }
+  /**
+   * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+   */
+  @java.lang.Override
+  public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialCodeOrBuilder() {
+    return protectedMaterialCode_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialCode_;
+  }
+
+  public static final int ERROR_FIELD_NUMBER = 99;
   private com.azure.openai.v1.Error error_;
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
   public boolean hasError() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    * @return The error.
    */
   @java.lang.Override
@@ -218,7 +289,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? com.azure.openai.v1.Error.getDefaultInstance() : error_;
   }
   /**
-   * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+   * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
    */
   @java.lang.Override
   public com.azure.openai.v1.ErrorOrBuilder getErrorOrBuilder() {
@@ -258,7 +329,16 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(6, getJailbreak());
     }
     if (((bitField0_ & 0x00000040) != 0)) {
-      output.writeMessage(7, getError());
+      output.writeUInt32(7, promptIndex_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeMessage(8, getProtectedMaterialText());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(9, getProtectedMaterialCode());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeMessage(99, getError());
     }
     getUnknownFields().writeTo(output);
   }
@@ -295,7 +375,19 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getError());
+        .computeUInt32Size(7, promptIndex_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getProtectedMaterialText());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getProtectedMaterialCode());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(99, getError());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -342,6 +434,21 @@ private static final long serialVersionUID = 0L;
       if (!getJailbreak()
           .equals(other.getJailbreak())) return false;
     }
+    if (hasPromptIndex() != other.hasPromptIndex()) return false;
+    if (hasPromptIndex()) {
+      if (getPromptIndex()
+          != other.getPromptIndex()) return false;
+    }
+    if (hasProtectedMaterialText() != other.hasProtectedMaterialText()) return false;
+    if (hasProtectedMaterialText()) {
+      if (!getProtectedMaterialText()
+          .equals(other.getProtectedMaterialText())) return false;
+    }
+    if (hasProtectedMaterialCode() != other.hasProtectedMaterialCode()) return false;
+    if (hasProtectedMaterialCode()) {
+      if (!getProtectedMaterialCode()
+          .equals(other.getProtectedMaterialCode())) return false;
+    }
     if (hasError() != other.hasError()) return false;
     if (hasError()) {
       if (!getError()
@@ -381,6 +488,18 @@ private static final long serialVersionUID = 0L;
     if (hasJailbreak()) {
       hash = (37 * hash) + JAILBREAK_FIELD_NUMBER;
       hash = (53 * hash) + getJailbreak().hashCode();
+    }
+    if (hasPromptIndex()) {
+      hash = (37 * hash) + PROMPT_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getPromptIndex();
+    }
+    if (hasProtectedMaterialText()) {
+      hash = (37 * hash) + PROTECTED_MATERIAL_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getProtectedMaterialText().hashCode();
+    }
+    if (hasProtectedMaterialCode()) {
+      hash = (37 * hash) + PROTECTED_MATERIAL_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getProtectedMaterialCode().hashCode();
     }
     if (hasError()) {
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
@@ -522,6 +641,8 @@ private static final long serialVersionUID = 0L;
         getSelfHarmFieldBuilder();
         getProfanityFieldBuilder();
         getJailbreakFieldBuilder();
+        getProtectedMaterialTextFieldBuilder();
+        getProtectedMaterialCodeFieldBuilder();
         getErrorFieldBuilder();
       }
     }
@@ -558,6 +679,17 @@ private static final long serialVersionUID = 0L;
       if (jailbreakBuilder_ != null) {
         jailbreakBuilder_.dispose();
         jailbreakBuilder_ = null;
+      }
+      promptIndex_ = 0;
+      protectedMaterialText_ = null;
+      if (protectedMaterialTextBuilder_ != null) {
+        protectedMaterialTextBuilder_.dispose();
+        protectedMaterialTextBuilder_ = null;
+      }
+      protectedMaterialCode_ = null;
+      if (protectedMaterialCodeBuilder_ != null) {
+        protectedMaterialCodeBuilder_.dispose();
+        protectedMaterialCodeBuilder_ = null;
       }
       error_ = null;
       if (errorBuilder_ != null) {
@@ -635,10 +767,26 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.promptIndex_ = promptIndex_;
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.protectedMaterialText_ = protectedMaterialTextBuilder_ == null
+            ? protectedMaterialText_
+            : protectedMaterialTextBuilder_.build();
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.protectedMaterialCode_ = protectedMaterialCodeBuilder_ == null
+            ? protectedMaterialCode_
+            : protectedMaterialCodeBuilder_.build();
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.error_ = errorBuilder_ == null
             ? error_
             : errorBuilder_.build();
-        to_bitField0_ |= 0x00000040;
+        to_bitField0_ |= 0x00000200;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -672,6 +820,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasJailbreak()) {
         mergeJailbreak(other.getJailbreak());
+      }
+      if (other.hasPromptIndex()) {
+        setPromptIndex(other.getPromptIndex());
+      }
+      if (other.hasProtectedMaterialText()) {
+        mergeProtectedMaterialText(other.getProtectedMaterialText());
+      }
+      if (other.hasProtectedMaterialCode()) {
+        mergeProtectedMaterialCode(other.getProtectedMaterialCode());
       }
       if (other.hasError()) {
         mergeError(other.getError());
@@ -744,13 +901,32 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 58: {
+            case 56: {
+              promptIndex_ = input.readUInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 66: {
+              input.readMessage(
+                  getProtectedMaterialTextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getProtectedMaterialCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 794: {
               input.readMessage(
                   getErrorFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000200;
               break;
-            } // case 58
+            } // case 794
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1494,18 +1670,300 @@ private static final long serialVersionUID = 0L;
       return jailbreakBuilder_;
     }
 
+    private int promptIndex_ ;
+    /**
+     * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+     * @return Whether the promptIndex field is set.
+     */
+    @java.lang.Override
+    public boolean hasPromptIndex() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+     * @return The promptIndex.
+     */
+    @java.lang.Override
+    public int getPromptIndex() {
+      return promptIndex_;
+    }
+    /**
+     * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+     * @param value The promptIndex to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPromptIndex(int value) {
+
+      promptIndex_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional uint32 prompt_index = 7 [json_name = "promptIndex"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPromptIndex() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      promptIndex_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.azure.openai.v1.ContentFilterDetectedResult protectedMaterialText_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> protectedMaterialTextBuilder_;
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     * @return Whether the protectedMaterialText field is set.
+     */
+    public boolean hasProtectedMaterialText() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     * @return The protectedMaterialText.
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialText() {
+      if (protectedMaterialTextBuilder_ == null) {
+        return protectedMaterialText_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialText_;
+      } else {
+        return protectedMaterialTextBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public Builder setProtectedMaterialText(com.azure.openai.v1.ContentFilterDetectedResult value) {
+      if (protectedMaterialTextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        protectedMaterialText_ = value;
+      } else {
+        protectedMaterialTextBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public Builder setProtectedMaterialText(
+        com.azure.openai.v1.ContentFilterDetectedResult.Builder builderForValue) {
+      if (protectedMaterialTextBuilder_ == null) {
+        protectedMaterialText_ = builderForValue.build();
+      } else {
+        protectedMaterialTextBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public Builder mergeProtectedMaterialText(com.azure.openai.v1.ContentFilterDetectedResult value) {
+      if (protectedMaterialTextBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          protectedMaterialText_ != null &&
+          protectedMaterialText_ != com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance()) {
+          getProtectedMaterialTextBuilder().mergeFrom(value);
+        } else {
+          protectedMaterialText_ = value;
+        }
+      } else {
+        protectedMaterialTextBuilder_.mergeFrom(value);
+      }
+      if (protectedMaterialText_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public Builder clearProtectedMaterialText() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      protectedMaterialText_ = null;
+      if (protectedMaterialTextBuilder_ != null) {
+        protectedMaterialTextBuilder_.dispose();
+        protectedMaterialTextBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResult.Builder getProtectedMaterialTextBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getProtectedMaterialTextFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialTextOrBuilder() {
+      if (protectedMaterialTextBuilder_ != null) {
+        return protectedMaterialTextBuilder_.getMessageOrBuilder();
+      } else {
+        return protectedMaterialText_ == null ?
+            com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialText_;
+      }
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_text = 8 [json_name = "protectedMaterialText"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> 
+        getProtectedMaterialTextFieldBuilder() {
+      if (protectedMaterialTextBuilder_ == null) {
+        protectedMaterialTextBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder>(
+                getProtectedMaterialText(),
+                getParentForChildren(),
+                isClean());
+        protectedMaterialText_ = null;
+      }
+      return protectedMaterialTextBuilder_;
+    }
+
+    private com.azure.openai.v1.ContentFilterDetectedResult protectedMaterialCode_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> protectedMaterialCodeBuilder_;
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     * @return Whether the protectedMaterialCode field is set.
+     */
+    public boolean hasProtectedMaterialCode() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     * @return The protectedMaterialCode.
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResult getProtectedMaterialCode() {
+      if (protectedMaterialCodeBuilder_ == null) {
+        return protectedMaterialCode_ == null ? com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialCode_;
+      } else {
+        return protectedMaterialCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public Builder setProtectedMaterialCode(com.azure.openai.v1.ContentFilterDetectedResult value) {
+      if (protectedMaterialCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        protectedMaterialCode_ = value;
+      } else {
+        protectedMaterialCodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public Builder setProtectedMaterialCode(
+        com.azure.openai.v1.ContentFilterDetectedResult.Builder builderForValue) {
+      if (protectedMaterialCodeBuilder_ == null) {
+        protectedMaterialCode_ = builderForValue.build();
+      } else {
+        protectedMaterialCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public Builder mergeProtectedMaterialCode(com.azure.openai.v1.ContentFilterDetectedResult value) {
+      if (protectedMaterialCodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          protectedMaterialCode_ != null &&
+          protectedMaterialCode_ != com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance()) {
+          getProtectedMaterialCodeBuilder().mergeFrom(value);
+        } else {
+          protectedMaterialCode_ = value;
+        }
+      } else {
+        protectedMaterialCodeBuilder_.mergeFrom(value);
+      }
+      if (protectedMaterialCode_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public Builder clearProtectedMaterialCode() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      protectedMaterialCode_ = null;
+      if (protectedMaterialCodeBuilder_ != null) {
+        protectedMaterialCodeBuilder_.dispose();
+        protectedMaterialCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResult.Builder getProtectedMaterialCodeBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getProtectedMaterialCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    public com.azure.openai.v1.ContentFilterDetectedResultOrBuilder getProtectedMaterialCodeOrBuilder() {
+      if (protectedMaterialCodeBuilder_ != null) {
+        return protectedMaterialCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return protectedMaterialCode_ == null ?
+            com.azure.openai.v1.ContentFilterDetectedResult.getDefaultInstance() : protectedMaterialCode_;
+      }
+    }
+    /**
+     * <code>optional .azure.openai.v1.ContentFilterDetectedResult protected_material_code = 9 [json_name = "protectedMaterialCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder> 
+        getProtectedMaterialCodeFieldBuilder() {
+      if (protectedMaterialCodeBuilder_ == null) {
+        protectedMaterialCodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.azure.openai.v1.ContentFilterDetectedResult, com.azure.openai.v1.ContentFilterDetectedResult.Builder, com.azure.openai.v1.ContentFilterDetectedResultOrBuilder>(
+                getProtectedMaterialCode(),
+                getParentForChildren(),
+                isClean());
+        protectedMaterialCode_ = null;
+      }
+      return protectedMaterialCodeBuilder_;
+    }
+
     private com.azure.openai.v1.Error error_;
     private com.google.protobuf.SingleFieldBuilder<
         com.azure.openai.v1.Error, com.azure.openai.v1.Error.Builder, com.azure.openai.v1.ErrorOrBuilder> errorBuilder_;
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      * @return The error.
      */
     public com.azure.openai.v1.Error getError() {
@@ -1516,7 +1974,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public Builder setError(com.azure.openai.v1.Error value) {
       if (errorBuilder_ == null) {
@@ -1527,12 +1985,12 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public Builder setError(
         com.azure.openai.v1.Error.Builder builderForValue) {
@@ -1541,16 +1999,16 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public Builder mergeError(com.azure.openai.v1.Error value) {
       if (errorBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           error_ != null &&
           error_ != com.azure.openai.v1.Error.getDefaultInstance()) {
           getErrorBuilder().mergeFrom(value);
@@ -1561,16 +2019,16 @@ private static final long serialVersionUID = 0L;
         errorBuilder_.mergeFrom(value);
       }
       if (error_ != null) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public Builder clearError() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000200);
       error_ = null;
       if (errorBuilder_ != null) {
         errorBuilder_.dispose();
@@ -1580,15 +2038,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public com.azure.openai.v1.Error.Builder getErrorBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     public com.azure.openai.v1.ErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -1599,7 +2057,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.azure.openai.v1.Error error = 7 [json_name = "error"];</code>
+     * <code>.azure.openai.v1.Error error = 99 [json_name = "error"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.azure.openai.v1.Error, com.azure.openai.v1.Error.Builder, com.azure.openai.v1.ErrorOrBuilder> 

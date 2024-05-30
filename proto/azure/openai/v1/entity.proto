@@ -26,12 +26,30 @@ message ContentFilterResults {
   ContentFilterSeverityResult self_harm = 4;
   ContentFilterSeverityResult profanity = 5;
   ContentFilterDetectedResult jailbreak = 6;
-  Error error = 7;
+  optional uint32 prompt_index = 7;
+  optional ContentFilterDetectedResult protected_material_text = 8;
+  optional ContentFilterDetectedResult protected_material_code = 9;
+  Error error = 99;
 }
 
 message ContentFilterDetectedResult {
   bool filtered = 1;
   bool detected = 2;
+  optional Citation citation = 3;
+}
+
+message Citation {
+  string url = 1;
+  string license = 2;
+  string content = 3;
+  string title = 4;
+  string filepath = 5;
+  string chunk_id = 6;
+}
+
+message Context {
+  repeated Citation citations = 1;
+  string intent = 2;
 }
 
 message ContentFilterSeverityResult {

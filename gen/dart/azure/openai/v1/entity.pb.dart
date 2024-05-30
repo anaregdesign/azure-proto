@@ -209,6 +209,9 @@ class ContentFilterResults extends $pb.GeneratedMessage {
     ContentFilterSeverityResult? selfHarm,
     ContentFilterSeverityResult? profanity,
     ContentFilterDetectedResult? jailbreak,
+    $core.int? promptIndex,
+    ContentFilterDetectedResult? protectedMaterialText,
+    ContentFilterDetectedResult? protectedMaterialCode,
     Error? error,
   }) {
     final $result = create();
@@ -230,6 +233,15 @@ class ContentFilterResults extends $pb.GeneratedMessage {
     if (jailbreak != null) {
       $result.jailbreak = jailbreak;
     }
+    if (promptIndex != null) {
+      $result.promptIndex = promptIndex;
+    }
+    if (protectedMaterialText != null) {
+      $result.protectedMaterialText = protectedMaterialText;
+    }
+    if (protectedMaterialCode != null) {
+      $result.protectedMaterialCode = protectedMaterialCode;
+    }
     if (error != null) {
       $result.error = error;
     }
@@ -246,7 +258,10 @@ class ContentFilterResults extends $pb.GeneratedMessage {
     ..aOM<ContentFilterSeverityResult>(4, _omitFieldNames ? '' : 'selfHarm', subBuilder: ContentFilterSeverityResult.create)
     ..aOM<ContentFilterSeverityResult>(5, _omitFieldNames ? '' : 'profanity', subBuilder: ContentFilterSeverityResult.create)
     ..aOM<ContentFilterDetectedResult>(6, _omitFieldNames ? '' : 'jailbreak', subBuilder: ContentFilterDetectedResult.create)
-    ..aOM<Error>(7, _omitFieldNames ? '' : 'error', subBuilder: Error.create)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'promptIndex', $pb.PbFieldType.OU3)
+    ..aOM<ContentFilterDetectedResult>(8, _omitFieldNames ? '' : 'protectedMaterialText', subBuilder: ContentFilterDetectedResult.create)
+    ..aOM<ContentFilterDetectedResult>(9, _omitFieldNames ? '' : 'protectedMaterialCode', subBuilder: ContentFilterDetectedResult.create)
+    ..aOM<Error>(99, _omitFieldNames ? '' : 'error', subBuilder: Error.create)
     ..hasRequiredFields = false
   ;
 
@@ -338,21 +353,53 @@ class ContentFilterResults extends $pb.GeneratedMessage {
   ContentFilterDetectedResult ensureJailbreak() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  Error get error => $_getN(6);
+  $core.int get promptIndex => $_getIZ(6);
   @$pb.TagNumber(7)
-  set error(Error v) { setField(7, v); }
+  set promptIndex($core.int v) { $_setUnsignedInt32(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasError() => $_has(6);
+  $core.bool hasPromptIndex() => $_has(6);
   @$pb.TagNumber(7)
-  void clearError() => clearField(7);
-  @$pb.TagNumber(7)
-  Error ensureError() => $_ensure(6);
+  void clearPromptIndex() => clearField(7);
+
+  @$pb.TagNumber(8)
+  ContentFilterDetectedResult get protectedMaterialText => $_getN(7);
+  @$pb.TagNumber(8)
+  set protectedMaterialText(ContentFilterDetectedResult v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasProtectedMaterialText() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearProtectedMaterialText() => clearField(8);
+  @$pb.TagNumber(8)
+  ContentFilterDetectedResult ensureProtectedMaterialText() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  ContentFilterDetectedResult get protectedMaterialCode => $_getN(8);
+  @$pb.TagNumber(9)
+  set protectedMaterialCode(ContentFilterDetectedResult v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasProtectedMaterialCode() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearProtectedMaterialCode() => clearField(9);
+  @$pb.TagNumber(9)
+  ContentFilterDetectedResult ensureProtectedMaterialCode() => $_ensure(8);
+
+  @$pb.TagNumber(99)
+  Error get error => $_getN(9);
+  @$pb.TagNumber(99)
+  set error(Error v) { setField(99, v); }
+  @$pb.TagNumber(99)
+  $core.bool hasError() => $_has(9);
+  @$pb.TagNumber(99)
+  void clearError() => clearField(99);
+  @$pb.TagNumber(99)
+  Error ensureError() => $_ensure(9);
 }
 
 class ContentFilterDetectedResult extends $pb.GeneratedMessage {
   factory ContentFilterDetectedResult({
     $core.bool? filtered,
     $core.bool? detected,
+    Citation? citation,
   }) {
     final $result = create();
     if (filtered != null) {
@@ -360,6 +407,9 @@ class ContentFilterDetectedResult extends $pb.GeneratedMessage {
     }
     if (detected != null) {
       $result.detected = detected;
+    }
+    if (citation != null) {
+      $result.citation = citation;
     }
     return $result;
   }
@@ -370,6 +420,7 @@ class ContentFilterDetectedResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ContentFilterDetectedResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'filtered')
     ..aOB(2, _omitFieldNames ? '' : 'detected')
+    ..aOM<Citation>(3, _omitFieldNames ? '' : 'citation', subBuilder: Citation.create)
     ..hasRequiredFields = false
   ;
 
@@ -411,6 +462,195 @@ class ContentFilterDetectedResult extends $pb.GeneratedMessage {
   $core.bool hasDetected() => $_has(1);
   @$pb.TagNumber(2)
   void clearDetected() => clearField(2);
+
+  @$pb.TagNumber(3)
+  Citation get citation => $_getN(2);
+  @$pb.TagNumber(3)
+  set citation(Citation v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCitation() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCitation() => clearField(3);
+  @$pb.TagNumber(3)
+  Citation ensureCitation() => $_ensure(2);
+}
+
+class Citation extends $pb.GeneratedMessage {
+  factory Citation({
+    $core.String? url,
+    $core.String? license,
+    $core.String? content,
+    $core.String? title,
+    $core.String? filepath,
+    $core.String? chunkId,
+  }) {
+    final $result = create();
+    if (url != null) {
+      $result.url = url;
+    }
+    if (license != null) {
+      $result.license = license;
+    }
+    if (content != null) {
+      $result.content = content;
+    }
+    if (title != null) {
+      $result.title = title;
+    }
+    if (filepath != null) {
+      $result.filepath = filepath;
+    }
+    if (chunkId != null) {
+      $result.chunkId = chunkId;
+    }
+    return $result;
+  }
+  Citation._() : super();
+  factory Citation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Citation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Citation', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..aOS(2, _omitFieldNames ? '' : 'license')
+    ..aOS(3, _omitFieldNames ? '' : 'content')
+    ..aOS(4, _omitFieldNames ? '' : 'title')
+    ..aOS(5, _omitFieldNames ? '' : 'filepath')
+    ..aOS(6, _omitFieldNames ? '' : 'chunkId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Citation clone() => Citation()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Citation copyWith(void Function(Citation) updates) => super.copyWith((message) => updates(message as Citation)) as Citation;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Citation create() => Citation._();
+  Citation createEmptyInstance() => create();
+  static $pb.PbList<Citation> createRepeated() => $pb.PbList<Citation>();
+  @$core.pragma('dart2js:noInline')
+  static Citation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Citation>(create);
+  static Citation? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get license => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set license($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLicense() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLicense() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get content => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set content($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasContent() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContent() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get title => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set title($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasTitle() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTitle() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get filepath => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set filepath($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFilepath() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearFilepath() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get chunkId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set chunkId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasChunkId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearChunkId() => clearField(6);
+}
+
+class Context extends $pb.GeneratedMessage {
+  factory Context({
+    $core.Iterable<Citation>? citations,
+    $core.String? intent,
+  }) {
+    final $result = create();
+    if (citations != null) {
+      $result.citations.addAll(citations);
+    }
+    if (intent != null) {
+      $result.intent = intent;
+    }
+    return $result;
+  }
+  Context._() : super();
+  factory Context.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Context.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Context', package: const $pb.PackageName(_omitMessageNames ? '' : 'azure.openai.v1'), createEmptyInstance: create)
+    ..pc<Citation>(1, _omitFieldNames ? '' : 'citations', $pb.PbFieldType.PM, subBuilder: Citation.create)
+    ..aOS(2, _omitFieldNames ? '' : 'intent')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Context clone() => Context()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Context copyWith(void Function(Context) updates) => super.copyWith((message) => updates(message as Context)) as Context;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Context create() => Context._();
+  Context createEmptyInstance() => create();
+  static $pb.PbList<Context> createRepeated() => $pb.PbList<Context>();
+  @$core.pragma('dart2js:noInline')
+  static Context getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Context>(create);
+  static Context? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Citation> get citations => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.String get intent => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set intent($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIntent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIntent() => clearField(2);
 }
 
 class ContentFilterSeverityResult extends $pb.GeneratedMessage {

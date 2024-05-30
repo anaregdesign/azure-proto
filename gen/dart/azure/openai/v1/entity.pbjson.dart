@@ -57,7 +57,15 @@ const ContentFilterResults$json = {
     {'1': 'self_harm', '3': 4, '4': 1, '5': 11, '6': '.azure.openai.v1.ContentFilterSeverityResult', '10': 'selfHarm'},
     {'1': 'profanity', '3': 5, '4': 1, '5': 11, '6': '.azure.openai.v1.ContentFilterSeverityResult', '10': 'profanity'},
     {'1': 'jailbreak', '3': 6, '4': 1, '5': 11, '6': '.azure.openai.v1.ContentFilterDetectedResult', '10': 'jailbreak'},
-    {'1': 'error', '3': 7, '4': 1, '5': 11, '6': '.azure.openai.v1.Error', '10': 'error'},
+    {'1': 'prompt_index', '3': 7, '4': 1, '5': 13, '9': 0, '10': 'promptIndex', '17': true},
+    {'1': 'protected_material_text', '3': 8, '4': 1, '5': 11, '6': '.azure.openai.v1.ContentFilterDetectedResult', '9': 1, '10': 'protectedMaterialText', '17': true},
+    {'1': 'protected_material_code', '3': 9, '4': 1, '5': 11, '6': '.azure.openai.v1.ContentFilterDetectedResult', '9': 2, '10': 'protectedMaterialCode', '17': true},
+    {'1': 'error', '3': 99, '4': 1, '5': 11, '6': '.azure.openai.v1.Error', '10': 'error'},
+  ],
+  '8': [
+    {'1': '_prompt_index'},
+    {'1': '_protected_material_text'},
+    {'1': '_protected_material_code'},
   ],
 };
 
@@ -71,8 +79,14 @@ final $typed_data.Uint8List contentFilterResultsDescriptor = $convert.base64Deco
     'ZpbHRlclNldmVyaXR5UmVzdWx0UghzZWxmSGFybRJKCglwcm9mYW5pdHkYBSABKAsyLC5henVy'
     'ZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclNldmVyaXR5UmVzdWx0Uglwcm9mYW5pdHkSSgoJam'
     'FpbGJyZWFrGAYgASgLMiwuYXp1cmUub3BlbmFpLnYxLkNvbnRlbnRGaWx0ZXJEZXRlY3RlZFJl'
-    'c3VsdFIJamFpbGJyZWFrEiwKBWVycm9yGAcgASgLMhYuYXp1cmUub3BlbmFpLnYxLkVycm9yUg'
-    'VlcnJvcg==');
+    'c3VsdFIJamFpbGJyZWFrEiYKDHByb21wdF9pbmRleBgHIAEoDUgAUgtwcm9tcHRJbmRleIgBAR'
+    'JpChdwcm90ZWN0ZWRfbWF0ZXJpYWxfdGV4dBgIIAEoCzIsLmF6dXJlLm9wZW5haS52MS5Db250'
+    'ZW50RmlsdGVyRGV0ZWN0ZWRSZXN1bHRIAVIVcHJvdGVjdGVkTWF0ZXJpYWxUZXh0iAEBEmkKF3'
+    'Byb3RlY3RlZF9tYXRlcmlhbF9jb2RlGAkgASgLMiwuYXp1cmUub3BlbmFpLnYxLkNvbnRlbnRG'
+    'aWx0ZXJEZXRlY3RlZFJlc3VsdEgCUhVwcm90ZWN0ZWRNYXRlcmlhbENvZGWIAQESLAoFZXJyb3'
+    'IYYyABKAsyFi5henVyZS5vcGVuYWkudjEuRXJyb3JSBWVycm9yQg8KDV9wcm9tcHRfaW5kZXhC'
+    'GgoYX3Byb3RlY3RlZF9tYXRlcmlhbF90ZXh0QhoKGF9wcm90ZWN0ZWRfbWF0ZXJpYWxfY29kZQ'
+    '==');
 
 @$core.Deprecated('Use contentFilterDetectedResultDescriptor instead')
 const ContentFilterDetectedResult$json = {
@@ -80,13 +94,51 @@ const ContentFilterDetectedResult$json = {
   '2': [
     {'1': 'filtered', '3': 1, '4': 1, '5': 8, '10': 'filtered'},
     {'1': 'detected', '3': 2, '4': 1, '5': 8, '10': 'detected'},
+    {'1': 'citation', '3': 3, '4': 1, '5': 11, '6': '.azure.openai.v1.Citation', '9': 0, '10': 'citation', '17': true},
+  ],
+  '8': [
+    {'1': '_citation'},
   ],
 };
 
 /// Descriptor for `ContentFilterDetectedResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contentFilterDetectedResultDescriptor = $convert.base64Decode(
     'ChtDb250ZW50RmlsdGVyRGV0ZWN0ZWRSZXN1bHQSGgoIZmlsdGVyZWQYASABKAhSCGZpbHRlcm'
-    'VkEhoKCGRldGVjdGVkGAIgASgIUghkZXRlY3RlZA==');
+    'VkEhoKCGRldGVjdGVkGAIgASgIUghkZXRlY3RlZBI6CghjaXRhdGlvbhgDIAEoCzIZLmF6dXJl'
+    'Lm9wZW5haS52MS5DaXRhdGlvbkgAUghjaXRhdGlvbogBAUILCglfY2l0YXRpb24=');
+
+@$core.Deprecated('Use citationDescriptor instead')
+const Citation$json = {
+  '1': 'Citation',
+  '2': [
+    {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    {'1': 'license', '3': 2, '4': 1, '5': 9, '10': 'license'},
+    {'1': 'content', '3': 3, '4': 1, '5': 9, '10': 'content'},
+    {'1': 'title', '3': 4, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'filepath', '3': 5, '4': 1, '5': 9, '10': 'filepath'},
+    {'1': 'chunk_id', '3': 6, '4': 1, '5': 9, '10': 'chunkId'},
+  ],
+};
+
+/// Descriptor for `Citation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List citationDescriptor = $convert.base64Decode(
+    'CghDaXRhdGlvbhIQCgN1cmwYASABKAlSA3VybBIYCgdsaWNlbnNlGAIgASgJUgdsaWNlbnNlEh'
+    'gKB2NvbnRlbnQYAyABKAlSB2NvbnRlbnQSFAoFdGl0bGUYBCABKAlSBXRpdGxlEhoKCGZpbGVw'
+    'YXRoGAUgASgJUghmaWxlcGF0aBIZCghjaHVua19pZBgGIAEoCVIHY2h1bmtJZA==');
+
+@$core.Deprecated('Use contextDescriptor instead')
+const Context$json = {
+  '1': 'Context',
+  '2': [
+    {'1': 'citations', '3': 1, '4': 3, '5': 11, '6': '.azure.openai.v1.Citation', '10': 'citations'},
+    {'1': 'intent', '3': 2, '4': 1, '5': 9, '10': 'intent'},
+  ],
+};
+
+/// Descriptor for `Context`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contextDescriptor = $convert.base64Decode(
+    'CgdDb250ZXh0EjcKCWNpdGF0aW9ucxgBIAMoCzIZLmF6dXJlLm9wZW5haS52MS5DaXRhdGlvbl'
+    'IJY2l0YXRpb25zEhYKBmludGVudBgCIAEoCVIGaW50ZW50');
 
 @$core.Deprecated('Use contentFilterSeverityResultDescriptor instead')
 const ContentFilterSeverityResult$json = {
