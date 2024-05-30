@@ -5,14 +5,12 @@ package azure.openai.v1;
 
 option go_package = "azure/openai/v1";
 
-
 message Choice {
   uint32 index = 1;
   string text = 2;
   float logprobs = 3;
   string finish_reason = 4;
 }
-
 
 message CompletionRequest {
   string model = 1;
@@ -22,11 +20,9 @@ message CompletionRequest {
   repeated Choice choices = 5;
 }
 
-
 message CompletionResponse {
   Error error = 1;
 }
-
 
 message Error {
   string code = 1;
@@ -36,12 +32,10 @@ message Error {
   InnerError inner_error = 5;
 }
 
-
 message InnerError {
   string code = 1;
   ContentFilterResults content_filter_results = 2;
 }
-
 
 message ContentFilterResults {
   ContentFilterResult sexual = 1;
@@ -53,10 +47,8 @@ message ContentFilterResults {
   Error error = 7;
 }
 
-
 message ContentFilterResult {
   bool filtered = 1;
   bool detected = 2;
   string severity = 3;
 }
-
