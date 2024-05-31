@@ -5,7 +5,7 @@ poetry add git+https://github.com/anaregdesign/msproto.git#subdirectory=python
 ```
 More information about poetry and git dependencies can be found [here](https://python-poetry.org/docs/dependency-specification/#git-dependencies)
 
-# Usage
+# Example
 ```python
 from msp.azure.openai.chat.v1 import completions_pb2
 from google.protobuf.json_format import MessageToJson
