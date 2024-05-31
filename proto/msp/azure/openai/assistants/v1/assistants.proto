@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package msp.azure.openai.assistants.v1;
+
+option go_package = "msp/azure/openai/assistants/v1";
+
+message Tool {
+  string type = 1;
+}
+
+message Assistant {
+  string id = 1;
+  string object = 2;
+  uint64 created_at = 3;
+  string name = 4;
+  string description = 5;
+  string model = 6;
+  string instruction = 7 [json_name = "instructions"];
+  repeated Tool tools = 8;
+  repeated string file_ids = 9;
+  map<string, string> metadata = 10;
+}
+
+message CreateAssistantRequest {
+  string model = 1;
+  string name = 2;
+  string description = 3;
+  string instruction = 4 [json_name = "instructions"];
+  repeated Tool tools = 5;
+  repeated string file_ids = 6;
+  map<string, string> metadata = 7;
+  float temperature = 8;
+  float top_p = 9;
+  string response_format = 10;
+}
+
+message ModifyAssistantRequest {
+  string name = 1;
+  string description = 2;
+  string instruction = 3 [json_name = "instructions"];
+  repeated Tool tools = 4;
+  repeated string file_ids = 5;
+  map<string, string> metadata = 6;
+}
