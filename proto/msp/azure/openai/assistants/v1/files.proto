@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package msp.azure.openai.assistants.v1;
+
+option go_package = "msp/azure/openai/assistants/v1";
+
+message CreateAssistantFileRequest {
+  string file_id = 1;
+}
+
+message AssistantFile {
+  string id = 1;
+  string object = 2;
+  uint64 created_at = 3;
+  string assistant_id = 4;
+}
