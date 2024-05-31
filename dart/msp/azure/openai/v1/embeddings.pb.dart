@@ -91,6 +91,78 @@ class EmbeddingRequest extends $pb.GeneratedMessage {
   void clearInputType() => clearField(3);
 }
 
+class EmbeddingResponse_Data extends $pb.GeneratedMessage {
+  factory EmbeddingResponse_Data({
+    $core.int? index,
+    $core.String? object,
+    $core.Iterable<$core.double>? embedding,
+  }) {
+    final $result = create();
+    if (index != null) {
+      $result.index = index;
+    }
+    if (object != null) {
+      $result.object = object;
+    }
+    if (embedding != null) {
+      $result.embedding.addAll(embedding);
+    }
+    return $result;
+  }
+  EmbeddingResponse_Data._() : super();
+  factory EmbeddingResponse_Data.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EmbeddingResponse_Data.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EmbeddingResponse.Data', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..aOS(2, _omitFieldNames ? '' : 'object')
+    ..p<$core.double>(3, _omitFieldNames ? '' : 'embedding', $pb.PbFieldType.KF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EmbeddingResponse_Data clone() => EmbeddingResponse_Data()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EmbeddingResponse_Data copyWith(void Function(EmbeddingResponse_Data) updates) => super.copyWith((message) => updates(message as EmbeddingResponse_Data)) as EmbeddingResponse_Data;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EmbeddingResponse_Data create() => EmbeddingResponse_Data._();
+  EmbeddingResponse_Data createEmptyInstance() => create();
+  static $pb.PbList<EmbeddingResponse_Data> createRepeated() => $pb.PbList<EmbeddingResponse_Data>();
+  @$core.pragma('dart2js:noInline')
+  static EmbeddingResponse_Data getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EmbeddingResponse_Data>(create);
+  static EmbeddingResponse_Data? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get index => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set index($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIndex() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIndex() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get object => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set object($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasObject() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearObject() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.double> get embedding => $_getList(2);
+}
+
 class EmbeddingResponse_Usage extends $pb.GeneratedMessage {
   factory EmbeddingResponse_Usage({
     $core.int? promptTokens,
@@ -159,7 +231,7 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
   factory EmbeddingResponse({
     $core.String? object,
     $core.String? model,
-    $core.Iterable<Data>? data,
+    $core.Iterable<EmbeddingResponse_Data>? data,
     EmbeddingResponse_Usage? usage,
   }) {
     final $result = create();
@@ -184,7 +256,7 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EmbeddingResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'object')
     ..aOS(2, _omitFieldNames ? '' : 'model')
-    ..pc<Data>(3, _omitFieldNames ? '' : 'data', $pb.PbFieldType.PM, subBuilder: Data.create)
+    ..pc<EmbeddingResponse_Data>(3, _omitFieldNames ? '' : 'data', $pb.PbFieldType.PM, subBuilder: EmbeddingResponse_Data.create)
     ..aOM<EmbeddingResponse_Usage>(4, _omitFieldNames ? '' : 'usage', subBuilder: EmbeddingResponse_Usage.create)
     ..hasRequiredFields = false
   ;
@@ -229,7 +301,7 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
   void clearModel() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<Data> get data => $_getList(2);
+  $core.List<EmbeddingResponse_Data> get data => $_getList(2);
 
   @$pb.TagNumber(4)
   EmbeddingResponse_Usage get usage => $_getN(3);
@@ -241,78 +313,6 @@ class EmbeddingResponse extends $pb.GeneratedMessage {
   void clearUsage() => clearField(4);
   @$pb.TagNumber(4)
   EmbeddingResponse_Usage ensureUsage() => $_ensure(3);
-}
-
-class Data extends $pb.GeneratedMessage {
-  factory Data({
-    $core.int? index,
-    $core.String? object,
-    $core.Iterable<$core.double>? embedding,
-  }) {
-    final $result = create();
-    if (index != null) {
-      $result.index = index;
-    }
-    if (object != null) {
-      $result.object = object;
-    }
-    if (embedding != null) {
-      $result.embedding.addAll(embedding);
-    }
-    return $result;
-  }
-  Data._() : super();
-  factory Data.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Data.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Data', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.v1'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOS(2, _omitFieldNames ? '' : 'object')
-    ..p<$core.double>(3, _omitFieldNames ? '' : 'embedding', $pb.PbFieldType.KF)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Data clone() => Data()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Data copyWith(void Function(Data) updates) => super.copyWith((message) => updates(message as Data)) as Data;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static Data create() => Data._();
-  Data createEmptyInstance() => create();
-  static $pb.PbList<Data> createRepeated() => $pb.PbList<Data>();
-  @$core.pragma('dart2js:noInline')
-  static Data getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Data>(create);
-  static Data? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get index => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set index($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasIndex() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearIndex() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get object => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set object($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasObject() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearObject() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.List<$core.double> get embedding => $_getList(2);
 }
 
 

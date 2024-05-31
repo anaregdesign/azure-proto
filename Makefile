@@ -15,8 +15,7 @@ format: lint
 .PHONY: generate
 generate: format
 	@echo "Running code generator..."
-	#rm -rf ./gen
 	buf generate
 	@echo "Code generator finished successfully"
-	@echo "create __init__.py file in gen directory"
-	find ./gen/python/msp -type d -exec touch {}/__init__.py \;
+	@echo "create __init__.py file in generated directory"
+	find ./python/msp -type d -exec touch {}/__init__.py \;

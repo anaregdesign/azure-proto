@@ -20,7 +20,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionRequest {
+public struct Msp_Azure_Openai_Chat_V1_CompletionRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -43,7 +43,7 @@ public struct Msp_Azure_Openai_Chat_V1_ChatCompletionRequest {
 
   public var user: String = String()
 
-  public var messages: [Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage] = []
+  public var messages: [Msp_Azure_Openai_Chat_V1_CompletionRequest.Message] = []
 
   ///  repeated DataSource data_sources = 11;
   public var n: UInt32 = 0
@@ -57,24 +57,24 @@ public struct Msp_Azure_Openai_Chat_V1_ChatCompletionRequest {
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
+  public struct Message {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    public var role: String = String()
+
+    public var content: String = String()
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+  }
+
   public init() {}
 }
 
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var role: String = String()
-
-  public var content: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-}
-
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionResponse {
+public struct Msp_Azure_Openai_Chat_V1_CompletionResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -87,8 +87,8 @@ public struct Msp_Azure_Openai_Chat_V1_ChatCompletionResponse {
 
   public var model: String = String()
 
-  public var usage: Msp_Azure_Openai_Chat_V1_Usage {
-    get {return _usage ?? Msp_Azure_Openai_Chat_V1_Usage()}
+  public var usage: Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage {
+    get {return _usage ?? Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage()}
     set {_usage = newValue}
   }
   /// Returns true if `usage` has been explicitly set.
@@ -100,188 +100,188 @@ public struct Msp_Azure_Openai_Chat_V1_ChatCompletionResponse {
 
   public var promptFilterResults: [Msp_Azure_Openai_V1_PromptFilterResult] = []
 
-  public var choices: [Msp_Azure_Openai_Chat_V1_Choice] = []
+  public var choices: [Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice] = []
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  public init() {}
-
-  fileprivate var _usage: Msp_Azure_Openai_Chat_V1_Usage? = nil
-}
-
-public struct Msp_Azure_Openai_Chat_V1_Usage {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var promptTokens: UInt64 = 0
-
-  public var completionTokens: UInt64 = 0
-
-  public var totalTokens: UInt64 = 0
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-}
-
-public struct Msp_Azure_Openai_Chat_V1_Choice {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var index: UInt32 = 0
-
-  public var finishReason: String = String()
-
-  public var message: Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage {
-    get {return _message ?? Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage()}
-    set {_message = newValue}
-  }
-  /// Returns true if `message` has been explicitly set.
-  public var hasMessage: Bool {return self._message != nil}
-  /// Clears the value of `message`. Subsequent reads from it will return its default value.
-  public mutating func clearMessage() {self._message = nil}
-
-  public var contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult {
-    get {return _contentFilterResult ?? Msp_Azure_Openai_V1_ContentFilterChoiceResult()}
-    set {_contentFilterResult = newValue}
-  }
-  /// Returns true if `contentFilterResult` has been explicitly set.
-  public var hasContentFilterResult: Bool {return self._contentFilterResult != nil}
-  /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
-  public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _message: Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage? = nil
-  fileprivate var _contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult? = nil
-}
-
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var role: String = String()
-
-  public var content: String = String()
-
-  public var toolCalls: [Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall] = []
-
-  public var functionCall: Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall {
-    get {return _functionCall ?? Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall()}
-    set {_functionCall = newValue}
-  }
-  /// Returns true if `functionCall` has been explicitly set.
-  public var hasFunctionCall: Bool {return self._functionCall != nil}
-  /// Clears the value of `functionCall`. Subsequent reads from it will return its default value.
-  public mutating func clearFunctionCall() {self._functionCall = nil}
-
-  public var context: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext {
-    get {return _context ?? Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext()}
-    set {_context = newValue}
-  }
-  /// Returns true if `context` has been explicitly set.
-  public var hasContext: Bool {return self._context != nil}
-  /// Clears the value of `context`. Subsequent reads from it will return its default value.
-  public mutating func clearContext() {self._context = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _functionCall: Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall? = nil
-  fileprivate var _context: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext? = nil
-}
-
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var id: String = String()
-
-  public var type: String = String()
-
-  public var function: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function {
-    get {return _function ?? Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function()}
-    set {_function = newValue}
-  }
-  /// Returns true if `function` has been explicitly set.
-  public var hasFunction: Bool {return self._function != nil}
-  /// Clears the value of `function`. Subsequent reads from it will return its default value.
-  public mutating func clearFunction() {self._function = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct Function {
+  public struct Usage {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    public var name: String = String()
+    public var promptTokens: UInt64 = 0
 
-    public var argument: String = String()
+    public var completionTokens: UInt64 = 0
+
+    public var totalTokens: UInt64 = 0
 
     public var unknownFields = SwiftProtobuf.UnknownStorage()
 
     public init() {}
   }
 
-  public init() {}
-
-  fileprivate var _function: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function? = nil
-}
-
-public struct Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var name: String = String()
-
-  public var argument: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-}
-
-public struct Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var citations: [Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation] = []
-
-  public var intent: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct Citation {
+  public struct Choice {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    public var content: String = String()
+    public var index: UInt32 = 0
 
-    public var title: String = String()
+    public var finishReason: String = String()
 
-    public var url: String = String()
+    public var message: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message {
+      get {return _message ?? Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message()}
+      set {_message = newValue}
+    }
+    /// Returns true if `message` has been explicitly set.
+    public var hasMessage: Bool {return self._message != nil}
+    /// Clears the value of `message`. Subsequent reads from it will return its default value.
+    public mutating func clearMessage() {self._message = nil}
 
-    public var filepath: String = String()
-
-    public var chunkID: String = String()
+    public var contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult {
+      get {return _contentFilterResult ?? Msp_Azure_Openai_V1_ContentFilterChoiceResult()}
+      set {_contentFilterResult = newValue}
+    }
+    /// Returns true if `contentFilterResult` has been explicitly set.
+    public var hasContentFilterResult: Bool {return self._contentFilterResult != nil}
+    /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
+    public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
 
     public var unknownFields = SwiftProtobuf.UnknownStorage()
 
+    public struct Message {
+      // SwiftProtobuf.Message conformance is added in an extension below. See the
+      // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+      // methods supported on all messages.
+
+      public var role: String = String()
+
+      public var content: String = String()
+
+      public var toolCalls: [Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall] = []
+
+      public var functionCall: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall {
+        get {return _functionCall ?? Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall()}
+        set {_functionCall = newValue}
+      }
+      /// Returns true if `functionCall` has been explicitly set.
+      public var hasFunctionCall: Bool {return self._functionCall != nil}
+      /// Clears the value of `functionCall`. Subsequent reads from it will return its default value.
+      public mutating func clearFunctionCall() {self._functionCall = nil}
+
+      public var context: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context {
+        get {return _context ?? Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context()}
+        set {_context = newValue}
+      }
+      /// Returns true if `context` has been explicitly set.
+      public var hasContext: Bool {return self._context != nil}
+      /// Clears the value of `context`. Subsequent reads from it will return its default value.
+      public mutating func clearContext() {self._context = nil}
+
+      public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+      public struct ToolCall {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+
+        public var id: String = String()
+
+        public var type: String = String()
+
+        public var function: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function {
+          get {return _function ?? Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function()}
+          set {_function = newValue}
+        }
+        /// Returns true if `function` has been explicitly set.
+        public var hasFunction: Bool {return self._function != nil}
+        /// Clears the value of `function`. Subsequent reads from it will return its default value.
+        public mutating func clearFunction() {self._function = nil}
+
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+        public struct Function {
+          // SwiftProtobuf.Message conformance is added in an extension below. See the
+          // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+          // methods supported on all messages.
+
+          public var name: String = String()
+
+          public var argument: String = String()
+
+          public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+          public init() {}
+        }
+
+        public init() {}
+
+        fileprivate var _function: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function? = nil
+      }
+
+      public struct FunctionCall {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+
+        public var name: String = String()
+
+        public var argument: String = String()
+
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+        public init() {}
+      }
+
+      public struct Context {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+
+        public var citations: [Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.Citation] = []
+
+        public var intent: String = String()
+
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+        public struct Citation {
+          // SwiftProtobuf.Message conformance is added in an extension below. See the
+          // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+          // methods supported on all messages.
+
+          public var content: String = String()
+
+          public var title: String = String()
+
+          public var url: String = String()
+
+          public var filepath: String = String()
+
+          public var chunkID: String = String()
+
+          public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+          public init() {}
+        }
+
+        public init() {}
+      }
+
+      public init() {}
+
+      fileprivate var _functionCall: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall? = nil
+      fileprivate var _context: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context? = nil
+    }
+
     public init() {}
+
+    fileprivate var _message: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message? = nil
+    fileprivate var _contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult? = nil
   }
 
   public init() {}
+
+  fileprivate var _usage: Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage? = nil
 }
 
 public struct Msp_Azure_Openai_Chat_V1_ErrorResponse {
@@ -349,17 +349,17 @@ public struct Msp_Azure_Openai_Chat_V1_ErrorResponse {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequest: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponse: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_Usage: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_Choice: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext: @unchecked Sendable {}
-extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionRequest: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionRequest.Message: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context: @unchecked Sendable {}
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.Citation: @unchecked Sendable {}
 extension Msp_Azure_Openai_Chat_V1_ErrorResponse: @unchecked Sendable {}
 extension Msp_Azure_Openai_Chat_V1_ErrorResponse.InnerError: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
@@ -368,8 +368,8 @@ extension Msp_Azure_Openai_Chat_V1_ErrorResponse.InnerError: @unchecked Sendable
 
 fileprivate let _protobuf_package = "msp.azure.openai.chat.v1"
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionRequest"
+extension Msp_Azure_Openai_Chat_V1_CompletionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".CompletionRequest"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "temperature"),
     2: .standard(proto: "top_p"),
@@ -448,7 +448,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequest: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionRequest, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionRequest) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionRequest, rhs: Msp_Azure_Openai_Chat_V1_CompletionRequest) -> Bool {
     if lhs.temperature != rhs.temperature {return false}
     if lhs.topP != rhs.topP {return false}
     if lhs.stream != rhs.stream {return false}
@@ -466,8 +466,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequest: SwiftProtobuf.Message,
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionRequestMessage"
+extension Msp_Azure_Openai_Chat_V1_CompletionRequest.Message: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionRequest.protoMessageName + ".Message"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "role"),
     2: .same(proto: "content"),
@@ -496,7 +496,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage: SwiftProtobuf.M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionRequest.Message, rhs: Msp_Azure_Openai_Chat_V1_CompletionRequest.Message) -> Bool {
     if lhs.role != rhs.role {return false}
     if lhs.content != rhs.content {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -504,8 +504,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionRequestMessage: SwiftProtobuf.M
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionResponse"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".CompletionResponse"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "id"),
     2: .same(proto: "object"),
@@ -568,7 +568,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponse: SwiftProtobuf.Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionResponse, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionResponse) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.object != rhs.object {return false}
     if lhs.created != rhs.created {return false}
@@ -582,8 +582,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponse: SwiftProtobuf.Message
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Usage"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.protoMessageName + ".Usage"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "prompt_tokens"),
     2: .standard(proto: "completion_tokens"),
@@ -617,7 +617,7 @@ extension Msp_Azure_Openai_Chat_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_Usage, rhs: Msp_Azure_Openai_Chat_V1_Usage) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Usage) -> Bool {
     if lhs.promptTokens != rhs.promptTokens {return false}
     if lhs.completionTokens != rhs.completionTokens {return false}
     if lhs.totalTokens != rhs.totalTokens {return false}
@@ -626,8 +626,8 @@ extension Msp_Azure_Openai_Chat_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Choice"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.protoMessageName + ".Choice"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "index"),
     2: .standard(proto: "finish_reason"),
@@ -670,7 +670,7 @@ extension Msp_Azure_Openai_Chat_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_Choice, rhs: Msp_Azure_Openai_Chat_V1_Choice) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice) -> Bool {
     if lhs.index != rhs.index {return false}
     if lhs.finishReason != rhs.finishReason {return false}
     if lhs._message != rhs._message {return false}
@@ -680,8 +680,8 @@ extension Msp_Azure_Openai_Chat_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf.
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionResponseMessage"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.protoMessageName + ".Message"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "role"),
     2: .same(proto: "content"),
@@ -729,7 +729,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage: SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message) -> Bool {
     if lhs.role != rhs.role {return false}
     if lhs.content != rhs.content {return false}
     if lhs.toolCalls != rhs.toolCalls {return false}
@@ -740,8 +740,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionResponseMessage: SwiftProtobuf.
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionMessageToolCall"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.protoMessageName + ".ToolCall"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "id"),
     2: .same(proto: "type"),
@@ -779,7 +779,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall: SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.type != rhs.type {return false}
     if lhs._function != rhs._function {return false}
@@ -788,8 +788,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall: SwiftProtobuf.
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.protoMessageName + ".Function"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.protoMessageName + ".Function"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .unique(proto: "argument", json: "arguments"),
@@ -818,7 +818,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function: Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.ToolCall.Function) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs.argument != rhs.argument {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -826,8 +826,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionMessageToolCall.Function: Swift
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".ChatCompletionFunctionCall"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.protoMessageName + ".FunctionCall"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .unique(proto: "argument", json: "arguments"),
@@ -856,7 +856,7 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall: SwiftProtobuf.Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall, rhs: Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.FunctionCall) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs.argument != rhs.argument {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -864,8 +864,8 @@ extension Msp_Azure_Openai_Chat_V1_ChatCompletionFunctionCall: SwiftProtobuf.Mes
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".AzureChatExtensionsMessageContext"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.protoMessageName + ".Context"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "citations"),
     2: .same(proto: "intent"),
@@ -894,7 +894,7 @@ extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext: SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext, rhs: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context) -> Bool {
     if lhs.citations != rhs.citations {return false}
     if lhs.intent != rhs.intent {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -902,8 +902,8 @@ extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext: SwiftProto
   }
 }
 
-extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.protoMessageName + ".Citation"
+extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.Citation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.protoMessageName + ".Citation"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "content"),
     2: .same(proto: "title"),
@@ -947,7 +947,7 @@ extension Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation: S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation, rhs: Msp_Azure_Openai_Chat_V1_AzureChatExtensionsMessageContext.Citation) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.Citation, rhs: Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice.Message.Context.Citation) -> Bool {
     if lhs.content != rhs.content {return false}
     if lhs.title != rhs.title {return false}
     if lhs.url != rhs.url {return false}

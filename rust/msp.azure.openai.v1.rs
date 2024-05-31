@@ -140,48 +140,51 @@ pub struct CompletionResponse {
     #[prost(message, repeated, tag="5")]
     pub prompt_filter_results: ::prost::alloc::vec::Vec<PromptFilterResult>,
     #[prost(message, repeated, tag="6")]
-    pub choices: ::prost::alloc::vec::Vec<Choice>,
+    pub choices: ::prost::alloc::vec::Vec<completion_response::Choice>,
     #[prost(message, optional, tag="7")]
-    pub usage: ::core::option::Option<Usage>,
+    pub usage: ::core::option::Option<completion_response::Usage>,
 }
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Choice {
-    #[prost(string, tag="1")]
-    pub text: ::prost::alloc::string::String,
-    #[prost(uint32, tag="2")]
-    pub index: u32,
-    #[prost(message, optional, tag="3")]
-    pub logprobs: ::core::option::Option<choice::LogProbs>,
-    #[prost(string, tag="4")]
-    pub finish_reason: ::prost::alloc::string::String,
-    #[prost(message, optional, tag="5")]
-    pub content_filter_result: ::core::option::Option<ContentFilterChoiceResult>,
-}
-/// Nested message and enum types in `Choice`.
-pub mod choice {
+/// Nested message and enum types in `CompletionResponse`.
+pub mod completion_response {
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-    pub struct LogProbs {
-        #[prost(string, repeated, tag="1")]
-        pub tokens: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
-        #[prost(float, repeated, tag="2")]
-        pub token_logprobs: ::prost::alloc::vec::Vec<f32>,
-        #[prost(float, repeated, tag="3")]
-        pub top_logprobs: ::prost::alloc::vec::Vec<f32>,
-        #[prost(uint32, repeated, tag="4")]
-        pub text_offsets: ::prost::alloc::vec::Vec<u32>,
+    pub struct Usage {
+        #[prost(uint32, tag="1")]
+        pub completion_tokens: u32,
+        #[prost(uint32, tag="2")]
+        pub prompt_tokens: u32,
+        #[prost(uint32, tag="3")]
+        pub total_tokens: u32,
     }
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
+    #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Usage {
-    #[prost(uint32, tag="1")]
-    pub completion_tokens: u32,
-    #[prost(uint32, tag="2")]
-    pub prompt_tokens: u32,
-    #[prost(uint32, tag="3")]
-    pub total_tokens: u32,
+    pub struct Choice {
+        #[prost(string, tag="1")]
+        pub text: ::prost::alloc::string::String,
+        #[prost(uint32, tag="2")]
+        pub index: u32,
+        #[prost(message, optional, tag="3")]
+        pub logprobs: ::core::option::Option<choice::LogProbs>,
+        #[prost(string, tag="4")]
+        pub finish_reason: ::prost::alloc::string::String,
+        #[prost(message, optional, tag="5")]
+        pub content_filter_result: ::core::option::Option<super::ContentFilterChoiceResult>,
+    }
+    /// Nested message and enum types in `Choice`.
+    pub mod choice {
+        #[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+        pub struct LogProbs {
+            #[prost(string, repeated, tag="1")]
+            pub tokens: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+            #[prost(float, repeated, tag="2")]
+            pub token_logprobs: ::prost::alloc::vec::Vec<f32>,
+            #[prost(float, repeated, tag="3")]
+            pub top_logprobs: ::prost::alloc::vec::Vec<f32>,
+            #[prost(uint32, repeated, tag="4")]
+            pub text_offsets: ::prost::alloc::vec::Vec<u32>,
+        }
+    }
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -201,12 +204,22 @@ pub struct EmbeddingResponse {
     #[prost(string, tag="2")]
     pub model: ::prost::alloc::string::String,
     #[prost(message, repeated, tag="3")]
-    pub data: ::prost::alloc::vec::Vec<Data>,
+    pub data: ::prost::alloc::vec::Vec<embedding_response::Data>,
     #[prost(message, optional, tag="4")]
     pub usage: ::core::option::Option<embedding_response::Usage>,
 }
 /// Nested message and enum types in `EmbeddingResponse`.
 pub mod embedding_response {
+    #[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct Data {
+        #[prost(uint32, tag="1")]
+        pub index: u32,
+        #[prost(string, tag="2")]
+        pub object: ::prost::alloc::string::String,
+        #[prost(float, repeated, tag="3")]
+        pub embedding: ::prost::alloc::vec::Vec<f32>,
+    }
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Usage {
@@ -215,15 +228,5 @@ pub mod embedding_response {
         #[prost(uint32, tag="2")]
         pub total_tokens: u32,
     }
-}
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Data {
-    #[prost(uint32, tag="1")]
-    pub index: u32,
-    #[prost(string, tag="2")]
-    pub object: ::prost::alloc::string::String,
-    #[prost(float, repeated, tag="3")]
-    pub embedding: ::prost::alloc::vec::Vec<f32>,
 }
 // @@protoc_insertion_point(module)

@@ -41,20 +41,20 @@ public final class CompletionsProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_msp_azure_openai_v1_CompletionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_msp_azure_openai_v1_Choice_descriptor;
+    internal_static_msp_azure_openai_v1_CompletionResponse_Usage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_msp_azure_openai_v1_Choice_fieldAccessorTable;
+      internal_static_msp_azure_openai_v1_CompletionResponse_Usage_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_msp_azure_openai_v1_Choice_LogProbs_descriptor;
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_msp_azure_openai_v1_Choice_LogProbs_fieldAccessorTable;
+      internal_static_msp_azure_openai_v1_CompletionResponse_Choice_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_msp_azure_openai_v1_Usage_descriptor;
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_LogProbs_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_msp_azure_openai_v1_Usage_fieldAccessorTable;
+      internal_static_msp_azure_openai_v1_CompletionResponse_Choice_LogProbs_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -81,33 +81,35 @@ public final class CompletionsProto {
       "uency_penalty\030\017 \001(\002R\020frequencyPenalty\022\027\n" +
       "\007best_of\030\020 \001(\rR\006bestOf\032<\n\016LogitBiasEntry" +
       "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\002R\005value" +
-      ":\0028\001\"\262\002\n\022CompletionResponse\022\016\n\002id\030\001 \001(\tR" +
+      ":\0028\001\"\376\006\n\022CompletionResponse\022\016\n\002id\030\001 \001(\tR" +
       "\002id\022\026\n\006object\030\002 \001(\tR\006object\022\030\n\007created\030\003" +
       " \001(\004R\007created\022\024\n\005model\030\004 \001(\tR\005model\022[\n\025p" +
       "rompt_filter_results\030\005 \003(\0132\'.msp.azure.o" +
       "penai.v1.PromptFilterResultR\023promptFilte" +
-      "rResults\0225\n\007choices\030\006 \003(\0132\033.msp.azure.op" +
-      "enai.v1.ChoiceR\007choices\0220\n\005usage\030\007 \001(\0132\032" +
-      ".msp.azure.openai.v1.UsageR\005usage\"\222\003\n\006Ch" +
-      "oice\022\022\n\004text\030\001 \001(\tR\004text\022\024\n\005index\030\002 \001(\rR" +
-      "\005index\022@\n\010logprobs\030\003 \001(\0132$.msp.azure.ope" +
-      "nai.v1.Choice.LogProbsR\010logprobs\022#\n\rfini" +
-      "sh_reason\030\004 \001(\tR\014finishReason\022e\n\025content" +
-      "_filter_result\030\005 \001(\0132..msp.azure.openai." +
-      "v1.ContentFilterChoiceResultR\026content_fi" +
-      "lter_results\032\217\001\n\010LogProbs\022\026\n\006tokens\030\001 \003(" +
-      "\tR\006tokens\022%\n\016token_logprobs\030\002 \003(\002R\rtoken" +
-      "Logprobs\022!\n\014top_logprobs\030\003 \003(\002R\013topLogpr" +
-      "obs\022!\n\014text_offsets\030\004 \003(\rR\013text_offset\"|" +
-      "\n\005Usage\022+\n\021completion_tokens\030\001 \001(\rR\020comp" +
-      "letionTokens\022#\n\rprompt_tokens\030\002 \001(\rR\014pro" +
-      "mptTokens\022!\n\014total_tokens\030\003 \001(\rR\013totalTo" +
-      "kensB\337\001\n\027com.msp.azure.openai.v1B\020Comple" +
-      "tionsProtoP\001ZCgithub.com/anaregdesign/az" +
-      "ure-proto/go/msp/azure/openai/v1;openaiv" +
-      "1\242\002\003MAO\252\002\023Msp.Azure.Openai.V1\312\002\023Msp\\Azur" +
-      "e\\Openai\\V1\342\002\037Msp\\Azure\\Openai\\V1\\GPBMet" +
-      "adata\352\002\026Msp::Azure::Openai::V1b\006proto3"
+      "rResults\022H\n\007choices\030\006 \003(\0132..msp.azure.op" +
+      "enai.v1.CompletionResponse.ChoiceR\007choic" +
+      "es\022C\n\005usage\030\007 \001(\0132-.msp.azure.openai.v1." +
+      "CompletionResponse.UsageR\005usage\032|\n\005Usage" +
+      "\022+\n\021completion_tokens\030\001 \001(\rR\020completionT" +
+      "okens\022#\n\rprompt_tokens\030\002 \001(\rR\014promptToke" +
+      "ns\022!\n\014total_tokens\030\003 \001(\rR\013totalTokens\032\245\003" +
+      "\n\006Choice\022\022\n\004text\030\001 \001(\tR\004text\022\024\n\005index\030\002 " +
+      "\001(\rR\005index\022S\n\010logprobs\030\003 \001(\01327.msp.azure" +
+      ".openai.v1.CompletionResponse.Choice.Log" +
+      "ProbsR\010logprobs\022#\n\rfinish_reason\030\004 \001(\tR\014" +
+      "finishReason\022e\n\025content_filter_result\030\005 " +
+      "\001(\0132..msp.azure.openai.v1.ContentFilterC" +
+      "hoiceResultR\026content_filter_results\032\217\001\n\010" +
+      "LogProbs\022\026\n\006tokens\030\001 \003(\tR\006tokens\022%\n\016toke" +
+      "n_logprobs\030\002 \003(\002R\rtokenLogprobs\022!\n\014top_l" +
+      "ogprobs\030\003 \003(\002R\013topLogprobs\022!\n\014text_offse" +
+      "ts\030\004 \003(\rR\013text_offsetB\337\001\n\027com.msp.azure." +
+      "openai.v1B\020CompletionsProtoP\001ZCgithub.co" +
+      "m/anaregdesign/azure-proto/go/msp/azure/" +
+      "openai/v1;openaiv1\242\002\003MAO\252\002\023Msp.Azure.Ope" +
+      "nai.V1\312\002\023Msp\\Azure\\Openai\\V1\342\002\037Msp\\Azure" +
+      "\\Openai\\V1\\GPBMetadata\352\002\026Msp::Azure::Ope" +
+      "nai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -132,24 +134,24 @@ public final class CompletionsProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_msp_azure_openai_v1_CompletionResponse_descriptor,
         new java.lang.String[] { "Id", "Object", "Created", "Model", "PromptFilterResults", "Choices", "Usage", });
-    internal_static_msp_azure_openai_v1_Choice_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_msp_azure_openai_v1_Choice_fieldAccessorTable = new
+    internal_static_msp_azure_openai_v1_CompletionResponse_Usage_descriptor =
+      internal_static_msp_azure_openai_v1_CompletionResponse_descriptor.getNestedTypes().get(0);
+    internal_static_msp_azure_openai_v1_CompletionResponse_Usage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_msp_azure_openai_v1_Choice_descriptor,
-        new java.lang.String[] { "Text", "Index", "Logprobs", "FinishReason", "ContentFilterResult", });
-    internal_static_msp_azure_openai_v1_Choice_LogProbs_descriptor =
-      internal_static_msp_azure_openai_v1_Choice_descriptor.getNestedTypes().get(0);
-    internal_static_msp_azure_openai_v1_Choice_LogProbs_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_msp_azure_openai_v1_Choice_LogProbs_descriptor,
-        new java.lang.String[] { "Tokens", "TokenLogprobs", "TopLogprobs", "TextOffsets", });
-    internal_static_msp_azure_openai_v1_Usage_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_msp_azure_openai_v1_Usage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_msp_azure_openai_v1_Usage_descriptor,
+        internal_static_msp_azure_openai_v1_CompletionResponse_Usage_descriptor,
         new java.lang.String[] { "CompletionTokens", "PromptTokens", "TotalTokens", });
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_descriptor =
+      internal_static_msp_azure_openai_v1_CompletionResponse_descriptor.getNestedTypes().get(1);
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_msp_azure_openai_v1_CompletionResponse_Choice_descriptor,
+        new java.lang.String[] { "Text", "Index", "Logprobs", "FinishReason", "ContentFilterResult", });
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_LogProbs_descriptor =
+      internal_static_msp_azure_openai_v1_CompletionResponse_Choice_descriptor.getNestedTypes().get(0);
+    internal_static_msp_azure_openai_v1_CompletionResponse_Choice_LogProbs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_msp_azure_openai_v1_CompletionResponse_Choice_LogProbs_descriptor,
+        new java.lang.String[] { "Tokens", "TokenLogprobs", "TopLogprobs", "TextOffsets", });
     descriptor.resolveAllFeaturesImmutable();
     com.msp.azure.openai.v1.EntityProto.getDescriptor();
   }

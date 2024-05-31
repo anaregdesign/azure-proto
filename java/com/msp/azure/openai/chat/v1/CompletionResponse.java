@@ -6,12 +6,12 @@
 package com.msp.azure.openai.chat.v1;
 
 /**
- * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse}
+ * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse}
  */
-public final class ChatCompletionResponse extends
+public final class CompletionResponse extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse)
-    ChatCompletionResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse)
+    CompletionResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,13 +20,13 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 27,
       /* patch= */ 0,
       /* suffix= */ "",
-      ChatCompletionResponse.class.getName());
+      CompletionResponse.class.getName());
   }
-  // Use ChatCompletionResponse.newBuilder() to construct.
-  private ChatCompletionResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use CompletionResponse.newBuilder() to construct.
+  private CompletionResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private ChatCompletionResponse() {
+  private CompletionResponse() {
     id_ = "";
     object_ = "";
     model_ = "";
@@ -37,19 +37,19 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_descriptor;
+    return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_fieldAccessorTable
+    return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Builder.class);
+            com.msp.azure.openai.chat.v1.CompletionResponse.class, com.msp.azure.openai.chat.v1.CompletionResponse.Builder.class);
   }
 
   public interface UsageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)
+      // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Usage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -71,11 +71,11 @@ private static final long serialVersionUID = 0L;
     long getTotalTokens();
   }
   /**
-   * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Usage}
+   * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Usage}
    */
   public static final class Usage extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)
+      // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Usage)
       UsageOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -96,15 +96,15 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Usage_descriptor;
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Usage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Usage_fieldAccessorTable
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Usage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder.class);
+              com.msp.azure.openai.chat.v1.CompletionResponse.Usage.class, com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder.class);
     }
 
     public static final int PROMPT_TOKENS_FIELD_NUMBER = 1;
@@ -194,10 +194,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)) {
+      if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Usage)) {
         return super.equals(obj);
       }
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage) obj;
+      com.msp.azure.openai.chat.v1.CompletionResponse.Usage other = (com.msp.azure.openai.chat.v1.CompletionResponse.Usage) obj;
 
       if (getPromptTokens()
           != other.getPromptTokens()) return false;
@@ -230,44 +230,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(byte[] data)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(java.io.InputStream input)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -275,26 +275,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseDelimitedFrom(java.io.InputStream input)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseDelimitedFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage prototype) {
+    public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Usage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -323,26 +323,26 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Usage}
+     * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Usage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder {
+        // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Usage)
+        com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Usage_descriptor;
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Usage_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Usage_fieldAccessorTable
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Usage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder.class);
+                com.msp.azure.openai.chat.v1.CompletionResponse.Usage.class, com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder.class);
       }
 
-      // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.newBuilder()
+      // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Usage.newBuilder()
       private Builder() {
 
       }
@@ -365,17 +365,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Usage_descriptor;
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Usage_descriptor;
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage getDefaultInstanceForType() {
-        return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance();
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Usage getDefaultInstanceForType() {
+        return com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage build() {
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage result = buildPartial();
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Usage build() {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Usage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -383,14 +383,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage buildPartial() {
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage(this);
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Usage buildPartial() {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Usage result = new com.msp.azure.openai.chat.v1.CompletionResponse.Usage(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage result) {
+      private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Usage result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.promptTokens_ = promptTokens_;
@@ -405,16 +405,16 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage) {
-          return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)other);
+        if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Usage) {
+          return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Usage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage other) {
-        if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Usage other) {
+        if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance()) return this;
         if (other.getPromptTokens() != 0L) {
           setPromptTokens(other.getPromptTokens());
         }
@@ -578,16 +578,16 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)
+      // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Usage)
     }
 
-    // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Usage)
-    private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Usage)
+    private static final com.msp.azure.openai.chat.v1.CompletionResponse.Usage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage();
+      DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Usage();
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage getDefaultInstance() {
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Usage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -623,14 +623,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage getDefaultInstanceForType() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Usage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ChoiceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)
+      // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -652,19 +652,19 @@ private static final long serialVersionUID = 0L;
         getFinishReasonBytes();
 
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      * @return Whether the message field is set.
      */
     boolean hasMessage();
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      * @return The message.
      */
-    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getMessage();
+    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getMessage();
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      */
-    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder();
+    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder();
 
     /**
      * <code>.msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
@@ -682,11 +682,11 @@ private static final long serialVersionUID = 0L;
     com.msp.azure.openai.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder();
   }
   /**
-   * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice}
+   * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice}
    */
   public static final class Choice extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)
+      // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice)
       ChoiceOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -708,19 +708,19 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_descriptor;
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_fieldAccessorTable
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder.class);
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder.class);
     }
 
     public interface MessageOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)
+        // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -748,65 +748,65 @@ private static final long serialVersionUID = 0L;
           getContentBytes();
 
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
-      java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> 
+      java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> 
           getToolCallsList();
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getToolCalls(int index);
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getToolCalls(int index);
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       int getToolCallsCount();
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
-      java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder> 
+      java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder> 
           getToolCallsOrBuilderList();
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
           int index);
 
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        * @return Whether the functionCall field is set.
        */
       boolean hasFunctionCall();
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        * @return The functionCall.
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getFunctionCall();
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getFunctionCall();
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder();
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder();
 
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        * @return Whether the context field is set.
        */
       boolean hasContext();
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        * @return The context.
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getContext();
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getContext();
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        */
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder();
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder();
     }
     /**
-     * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message}
+     * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message}
      */
     public static final class Message extends
         com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)
+        // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)
         MessageOrBuilder {
     private static final long serialVersionUID = 0L;
       static {
@@ -830,19 +830,19 @@ private static final long serialVersionUID = 0L;
 
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_descriptor;
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_fieldAccessorTable
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder.class);
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder.class);
       }
 
       public interface ToolCallOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)
+          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -870,26 +870,26 @@ private static final long serialVersionUID = 0L;
             getTypeBytes();
 
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          * @return Whether the function field is set.
          */
         boolean hasFunction();
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          * @return The function.
          */
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getFunction();
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getFunction();
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          */
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder();
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder();
       }
       /**
-       * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall}
+       * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall}
        */
       public static final class ToolCall extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)
+          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)
           ToolCallOrBuilder {
       private static final long serialVersionUID = 0L;
         static {
@@ -912,19 +912,19 @@ private static final long serialVersionUID = 0L;
 
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_descriptor;
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_fieldAccessorTable
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder.class);
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder.class);
         }
 
         public interface FunctionOrBuilder extends
-            // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)
+            // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)
             com.google.protobuf.MessageOrBuilder {
 
           /**
@@ -952,11 +952,11 @@ private static final long serialVersionUID = 0L;
               getArgumentBytes();
         }
         /**
-         * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function}
+         * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function}
          */
         public static final class Function extends
             com.google.protobuf.GeneratedMessage implements
-            // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)
+            // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)
             FunctionOrBuilder {
         private static final long serialVersionUID = 0L;
           static {
@@ -979,15 +979,15 @@ private static final long serialVersionUID = 0L;
 
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_Function_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_Function_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_Function_fieldAccessorTable
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_Function_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder.class);
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder.class);
           }
 
           public static final int NAME_FIELD_NUMBER = 1;
@@ -1113,10 +1113,10 @@ private static final long serialVersionUID = 0L;
             if (obj == this) {
              return true;
             }
-            if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)) {
+            if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)) {
               return super.equals(obj);
             }
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function) obj;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function) obj;
 
             if (!getName()
                 .equals(other.getName())) return false;
@@ -1142,44 +1142,44 @@ private static final long serialVersionUID = 0L;
             return hash;
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               java.nio.ByteBuffer data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               java.nio.ByteBuffer data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               com.google.protobuf.ByteString data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               com.google.protobuf.ByteString data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(byte[] data)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(byte[] data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               byte[] data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(java.io.InputStream input)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(java.io.InputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseWithIOException(PARSER, input);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               java.io.InputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
@@ -1187,26 +1187,26 @@ private static final long serialVersionUID = 0L;
                 .parseWithIOException(PARSER, input, extensionRegistry);
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseDelimitedFrom(java.io.InputStream input)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseDelimitedFrom(java.io.InputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseDelimitedWithIOException(PARSER, input);
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseDelimitedFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseDelimitedFrom(
               java.io.InputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               com.google.protobuf.CodedInputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseWithIOException(PARSER, input);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function parseFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
@@ -1219,7 +1219,7 @@ private static final long serialVersionUID = 0L;
           public static Builder newBuilder() {
             return DEFAULT_INSTANCE.toBuilder();
           }
-          public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function prototype) {
+          public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function prototype) {
             return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
           }
           @java.lang.Override
@@ -1235,26 +1235,26 @@ private static final long serialVersionUID = 0L;
             return builder;
           }
           /**
-           * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function}
+           * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function}
            */
           public static final class Builder extends
               com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-              // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder {
+              // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder {
             public static final com.google.protobuf.Descriptors.Descriptor
                 getDescriptor() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_Function_descriptor;
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_Function_descriptor;
             }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
                 internalGetFieldAccessorTable() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_Function_fieldAccessorTable
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_Function_fieldAccessorTable
                   .ensureFieldAccessorsInitialized(
-                      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder.class);
+                      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder.class);
             }
 
-            // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.newBuilder()
+            // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.newBuilder()
             private Builder() {
 
             }
@@ -1276,17 +1276,17 @@ private static final long serialVersionUID = 0L;
             @java.lang.Override
             public com.google.protobuf.Descriptors.Descriptor
                 getDescriptorForType() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_Function_descriptor;
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_Function_descriptor;
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getDefaultInstanceForType() {
-              return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance();
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getDefaultInstanceForType() {
+              return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance();
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function build() {
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function result = buildPartial();
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function build() {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function result = buildPartial();
               if (!result.isInitialized()) {
                 throw newUninitializedMessageException(result);
               }
@@ -1294,14 +1294,14 @@ private static final long serialVersionUID = 0L;
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function buildPartial() {
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function(this);
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function buildPartial() {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function(this);
               if (bitField0_ != 0) { buildPartial0(result); }
               onBuilt();
               return result;
             }
 
-            private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function result) {
+            private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function result) {
               int from_bitField0_ = bitField0_;
               if (((from_bitField0_ & 0x00000001) != 0)) {
                 result.name_ = name_;
@@ -1313,16 +1313,16 @@ private static final long serialVersionUID = 0L;
 
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
-              if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function) {
-                return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)other);
+              if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function) {
+                return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)other);
               } else {
                 super.mergeFrom(other);
                 return this;
               }
             }
 
-            public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function other) {
-              if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance()) return this;
+            public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function other) {
+              if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance()) return this;
               if (!other.getName().isEmpty()) {
                 name_ = other.name_;
                 bitField0_ |= 0x00000001;
@@ -1530,16 +1530,16 @@ private static final long serialVersionUID = 0L;
               return this;
             }
 
-            // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)
+            // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)
           }
 
-          // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function)
-          private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function DEFAULT_INSTANCE;
+          // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function)
+          private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function DEFAULT_INSTANCE;
           static {
-            DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function();
+            DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function();
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getDefaultInstance() {
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getDefaultInstance() {
             return DEFAULT_INSTANCE;
           }
 
@@ -1575,7 +1575,7 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getDefaultInstanceForType() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getDefaultInstanceForType() {
             return DEFAULT_INSTANCE;
           }
 
@@ -1661,9 +1661,9 @@ private static final long serialVersionUID = 0L;
         }
 
         public static final int FUNCTION_FIELD_NUMBER = 3;
-        private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function_;
+        private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function_;
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          * @return Whether the function field is set.
          */
         @java.lang.Override
@@ -1671,19 +1671,19 @@ private static final long serialVersionUID = 0L;
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          * @return The function.
          */
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getFunction() {
-          return function_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getFunction() {
+          return function_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
          */
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder() {
-          return function_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder() {
+          return function_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -1738,10 +1738,10 @@ private static final long serialVersionUID = 0L;
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)) {
+          if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)) {
             return super.equals(obj);
           }
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall) obj;
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall) obj;
 
           if (!getId()
               .equals(other.getId())) return false;
@@ -1776,44 +1776,44 @@ private static final long serialVersionUID = 0L;
           return hash;
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(byte[] data)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1821,26 +1821,26 @@ private static final long serialVersionUID = 0L;
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseDelimitedFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseDelimitedFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1853,7 +1853,7 @@ private static final long serialVersionUID = 0L;
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall prototype) {
+        public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -1869,26 +1869,26 @@ private static final long serialVersionUID = 0L;
           return builder;
         }
         /**
-         * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall}
+         * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder {
+            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_fieldAccessorTable
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder.class);
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder.class);
           }
 
-          // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.newBuilder()
+          // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -1921,17 +1921,17 @@ private static final long serialVersionUID = 0L;
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_ToolCall_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_ToolCall_descriptor;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getDefaultInstanceForType() {
-            return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.getDefaultInstance();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getDefaultInstanceForType() {
+            return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.getDefaultInstance();
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall build() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall result = buildPartial();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall build() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -1939,14 +1939,14 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall buildPartial() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall(this);
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall buildPartial() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall(this);
             if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
           }
 
-          private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall result) {
+          private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall result) {
             int from_bitField0_ = bitField0_;
             if (((from_bitField0_ & 0x00000001) != 0)) {
               result.id_ = id_;
@@ -1966,16 +1966,16 @@ private static final long serialVersionUID = 0L;
 
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall) {
-              return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)other);
+            if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall) {
+              return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall other) {
-            if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.getDefaultInstance()) return this;
+          public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall other) {
+            if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.getDefaultInstance()) return this;
             if (!other.getId().isEmpty()) {
               id_ = other.id_;
               bitField0_ |= 0x00000001;
@@ -2193,31 +2193,31 @@ private static final long serialVersionUID = 0L;
             return this;
           }
 
-          private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function_;
+          private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function_;
           private com.google.protobuf.SingleFieldBuilder<
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder> functionBuilder_;
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder> functionBuilder_;
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            * @return Whether the function field is set.
            */
           public boolean hasFunction() {
             return ((bitField0_ & 0x00000004) != 0);
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            * @return The function.
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function getFunction() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function getFunction() {
             if (functionBuilder_ == null) {
-              return function_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
+              return function_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
             } else {
               return functionBuilder_.getMessage();
             }
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
-          public Builder setFunction(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function value) {
+          public Builder setFunction(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function value) {
             if (functionBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -2231,10 +2231,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
           public Builder setFunction(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder builderForValue) {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder builderForValue) {
             if (functionBuilder_ == null) {
               function_ = builderForValue.build();
             } else {
@@ -2245,13 +2245,13 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
-          public Builder mergeFunction(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function value) {
+          public Builder mergeFunction(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function value) {
             if (functionBuilder_ == null) {
               if (((bitField0_ & 0x00000004) != 0) &&
                 function_ != null &&
-                function_ != com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance()) {
+                function_ != com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance()) {
                 getFunctionBuilder().mergeFrom(value);
               } else {
                 function_ = value;
@@ -2266,7 +2266,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
           public Builder clearFunction() {
             bitField0_ = (bitField0_ & ~0x00000004);
@@ -2279,33 +2279,33 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder getFunctionBuilder() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder getFunctionBuilder() {
             bitField0_ |= 0x00000004;
             onChanged();
             return getFunctionFieldBuilder().getBuilder();
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder getFunctionOrBuilder() {
             if (functionBuilder_ != null) {
               return functionBuilder_.getMessageOrBuilder();
             } else {
               return function_ == null ?
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.getDefaultInstance() : function_;
             }
           }
           /**
-           * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
+           * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3 [json_name = "function"];</code>
            */
           private com.google.protobuf.SingleFieldBuilder<
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder> 
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder> 
               getFunctionFieldBuilder() {
             if (functionBuilder_ == null) {
               functionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder>(
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.FunctionOrBuilder>(
                       getFunction(),
                       getParentForChildren(),
                       isClean());
@@ -2314,16 +2314,16 @@ private static final long serialVersionUID = 0L;
             return functionBuilder_;
           }
 
-          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)
+          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)
         }
 
-        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall)
-        private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall)
+        private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall();
+          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall();
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getDefaultInstance() {
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -2359,14 +2359,14 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getDefaultInstanceForType() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
       }
 
       public interface FunctionCallOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)
+          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -2394,11 +2394,11 @@ private static final long serialVersionUID = 0L;
             getArgumentBytes();
       }
       /**
-       * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall}
+       * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall}
        */
       public static final class FunctionCall extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)
+          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)
           FunctionCallOrBuilder {
       private static final long serialVersionUID = 0L;
         static {
@@ -2421,15 +2421,15 @@ private static final long serialVersionUID = 0L;
 
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_FunctionCall_descriptor;
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_FunctionCall_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_FunctionCall_fieldAccessorTable
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_FunctionCall_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder.class);
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder.class);
         }
 
         public static final int NAME_FIELD_NUMBER = 1;
@@ -2555,10 +2555,10 @@ private static final long serialVersionUID = 0L;
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)) {
+          if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)) {
             return super.equals(obj);
           }
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall) obj;
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall) obj;
 
           if (!getName()
               .equals(other.getName())) return false;
@@ -2584,44 +2584,44 @@ private static final long serialVersionUID = 0L;
           return hash;
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(byte[] data)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2629,26 +2629,26 @@ private static final long serialVersionUID = 0L;
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseDelimitedFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseDelimitedFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2661,7 +2661,7 @@ private static final long serialVersionUID = 0L;
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall prototype) {
+        public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -2677,26 +2677,26 @@ private static final long serialVersionUID = 0L;
           return builder;
         }
         /**
-         * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall}
+         * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder {
+            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_FunctionCall_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_FunctionCall_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_FunctionCall_fieldAccessorTable
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_FunctionCall_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder.class);
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder.class);
           }
 
-          // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.newBuilder()
+          // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.newBuilder()
           private Builder() {
 
           }
@@ -2718,17 +2718,17 @@ private static final long serialVersionUID = 0L;
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_FunctionCall_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_FunctionCall_descriptor;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getDefaultInstanceForType() {
-            return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getDefaultInstanceForType() {
+            return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance();
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall build() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall result = buildPartial();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall build() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -2736,14 +2736,14 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall buildPartial() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall(this);
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall buildPartial() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall(this);
             if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
           }
 
-          private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall result) {
+          private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall result) {
             int from_bitField0_ = bitField0_;
             if (((from_bitField0_ & 0x00000001) != 0)) {
               result.name_ = name_;
@@ -2755,16 +2755,16 @@ private static final long serialVersionUID = 0L;
 
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall) {
-              return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)other);
+            if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall) {
+              return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall other) {
-            if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance()) return this;
+          public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall other) {
+            if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance()) return this;
             if (!other.getName().isEmpty()) {
               name_ = other.name_;
               bitField0_ |= 0x00000001;
@@ -2972,16 +2972,16 @@ private static final long serialVersionUID = 0L;
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)
+          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)
         }
 
-        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall)
-        private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall)
+        private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall();
+          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall();
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getDefaultInstance() {
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -3017,38 +3017,38 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getDefaultInstanceForType() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
       }
 
       public interface ContextOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)
+          // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
-        java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> 
+        java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> 
             getCitationsList();
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getCitations(int index);
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getCitations(int index);
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         int getCitationsCount();
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
-        java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder> 
+        java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder> 
             getCitationsOrBuilderList();
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
             int index);
 
         /**
@@ -3064,11 +3064,11 @@ private static final long serialVersionUID = 0L;
             getIntentBytes();
       }
       /**
-       * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context}
+       * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context}
        */
       public static final class Context extends
           com.google.protobuf.GeneratedMessage implements
-          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)
+          // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)
           ContextOrBuilder {
       private static final long serialVersionUID = 0L;
         static {
@@ -3091,19 +3091,19 @@ private static final long serialVersionUID = 0L;
 
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_descriptor;
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_fieldAccessorTable
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder.class);
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder.class);
         }
 
         public interface CitationOrBuilder extends
-            // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)
+            // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)
             com.google.protobuf.MessageOrBuilder {
 
           /**
@@ -3167,11 +3167,11 @@ private static final long serialVersionUID = 0L;
               getChunkIdBytes();
         }
         /**
-         * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation}
+         * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation}
          */
         public static final class Citation extends
             com.google.protobuf.GeneratedMessage implements
-            // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)
+            // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)
             CitationOrBuilder {
         private static final long serialVersionUID = 0L;
           static {
@@ -3197,15 +3197,15 @@ private static final long serialVersionUID = 0L;
 
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_Citation_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_Citation_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_Citation_fieldAccessorTable
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_Citation_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder.class);
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder.class);
           }
 
           public static final int CONTENT_FIELD_NUMBER = 1;
@@ -3466,10 +3466,10 @@ private static final long serialVersionUID = 0L;
             if (obj == this) {
              return true;
             }
-            if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)) {
+            if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)) {
               return super.equals(obj);
             }
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation) obj;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation) obj;
 
             if (!getContent()
                 .equals(other.getContent())) return false;
@@ -3507,44 +3507,44 @@ private static final long serialVersionUID = 0L;
             return hash;
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               java.nio.ByteBuffer data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               java.nio.ByteBuffer data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               com.google.protobuf.ByteString data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               com.google.protobuf.ByteString data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(byte[] data)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(byte[] data)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               byte[] data,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
             return PARSER.parseFrom(data, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(java.io.InputStream input)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(java.io.InputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseWithIOException(PARSER, input);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               java.io.InputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
@@ -3552,26 +3552,26 @@ private static final long serialVersionUID = 0L;
                 .parseWithIOException(PARSER, input, extensionRegistry);
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseDelimitedFrom(java.io.InputStream input)
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseDelimitedFrom(java.io.InputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseDelimitedWithIOException(PARSER, input);
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseDelimitedFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseDelimitedFrom(
               java.io.InputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               com.google.protobuf.CodedInputStream input)
               throws java.io.IOException {
             return com.google.protobuf.GeneratedMessage
                 .parseWithIOException(PARSER, input);
           }
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation parseFrom(
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation parseFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
@@ -3584,7 +3584,7 @@ private static final long serialVersionUID = 0L;
           public static Builder newBuilder() {
             return DEFAULT_INSTANCE.toBuilder();
           }
-          public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation prototype) {
+          public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation prototype) {
             return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
           }
           @java.lang.Override
@@ -3600,26 +3600,26 @@ private static final long serialVersionUID = 0L;
             return builder;
           }
           /**
-           * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation}
+           * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation}
            */
           public static final class Builder extends
               com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-              // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder {
+              // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder {
             public static final com.google.protobuf.Descriptors.Descriptor
                 getDescriptor() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_Citation_descriptor;
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_Citation_descriptor;
             }
 
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
                 internalGetFieldAccessorTable() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_Citation_fieldAccessorTable
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_Citation_fieldAccessorTable
                   .ensureFieldAccessorsInitialized(
-                      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder.class);
+                      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder.class);
             }
 
-            // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.newBuilder()
+            // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.newBuilder()
             private Builder() {
 
             }
@@ -3644,17 +3644,17 @@ private static final long serialVersionUID = 0L;
             @java.lang.Override
             public com.google.protobuf.Descriptors.Descriptor
                 getDescriptorForType() {
-              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_Citation_descriptor;
+              return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_Citation_descriptor;
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getDefaultInstanceForType() {
-              return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.getDefaultInstance();
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getDefaultInstanceForType() {
+              return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.getDefaultInstance();
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation build() {
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation result = buildPartial();
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation build() {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation result = buildPartial();
               if (!result.isInitialized()) {
                 throw newUninitializedMessageException(result);
               }
@@ -3662,14 +3662,14 @@ private static final long serialVersionUID = 0L;
             }
 
             @java.lang.Override
-            public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation buildPartial() {
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation(this);
+            public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation buildPartial() {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation(this);
               if (bitField0_ != 0) { buildPartial0(result); }
               onBuilt();
               return result;
             }
 
-            private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation result) {
+            private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation result) {
               int from_bitField0_ = bitField0_;
               if (((from_bitField0_ & 0x00000001) != 0)) {
                 result.content_ = content_;
@@ -3690,16 +3690,16 @@ private static final long serialVersionUID = 0L;
 
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
-              if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation) {
-                return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)other);
+              if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation) {
+                return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)other);
               } else {
                 super.mergeFrom(other);
                 return this;
               }
             }
 
-            public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation other) {
-              if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.getDefaultInstance()) return this;
+            public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation other) {
+              if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.getDefaultInstance()) return this;
               if (!other.getContent().isEmpty()) {
                 content_ = other.content_;
                 bitField0_ |= 0x00000001;
@@ -4153,16 +4153,16 @@ private static final long serialVersionUID = 0L;
               return this;
             }
 
-            // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)
+            // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)
           }
 
-          // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation)
-          private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation DEFAULT_INSTANCE;
+          // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation)
+          private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation DEFAULT_INSTANCE;
           static {
-            DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation();
+            DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation();
           }
 
-          public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getDefaultInstance() {
+          public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getDefaultInstance() {
             return DEFAULT_INSTANCE;
           }
 
@@ -4198,7 +4198,7 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getDefaultInstanceForType() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getDefaultInstanceForType() {
             return DEFAULT_INSTANCE;
           }
 
@@ -4206,41 +4206,41 @@ private static final long serialVersionUID = 0L;
 
         public static final int CITATIONS_FIELD_NUMBER = 1;
         @SuppressWarnings("serial")
-        private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> citations_;
+        private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> citations_;
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         @java.lang.Override
-        public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> getCitationsList() {
+        public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> getCitationsList() {
           return citations_;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         @java.lang.Override
-        public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder> 
+        public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder> 
             getCitationsOrBuilderList() {
           return citations_;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         @java.lang.Override
         public int getCitationsCount() {
           return citations_.size();
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getCitations(int index) {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getCitations(int index) {
           return citations_.get(index);
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
          */
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
             int index) {
           return citations_.get(index);
         }
@@ -4330,10 +4330,10 @@ private static final long serialVersionUID = 0L;
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)) {
+          if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)) {
             return super.equals(obj);
           }
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context) obj;
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context) obj;
 
           if (!getCitationsList()
               .equals(other.getCitationsList())) return false;
@@ -4361,44 +4361,44 @@ private static final long serialVersionUID = 0L;
           return hash;
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(byte[] data)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -4406,26 +4406,26 @@ private static final long serialVersionUID = 0L;
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseDelimitedFrom(java.io.InputStream input)
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input);
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseDelimitedFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessage
               .parseWithIOException(PARSER, input);
         }
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context parseFrom(
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -4438,7 +4438,7 @@ private static final long serialVersionUID = 0L;
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context prototype) {
+        public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -4454,26 +4454,26 @@ private static final long serialVersionUID = 0L;
           return builder;
         }
         /**
-         * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context}
+         * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder {
+            // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_descriptor;
           }
 
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_fieldAccessorTable
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder.class);
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder.class);
           }
 
-          // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.newBuilder()
+          // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.newBuilder()
           private Builder() {
 
           }
@@ -4501,17 +4501,17 @@ private static final long serialVersionUID = 0L;
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_Context_descriptor;
+            return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_Context_descriptor;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getDefaultInstanceForType() {
-            return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getDefaultInstanceForType() {
+            return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance();
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context build() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context result = buildPartial();
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context build() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -4519,15 +4519,15 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context buildPartial() {
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context(this);
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context buildPartial() {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context(this);
             buildPartialRepeatedFields(result);
             if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
           }
 
-          private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context result) {
+          private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context result) {
             if (citationsBuilder_ == null) {
               if (((bitField0_ & 0x00000001) != 0)) {
                 citations_ = java.util.Collections.unmodifiableList(citations_);
@@ -4539,7 +4539,7 @@ private static final long serialVersionUID = 0L;
             }
           }
 
-          private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context result) {
+          private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context result) {
             int from_bitField0_ = bitField0_;
             if (((from_bitField0_ & 0x00000002) != 0)) {
               result.intent_ = intent_;
@@ -4548,16 +4548,16 @@ private static final long serialVersionUID = 0L;
 
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context) {
-              return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)other);
+            if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context) {
+              return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context other) {
-            if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance()) return this;
+          public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context other) {
+            if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance()) return this;
             if (citationsBuilder_ == null) {
               if (!other.citations_.isEmpty()) {
                 if (citations_.isEmpty()) {
@@ -4616,9 +4616,9 @@ private static final long serialVersionUID = 0L;
                     done = true;
                     break;
                   case 10: {
-                    com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation m =
+                    com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation m =
                         input.readMessage(
-                            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.parser(),
+                            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.parser(),
                             extensionRegistry);
                     if (citationsBuilder_ == null) {
                       ensureCitationsIsMutable();
@@ -4650,22 +4650,22 @@ private static final long serialVersionUID = 0L;
           }
           private int bitField0_;
 
-          private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> citations_ =
+          private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> citations_ =
             java.util.Collections.emptyList();
           private void ensureCitationsIsMutable() {
             if (!((bitField0_ & 0x00000001) != 0)) {
-              citations_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation>(citations_);
+              citations_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation>(citations_);
               bitField0_ |= 0x00000001;
              }
           }
 
           private com.google.protobuf.RepeatedFieldBuilder<
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder> citationsBuilder_;
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder> citationsBuilder_;
 
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> getCitationsList() {
+          public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> getCitationsList() {
             if (citationsBuilder_ == null) {
               return java.util.Collections.unmodifiableList(citations_);
             } else {
@@ -4673,7 +4673,7 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public int getCitationsCount() {
             if (citationsBuilder_ == null) {
@@ -4683,9 +4683,9 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation getCitations(int index) {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation getCitations(int index) {
             if (citationsBuilder_ == null) {
               return citations_.get(index);
             } else {
@@ -4693,10 +4693,10 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder setCitations(
-              int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation value) {
+              int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation value) {
             if (citationsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -4710,10 +4710,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder setCitations(
-              int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
+              int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
             if (citationsBuilder_ == null) {
               ensureCitationsIsMutable();
               citations_.set(index, builderForValue.build());
@@ -4724,9 +4724,9 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public Builder addCitations(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation value) {
+          public Builder addCitations(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation value) {
             if (citationsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -4740,10 +4740,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder addCitations(
-              int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation value) {
+              int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation value) {
             if (citationsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -4757,10 +4757,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder addCitations(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
             if (citationsBuilder_ == null) {
               ensureCitationsIsMutable();
               citations_.add(builderForValue.build());
@@ -4771,10 +4771,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder addCitations(
-              int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
+              int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder builderForValue) {
             if (citationsBuilder_ == null) {
               ensureCitationsIsMutable();
               citations_.add(index, builderForValue.build());
@@ -4785,10 +4785,10 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder addAllCitations(
-              java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation> values) {
+              java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation> values) {
             if (citationsBuilder_ == null) {
               ensureCitationsIsMutable();
               com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4800,7 +4800,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder clearCitations() {
             if (citationsBuilder_ == null) {
@@ -4813,7 +4813,7 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
           public Builder removeCitations(int index) {
             if (citationsBuilder_ == null) {
@@ -4826,16 +4826,16 @@ private static final long serialVersionUID = 0L;
             return this;
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder getCitationsBuilder(
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder getCitationsBuilder(
               int index) {
             return getCitationsFieldBuilder().getBuilder(index);
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder getCitationsOrBuilder(
               int index) {
             if (citationsBuilder_ == null) {
               return citations_.get(index);  } else {
@@ -4843,9 +4843,9 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder> 
+          public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder> 
                getCitationsOrBuilderList() {
             if (citationsBuilder_ != null) {
               return citationsBuilder_.getMessageOrBuilderList();
@@ -4854,33 +4854,33 @@ private static final long serialVersionUID = 0L;
             }
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder addCitationsBuilder() {
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder addCitationsBuilder() {
             return getCitationsFieldBuilder().addBuilder(
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.getDefaultInstance());
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.getDefaultInstance());
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder addCitationsBuilder(
+          public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder addCitationsBuilder(
               int index) {
             return getCitationsFieldBuilder().addBuilder(
-                index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.getDefaultInstance());
+                index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.getDefaultInstance());
           }
           /**
-           * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
+           * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1 [json_name = "citations"];</code>
            */
-          public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder> 
+          public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder> 
                getCitationsBuilderList() {
             return getCitationsFieldBuilder().getBuilderList();
           }
           private com.google.protobuf.RepeatedFieldBuilder<
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder> 
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder> 
               getCitationsFieldBuilder() {
             if (citationsBuilder_ == null) {
               citationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.CitationOrBuilder>(
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.CitationOrBuilder>(
                       citations_,
                       ((bitField0_ & 0x00000001) != 0),
                       getParentForChildren(),
@@ -4962,16 +4962,16 @@ private static final long serialVersionUID = 0L;
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)
+          // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)
         }
 
-        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context)
-        private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context)
+        private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context();
+          DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context();
         }
 
-        public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getDefaultInstance() {
+        public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
@@ -5007,7 +5007,7 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getDefaultInstanceForType() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
@@ -5094,49 +5094,49 @@ private static final long serialVersionUID = 0L;
 
       public static final int TOOL_CALLS_FIELD_NUMBER = 3;
       @SuppressWarnings("serial")
-      private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> toolCalls_;
+      private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> toolCalls_;
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       @java.lang.Override
-      public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> getToolCallsList() {
+      public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> getToolCallsList() {
         return toolCalls_;
       }
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       @java.lang.Override
-      public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder> 
+      public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder> 
           getToolCallsOrBuilderList() {
         return toolCalls_;
       }
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       @java.lang.Override
       public int getToolCallsCount() {
         return toolCalls_.size();
       }
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getToolCalls(int index) {
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getToolCalls(int index) {
         return toolCalls_.get(index);
       }
       /**
-       * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+       * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
           int index) {
         return toolCalls_.get(index);
       }
 
       public static final int FUNCTION_CALL_FIELD_NUMBER = 4;
-      private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall functionCall_;
+      private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall functionCall_;
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        * @return Whether the functionCall field is set.
        */
       @java.lang.Override
@@ -5144,25 +5144,25 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        * @return The functionCall.
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getFunctionCall() {
-        return functionCall_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getFunctionCall() {
+        return functionCall_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder() {
-        return functionCall_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+        return functionCall_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
       }
 
       public static final int CONTEXT_FIELD_NUMBER = 5;
-      private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context_;
+      private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context_;
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        * @return Whether the context field is set.
        */
       @java.lang.Override
@@ -5170,19 +5170,19 @@ private static final long serialVersionUID = 0L;
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        * @return The context.
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getContext() {
-        return context_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getContext() {
+        return context_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
        */
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder() {
-        return context_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder() {
+        return context_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -5251,10 +5251,10 @@ private static final long serialVersionUID = 0L;
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)) {
+        if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)) {
           return super.equals(obj);
         }
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message) obj;
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message) obj;
 
         if (!getRole()
             .equals(other.getRole())) return false;
@@ -5304,44 +5304,44 @@ private static final long serialVersionUID = 0L;
         return hash;
       }
 
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(byte[] data)
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(java.io.InputStream input)
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessage
             .parseWithIOException(PARSER, input);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -5349,26 +5349,26 @@ private static final long serialVersionUID = 0L;
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseDelimitedFrom(java.io.InputStream input)
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessage
             .parseDelimitedWithIOException(PARSER, input);
       }
 
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseDelimitedFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessage
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessage
             .parseWithIOException(PARSER, input);
       }
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message parseFrom(
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -5381,7 +5381,7 @@ private static final long serialVersionUID = 0L;
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message prototype) {
+      public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -5397,26 +5397,26 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
-       * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message}
+       * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice.Message}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder {
+          // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_descriptor;
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_fieldAccessorTable
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder.class);
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder.class);
         }
 
-        // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.newBuilder()
+        // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -5463,17 +5463,17 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_Message_descriptor;
+          return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_descriptor;
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getDefaultInstanceForType() {
-          return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance();
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getDefaultInstanceForType() {
+          return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance();
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message build() {
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message result = buildPartial();
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message build() {
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -5481,15 +5481,15 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message buildPartial() {
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message(this);
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message buildPartial() {
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message(this);
           buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message result) {
+        private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message result) {
           if (toolCallsBuilder_ == null) {
             if (((bitField0_ & 0x00000004) != 0)) {
               toolCalls_ = java.util.Collections.unmodifiableList(toolCalls_);
@@ -5501,7 +5501,7 @@ private static final long serialVersionUID = 0L;
           }
         }
 
-        private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message result) {
+        private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.role_ = role_;
@@ -5527,16 +5527,16 @@ private static final long serialVersionUID = 0L;
 
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message) {
-            return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)other);
+          if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message) {
+            return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message other) {
-          if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message other) {
+          if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance()) return this;
           if (!other.getRole().isEmpty()) {
             role_ = other.role_;
             bitField0_ |= 0x00000001;
@@ -5616,9 +5616,9 @@ private static final long serialVersionUID = 0L;
                   break;
                 } // case 18
                 case 26: {
-                  com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall m =
+                  com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall m =
                       input.readMessage(
-                          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.parser(),
+                          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.parser(),
                           extensionRegistry);
                   if (toolCallsBuilder_ == null) {
                     ensureToolCallsIsMutable();
@@ -5803,22 +5803,22 @@ private static final long serialVersionUID = 0L;
           return this;
         }
 
-        private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> toolCalls_ =
+        private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> toolCalls_ =
           java.util.Collections.emptyList();
         private void ensureToolCallsIsMutable() {
           if (!((bitField0_ & 0x00000004) != 0)) {
-            toolCalls_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall>(toolCalls_);
+            toolCalls_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall>(toolCalls_);
             bitField0_ |= 0x00000004;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder> toolCallsBuilder_;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder> toolCallsBuilder_;
 
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> getToolCallsList() {
+        public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> getToolCallsList() {
           if (toolCallsBuilder_ == null) {
             return java.util.Collections.unmodifiableList(toolCalls_);
           } else {
@@ -5826,7 +5826,7 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public int getToolCallsCount() {
           if (toolCallsBuilder_ == null) {
@@ -5836,9 +5836,9 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall getToolCalls(int index) {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall getToolCalls(int index) {
           if (toolCallsBuilder_ == null) {
             return toolCalls_.get(index);
           } else {
@@ -5846,10 +5846,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder setToolCalls(
-            int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall value) {
+            int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall value) {
           if (toolCallsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -5863,10 +5863,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder setToolCalls(
-            int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
+            int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
           if (toolCallsBuilder_ == null) {
             ensureToolCallsIsMutable();
             toolCalls_.set(index, builderForValue.build());
@@ -5877,9 +5877,9 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public Builder addToolCalls(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall value) {
+        public Builder addToolCalls(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall value) {
           if (toolCallsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -5893,10 +5893,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder addToolCalls(
-            int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall value) {
+            int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall value) {
           if (toolCallsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -5910,10 +5910,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder addToolCalls(
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
           if (toolCallsBuilder_ == null) {
             ensureToolCallsIsMutable();
             toolCalls_.add(builderForValue.build());
@@ -5924,10 +5924,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder addToolCalls(
-            int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
+            int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder builderForValue) {
           if (toolCallsBuilder_ == null) {
             ensureToolCallsIsMutable();
             toolCalls_.add(index, builderForValue.build());
@@ -5938,10 +5938,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder addAllToolCalls(
-            java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall> values) {
+            java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall> values) {
           if (toolCallsBuilder_ == null) {
             ensureToolCallsIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -5953,7 +5953,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder clearToolCalls() {
           if (toolCallsBuilder_ == null) {
@@ -5966,7 +5966,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
         public Builder removeToolCalls(int index) {
           if (toolCallsBuilder_ == null) {
@@ -5979,16 +5979,16 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder getToolCallsBuilder(
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder getToolCallsBuilder(
             int index) {
           return getToolCallsFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder getToolCallsOrBuilder(
             int index) {
           if (toolCallsBuilder_ == null) {
             return toolCalls_.get(index);  } else {
@@ -5996,9 +5996,9 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder> 
+        public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder> 
              getToolCallsOrBuilderList() {
           if (toolCallsBuilder_ != null) {
             return toolCallsBuilder_.getMessageOrBuilderList();
@@ -6007,33 +6007,33 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder addToolCallsBuilder() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder addToolCallsBuilder() {
           return getToolCallsFieldBuilder().addBuilder(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.getDefaultInstance());
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.getDefaultInstance());
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder addToolCallsBuilder(
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder addToolCallsBuilder(
             int index) {
           return getToolCallsFieldBuilder().addBuilder(
-              index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.getDefaultInstance());
+              index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.getDefaultInstance());
         }
         /**
-         * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
+         * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3 [json_name = "toolCalls"];</code>
          */
-        public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder> 
+        public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder> 
              getToolCallsBuilderList() {
           return getToolCallsFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder> 
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder> 
             getToolCallsFieldBuilder() {
           if (toolCallsBuilder_ == null) {
             toolCallsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ToolCallOrBuilder>(
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCallOrBuilder>(
                     toolCalls_,
                     ((bitField0_ & 0x00000004) != 0),
                     getParentForChildren(),
@@ -6043,31 +6043,31 @@ private static final long serialVersionUID = 0L;
           return toolCallsBuilder_;
         }
 
-        private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall functionCall_;
+        private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall functionCall_;
         private com.google.protobuf.SingleFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder> functionCallBuilder_;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder> functionCallBuilder_;
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          * @return Whether the functionCall field is set.
          */
         public boolean hasFunctionCall() {
           return ((bitField0_ & 0x00000008) != 0);
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          * @return The functionCall.
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall getFunctionCall() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall getFunctionCall() {
           if (functionCallBuilder_ == null) {
-            return functionCall_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
+            return functionCall_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
           } else {
             return functionCallBuilder_.getMessage();
           }
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
-        public Builder setFunctionCall(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall value) {
+        public Builder setFunctionCall(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall value) {
           if (functionCallBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -6081,10 +6081,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
         public Builder setFunctionCall(
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder builderForValue) {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder builderForValue) {
           if (functionCallBuilder_ == null) {
             functionCall_ = builderForValue.build();
           } else {
@@ -6095,13 +6095,13 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
-        public Builder mergeFunctionCall(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall value) {
+        public Builder mergeFunctionCall(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall value) {
           if (functionCallBuilder_ == null) {
             if (((bitField0_ & 0x00000008) != 0) &&
               functionCall_ != null &&
-              functionCall_ != com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance()) {
+              functionCall_ != com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance()) {
               getFunctionCallBuilder().mergeFrom(value);
             } else {
               functionCall_ = value;
@@ -6116,7 +6116,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
         public Builder clearFunctionCall() {
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -6129,33 +6129,33 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder getFunctionCallBuilder() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder getFunctionCallBuilder() {
           bitField0_ |= 0x00000008;
           onChanged();
           return getFunctionCallFieldBuilder().getBuilder();
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder getFunctionCallOrBuilder() {
           if (functionCallBuilder_ != null) {
             return functionCallBuilder_.getMessageOrBuilder();
           } else {
             return functionCall_ == null ?
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.getDefaultInstance() : functionCall_;
           }
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4 [json_name = "functionCall"];</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder> 
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder> 
             getFunctionCallFieldBuilder() {
           if (functionCallBuilder_ == null) {
             functionCallBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.FunctionCallOrBuilder>(
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCallOrBuilder>(
                     getFunctionCall(),
                     getParentForChildren(),
                     isClean());
@@ -6164,31 +6164,31 @@ private static final long serialVersionUID = 0L;
           return functionCallBuilder_;
         }
 
-        private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context_;
+        private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context_;
         private com.google.protobuf.SingleFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder> contextBuilder_;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder> contextBuilder_;
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          * @return Whether the context field is set.
          */
         public boolean hasContext() {
           return ((bitField0_ & 0x00000010) != 0);
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          * @return The context.
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context getContext() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context getContext() {
           if (contextBuilder_ == null) {
-            return context_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
+            return context_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
           } else {
             return contextBuilder_.getMessage();
           }
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
-        public Builder setContext(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context value) {
+        public Builder setContext(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context value) {
           if (contextBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -6202,10 +6202,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
         public Builder setContext(
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder builderForValue) {
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder builderForValue) {
           if (contextBuilder_ == null) {
             context_ = builderForValue.build();
           } else {
@@ -6216,13 +6216,13 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
-        public Builder mergeContext(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context value) {
+        public Builder mergeContext(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context value) {
           if (contextBuilder_ == null) {
             if (((bitField0_ & 0x00000010) != 0) &&
               context_ != null &&
-              context_ != com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance()) {
+              context_ != com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance()) {
               getContextBuilder().mergeFrom(value);
             } else {
               context_ = value;
@@ -6237,7 +6237,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
         public Builder clearContext() {
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -6250,33 +6250,33 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder getContextBuilder() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder getContextBuilder() {
           bitField0_ |= 0x00000010;
           onChanged();
           return getContextFieldBuilder().getBuilder();
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
-        public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder() {
+        public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder getContextOrBuilder() {
           if (contextBuilder_ != null) {
             return contextBuilder_.getMessageOrBuilder();
           } else {
             return context_ == null ?
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.getDefaultInstance() : context_;
           }
         }
         /**
-         * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
+         * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5 [json_name = "context"];</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder> 
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder> 
             getContextFieldBuilder() {
           if (contextBuilder_ == null) {
             contextBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.ContextOrBuilder>(
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ContextOrBuilder>(
                     getContext(),
                     getParentForChildren(),
                     isClean());
@@ -6285,16 +6285,16 @@ private static final long serialVersionUID = 0L;
           return contextBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)
+        // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)
       }
 
-      // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message)
-      private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice.Message)
+      private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message();
+        DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message();
       }
 
-      public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getDefaultInstance() {
+      public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -6330,7 +6330,7 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getDefaultInstanceForType() {
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -6388,9 +6388,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 3;
-    private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message_;
+    private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message_;
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      * @return Whether the message field is set.
      */
     @java.lang.Override
@@ -6398,19 +6398,19 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      * @return The message.
      */
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getMessage() {
-      return message_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance() : message_;
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getMessage() {
+      return message_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance() : message_;
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
      */
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder() {
-      return message_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance() : message_;
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder() {
+      return message_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance() : message_;
     }
 
     public static final int CONTENT_FILTER_RESULT_FIELD_NUMBER = 4;
@@ -6499,10 +6499,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)) {
+      if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice)) {
         return super.equals(obj);
       }
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice) obj;
+      com.msp.azure.openai.chat.v1.CompletionResponse.Choice other = (com.msp.azure.openai.chat.v1.CompletionResponse.Choice) obj;
 
       if (getIndex()
           != other.getIndex()) return false;
@@ -6546,44 +6546,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(byte[] data)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(java.io.InputStream input)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6591,26 +6591,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseDelimitedFrom(java.io.InputStream input)
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseDelimitedFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice parseFrom(
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6623,7 +6623,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice prototype) {
+    public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse.Choice prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6639,26 +6639,26 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse.Choice}
+     * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder {
+        // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse.Choice)
+        com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_descriptor;
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_fieldAccessorTable
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder.class);
+                com.msp.azure.openai.chat.v1.CompletionResponse.Choice.class, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder.class);
       }
 
-      // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.newBuilder()
+      // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.Choice.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6697,17 +6697,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_Choice_descriptor;
+        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_descriptor;
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice getDefaultInstanceForType() {
-        return com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.getDefaultInstance();
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice getDefaultInstanceForType() {
+        return com.msp.azure.openai.chat.v1.CompletionResponse.Choice.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice build() {
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice result = buildPartial();
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice build() {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6715,14 +6715,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice buildPartial() {
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice(this);
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice buildPartial() {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice result = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice result) {
+      private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse.Choice result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.index_ = index_;
@@ -6748,16 +6748,16 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice) {
-          return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)other);
+        if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse.Choice) {
+          return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse.Choice)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice other) {
-        if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse.Choice other) {
+        if (other == com.msp.azure.openai.chat.v1.CompletionResponse.Choice.getDefaultInstance()) return this;
         if (other.getIndex() != 0) {
           setIndex(other.getIndex());
         }
@@ -6943,31 +6943,31 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message_;
+      private com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message_;
       private com.google.protobuf.SingleFieldBuilder<
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder> messageBuilder_;
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder> messageBuilder_;
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        * @return Whether the message field is set.
        */
       public boolean hasMessage() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        * @return The message.
        */
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message getMessage() {
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message getMessage() {
         if (messageBuilder_ == null) {
-          return message_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance() : message_;
+          return message_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance() : message_;
         } else {
           return messageBuilder_.getMessage();
         }
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
-      public Builder setMessage(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message value) {
+      public Builder setMessage(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message value) {
         if (messageBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6981,10 +6981,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
       public Builder setMessage(
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder builderForValue) {
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder builderForValue) {
         if (messageBuilder_ == null) {
           message_ = builderForValue.build();
         } else {
@@ -6995,13 +6995,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
-      public Builder mergeMessage(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message value) {
+      public Builder mergeMessage(com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message value) {
         if (messageBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0) &&
             message_ != null &&
-            message_ != com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance()) {
+            message_ != com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance()) {
             getMessageBuilder().mergeFrom(value);
           } else {
             message_ = value;
@@ -7016,7 +7016,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
       public Builder clearMessage() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -7029,33 +7029,33 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder getMessageBuilder() {
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder getMessageBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
-      public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder() {
+      public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder getMessageOrBuilder() {
         if (messageBuilder_ != null) {
           return messageBuilder_.getMessageOrBuilder();
         } else {
           return message_ == null ?
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.getDefaultInstance() : message_;
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.getDefaultInstance() : message_;
         }
       }
       /**
-       * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
+       * <code>.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3 [json_name = "message"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder> 
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder> 
           getMessageFieldBuilder() {
         if (messageBuilder_ == null) {
           messageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.MessageOrBuilder>(
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.MessageOrBuilder>(
                   getMessage(),
                   getParentForChildren(),
                   isClean());
@@ -7185,16 +7185,16 @@ private static final long serialVersionUID = 0L;
         return contentFilterResultBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)
+      // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice)
     }
 
-    // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse.Choice)
-    private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice)
+    private static final com.msp.azure.openai.chat.v1.CompletionResponse.Choice DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice();
+      DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse.Choice();
     }
 
-    public static com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice getDefaultInstance() {
+    public static com.msp.azure.openai.chat.v1.CompletionResponse.Choice getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7230,7 +7230,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice getDefaultInstanceForType() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7366,9 +7366,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USAGE_FIELD_NUMBER = 5;
-  private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage_;
+  private com.msp.azure.openai.chat.v1.CompletionResponse.Usage usage_;
   /**
-   * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
    * @return Whether the usage field is set.
    */
   @java.lang.Override
@@ -7376,19 +7376,19 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
    * @return The usage.
    */
   @java.lang.Override
-  public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage getUsage() {
-    return usage_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance() : usage_;
+  public com.msp.azure.openai.chat.v1.CompletionResponse.Usage getUsage() {
+    return usage_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance() : usage_;
   }
   /**
-   * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
    */
   @java.lang.Override
-  public com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder getUsageOrBuilder() {
-    return usage_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance() : usage_;
+  public com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder getUsageOrBuilder() {
+    return usage_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance() : usage_;
   }
 
   public static final int SYSTEM_FINGERPRINT_FIELD_NUMBER = 6;
@@ -7473,41 +7473,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int CHOICES_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
-  private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice> choices_;
+  private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice> choices_;
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice> getChoicesList() {
+  public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice> getChoicesList() {
     return choices_;
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder> 
+  public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder> 
       getChoicesOrBuilderList() {
     return choices_;
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
    */
   @java.lang.Override
   public int getChoicesCount() {
     return choices_.size();
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice getChoices(int index) {
+  public com.msp.azure.openai.chat.v1.CompletionResponse.Choice getChoices(int index) {
     return choices_.get(index);
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
    */
   @java.lang.Override
-  public com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder getChoicesOrBuilder(
+  public com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder getChoicesOrBuilder(
       int index) {
     return choices_.get(index);
   }
@@ -7597,10 +7597,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse)) {
+    if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionResponse)) {
       return super.equals(obj);
     }
-    com.msp.azure.openai.chat.v1.ChatCompletionResponse other = (com.msp.azure.openai.chat.v1.ChatCompletionResponse) obj;
+    com.msp.azure.openai.chat.v1.CompletionResponse other = (com.msp.azure.openai.chat.v1.CompletionResponse) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -7660,44 +7660,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(byte[] data)
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(java.io.InputStream input)
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -7705,26 +7705,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseDelimitedFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse parseFrom(
+  public static com.msp.azure.openai.chat.v1.CompletionResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -7737,7 +7737,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.msp.azure.openai.chat.v1.ChatCompletionResponse prototype) {
+  public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -7753,26 +7753,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code msp.azure.openai.chat.v1.ChatCompletionResponse}
+   * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.ChatCompletionResponse)
-      com.msp.azure.openai.chat.v1.ChatCompletionResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionResponse)
+      com.msp.azure.openai.chat.v1.CompletionResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_descriptor;
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_fieldAccessorTable
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.class, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Builder.class);
+              com.msp.azure.openai.chat.v1.CompletionResponse.class, com.msp.azure.openai.chat.v1.CompletionResponse.Builder.class);
     }
 
-    // Construct using com.msp.azure.openai.chat.v1.ChatCompletionResponse.newBuilder()
+    // Construct using com.msp.azure.openai.chat.v1.CompletionResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -7824,17 +7824,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_ChatCompletionResponse_descriptor;
+      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse getDefaultInstanceForType() {
-      return com.msp.azure.openai.chat.v1.ChatCompletionResponse.getDefaultInstance();
+    public com.msp.azure.openai.chat.v1.CompletionResponse getDefaultInstanceForType() {
+      return com.msp.azure.openai.chat.v1.CompletionResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse build() {
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse result = buildPartial();
+    public com.msp.azure.openai.chat.v1.CompletionResponse build() {
+      com.msp.azure.openai.chat.v1.CompletionResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -7842,15 +7842,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse buildPartial() {
-      com.msp.azure.openai.chat.v1.ChatCompletionResponse result = new com.msp.azure.openai.chat.v1.ChatCompletionResponse(this);
+    public com.msp.azure.openai.chat.v1.CompletionResponse buildPartial() {
+      com.msp.azure.openai.chat.v1.CompletionResponse result = new com.msp.azure.openai.chat.v1.CompletionResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.ChatCompletionResponse result) {
+    private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.CompletionResponse result) {
       if (promptFilterResultsBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0)) {
           promptFilterResults_ = java.util.Collections.unmodifiableList(promptFilterResults_);
@@ -7871,7 +7871,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.msp.azure.openai.chat.v1.ChatCompletionResponse result) {
+    private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
@@ -7900,16 +7900,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.msp.azure.openai.chat.v1.ChatCompletionResponse) {
-        return mergeFrom((com.msp.azure.openai.chat.v1.ChatCompletionResponse)other);
+      if (other instanceof com.msp.azure.openai.chat.v1.CompletionResponse) {
+        return mergeFrom((com.msp.azure.openai.chat.v1.CompletionResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.msp.azure.openai.chat.v1.ChatCompletionResponse other) {
-      if (other == com.msp.azure.openai.chat.v1.ChatCompletionResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionResponse other) {
+      if (other == com.msp.azure.openai.chat.v1.CompletionResponse.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
@@ -8060,9 +8060,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 58
             case 66: {
-              com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice m =
+              com.msp.azure.openai.chat.v1.CompletionResponse.Choice m =
                   input.readMessage(
-                      com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.parser(),
+                      com.msp.azure.openai.chat.v1.CompletionResponse.Choice.parser(),
                       extensionRegistry);
               if (choicesBuilder_ == null) {
                 ensureChoicesIsMutable();
@@ -8337,31 +8337,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage_;
+    private com.msp.azure.openai.chat.v1.CompletionResponse.Usage usage_;
     private com.google.protobuf.SingleFieldBuilder<
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder> usageBuilder_;
+        com.msp.azure.openai.chat.v1.CompletionResponse.Usage, com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder> usageBuilder_;
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      * @return Whether the usage field is set.
      */
     public boolean hasUsage() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      * @return The usage.
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage getUsage() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Usage getUsage() {
       if (usageBuilder_ == null) {
-        return usage_ == null ? com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance() : usage_;
+        return usage_ == null ? com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance() : usage_;
       } else {
         return usageBuilder_.getMessage();
       }
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
-    public Builder setUsage(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage value) {
+    public Builder setUsage(com.msp.azure.openai.chat.v1.CompletionResponse.Usage value) {
       if (usageBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8375,10 +8375,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
     public Builder setUsage(
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder builderForValue) {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder builderForValue) {
       if (usageBuilder_ == null) {
         usage_ = builderForValue.build();
       } else {
@@ -8389,13 +8389,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
-    public Builder mergeUsage(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage value) {
+    public Builder mergeUsage(com.msp.azure.openai.chat.v1.CompletionResponse.Usage value) {
       if (usageBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           usage_ != null &&
-          usage_ != com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance()) {
+          usage_ != com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance()) {
           getUsageBuilder().mergeFrom(value);
         } else {
           usage_ = value;
@@ -8410,7 +8410,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
     public Builder clearUsage() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -8423,33 +8423,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder getUsageBuilder() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder getUsageBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getUsageFieldBuilder().getBuilder();
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder getUsageOrBuilder() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder getUsageOrBuilder() {
       if (usageBuilder_ != null) {
         return usageBuilder_.getMessageOrBuilder();
       } else {
         return usage_ == null ?
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.getDefaultInstance() : usage_;
+            com.msp.azure.openai.chat.v1.CompletionResponse.Usage.getDefaultInstance() : usage_;
       }
     }
     /**
-     * <code>.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5 [json_name = "usage"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder> 
+        com.msp.azure.openai.chat.v1.CompletionResponse.Usage, com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder> 
         getUsageFieldBuilder() {
       if (usageBuilder_ == null) {
         usageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.UsageOrBuilder>(
+            com.msp.azure.openai.chat.v1.CompletionResponse.Usage, com.msp.azure.openai.chat.v1.CompletionResponse.Usage.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.UsageOrBuilder>(
                 getUsage(),
                 getParentForChildren(),
                 isClean());
@@ -8770,22 +8770,22 @@ private static final long serialVersionUID = 0L;
       return promptFilterResultsBuilder_;
     }
 
-    private java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice> choices_ =
+    private java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice> choices_ =
       java.util.Collections.emptyList();
     private void ensureChoicesIsMutable() {
       if (!((bitField0_ & 0x00000080) != 0)) {
-        choices_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice>(choices_);
+        choices_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.CompletionResponse.Choice>(choices_);
         bitField0_ |= 0x00000080;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder> choicesBuilder_;
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder> choicesBuilder_;
 
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice> getChoicesList() {
+    public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice> getChoicesList() {
       if (choicesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(choices_);
       } else {
@@ -8793,7 +8793,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public int getChoicesCount() {
       if (choicesBuilder_ == null) {
@@ -8803,9 +8803,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice getChoices(int index) {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice getChoices(int index) {
       if (choicesBuilder_ == null) {
         return choices_.get(index);
       } else {
@@ -8813,10 +8813,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder setChoices(
-        int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice value) {
+        int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8830,10 +8830,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder setChoices(
-        int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder builderForValue) {
+        int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.set(index, builderForValue.build());
@@ -8844,9 +8844,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public Builder addChoices(com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice value) {
+    public Builder addChoices(com.msp.azure.openai.chat.v1.CompletionResponse.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8860,10 +8860,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice value) {
+        int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice value) {
       if (choicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8877,10 +8877,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder builderForValue) {
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.add(builderForValue.build());
@@ -8891,10 +8891,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder addChoices(
-        int index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder builderForValue) {
+        int index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder builderForValue) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         choices_.add(index, builderForValue.build());
@@ -8905,10 +8905,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder addAllChoices(
-        java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice> values) {
+        java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.CompletionResponse.Choice> values) {
       if (choicesBuilder_ == null) {
         ensureChoicesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8920,7 +8920,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder clearChoices() {
       if (choicesBuilder_ == null) {
@@ -8933,7 +8933,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
     public Builder removeChoices(int index) {
       if (choicesBuilder_ == null) {
@@ -8946,16 +8946,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder getChoicesBuilder(
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder getChoicesBuilder(
         int index) {
       return getChoicesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder getChoicesOrBuilder(
+    public com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder getChoicesOrBuilder(
         int index) {
       if (choicesBuilder_ == null) {
         return choices_.get(index);  } else {
@@ -8963,9 +8963,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder> 
+    public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder> 
          getChoicesOrBuilderList() {
       if (choicesBuilder_ != null) {
         return choicesBuilder_.getMessageOrBuilderList();
@@ -8974,33 +8974,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder addChoicesBuilder() {
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder addChoicesBuilder() {
       return getChoicesFieldBuilder().addBuilder(
-          com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.getDefaultInstance());
+          com.msp.azure.openai.chat.v1.CompletionResponse.Choice.getDefaultInstance());
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder addChoicesBuilder(
+    public com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder addChoicesBuilder(
         int index) {
       return getChoicesFieldBuilder().addBuilder(
-          index, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.getDefaultInstance());
+          index, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.getDefaultInstance());
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
+     * <code>repeated .msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8 [json_name = "choices"];</code>
      */
-    public java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder> 
+    public java.util.List<com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder> 
          getChoicesBuilderList() {
       return getChoicesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder> 
+        com.msp.azure.openai.chat.v1.CompletionResponse.Choice, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder> 
         getChoicesFieldBuilder() {
       if (choicesBuilder_ == null) {
         choicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice, com.msp.azure.openai.chat.v1.ChatCompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.ChatCompletionResponse.ChoiceOrBuilder>(
+            com.msp.azure.openai.chat.v1.CompletionResponse.Choice, com.msp.azure.openai.chat.v1.CompletionResponse.Choice.Builder, com.msp.azure.openai.chat.v1.CompletionResponse.ChoiceOrBuilder>(
                 choices_,
                 ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
@@ -9010,23 +9010,23 @@ private static final long serialVersionUID = 0L;
       return choicesBuilder_;
     }
 
-    // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.ChatCompletionResponse)
+    // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.ChatCompletionResponse)
-  private static final com.msp.azure.openai.chat.v1.ChatCompletionResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionResponse)
+  private static final com.msp.azure.openai.chat.v1.CompletionResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.ChatCompletionResponse();
+    DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionResponse();
   }
 
-  public static com.msp.azure.openai.chat.v1.ChatCompletionResponse getDefaultInstance() {
+  public static com.msp.azure.openai.chat.v1.CompletionResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ChatCompletionResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ChatCompletionResponse>() {
+  private static final com.google.protobuf.Parser<CompletionResponse>
+      PARSER = new com.google.protobuf.AbstractParser<CompletionResponse>() {
     @java.lang.Override
-    public ChatCompletionResponse parsePartialFrom(
+    public CompletionResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9045,17 +9045,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ChatCompletionResponse> parser() {
+  public static com.google.protobuf.Parser<CompletionResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ChatCompletionResponse> getParserForType() {
+  public com.google.protobuf.Parser<CompletionResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.msp.azure.openai.chat.v1.ChatCompletionResponse getDefaultInstanceForType() {
+  public com.msp.azure.openai.chat.v1.CompletionResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -34,10 +34,20 @@ const EmbeddingResponse$json = {
   '2': [
     {'1': 'object', '3': 1, '4': 1, '5': 9, '10': 'object'},
     {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
-    {'1': 'data', '3': 3, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.Data', '10': 'data'},
+    {'1': 'data', '3': 3, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.EmbeddingResponse.Data', '10': 'data'},
     {'1': 'usage', '3': 4, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.EmbeddingResponse.Usage', '10': 'usage'},
   ],
-  '3': [EmbeddingResponse_Usage$json],
+  '3': [EmbeddingResponse_Data$json, EmbeddingResponse_Usage$json],
+};
+
+@$core.Deprecated('Use embeddingResponseDescriptor instead')
+const EmbeddingResponse_Data$json = {
+  '1': 'Data',
+  '2': [
+    {'1': 'index', '3': 1, '4': 1, '5': 13, '10': 'index'},
+    {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
+    {'1': 'embedding', '3': 3, '4': 3, '5': 2, '10': 'embedding'},
+  ],
 };
 
 @$core.Deprecated('Use embeddingResponseDescriptor instead')
@@ -52,23 +62,10 @@ const EmbeddingResponse_Usage$json = {
 /// Descriptor for `EmbeddingResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List embeddingResponseDescriptor = $convert.base64Decode(
     'ChFFbWJlZGRpbmdSZXNwb25zZRIWCgZvYmplY3QYASABKAlSBm9iamVjdBIUCgVtb2RlbBgCIA'
-    'EoCVIFbW9kZWwSLQoEZGF0YRgDIAMoCzIZLm1zcC5henVyZS5vcGVuYWkudjEuRGF0YVIEZGF0'
-    'YRJCCgV1c2FnZRgEIAEoCzIsLm1zcC5henVyZS5vcGVuYWkudjEuRW1iZWRkaW5nUmVzcG9uc2'
-    'UuVXNhZ2VSBXVzYWdlGk8KBVVzYWdlEiMKDXByb21wdF90b2tlbnMYASABKA1SDHByb21wdFRv'
-    'a2VucxIhCgx0b3RhbF90b2tlbnMYAiABKA1SC3RvdGFsVG9rZW5z');
-
-@$core.Deprecated('Use dataDescriptor instead')
-const Data$json = {
-  '1': 'Data',
-  '2': [
-    {'1': 'index', '3': 1, '4': 1, '5': 13, '10': 'index'},
-    {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
-    {'1': 'embedding', '3': 3, '4': 3, '5': 2, '10': 'embedding'},
-  ],
-};
-
-/// Descriptor for `Data`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dataDescriptor = $convert.base64Decode(
-    'CgREYXRhEhQKBWluZGV4GAEgASgNUgVpbmRleBIWCgZvYmplY3QYAiABKAlSBm9iamVjdBIcCg'
-    'llbWJlZGRpbmcYAyADKAJSCWVtYmVkZGluZw==');
+    'EoCVIFbW9kZWwSPwoEZGF0YRgDIAMoCzIrLm1zcC5henVyZS5vcGVuYWkudjEuRW1iZWRkaW5n'
+    'UmVzcG9uc2UuRGF0YVIEZGF0YRJCCgV1c2FnZRgEIAEoCzIsLm1zcC5henVyZS5vcGVuYWkudj'
+    'EuRW1iZWRkaW5nUmVzcG9uc2UuVXNhZ2VSBXVzYWdlGlIKBERhdGESFAoFaW5kZXgYASABKA1S'
+    'BWluZGV4EhYKBm9iamVjdBgCIAEoCVIGb2JqZWN0EhwKCWVtYmVkZGluZxgDIAMoAlIJZW1iZW'
+    'RkaW5nGk8KBVVzYWdlEiMKDXByb21wdF90b2tlbnMYASABKA1SDHByb21wdFRva2VucxIhCgx0'
+    'b3RhbF90b2tlbnMYAiABKA1SC3RvdGFsVG9rZW5z');
 

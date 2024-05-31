@@ -77,10 +77,10 @@ public struct Msp_Azure_Openai_V1_CompletionResponse {
 
   public var promptFilterResults: [Msp_Azure_Openai_V1_PromptFilterResult] = []
 
-  public var choices: [Msp_Azure_Openai_V1_Choice] = []
+  public var choices: [Msp_Azure_Openai_V1_CompletionResponse.Choice] = []
 
-  public var usage: Msp_Azure_Openai_V1_Usage {
-    get {return _usage ?? Msp_Azure_Openai_V1_Usage()}
+  public var usage: Msp_Azure_Openai_V1_CompletionResponse.Usage {
+    get {return _usage ?? Msp_Azure_Openai_V1_CompletionResponse.Usage()}
     set {_usage = newValue}
   }
   /// Returns true if `usage` has been explicitly set.
@@ -90,88 +90,88 @@ public struct Msp_Azure_Openai_V1_CompletionResponse {
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  public init() {}
-
-  fileprivate var _usage: Msp_Azure_Openai_V1_Usage? = nil
-}
-
-public struct Msp_Azure_Openai_V1_Choice {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var text: String = String()
-
-  public var index: UInt32 = 0
-
-  public var logprobs: Msp_Azure_Openai_V1_Choice.LogProbs {
-    get {return _logprobs ?? Msp_Azure_Openai_V1_Choice.LogProbs()}
-    set {_logprobs = newValue}
-  }
-  /// Returns true if `logprobs` has been explicitly set.
-  public var hasLogprobs: Bool {return self._logprobs != nil}
-  /// Clears the value of `logprobs`. Subsequent reads from it will return its default value.
-  public mutating func clearLogprobs() {self._logprobs = nil}
-
-  public var finishReason: String = String()
-
-  public var contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult {
-    get {return _contentFilterResult ?? Msp_Azure_Openai_V1_ContentFilterChoiceResult()}
-    set {_contentFilterResult = newValue}
-  }
-  /// Returns true if `contentFilterResult` has been explicitly set.
-  public var hasContentFilterResult: Bool {return self._contentFilterResult != nil}
-  /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
-  public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct LogProbs {
+  public struct Usage {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    public var tokens: [String] = []
+    public var completionTokens: UInt32 = 0
 
-    public var tokenLogprobs: [Float] = []
+    public var promptTokens: UInt32 = 0
 
-    public var topLogprobs: [Float] = []
-
-    public var textOffsets: [UInt32] = []
+    public var totalTokens: UInt32 = 0
 
     public var unknownFields = SwiftProtobuf.UnknownStorage()
 
     public init() {}
   }
 
+  public struct Choice {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    public var text: String = String()
+
+    public var index: UInt32 = 0
+
+    public var logprobs: Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs {
+      get {return _logprobs ?? Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs()}
+      set {_logprobs = newValue}
+    }
+    /// Returns true if `logprobs` has been explicitly set.
+    public var hasLogprobs: Bool {return self._logprobs != nil}
+    /// Clears the value of `logprobs`. Subsequent reads from it will return its default value.
+    public mutating func clearLogprobs() {self._logprobs = nil}
+
+    public var finishReason: String = String()
+
+    public var contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult {
+      get {return _contentFilterResult ?? Msp_Azure_Openai_V1_ContentFilterChoiceResult()}
+      set {_contentFilterResult = newValue}
+    }
+    /// Returns true if `contentFilterResult` has been explicitly set.
+    public var hasContentFilterResult: Bool {return self._contentFilterResult != nil}
+    /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
+    public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public struct LogProbs {
+      // SwiftProtobuf.Message conformance is added in an extension below. See the
+      // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+      // methods supported on all messages.
+
+      public var tokens: [String] = []
+
+      public var tokenLogprobs: [Float] = []
+
+      public var topLogprobs: [Float] = []
+
+      public var textOffsets: [UInt32] = []
+
+      public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+      public init() {}
+    }
+
+    public init() {}
+
+    fileprivate var _logprobs: Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs? = nil
+    fileprivate var _contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult? = nil
+  }
+
   public init() {}
 
-  fileprivate var _logprobs: Msp_Azure_Openai_V1_Choice.LogProbs? = nil
-  fileprivate var _contentFilterResult: Msp_Azure_Openai_V1_ContentFilterChoiceResult? = nil
-}
-
-public struct Msp_Azure_Openai_V1_Usage {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var completionTokens: UInt32 = 0
-
-  public var promptTokens: UInt32 = 0
-
-  public var totalTokens: UInt32 = 0
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+  fileprivate var _usage: Msp_Azure_Openai_V1_CompletionResponse.Usage? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Msp_Azure_Openai_V1_CompletionRequest: @unchecked Sendable {}
 extension Msp_Azure_Openai_V1_CompletionResponse: @unchecked Sendable {}
-extension Msp_Azure_Openai_V1_Choice: @unchecked Sendable {}
-extension Msp_Azure_Openai_V1_Choice.LogProbs: @unchecked Sendable {}
-extension Msp_Azure_Openai_V1_Usage: @unchecked Sendable {}
+extension Msp_Azure_Openai_V1_CompletionResponse.Usage: @unchecked Sendable {}
+extension Msp_Azure_Openai_V1_CompletionResponse.Choice: @unchecked Sendable {}
+extension Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -372,8 +372,52 @@ extension Msp_Azure_Openai_V1_CompletionResponse: SwiftProtobuf.Message, SwiftPr
   }
 }
 
-extension Msp_Azure_Openai_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Choice"
+extension Msp_Azure_Openai_V1_CompletionResponse.Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_V1_CompletionResponse.protoMessageName + ".Usage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "completion_tokens"),
+    2: .standard(proto: "prompt_tokens"),
+    3: .standard(proto: "total_tokens"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.completionTokens) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.promptTokens) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.completionTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.completionTokens, fieldNumber: 1)
+    }
+    if self.promptTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.promptTokens, fieldNumber: 2)
+    }
+    if self.totalTokens != 0 {
+      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Msp_Azure_Openai_V1_CompletionResponse.Usage, rhs: Msp_Azure_Openai_V1_CompletionResponse.Usage) -> Bool {
+    if lhs.completionTokens != rhs.completionTokens {return false}
+    if lhs.promptTokens != rhs.promptTokens {return false}
+    if lhs.totalTokens != rhs.totalTokens {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Msp_Azure_Openai_V1_CompletionResponse.Choice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_V1_CompletionResponse.protoMessageName + ".Choice"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "text"),
     2: .same(proto: "index"),
@@ -421,7 +465,7 @@ extension Msp_Azure_Openai_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_V1_Choice, rhs: Msp_Azure_Openai_V1_Choice) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_V1_CompletionResponse.Choice, rhs: Msp_Azure_Openai_V1_CompletionResponse.Choice) -> Bool {
     if lhs.text != rhs.text {return false}
     if lhs.index != rhs.index {return false}
     if lhs._logprobs != rhs._logprobs {return false}
@@ -432,8 +476,8 @@ extension Msp_Azure_Openai_V1_Choice: SwiftProtobuf.Message, SwiftProtobuf._Mess
   }
 }
 
-extension Msp_Azure_Openai_V1_Choice.LogProbs: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Msp_Azure_Openai_V1_Choice.protoMessageName + ".LogProbs"
+extension Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Msp_Azure_Openai_V1_CompletionResponse.Choice.protoMessageName + ".LogProbs"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "tokens"),
     2: .standard(proto: "token_logprobs"),
@@ -472,55 +516,11 @@ extension Msp_Azure_Openai_V1_Choice.LogProbs: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  public static func ==(lhs: Msp_Azure_Openai_V1_Choice.LogProbs, rhs: Msp_Azure_Openai_V1_Choice.LogProbs) -> Bool {
+  public static func ==(lhs: Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs, rhs: Msp_Azure_Openai_V1_CompletionResponse.Choice.LogProbs) -> Bool {
     if lhs.tokens != rhs.tokens {return false}
     if lhs.tokenLogprobs != rhs.tokenLogprobs {return false}
     if lhs.topLogprobs != rhs.topLogprobs {return false}
     if lhs.textOffsets != rhs.textOffsets {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Msp_Azure_Openai_V1_Usage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Usage"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "completion_tokens"),
-    2: .standard(proto: "prompt_tokens"),
-    3: .standard(proto: "total_tokens"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.completionTokens) }()
-      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.promptTokens) }()
-      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.totalTokens) }()
-      default: break
-      }
-    }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.completionTokens != 0 {
-      try visitor.visitSingularUInt32Field(value: self.completionTokens, fieldNumber: 1)
-    }
-    if self.promptTokens != 0 {
-      try visitor.visitSingularUInt32Field(value: self.promptTokens, fieldNumber: 2)
-    }
-    if self.totalTokens != 0 {
-      try visitor.visitSingularUInt32Field(value: self.totalTokens, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Msp_Azure_Openai_V1_Usage, rhs: Msp_Azure_Openai_V1_Usage) -> Bool {
-    if lhs.completionTokens != rhs.completionTokens {return false}
-    if lhs.promptTokens != rhs.promptTokens {return false}
-    if lhs.totalTokens != rhs.totalTokens {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

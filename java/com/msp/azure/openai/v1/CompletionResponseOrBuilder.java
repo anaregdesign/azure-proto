@@ -76,41 +76,41 @@ public interface CompletionResponseOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .msp.azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.v1.CompletionResponse.Choice choices = 6 [json_name = "choices"];</code>
    */
-  java.util.List<com.msp.azure.openai.v1.Choice> 
+  java.util.List<com.msp.azure.openai.v1.CompletionResponse.Choice> 
       getChoicesList();
   /**
-   * <code>repeated .msp.azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.v1.CompletionResponse.Choice choices = 6 [json_name = "choices"];</code>
    */
-  com.msp.azure.openai.v1.Choice getChoices(int index);
+  com.msp.azure.openai.v1.CompletionResponse.Choice getChoices(int index);
   /**
-   * <code>repeated .msp.azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.v1.CompletionResponse.Choice choices = 6 [json_name = "choices"];</code>
    */
   int getChoicesCount();
   /**
-   * <code>repeated .msp.azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.v1.CompletionResponse.Choice choices = 6 [json_name = "choices"];</code>
    */
-  java.util.List<? extends com.msp.azure.openai.v1.ChoiceOrBuilder> 
+  java.util.List<? extends com.msp.azure.openai.v1.CompletionResponse.ChoiceOrBuilder> 
       getChoicesOrBuilderList();
   /**
-   * <code>repeated .msp.azure.openai.v1.Choice choices = 6 [json_name = "choices"];</code>
+   * <code>repeated .msp.azure.openai.v1.CompletionResponse.Choice choices = 6 [json_name = "choices"];</code>
    */
-  com.msp.azure.openai.v1.ChoiceOrBuilder getChoicesOrBuilder(
+  com.msp.azure.openai.v1.CompletionResponse.ChoiceOrBuilder getChoicesOrBuilder(
       int index);
 
   /**
-   * <code>.msp.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.v1.CompletionResponse.Usage usage = 7 [json_name = "usage"];</code>
    * @return Whether the usage field is set.
    */
   boolean hasUsage();
   /**
-   * <code>.msp.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.v1.CompletionResponse.Usage usage = 7 [json_name = "usage"];</code>
    * @return The usage.
    */
-  com.msp.azure.openai.v1.Usage getUsage();
+  com.msp.azure.openai.v1.CompletionResponse.Usage getUsage();
   /**
-   * <code>.msp.azure.openai.v1.Usage usage = 7 [json_name = "usage"];</code>
+   * <code>.msp.azure.openai.v1.CompletionResponse.Usage usage = 7 [json_name = "usage"];</code>
    */
-  com.msp.azure.openai.v1.UsageOrBuilder getUsageOrBuilder();
+  com.msp.azure.openai.v1.CompletionResponse.UsageOrBuilder getUsageOrBuilder();
 }

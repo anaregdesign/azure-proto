@@ -34,27 +34,27 @@ public interface EmbeddingResponseOrBuilder extends
       getModelBytes();
 
   /**
-   * <code>repeated .msp.azure.openai.v1.Data data = 3 [json_name = "data"];</code>
+   * <code>repeated .msp.azure.openai.v1.EmbeddingResponse.Data data = 3 [json_name = "data"];</code>
    */
-  java.util.List<com.msp.azure.openai.v1.Data> 
+  java.util.List<com.msp.azure.openai.v1.EmbeddingResponse.Data> 
       getDataList();
   /**
-   * <code>repeated .msp.azure.openai.v1.Data data = 3 [json_name = "data"];</code>
+   * <code>repeated .msp.azure.openai.v1.EmbeddingResponse.Data data = 3 [json_name = "data"];</code>
    */
-  com.msp.azure.openai.v1.Data getData(int index);
+  com.msp.azure.openai.v1.EmbeddingResponse.Data getData(int index);
   /**
-   * <code>repeated .msp.azure.openai.v1.Data data = 3 [json_name = "data"];</code>
+   * <code>repeated .msp.azure.openai.v1.EmbeddingResponse.Data data = 3 [json_name = "data"];</code>
    */
   int getDataCount();
   /**
-   * <code>repeated .msp.azure.openai.v1.Data data = 3 [json_name = "data"];</code>
+   * <code>repeated .msp.azure.openai.v1.EmbeddingResponse.Data data = 3 [json_name = "data"];</code>
    */
-  java.util.List<? extends com.msp.azure.openai.v1.DataOrBuilder> 
+  java.util.List<? extends com.msp.azure.openai.v1.EmbeddingResponse.DataOrBuilder> 
       getDataOrBuilderList();
   /**
-   * <code>repeated .msp.azure.openai.v1.Data data = 3 [json_name = "data"];</code>
+   * <code>repeated .msp.azure.openai.v1.EmbeddingResponse.Data data = 3 [json_name = "data"];</code>
    */
-  com.msp.azure.openai.v1.DataOrBuilder getDataOrBuilder(
+  com.msp.azure.openai.v1.EmbeddingResponse.DataOrBuilder getDataOrBuilder(
       int index);
 
   /**

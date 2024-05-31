@@ -55,9 +55,9 @@ export declare class EmbeddingResponse extends Message<EmbeddingResponse> {
   model: string;
 
   /**
-   * @generated from field: repeated msp.azure.openai.v1.Data data = 3;
+   * @generated from field: repeated msp.azure.openai.v1.EmbeddingResponse.Data data = 3;
    */
-  data: Data[];
+  data: EmbeddingResponse_Data[];
 
   /**
    * @generated from field: msp.azure.openai.v1.EmbeddingResponse.Usage usage = 4;
@@ -77,6 +77,40 @@ export declare class EmbeddingResponse extends Message<EmbeddingResponse> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmbeddingResponse;
 
   static equals(a: EmbeddingResponse | PlainMessage<EmbeddingResponse> | undefined, b: EmbeddingResponse | PlainMessage<EmbeddingResponse> | undefined): boolean;
+}
+
+/**
+ * @generated from message msp.azure.openai.v1.EmbeddingResponse.Data
+ */
+export declare class EmbeddingResponse_Data extends Message<EmbeddingResponse_Data> {
+  /**
+   * @generated from field: uint32 index = 1;
+   */
+  index: number;
+
+  /**
+   * @generated from field: string object = 2;
+   */
+  object: string;
+
+  /**
+   * @generated from field: repeated float embedding = 3;
+   */
+  embedding: number[];
+
+  constructor(data?: PartialMessage<EmbeddingResponse_Data>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "msp.azure.openai.v1.EmbeddingResponse.Data";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmbeddingResponse_Data;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EmbeddingResponse_Data;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmbeddingResponse_Data;
+
+  static equals(a: EmbeddingResponse_Data | PlainMessage<EmbeddingResponse_Data> | undefined, b: EmbeddingResponse_Data | PlainMessage<EmbeddingResponse_Data> | undefined): boolean;
 }
 
 /**
@@ -106,39 +140,5 @@ export declare class EmbeddingResponse_Usage extends Message<EmbeddingResponse_U
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmbeddingResponse_Usage;
 
   static equals(a: EmbeddingResponse_Usage | PlainMessage<EmbeddingResponse_Usage> | undefined, b: EmbeddingResponse_Usage | PlainMessage<EmbeddingResponse_Usage> | undefined): boolean;
-}
-
-/**
- * @generated from message msp.azure.openai.v1.Data
- */
-export declare class Data extends Message<Data> {
-  /**
-   * @generated from field: uint32 index = 1;
-   */
-  index: number;
-
-  /**
-   * @generated from field: string object = 2;
-   */
-  object: string;
-
-  /**
-   * @generated from field: repeated float embedding = 3;
-   */
-  embedding: number[];
-
-  constructor(data?: PartialMessage<Data>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.v1.Data";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Data;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Data;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Data;
-
-  static equals(a: Data | PlainMessage<Data> | undefined, b: Data | PlainMessage<Data> | undefined): boolean;
 }
 

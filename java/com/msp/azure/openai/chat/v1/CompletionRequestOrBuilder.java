@@ -5,8 +5,8 @@
 
 package com.msp.azure.openai.chat.v1;
 
-public interface ChatCompletionRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.ChatCompletionRequest)
+public interface CompletionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -115,27 +115,27 @@ public interface ChatCompletionRequestOrBuilder extends
       getUserBytes();
 
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
    */
-  java.util.List<com.msp.azure.openai.chat.v1.ChatCompletionRequest.Message> 
+  java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message> 
       getMessagesList();
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
    */
-  com.msp.azure.openai.chat.v1.ChatCompletionRequest.Message getMessages(int index);
+  com.msp.azure.openai.chat.v1.CompletionRequest.Message getMessages(int index);
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
    */
   int getMessagesCount();
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
    */
-  java.util.List<? extends com.msp.azure.openai.chat.v1.ChatCompletionRequest.MessageOrBuilder> 
+  java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder> 
       getMessagesOrBuilderList();
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.ChatCompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
    */
-  com.msp.azure.openai.chat.v1.ChatCompletionRequest.MessageOrBuilder getMessagesOrBuilder(
+  com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder getMessagesOrBuilder(
       int index);
 
   /**

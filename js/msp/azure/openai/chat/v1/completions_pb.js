@@ -7,10 +7,10 @@ import { proto3 } from "@bufbuild/protobuf";
 import { ContentFilterChoiceResult, ContentFilterPromptResult, PromptFilterResult } from "../../v1/entity_pb.js";
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionRequest
+ * @generated from message msp.azure.openai.chat.v1.CompletionRequest
  */
-export const ChatCompletionRequest = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionRequest",
+export const CompletionRequest = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionRequest",
   () => [
     { no: 1, name: "temperature", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
     { no: 2, name: "top_p", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
@@ -21,130 +21,137 @@ export const ChatCompletionRequest = /*@__PURE__*/ proto3.makeMessageType(
     { no: 7, name: "frequency_penalty", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
     { no: 8, name: "logit_bias", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 2 /* ScalarType.FLOAT */} },
     { no: 9, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 10, name: "messages", kind: "message", T: ChatCompletionRequestMessage, repeated: true },
+    { no: 10, name: "messages", kind: "message", T: CompletionRequest_Message, repeated: true },
     { no: 12, name: "n", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 13, name: "seed", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
   ],
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionRequestMessage
+ * @generated from message msp.azure.openai.chat.v1.CompletionRequest.Message
  */
-export const ChatCompletionRequestMessage = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionRequestMessage",
+export const CompletionRequest_Message = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionRequest.Message",
   () => [
     { no: 1, name: "role", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "content", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
+  {localName: "CompletionRequest_Message"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionResponse
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse
  */
-export const ChatCompletionResponse = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionResponse",
+export const CompletionResponse = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "created", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
     { no: 4, name: "model", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "usage", kind: "message", T: Usage },
+    { no: 5, name: "usage", kind: "message", T: CompletionResponse_Usage },
     { no: 6, name: "system_fingerprint", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 7, name: "prompt_filter_results", kind: "message", T: PromptFilterResult, repeated: true },
-    { no: 8, name: "choices", kind: "message", T: Choice, repeated: true },
+    { no: 8, name: "choices", kind: "message", T: CompletionResponse_Choice, repeated: true },
   ],
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.Usage
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Usage
  */
-export const Usage = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.Usage",
+export const CompletionResponse_Usage = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Usage",
   () => [
     { no: 1, name: "prompt_tokens", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
     { no: 2, name: "completion_tokens", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
     { no: 3, name: "total_tokens", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
   ],
+  {localName: "CompletionResponse_Usage"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.Choice
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice
  */
-export const Choice = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.Choice",
+export const CompletionResponse_Choice = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice",
   () => [
     { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 2, name: "finish_reason", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "message", kind: "message", T: ChatCompletionResponseMessage },
+    { no: 3, name: "message", kind: "message", T: CompletionResponse_Choice_Message },
     { no: 4, name: "content_filter_result", jsonName: "content_filter_results", kind: "message", T: ContentFilterChoiceResult },
   ],
+  {localName: "CompletionResponse_Choice"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionResponseMessage
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message
  */
-export const ChatCompletionResponseMessage = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionResponseMessage",
+export const CompletionResponse_Choice_Message = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message",
   () => [
     { no: 1, name: "role", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "content", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "tool_calls", kind: "message", T: ChatCompletionMessageToolCall, repeated: true },
-    { no: 4, name: "function_call", kind: "message", T: ChatCompletionFunctionCall },
-    { no: 5, name: "context", kind: "message", T: AzureChatExtensionsMessageContext },
+    { no: 3, name: "tool_calls", kind: "message", T: CompletionResponse_Choice_Message_ToolCall, repeated: true },
+    { no: 4, name: "function_call", kind: "message", T: CompletionResponse_Choice_Message_FunctionCall },
+    { no: 5, name: "context", kind: "message", T: CompletionResponse_Choice_Message_Context },
   ],
+  {localName: "CompletionResponse_Choice_Message"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionMessageToolCall
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall
  */
-export const ChatCompletionMessageToolCall = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionMessageToolCall",
+export const CompletionResponse_Choice_Message_ToolCall = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall",
   () => [
     { no: 1, name: "id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "function", kind: "message", T: ChatCompletionMessageToolCall_Function },
+    { no: 3, name: "function", kind: "message", T: CompletionResponse_Choice_Message_ToolCall_Function },
   ],
+  {localName: "CompletionResponse_Choice_Message_ToolCall"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function
  */
-export const ChatCompletionMessageToolCall_Function = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function",
+export const CompletionResponse_Choice_Message_ToolCall_Function = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "argument", jsonName: "arguments", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
-  {localName: "ChatCompletionMessageToolCall_Function"},
+  {localName: "CompletionResponse_Choice_Message_ToolCall_Function"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionFunctionCall
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall
  */
-export const ChatCompletionFunctionCall = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.ChatCompletionFunctionCall",
+export const CompletionResponse_Choice_Message_FunctionCall = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall",
   () => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "argument", jsonName: "arguments", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
+  {localName: "CompletionResponse_Choice_Message_FunctionCall"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context
  */
-export const AzureChatExtensionsMessageContext = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext",
+export const CompletionResponse_Choice_Message_Context = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context",
   () => [
-    { no: 1, name: "citations", kind: "message", T: AzureChatExtensionsMessageContext_Citation, repeated: true },
+    { no: 1, name: "citations", kind: "message", T: CompletionResponse_Choice_Message_Context_Citation, repeated: true },
     { no: 2, name: "intent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
+  {localName: "CompletionResponse_Choice_Message_Context"},
 );
 
 /**
- * @generated from message msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation
  */
-export const AzureChatExtensionsMessageContext_Citation = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation",
+export const CompletionResponse_Choice_Message_Context_Citation = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation",
   () => [
     { no: 1, name: "content", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "title", kind: "scalar", T: 9 /* ScalarType.STRING */ },
@@ -152,7 +159,7 @@ export const AzureChatExtensionsMessageContext_Citation = /*@__PURE__*/ proto3.m
     { no: 4, name: "filepath", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 5, name: "chunk_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ],
-  {localName: "AzureChatExtensionsMessageContext_Citation"},
+  {localName: "CompletionResponse_Choice_Message_Context_Citation"},
 );
 
 /**

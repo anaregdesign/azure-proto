@@ -70,35 +70,37 @@ const CompletionResponse$json = {
     {'1': 'created', '3': 3, '4': 1, '5': 4, '10': 'created'},
     {'1': 'model', '3': 4, '4': 1, '5': 9, '10': 'model'},
     {'1': 'prompt_filter_results', '3': 5, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.PromptFilterResult', '10': 'promptFilterResults'},
-    {'1': 'choices', '3': 6, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.Choice', '10': 'choices'},
-    {'1': 'usage', '3': 7, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.Usage', '10': 'usage'},
+    {'1': 'choices', '3': 6, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.CompletionResponse.Choice', '10': 'choices'},
+    {'1': 'usage', '3': 7, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.CompletionResponse.Usage', '10': 'usage'},
+  ],
+  '3': [CompletionResponse_Usage$json, CompletionResponse_Choice$json],
+};
+
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Usage$json = {
+  '1': 'Usage',
+  '2': [
+    {'1': 'completion_tokens', '3': 1, '4': 1, '5': 13, '10': 'completionTokens'},
+    {'1': 'prompt_tokens', '3': 2, '4': 1, '5': 13, '10': 'promptTokens'},
+    {'1': 'total_tokens', '3': 3, '4': 1, '5': 13, '10': 'totalTokens'},
   ],
 };
 
-/// Descriptor for `CompletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List completionResponseDescriptor = $convert.base64Decode(
-    'ChJDb21wbGV0aW9uUmVzcG9uc2USDgoCaWQYASABKAlSAmlkEhYKBm9iamVjdBgCIAEoCVIGb2'
-    'JqZWN0EhgKB2NyZWF0ZWQYAyABKARSB2NyZWF0ZWQSFAoFbW9kZWwYBCABKAlSBW1vZGVsElsK'
-    'FXByb21wdF9maWx0ZXJfcmVzdWx0cxgFIAMoCzInLm1zcC5henVyZS5vcGVuYWkudjEuUHJvbX'
-    'B0RmlsdGVyUmVzdWx0UhNwcm9tcHRGaWx0ZXJSZXN1bHRzEjUKB2Nob2ljZXMYBiADKAsyGy5t'
-    'c3AuYXp1cmUub3BlbmFpLnYxLkNob2ljZVIHY2hvaWNlcxIwCgV1c2FnZRgHIAEoCzIaLm1zcC'
-    '5henVyZS5vcGVuYWkudjEuVXNhZ2VSBXVzYWdl');
-
-@$core.Deprecated('Use choiceDescriptor instead')
-const Choice$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice$json = {
   '1': 'Choice',
   '2': [
     {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
     {'1': 'index', '3': 2, '4': 1, '5': 13, '10': 'index'},
-    {'1': 'logprobs', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.Choice.LogProbs', '10': 'logprobs'},
+    {'1': 'logprobs', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.CompletionResponse.Choice.LogProbs', '10': 'logprobs'},
     {'1': 'finish_reason', '3': 4, '4': 1, '5': 9, '10': 'finishReason'},
     {'1': 'content_filter_result', '3': 5, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.ContentFilterChoiceResult', '10': 'content_filter_results'},
   ],
-  '3': [Choice_LogProbs$json],
+  '3': [CompletionResponse_Choice_LogProbs$json],
 };
 
-@$core.Deprecated('Use choiceDescriptor instead')
-const Choice_LogProbs$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_LogProbs$json = {
   '1': 'LogProbs',
   '2': [
     {'1': 'tokens', '3': 1, '4': 3, '5': 9, '10': 'tokens'},
@@ -108,30 +110,23 @@ const Choice_LogProbs$json = {
   ],
 };
 
-/// Descriptor for `Choice`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List choiceDescriptor = $convert.base64Decode(
-    'CgZDaG9pY2USEgoEdGV4dBgBIAEoCVIEdGV4dBIUCgVpbmRleBgCIAEoDVIFaW5kZXgSQAoIbG'
-    '9ncHJvYnMYAyABKAsyJC5tc3AuYXp1cmUub3BlbmFpLnYxLkNob2ljZS5Mb2dQcm9ic1IIbG9n'
-    'cHJvYnMSIwoNZmluaXNoX3JlYXNvbhgEIAEoCVIMZmluaXNoUmVhc29uEmUKFWNvbnRlbnRfZm'
-    'lsdGVyX3Jlc3VsdBgFIAEoCzIuLm1zcC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlckNo'
-    'b2ljZVJlc3VsdFIWY29udGVudF9maWx0ZXJfcmVzdWx0cxqPAQoITG9nUHJvYnMSFgoGdG9rZW'
-    '5zGAEgAygJUgZ0b2tlbnMSJQoOdG9rZW5fbG9ncHJvYnMYAiADKAJSDXRva2VuTG9ncHJvYnMS'
-    'IQoMdG9wX2xvZ3Byb2JzGAMgAygCUgt0b3BMb2dwcm9icxIhCgx0ZXh0X29mZnNldHMYBCADKA'
-    '1SC3RleHRfb2Zmc2V0');
-
-@$core.Deprecated('Use usageDescriptor instead')
-const Usage$json = {
-  '1': 'Usage',
-  '2': [
-    {'1': 'completion_tokens', '3': 1, '4': 1, '5': 13, '10': 'completionTokens'},
-    {'1': 'prompt_tokens', '3': 2, '4': 1, '5': 13, '10': 'promptTokens'},
-    {'1': 'total_tokens', '3': 3, '4': 1, '5': 13, '10': 'totalTokens'},
-  ],
-};
-
-/// Descriptor for `Usage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List usageDescriptor = $convert.base64Decode(
-    'CgVVc2FnZRIrChFjb21wbGV0aW9uX3Rva2VucxgBIAEoDVIQY29tcGxldGlvblRva2VucxIjCg'
-    '1wcm9tcHRfdG9rZW5zGAIgASgNUgxwcm9tcHRUb2tlbnMSIQoMdG90YWxfdG9rZW5zGAMgASgN'
-    'Ugt0b3RhbFRva2Vucw==');
+/// Descriptor for `CompletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List completionResponseDescriptor = $convert.base64Decode(
+    'ChJDb21wbGV0aW9uUmVzcG9uc2USDgoCaWQYASABKAlSAmlkEhYKBm9iamVjdBgCIAEoCVIGb2'
+    'JqZWN0EhgKB2NyZWF0ZWQYAyABKARSB2NyZWF0ZWQSFAoFbW9kZWwYBCABKAlSBW1vZGVsElsK'
+    'FXByb21wdF9maWx0ZXJfcmVzdWx0cxgFIAMoCzInLm1zcC5henVyZS5vcGVuYWkudjEuUHJvbX'
+    'B0RmlsdGVyUmVzdWx0UhNwcm9tcHRGaWx0ZXJSZXN1bHRzEkgKB2Nob2ljZXMYBiADKAsyLi5t'
+    'c3AuYXp1cmUub3BlbmFpLnYxLkNvbXBsZXRpb25SZXNwb25zZS5DaG9pY2VSB2Nob2ljZXMSQw'
+    'oFdXNhZ2UYByABKAsyLS5tc3AuYXp1cmUub3BlbmFpLnYxLkNvbXBsZXRpb25SZXNwb25zZS5V'
+    'c2FnZVIFdXNhZ2UafAoFVXNhZ2USKwoRY29tcGxldGlvbl90b2tlbnMYASABKA1SEGNvbXBsZX'
+    'Rpb25Ub2tlbnMSIwoNcHJvbXB0X3Rva2VucxgCIAEoDVIMcHJvbXB0VG9rZW5zEiEKDHRvdGFs'
+    'X3Rva2VucxgDIAEoDVILdG90YWxUb2tlbnMapQMKBkNob2ljZRISCgR0ZXh0GAEgASgJUgR0ZX'
+    'h0EhQKBWluZGV4GAIgASgNUgVpbmRleBJTCghsb2dwcm9icxgDIAEoCzI3Lm1zcC5henVyZS5v'
+    'cGVuYWkudjEuQ29tcGxldGlvblJlc3BvbnNlLkNob2ljZS5Mb2dQcm9ic1IIbG9ncHJvYnMSIw'
+    'oNZmluaXNoX3JlYXNvbhgEIAEoCVIMZmluaXNoUmVhc29uEmUKFWNvbnRlbnRfZmlsdGVyX3Jl'
+    'c3VsdBgFIAEoCzIuLm1zcC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlckNob2ljZVJlc3'
+    'VsdFIWY29udGVudF9maWx0ZXJfcmVzdWx0cxqPAQoITG9nUHJvYnMSFgoGdG9rZW5zGAEgAygJ'
+    'UgZ0b2tlbnMSJQoOdG9rZW5fbG9ncHJvYnMYAiADKAJSDXRva2VuTG9ncHJvYnMSIQoMdG9wX2'
+    'xvZ3Byb2JzGAMgAygCUgt0b3BMb2dwcm9icxIhCgx0ZXh0X29mZnNldHMYBCADKA1SC3RleHRf'
+    'b2Zmc2V0');
 

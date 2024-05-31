@@ -25,9 +25,22 @@ export const EmbeddingResponse = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "model", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "data", kind: "message", T: Data, repeated: true },
+    { no: 3, name: "data", kind: "message", T: EmbeddingResponse_Data, repeated: true },
     { no: 4, name: "usage", kind: "message", T: EmbeddingResponse_Usage },
   ],
+);
+
+/**
+ * @generated from message msp.azure.openai.v1.EmbeddingResponse.Data
+ */
+export const EmbeddingResponse_Data = /*@__PURE__*/ proto3.makeMessageType(
+  "msp.azure.openai.v1.EmbeddingResponse.Data",
+  () => [
+    { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "embedding", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true },
+  ],
+  {localName: "EmbeddingResponse_Data"},
 );
 
 /**
@@ -40,17 +53,5 @@ export const EmbeddingResponse_Usage = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "total_tokens", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
   ],
   {localName: "EmbeddingResponse_Usage"},
-);
-
-/**
- * @generated from message msp.azure.openai.v1.Data
- */
-export const Data = /*@__PURE__*/ proto3.makeMessageType(
-  "msp.azure.openai.v1.Data",
-  () => [
-    { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 2, name: "object", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "embedding", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true },
-  ],
 );
 

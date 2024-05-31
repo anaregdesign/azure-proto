@@ -136,14 +136,14 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
   promptFilterResults: PromptFilterResult[];
 
   /**
-   * @generated from field: repeated msp.azure.openai.v1.Choice choices = 6;
+   * @generated from field: repeated msp.azure.openai.v1.CompletionResponse.Choice choices = 6;
    */
-  choices: Choice[];
+  choices: CompletionResponse_Choice[];
 
   /**
-   * @generated from field: msp.azure.openai.v1.Usage usage = 7;
+   * @generated from field: msp.azure.openai.v1.CompletionResponse.Usage usage = 7;
    */
-  usage?: Usage;
+  usage?: CompletionResponse_Usage;
 
   constructor(data?: PartialMessage<CompletionResponse>);
 
@@ -161,9 +161,43 @@ export declare class CompletionResponse extends Message<CompletionResponse> {
 }
 
 /**
- * @generated from message msp.azure.openai.v1.Choice
+ * @generated from message msp.azure.openai.v1.CompletionResponse.Usage
  */
-export declare class Choice extends Message<Choice> {
+export declare class CompletionResponse_Usage extends Message<CompletionResponse_Usage> {
+  /**
+   * @generated from field: uint32 completion_tokens = 1;
+   */
+  completionTokens: number;
+
+  /**
+   * @generated from field: uint32 prompt_tokens = 2;
+   */
+  promptTokens: number;
+
+  /**
+   * @generated from field: uint32 total_tokens = 3;
+   */
+  totalTokens: number;
+
+  constructor(data?: PartialMessage<CompletionResponse_Usage>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "msp.azure.openai.v1.CompletionResponse.Usage";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Usage;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Usage;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Usage;
+
+  static equals(a: CompletionResponse_Usage | PlainMessage<CompletionResponse_Usage> | undefined, b: CompletionResponse_Usage | PlainMessage<CompletionResponse_Usage> | undefined): boolean;
+}
+
+/**
+ * @generated from message msp.azure.openai.v1.CompletionResponse.Choice
+ */
+export declare class CompletionResponse_Choice extends Message<CompletionResponse_Choice> {
   /**
    * @generated from field: string text = 1;
    */
@@ -175,9 +209,9 @@ export declare class Choice extends Message<Choice> {
   index: number;
 
   /**
-   * @generated from field: msp.azure.openai.v1.Choice.LogProbs logprobs = 3;
+   * @generated from field: msp.azure.openai.v1.CompletionResponse.Choice.LogProbs logprobs = 3;
    */
-  logprobs?: Choice_LogProbs;
+  logprobs?: CompletionResponse_Choice_LogProbs;
 
   /**
    * @generated from field: string finish_reason = 4;
@@ -189,25 +223,25 @@ export declare class Choice extends Message<Choice> {
    */
   contentFilterResult?: ContentFilterChoiceResult;
 
-  constructor(data?: PartialMessage<Choice>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.v1.Choice";
+  static readonly typeName = "msp.azure.openai.v1.CompletionResponse.Choice";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice;
 
-  static equals(a: Choice | PlainMessage<Choice> | undefined, b: Choice | PlainMessage<Choice> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice | PlainMessage<CompletionResponse_Choice> | undefined, b: CompletionResponse_Choice | PlainMessage<CompletionResponse_Choice> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.v1.Choice.LogProbs
+ * @generated from message msp.azure.openai.v1.CompletionResponse.Choice.LogProbs
  */
-export declare class Choice_LogProbs extends Message<Choice_LogProbs> {
+export declare class CompletionResponse_Choice_LogProbs extends Message<CompletionResponse_Choice_LogProbs> {
   /**
    * @generated from field: repeated string tokens = 1;
    */
@@ -228,52 +262,18 @@ export declare class Choice_LogProbs extends Message<Choice_LogProbs> {
    */
   textOffsets: number[];
 
-  constructor(data?: PartialMessage<Choice_LogProbs>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_LogProbs>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.v1.Choice.LogProbs";
+  static readonly typeName = "msp.azure.openai.v1.CompletionResponse.Choice.LogProbs";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice_LogProbs;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_LogProbs;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice_LogProbs;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_LogProbs;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice_LogProbs;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_LogProbs;
 
-  static equals(a: Choice_LogProbs | PlainMessage<Choice_LogProbs> | undefined, b: Choice_LogProbs | PlainMessage<Choice_LogProbs> | undefined): boolean;
-}
-
-/**
- * @generated from message msp.azure.openai.v1.Usage
- */
-export declare class Usage extends Message<Usage> {
-  /**
-   * @generated from field: uint32 completion_tokens = 1;
-   */
-  completionTokens: number;
-
-  /**
-   * @generated from field: uint32 prompt_tokens = 2;
-   */
-  promptTokens: number;
-
-  /**
-   * @generated from field: uint32 total_tokens = 3;
-   */
-  totalTokens: number;
-
-  constructor(data?: PartialMessage<Usage>);
-
-  static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.v1.Usage";
-  static readonly fields: FieldList;
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Usage;
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Usage;
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Usage;
-
-  static equals(a: Usage | PlainMessage<Usage> | undefined, b: Usage | PlainMessage<Usage> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_LogProbs | PlainMessage<CompletionResponse_Choice_LogProbs> | undefined, b: CompletionResponse_Choice_LogProbs | PlainMessage<CompletionResponse_Choice_LogProbs> | undefined): boolean;
 }
 

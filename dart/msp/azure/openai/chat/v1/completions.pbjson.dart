@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use chatCompletionRequestDescriptor instead')
-const ChatCompletionRequest$json = {
-  '1': 'ChatCompletionRequest',
+@$core.Deprecated('Use completionRequestDescriptor instead')
+const CompletionRequest$json = {
+  '1': 'CompletionRequest',
   '2': [
     {'1': 'temperature', '3': 1, '4': 1, '5': 2, '10': 'temperature'},
     {'1': 'top_p', '3': 2, '4': 1, '5': 2, '10': 'topP'},
@@ -24,17 +24,17 @@ const ChatCompletionRequest$json = {
     {'1': 'max_tokens', '3': 5, '4': 1, '5': 13, '10': 'maxTokens'},
     {'1': 'presence_penalty', '3': 6, '4': 1, '5': 2, '10': 'presencePenalty'},
     {'1': 'frequency_penalty', '3': 7, '4': 1, '5': 2, '10': 'frequencyPenalty'},
-    {'1': 'logit_bias', '3': 8, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionRequest.LogitBiasEntry', '10': 'logitBias'},
+    {'1': 'logit_bias', '3': 8, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionRequest.LogitBiasEntry', '10': 'logitBias'},
     {'1': 'user', '3': 9, '4': 1, '5': 9, '10': 'user'},
-    {'1': 'messages', '3': 10, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionRequestMessage', '10': 'messages'},
+    {'1': 'messages', '3': 10, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionRequest.Message', '10': 'messages'},
     {'1': 'n', '3': 12, '4': 1, '5': 13, '10': 'n'},
     {'1': 'seed', '3': 13, '4': 1, '5': 3, '10': 'seed'},
   ],
-  '3': [ChatCompletionRequest_LogitBiasEntry$json],
+  '3': [CompletionRequest_LogitBiasEntry$json, CompletionRequest_Message$json],
 };
 
-@$core.Deprecated('Use chatCompletionRequestDescriptor instead')
-const ChatCompletionRequest_LogitBiasEntry$json = {
+@$core.Deprecated('Use completionRequestDescriptor instead')
+const CompletionRequest_LogitBiasEntry$json = {
   '1': 'LogitBiasEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
@@ -43,60 +43,47 @@ const ChatCompletionRequest_LogitBiasEntry$json = {
   '7': {'7': true},
 };
 
-/// Descriptor for `ChatCompletionRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionRequestDescriptor = $convert.base64Decode(
-    'ChVDaGF0Q29tcGxldGlvblJlcXVlc3QSIAoLdGVtcGVyYXR1cmUYASABKAJSC3RlbXBlcmF0dX'
-    'JlEhMKBXRvcF9wGAIgASgCUgR0b3BQEhYKBnN0cmVhbRgDIAEoCFIGc3RyZWFtEhMKBXN0b3Bz'
-    'GAQgAygJUgRzdG9wEh0KCm1heF90b2tlbnMYBSABKA1SCW1heFRva2VucxIpChBwcmVzZW5jZV'
-    '9wZW5hbHR5GAYgASgCUg9wcmVzZW5jZVBlbmFsdHkSKwoRZnJlcXVlbmN5X3BlbmFsdHkYByAB'
-    'KAJSEGZyZXF1ZW5jeVBlbmFsdHkSXQoKbG9naXRfYmlhcxgIIAMoCzI+Lm1zcC5henVyZS5vcG'
-    'VuYWkuY2hhdC52MS5DaGF0Q29tcGxldGlvblJlcXVlc3QuTG9naXRCaWFzRW50cnlSCWxvZ2l0'
-    'QmlhcxISCgR1c2VyGAkgASgJUgR1c2VyElIKCG1lc3NhZ2VzGAogAygLMjYubXNwLmF6dXJlLm'
-    '9wZW5haS5jaGF0LnYxLkNoYXRDb21wbGV0aW9uUmVxdWVzdE1lc3NhZ2VSCG1lc3NhZ2VzEgwK'
-    'AW4YDCABKA1SAW4SEgoEc2VlZBgNIAEoA1IEc2VlZBo8Cg5Mb2dpdEJpYXNFbnRyeRIQCgNrZX'
-    'kYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoAlIFdmFsdWU6AjgB');
-
-@$core.Deprecated('Use chatCompletionRequestMessageDescriptor instead')
-const ChatCompletionRequestMessage$json = {
-  '1': 'ChatCompletionRequestMessage',
+@$core.Deprecated('Use completionRequestDescriptor instead')
+const CompletionRequest_Message$json = {
+  '1': 'Message',
   '2': [
     {'1': 'role', '3': 1, '4': 1, '5': 9, '10': 'role'},
     {'1': 'content', '3': 2, '4': 1, '5': 9, '10': 'content'},
   ],
 };
 
-/// Descriptor for `ChatCompletionRequestMessage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionRequestMessageDescriptor = $convert.base64Decode(
-    'ChxDaGF0Q29tcGxldGlvblJlcXVlc3RNZXNzYWdlEhIKBHJvbGUYASABKAlSBHJvbGUSGAoHY2'
-    '9udGVudBgCIAEoCVIHY29udGVudA==');
+/// Descriptor for `CompletionRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List completionRequestDescriptor = $convert.base64Decode(
+    'ChFDb21wbGV0aW9uUmVxdWVzdBIgCgt0ZW1wZXJhdHVyZRgBIAEoAlILdGVtcGVyYXR1cmUSEw'
+    'oFdG9wX3AYAiABKAJSBHRvcFASFgoGc3RyZWFtGAMgASgIUgZzdHJlYW0SEwoFc3RvcHMYBCAD'
+    'KAlSBHN0b3ASHQoKbWF4X3Rva2VucxgFIAEoDVIJbWF4VG9rZW5zEikKEHByZXNlbmNlX3Blbm'
+    'FsdHkYBiABKAJSD3ByZXNlbmNlUGVuYWx0eRIrChFmcmVxdWVuY3lfcGVuYWx0eRgHIAEoAlIQ'
+    'ZnJlcXVlbmN5UGVuYWx0eRJZCgpsb2dpdF9iaWFzGAggAygLMjoubXNwLmF6dXJlLm9wZW5haS'
+    '5jaGF0LnYxLkNvbXBsZXRpb25SZXF1ZXN0LkxvZ2l0Qmlhc0VudHJ5Uglsb2dpdEJpYXMSEgoE'
+    'dXNlchgJIAEoCVIEdXNlchJPCghtZXNzYWdlcxgKIAMoCzIzLm1zcC5henVyZS5vcGVuYWkuY2'
+    'hhdC52MS5Db21wbGV0aW9uUmVxdWVzdC5NZXNzYWdlUghtZXNzYWdlcxIMCgFuGAwgASgNUgFu'
+    'EhIKBHNlZWQYDSABKANSBHNlZWQaPAoOTG9naXRCaWFzRW50cnkSEAoDa2V5GAEgASgJUgNrZX'
+    'kSFAoFdmFsdWUYAiABKAJSBXZhbHVlOgI4ARo3CgdNZXNzYWdlEhIKBHJvbGUYASABKAlSBHJv'
+    'bGUSGAoHY29udGVudBgCIAEoCVIHY29udGVudA==');
 
-@$core.Deprecated('Use chatCompletionResponseDescriptor instead')
-const ChatCompletionResponse$json = {
-  '1': 'ChatCompletionResponse',
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse$json = {
+  '1': 'CompletionResponse',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'object', '3': 2, '4': 1, '5': 9, '10': 'object'},
     {'1': 'created', '3': 3, '4': 1, '5': 4, '10': 'created'},
     {'1': 'model', '3': 4, '4': 1, '5': 9, '10': 'model'},
-    {'1': 'usage', '3': 5, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.Usage', '10': 'usage'},
+    {'1': 'usage', '3': 5, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Usage', '10': 'usage'},
     {'1': 'system_fingerprint', '3': 6, '4': 1, '5': 9, '10': 'systemFingerprint'},
     {'1': 'prompt_filter_results', '3': 7, '4': 3, '5': 11, '6': '.msp.azure.openai.v1.PromptFilterResult', '10': 'promptFilterResults'},
-    {'1': 'choices', '3': 8, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.Choice', '10': 'choices'},
+    {'1': 'choices', '3': 8, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice', '10': 'choices'},
   ],
+  '3': [CompletionResponse_Usage$json, CompletionResponse_Choice$json],
 };
 
-/// Descriptor for `ChatCompletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionResponseDescriptor = $convert.base64Decode(
-    'ChZDaGF0Q29tcGxldGlvblJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBIWCgZvYmplY3QYAiABKA'
-    'lSBm9iamVjdBIYCgdjcmVhdGVkGAMgASgEUgdjcmVhdGVkEhQKBW1vZGVsGAQgASgJUgVtb2Rl'
-    'bBI1CgV1c2FnZRgFIAEoCzIfLm1zcC5henVyZS5vcGVuYWkuY2hhdC52MS5Vc2FnZVIFdXNhZ2'
-    'USLQoSc3lzdGVtX2ZpbmdlcnByaW50GAYgASgJUhFzeXN0ZW1GaW5nZXJwcmludBJbChVwcm9t'
-    'cHRfZmlsdGVyX3Jlc3VsdHMYByADKAsyJy5tc3AuYXp1cmUub3BlbmFpLnYxLlByb21wdEZpbH'
-    'RlclJlc3VsdFITcHJvbXB0RmlsdGVyUmVzdWx0cxI6CgdjaG9pY2VzGAggAygLMiAubXNwLmF6'
-    'dXJlLm9wZW5haS5jaGF0LnYxLkNob2ljZVIHY2hvaWNlcw==');
-
-@$core.Deprecated('Use usageDescriptor instead')
-const Usage$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Usage$json = {
   '1': 'Usage',
   '2': [
     {'1': 'prompt_tokens', '3': 1, '4': 1, '5': 4, '10': 'promptTokens'},
@@ -105,66 +92,44 @@ const Usage$json = {
   ],
 };
 
-/// Descriptor for `Usage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List usageDescriptor = $convert.base64Decode(
-    'CgVVc2FnZRIjCg1wcm9tcHRfdG9rZW5zGAEgASgEUgxwcm9tcHRUb2tlbnMSKwoRY29tcGxldG'
-    'lvbl90b2tlbnMYAiABKARSEGNvbXBsZXRpb25Ub2tlbnMSIQoMdG90YWxfdG9rZW5zGAMgASgE'
-    'Ugt0b3RhbFRva2Vucw==');
-
-@$core.Deprecated('Use choiceDescriptor instead')
-const Choice$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice$json = {
   '1': 'Choice',
   '2': [
     {'1': 'index', '3': 1, '4': 1, '5': 13, '10': 'index'},
     {'1': 'finish_reason', '3': 2, '4': 1, '5': 9, '10': 'finishReason'},
-    {'1': 'message', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionResponseMessage', '10': 'message'},
+    {'1': 'message', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message', '10': 'message'},
     {'1': 'content_filter_result', '3': 4, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.ContentFilterChoiceResult', '10': 'content_filter_results'},
   ],
+  '3': [CompletionResponse_Choice_Message$json],
 };
 
-/// Descriptor for `Choice`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List choiceDescriptor = $convert.base64Decode(
-    'CgZDaG9pY2USFAoFaW5kZXgYASABKA1SBWluZGV4EiMKDWZpbmlzaF9yZWFzb24YAiABKAlSDG'
-    'ZpbmlzaFJlYXNvbhJRCgdtZXNzYWdlGAMgASgLMjcubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYx'
-    'LkNoYXRDb21wbGV0aW9uUmVzcG9uc2VNZXNzYWdlUgdtZXNzYWdlEmUKFWNvbnRlbnRfZmlsdG'
-    'VyX3Jlc3VsdBgEIAEoCzIuLm1zcC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlckNob2lj'
-    'ZVJlc3VsdFIWY29udGVudF9maWx0ZXJfcmVzdWx0cw==');
-
-@$core.Deprecated('Use chatCompletionResponseMessageDescriptor instead')
-const ChatCompletionResponseMessage$json = {
-  '1': 'ChatCompletionResponseMessage',
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message$json = {
+  '1': 'Message',
   '2': [
     {'1': 'role', '3': 1, '4': 1, '5': 9, '10': 'role'},
     {'1': 'content', '3': 2, '4': 1, '5': 9, '10': 'content'},
-    {'1': 'tool_calls', '3': 3, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionMessageToolCall', '10': 'toolCalls'},
-    {'1': 'function_call', '3': 4, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionFunctionCall', '10': 'functionCall'},
-    {'1': 'context', '3': 5, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext', '10': 'context'},
+    {'1': 'tool_calls', '3': 3, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall', '10': 'toolCalls'},
+    {'1': 'function_call', '3': 4, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall', '10': 'functionCall'},
+    {'1': 'context', '3': 5, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context', '10': 'context'},
   ],
+  '3': [CompletionResponse_Choice_Message_ToolCall$json, CompletionResponse_Choice_Message_FunctionCall$json, CompletionResponse_Choice_Message_Context$json],
 };
 
-/// Descriptor for `ChatCompletionResponseMessage`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionResponseMessageDescriptor = $convert.base64Decode(
-    'Ch1DaGF0Q29tcGxldGlvblJlc3BvbnNlTWVzc2FnZRISCgRyb2xlGAEgASgJUgRyb2xlEhgKB2'
-    'NvbnRlbnQYAiABKAlSB2NvbnRlbnQSVgoKdG9vbF9jYWxscxgDIAMoCzI3Lm1zcC5henVyZS5v'
-    'cGVuYWkuY2hhdC52MS5DaGF0Q29tcGxldGlvbk1lc3NhZ2VUb29sQ2FsbFIJdG9vbENhbGxzEl'
-    'kKDWZ1bmN0aW9uX2NhbGwYBCABKAsyNC5tc3AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ2hhdENv'
-    'bXBsZXRpb25GdW5jdGlvbkNhbGxSDGZ1bmN0aW9uQ2FsbBJVCgdjb250ZXh0GAUgASgLMjsubX'
-    'NwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkF6dXJlQ2hhdEV4dGVuc2lvbnNNZXNzYWdlQ29udGV4'
-    'dFIHY29udGV4dA==');
-
-@$core.Deprecated('Use chatCompletionMessageToolCallDescriptor instead')
-const ChatCompletionMessageToolCall$json = {
-  '1': 'ChatCompletionMessageToolCall',
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message_ToolCall$json = {
+  '1': 'ToolCall',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'type', '3': 2, '4': 1, '5': 9, '10': 'type'},
-    {'1': 'function', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function', '10': 'function'},
+    {'1': 'function', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function', '10': 'function'},
   ],
-  '3': [ChatCompletionMessageToolCall_Function$json],
+  '3': [CompletionResponse_Choice_Message_ToolCall_Function$json],
 };
 
-@$core.Deprecated('Use chatCompletionMessageToolCallDescriptor instead')
-const ChatCompletionMessageToolCall_Function$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message_ToolCall_Function$json = {
   '1': 'Function',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
@@ -172,39 +137,27 @@ const ChatCompletionMessageToolCall_Function$json = {
   ],
 };
 
-/// Descriptor for `ChatCompletionMessageToolCall`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionMessageToolCallDescriptor = $convert.base64Decode(
-    'Ch1DaGF0Q29tcGxldGlvbk1lc3NhZ2VUb29sQ2FsbBIOCgJpZBgBIAEoCVICaWQSEgoEdHlwZR'
-    'gCIAEoCVIEdHlwZRJcCghmdW5jdGlvbhgDIAEoCzJALm1zcC5henVyZS5vcGVuYWkuY2hhdC52'
-    'MS5DaGF0Q29tcGxldGlvbk1lc3NhZ2VUb29sQ2FsbC5GdW5jdGlvblIIZnVuY3Rpb24aOwoIRn'
-    'VuY3Rpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRIbCghhcmd1bWVudBgCIAEoCVIJYXJndW1lbnRz');
-
-@$core.Deprecated('Use chatCompletionFunctionCallDescriptor instead')
-const ChatCompletionFunctionCall$json = {
-  '1': 'ChatCompletionFunctionCall',
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message_FunctionCall$json = {
+  '1': 'FunctionCall',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'argument', '3': 2, '4': 1, '5': 9, '10': 'arguments'},
   ],
 };
 
-/// Descriptor for `ChatCompletionFunctionCall`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List chatCompletionFunctionCallDescriptor = $convert.base64Decode(
-    'ChpDaGF0Q29tcGxldGlvbkZ1bmN0aW9uQ2FsbBISCgRuYW1lGAEgASgJUgRuYW1lEhsKCGFyZ3'
-    'VtZW50GAIgASgJUglhcmd1bWVudHM=');
-
-@$core.Deprecated('Use azureChatExtensionsMessageContextDescriptor instead')
-const AzureChatExtensionsMessageContext$json = {
-  '1': 'AzureChatExtensionsMessageContext',
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message_Context$json = {
+  '1': 'Context',
   '2': [
-    {'1': 'citations', '3': 1, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation', '10': 'citations'},
+    {'1': 'citations', '3': 1, '4': 3, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation', '10': 'citations'},
     {'1': 'intent', '3': 2, '4': 1, '5': 9, '10': 'intent'},
   ],
-  '3': [AzureChatExtensionsMessageContext_Citation$json],
+  '3': [CompletionResponse_Choice_Message_Context_Citation$json],
 };
 
-@$core.Deprecated('Use azureChatExtensionsMessageContextDescriptor instead')
-const AzureChatExtensionsMessageContext_Citation$json = {
+@$core.Deprecated('Use completionResponseDescriptor instead')
+const CompletionResponse_Choice_Message_Context_Citation$json = {
   '1': 'Citation',
   '2': [
     {'1': 'content', '3': 1, '4': 1, '5': 9, '10': 'content'},
@@ -215,14 +168,39 @@ const AzureChatExtensionsMessageContext_Citation$json = {
   ],
 };
 
-/// Descriptor for `AzureChatExtensionsMessageContext`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List azureChatExtensionsMessageContextDescriptor = $convert.base64Decode(
-    'CiFBenVyZUNoYXRFeHRlbnNpb25zTWVzc2FnZUNvbnRleHQSYgoJY2l0YXRpb25zGAEgAygLMk'
-    'QubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkF6dXJlQ2hhdEV4dGVuc2lvbnNNZXNzYWdlQ29u'
-    'dGV4dC5DaXRhdGlvblIJY2l0YXRpb25zEhYKBmludGVudBgCIAEoCVIGaW50ZW50GoMBCghDaX'
-    'RhdGlvbhIYCgdjb250ZW50GAEgASgJUgdjb250ZW50EhQKBXRpdGxlGAIgASgJUgV0aXRsZRIQ'
-    'CgN1cmwYAyABKAlSA3VybBIaCghmaWxlcGF0aBgEIAEoCVIIZmlsZXBhdGgSGQoIY2h1bmtfaW'
-    'QYBSABKAlSB2NodW5rSWQ=');
+/// Descriptor for `CompletionResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List completionResponseDescriptor = $convert.base64Decode(
+    'ChJDb21wbGV0aW9uUmVzcG9uc2USDgoCaWQYASABKAlSAmlkEhYKBm9iamVjdBgCIAEoCVIGb2'
+    'JqZWN0EhgKB2NyZWF0ZWQYAyABKARSB2NyZWF0ZWQSFAoFbW9kZWwYBCABKAlSBW1vZGVsEkgK'
+    'BXVzYWdlGAUgASgLMjIubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNvbXBsZXRpb25SZXNwb2'
+    '5zZS5Vc2FnZVIFdXNhZ2USLQoSc3lzdGVtX2ZpbmdlcnByaW50GAYgASgJUhFzeXN0ZW1GaW5n'
+    'ZXJwcmludBJbChVwcm9tcHRfZmlsdGVyX3Jlc3VsdHMYByADKAsyJy5tc3AuYXp1cmUub3Blbm'
+    'FpLnYxLlByb21wdEZpbHRlclJlc3VsdFITcHJvbXB0RmlsdGVyUmVzdWx0cxJNCgdjaG9pY2Vz'
+    'GAggAygLMjMubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNvbXBsZXRpb25SZXNwb25zZS5DaG'
+    '9pY2VSB2Nob2ljZXMafAoFVXNhZ2USIwoNcHJvbXB0X3Rva2VucxgBIAEoBFIMcHJvbXB0VG9r'
+    'ZW5zEisKEWNvbXBsZXRpb25fdG9rZW5zGAIgASgEUhBjb21wbGV0aW9uVG9rZW5zEiEKDHRvdG'
+    'FsX3Rva2VucxgDIAEoBFILdG90YWxUb2tlbnMangkKBkNob2ljZRIUCgVpbmRleBgBIAEoDVIF'
+    'aW5kZXgSIwoNZmluaXNoX3JlYXNvbhgCIAEoCVIMZmluaXNoUmVhc29uElUKB21lc3NhZ2UYAy'
+    'ABKAsyOy5tc3AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ29tcGxldGlvblJlc3BvbnNlLkNob2lj'
+    'ZS5NZXNzYWdlUgdtZXNzYWdlEmUKFWNvbnRlbnRfZmlsdGVyX3Jlc3VsdBgEIAEoCzIuLm1zcC'
+    '5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlckNob2ljZVJlc3VsdFIWY29udGVudF9maWx0'
+    'ZXJfcmVzdWx0cxqaBwoHTWVzc2FnZRISCgRyb2xlGAEgASgJUgRyb2xlEhgKB2NvbnRlbnQYAi'
+    'ABKAlSB2NvbnRlbnQSYwoKdG9vbF9jYWxscxgDIAMoCzJELm1zcC5henVyZS5vcGVuYWkuY2hh'
+    'dC52MS5Db21wbGV0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3NhZ2UuVG9vbENhbGxSCXRvb2xDYW'
+    'xscxJtCg1mdW5jdGlvbl9jYWxsGAQgASgLMkgubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNv'
+    'bXBsZXRpb25SZXNwb25zZS5DaG9pY2UuTWVzc2FnZS5GdW5jdGlvbkNhbGxSDGZ1bmN0aW9uQ2'
+    'FsbBJdCgdjb250ZXh0GAUgASgLMkMubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNvbXBsZXRp'
+    'b25SZXNwb25zZS5DaG9pY2UuTWVzc2FnZS5Db250ZXh0Ugdjb250ZXh0GtYBCghUb29sQ2FsbB'
+    'IOCgJpZBgBIAEoCVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZRJpCghmdW5jdGlvbhgDIAEoCzJN'
+    'Lm1zcC5henVyZS5vcGVuYWkuY2hhdC52MS5Db21wbGV0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3'
+    'NhZ2UuVG9vbENhbGwuRnVuY3Rpb25SCGZ1bmN0aW9uGjsKCEZ1bmN0aW9uEhIKBG5hbWUYASAB'
+    'KAlSBG5hbWUSGwoIYXJndW1lbnQYAiABKAlSCWFyZ3VtZW50cxo/CgxGdW5jdGlvbkNhbGwSEg'
+    'oEbmFtZRgBIAEoCVIEbmFtZRIbCghhcmd1bWVudBgCIAEoCVIJYXJndW1lbnRzGpMCCgdDb250'
+    'ZXh0EmoKCWNpdGF0aW9ucxgBIAMoCzJMLm1zcC5henVyZS5vcGVuYWkuY2hhdC52MS5Db21wbG'
+    'V0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3NhZ2UuQ29udGV4dC5DaXRhdGlvblIJY2l0YXRpb25z'
+    'EhYKBmludGVudBgCIAEoCVIGaW50ZW50GoMBCghDaXRhdGlvbhIYCgdjb250ZW50GAEgASgJUg'
+    'djb250ZW50EhQKBXRpdGxlGAIgASgJUgV0aXRsZRIQCgN1cmwYAyABKAlSA3VybBIaCghmaWxl'
+    'cGF0aBgEIAEoCVIIZmlsZXBhdGgSGQoIY2h1bmtfaWQYBSABKAlSB2NodW5rSWQ=');
 
 @$core.Deprecated('Use errorResponseDescriptor instead')
 const ErrorResponse$json = {

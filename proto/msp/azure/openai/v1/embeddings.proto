@@ -13,19 +13,19 @@ message EmbeddingRequest {
 }
 
 message EmbeddingResponse {
-  message Usage {
-    uint32 prompt_tokens = 1;
-    uint32 total_tokens = 2;
-  }
-
   string object = 1;
   string model = 2;
   repeated Data data = 3;
   Usage usage = 4;
-}
 
-message Data {
-  uint32 index = 1;
-  string object = 2;
-  repeated float embedding = 3;
+  message Data {
+    uint32 index = 1;
+    string object = 2;
+    repeated float embedding = 3;
+  }
+
+  message Usage {
+    uint32 prompt_tokens = 1;
+    uint32 total_tokens = 2;
+  }
 }

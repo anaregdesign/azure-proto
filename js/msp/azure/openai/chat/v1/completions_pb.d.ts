@@ -8,9 +8,9 @@ import { Message, proto3 } from "@bufbuild/protobuf";
 import type { ContentFilterChoiceResult, ContentFilterPromptResult, PromptFilterResult } from "../../v1/entity_pb.js";
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionRequest
+ * @generated from message msp.azure.openai.chat.v1.CompletionRequest
  */
-export declare class ChatCompletionRequest extends Message<ChatCompletionRequest> {
+export declare class CompletionRequest extends Message<CompletionRequest> {
   /**
    * @generated from field: float temperature = 1;
    */
@@ -57,9 +57,9 @@ export declare class ChatCompletionRequest extends Message<ChatCompletionRequest
   user: string;
 
   /**
-   * @generated from field: repeated msp.azure.openai.chat.v1.ChatCompletionRequestMessage messages = 10;
+   * @generated from field: repeated msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10;
    */
-  messages: ChatCompletionRequestMessage[];
+  messages: CompletionRequest_Message[];
 
   /**
    *  repeated DataSource data_sources = 11;
@@ -79,25 +79,25 @@ export declare class ChatCompletionRequest extends Message<ChatCompletionRequest
    */
   seed: bigint;
 
-  constructor(data?: PartialMessage<ChatCompletionRequest>);
+  constructor(data?: PartialMessage<CompletionRequest>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionRequest";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionRequest";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionRequest;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionRequest;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionRequest;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionRequest;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionRequest;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionRequest;
 
-  static equals(a: ChatCompletionRequest | PlainMessage<ChatCompletionRequest> | undefined, b: ChatCompletionRequest | PlainMessage<ChatCompletionRequest> | undefined): boolean;
+  static equals(a: CompletionRequest | PlainMessage<CompletionRequest> | undefined, b: CompletionRequest | PlainMessage<CompletionRequest> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionRequestMessage
+ * @generated from message msp.azure.openai.chat.v1.CompletionRequest.Message
  */
-export declare class ChatCompletionRequestMessage extends Message<ChatCompletionRequestMessage> {
+export declare class CompletionRequest_Message extends Message<CompletionRequest_Message> {
   /**
    * @generated from field: string role = 1;
    */
@@ -108,25 +108,25 @@ export declare class ChatCompletionRequestMessage extends Message<ChatCompletion
    */
   content: string;
 
-  constructor(data?: PartialMessage<ChatCompletionRequestMessage>);
+  constructor(data?: PartialMessage<CompletionRequest_Message>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionRequestMessage";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionRequest.Message";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionRequestMessage;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionRequest_Message;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionRequestMessage;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionRequest_Message;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionRequestMessage;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionRequest_Message;
 
-  static equals(a: ChatCompletionRequestMessage | PlainMessage<ChatCompletionRequestMessage> | undefined, b: ChatCompletionRequestMessage | PlainMessage<ChatCompletionRequestMessage> | undefined): boolean;
+  static equals(a: CompletionRequest_Message | PlainMessage<CompletionRequest_Message> | undefined, b: CompletionRequest_Message | PlainMessage<CompletionRequest_Message> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionResponse
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse
  */
-export declare class ChatCompletionResponse extends Message<ChatCompletionResponse> {
+export declare class CompletionResponse extends Message<CompletionResponse> {
   /**
    * @generated from field: string id = 1;
    */
@@ -148,9 +148,9 @@ export declare class ChatCompletionResponse extends Message<ChatCompletionRespon
   model: string;
 
   /**
-   * @generated from field: msp.azure.openai.chat.v1.Usage usage = 5;
+   * @generated from field: msp.azure.openai.chat.v1.CompletionResponse.Usage usage = 5;
    */
-  usage?: Usage;
+  usage?: CompletionResponse_Usage;
 
   /**
    * @generated from field: string system_fingerprint = 6;
@@ -163,29 +163,29 @@ export declare class ChatCompletionResponse extends Message<ChatCompletionRespon
   promptFilterResults: PromptFilterResult[];
 
   /**
-   * @generated from field: repeated msp.azure.openai.chat.v1.Choice choices = 8;
+   * @generated from field: repeated msp.azure.openai.chat.v1.CompletionResponse.Choice choices = 8;
    */
-  choices: Choice[];
+  choices: CompletionResponse_Choice[];
 
-  constructor(data?: PartialMessage<ChatCompletionResponse>);
+  constructor(data?: PartialMessage<CompletionResponse>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionResponse";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionResponse;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionResponse;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionResponse;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse;
 
-  static equals(a: ChatCompletionResponse | PlainMessage<ChatCompletionResponse> | undefined, b: ChatCompletionResponse | PlainMessage<ChatCompletionResponse> | undefined): boolean;
+  static equals(a: CompletionResponse | PlainMessage<CompletionResponse> | undefined, b: CompletionResponse | PlainMessage<CompletionResponse> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.Usage
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Usage
  */
-export declare class Usage extends Message<Usage> {
+export declare class CompletionResponse_Usage extends Message<CompletionResponse_Usage> {
   /**
    * @generated from field: uint64 prompt_tokens = 1;
    */
@@ -201,25 +201,25 @@ export declare class Usage extends Message<Usage> {
    */
   totalTokens: bigint;
 
-  constructor(data?: PartialMessage<Usage>);
+  constructor(data?: PartialMessage<CompletionResponse_Usage>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.Usage";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Usage";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Usage;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Usage;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Usage;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Usage;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Usage;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Usage;
 
-  static equals(a: Usage | PlainMessage<Usage> | undefined, b: Usage | PlainMessage<Usage> | undefined): boolean;
+  static equals(a: CompletionResponse_Usage | PlainMessage<CompletionResponse_Usage> | undefined, b: CompletionResponse_Usage | PlainMessage<CompletionResponse_Usage> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.Choice
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice
  */
-export declare class Choice extends Message<Choice> {
+export declare class CompletionResponse_Choice extends Message<CompletionResponse_Choice> {
   /**
    * @generated from field: uint32 index = 1;
    */
@@ -231,34 +231,34 @@ export declare class Choice extends Message<Choice> {
   finishReason: string;
 
   /**
-   * @generated from field: msp.azure.openai.chat.v1.ChatCompletionResponseMessage message = 3;
+   * @generated from field: msp.azure.openai.chat.v1.CompletionResponse.Choice.Message message = 3;
    */
-  message?: ChatCompletionResponseMessage;
+  message?: CompletionResponse_Choice_Message;
 
   /**
    * @generated from field: msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];
    */
   contentFilterResult?: ContentFilterChoiceResult;
 
-  constructor(data?: PartialMessage<Choice>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.Choice";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Choice;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Choice;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Choice;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice;
 
-  static equals(a: Choice | PlainMessage<Choice> | undefined, b: Choice | PlainMessage<Choice> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice | PlainMessage<CompletionResponse_Choice> | undefined, b: CompletionResponse_Choice | PlainMessage<CompletionResponse_Choice> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionResponseMessage
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message
  */
-export declare class ChatCompletionResponseMessage extends Message<ChatCompletionResponseMessage> {
+export declare class CompletionResponse_Choice_Message extends Message<CompletionResponse_Choice_Message> {
   /**
    * @generated from field: string role = 1;
    */
@@ -270,39 +270,39 @@ export declare class ChatCompletionResponseMessage extends Message<ChatCompletio
   content: string;
 
   /**
-   * @generated from field: repeated msp.azure.openai.chat.v1.ChatCompletionMessageToolCall tool_calls = 3;
+   * @generated from field: repeated msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall tool_calls = 3;
    */
-  toolCalls: ChatCompletionMessageToolCall[];
+  toolCalls: CompletionResponse_Choice_Message_ToolCall[];
 
   /**
-   * @generated from field: msp.azure.openai.chat.v1.ChatCompletionFunctionCall function_call = 4;
+   * @generated from field: msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall function_call = 4;
    */
-  functionCall?: ChatCompletionFunctionCall;
+  functionCall?: CompletionResponse_Choice_Message_FunctionCall;
 
   /**
-   * @generated from field: msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext context = 5;
+   * @generated from field: msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context context = 5;
    */
-  context?: AzureChatExtensionsMessageContext;
+  context?: CompletionResponse_Choice_Message_Context;
 
-  constructor(data?: PartialMessage<ChatCompletionResponseMessage>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionResponseMessage";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionResponseMessage;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionResponseMessage;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionResponseMessage;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message;
 
-  static equals(a: ChatCompletionResponseMessage | PlainMessage<ChatCompletionResponseMessage> | undefined, b: ChatCompletionResponseMessage | PlainMessage<ChatCompletionResponseMessage> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message | PlainMessage<CompletionResponse_Choice_Message> | undefined, b: CompletionResponse_Choice_Message | PlainMessage<CompletionResponse_Choice_Message> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionMessageToolCall
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall
  */
-export declare class ChatCompletionMessageToolCall extends Message<ChatCompletionMessageToolCall> {
+export declare class CompletionResponse_Choice_Message_ToolCall extends Message<CompletionResponse_Choice_Message_ToolCall> {
   /**
    * @generated from field: string id = 1;
    */
@@ -314,29 +314,29 @@ export declare class ChatCompletionMessageToolCall extends Message<ChatCompletio
   type: string;
 
   /**
-   * @generated from field: msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function function = 3;
+   * @generated from field: msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function function = 3;
    */
-  function?: ChatCompletionMessageToolCall_Function;
+  function?: CompletionResponse_Choice_Message_ToolCall_Function;
 
-  constructor(data?: PartialMessage<ChatCompletionMessageToolCall>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message_ToolCall>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionMessageToolCall";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionMessageToolCall;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message_ToolCall;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionMessageToolCall;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_ToolCall;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionMessageToolCall;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_ToolCall;
 
-  static equals(a: ChatCompletionMessageToolCall | PlainMessage<ChatCompletionMessageToolCall> | undefined, b: ChatCompletionMessageToolCall | PlainMessage<ChatCompletionMessageToolCall> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message_ToolCall | PlainMessage<CompletionResponse_Choice_Message_ToolCall> | undefined, b: CompletionResponse_Choice_Message_ToolCall | PlainMessage<CompletionResponse_Choice_Message_ToolCall> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function
  */
-export declare class ChatCompletionMessageToolCall_Function extends Message<ChatCompletionMessageToolCall_Function> {
+export declare class CompletionResponse_Choice_Message_ToolCall_Function extends Message<CompletionResponse_Choice_Message_ToolCall_Function> {
   /**
    * @generated from field: string name = 1;
    */
@@ -347,25 +347,25 @@ export declare class ChatCompletionMessageToolCall_Function extends Message<Chat
    */
   argument: string;
 
-  constructor(data?: PartialMessage<ChatCompletionMessageToolCall_Function>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message_ToolCall_Function>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionMessageToolCall.Function";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.ToolCall.Function";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionMessageToolCall_Function;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message_ToolCall_Function;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionMessageToolCall_Function;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_ToolCall_Function;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionMessageToolCall_Function;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_ToolCall_Function;
 
-  static equals(a: ChatCompletionMessageToolCall_Function | PlainMessage<ChatCompletionMessageToolCall_Function> | undefined, b: ChatCompletionMessageToolCall_Function | PlainMessage<ChatCompletionMessageToolCall_Function> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message_ToolCall_Function | PlainMessage<CompletionResponse_Choice_Message_ToolCall_Function> | undefined, b: CompletionResponse_Choice_Message_ToolCall_Function | PlainMessage<CompletionResponse_Choice_Message_ToolCall_Function> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.ChatCompletionFunctionCall
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall
  */
-export declare class ChatCompletionFunctionCall extends Message<ChatCompletionFunctionCall> {
+export declare class CompletionResponse_Choice_Message_FunctionCall extends Message<CompletionResponse_Choice_Message_FunctionCall> {
   /**
    * @generated from field: string name = 1;
    */
@@ -376,54 +376,54 @@ export declare class ChatCompletionFunctionCall extends Message<ChatCompletionFu
    */
   argument: string;
 
-  constructor(data?: PartialMessage<ChatCompletionFunctionCall>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message_FunctionCall>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.ChatCompletionFunctionCall";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.FunctionCall";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatCompletionFunctionCall;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message_FunctionCall;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatCompletionFunctionCall;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_FunctionCall;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatCompletionFunctionCall;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_FunctionCall;
 
-  static equals(a: ChatCompletionFunctionCall | PlainMessage<ChatCompletionFunctionCall> | undefined, b: ChatCompletionFunctionCall | PlainMessage<ChatCompletionFunctionCall> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message_FunctionCall | PlainMessage<CompletionResponse_Choice_Message_FunctionCall> | undefined, b: CompletionResponse_Choice_Message_FunctionCall | PlainMessage<CompletionResponse_Choice_Message_FunctionCall> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context
  */
-export declare class AzureChatExtensionsMessageContext extends Message<AzureChatExtensionsMessageContext> {
+export declare class CompletionResponse_Choice_Message_Context extends Message<CompletionResponse_Choice_Message_Context> {
   /**
-   * @generated from field: repeated msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation citations = 1;
+   * @generated from field: repeated msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation citations = 1;
    */
-  citations: AzureChatExtensionsMessageContext_Citation[];
+  citations: CompletionResponse_Choice_Message_Context_Citation[];
 
   /**
    * @generated from field: string intent = 2;
    */
   intent: string;
 
-  constructor(data?: PartialMessage<AzureChatExtensionsMessageContext>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message_Context>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AzureChatExtensionsMessageContext;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message_Context;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AzureChatExtensionsMessageContext;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_Context;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AzureChatExtensionsMessageContext;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_Context;
 
-  static equals(a: AzureChatExtensionsMessageContext | PlainMessage<AzureChatExtensionsMessageContext> | undefined, b: AzureChatExtensionsMessageContext | PlainMessage<AzureChatExtensionsMessageContext> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message_Context | PlainMessage<CompletionResponse_Choice_Message_Context> | undefined, b: CompletionResponse_Choice_Message_Context | PlainMessage<CompletionResponse_Choice_Message_Context> | undefined): boolean;
 }
 
 /**
- * @generated from message msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation
+ * @generated from message msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation
  */
-export declare class AzureChatExtensionsMessageContext_Citation extends Message<AzureChatExtensionsMessageContext_Citation> {
+export declare class CompletionResponse_Choice_Message_Context_Citation extends Message<CompletionResponse_Choice_Message_Context_Citation> {
   /**
    * @generated from field: string content = 1;
    */
@@ -449,19 +449,19 @@ export declare class AzureChatExtensionsMessageContext_Citation extends Message<
    */
   chunkId: string;
 
-  constructor(data?: PartialMessage<AzureChatExtensionsMessageContext_Citation>);
+  constructor(data?: PartialMessage<CompletionResponse_Choice_Message_Context_Citation>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "msp.azure.openai.chat.v1.AzureChatExtensionsMessageContext.Citation";
+  static readonly typeName = "msp.azure.openai.chat.v1.CompletionResponse.Choice.Message.Context.Citation";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AzureChatExtensionsMessageContext_Citation;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CompletionResponse_Choice_Message_Context_Citation;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AzureChatExtensionsMessageContext_Citation;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_Context_Citation;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AzureChatExtensionsMessageContext_Citation;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CompletionResponse_Choice_Message_Context_Citation;
 
-  static equals(a: AzureChatExtensionsMessageContext_Citation | PlainMessage<AzureChatExtensionsMessageContext_Citation> | undefined, b: AzureChatExtensionsMessageContext_Citation | PlainMessage<AzureChatExtensionsMessageContext_Citation> | undefined): boolean;
+  static equals(a: CompletionResponse_Choice_Message_Context_Citation | PlainMessage<CompletionResponse_Choice_Message_Context_Citation> | undefined, b: CompletionResponse_Choice_Message_Context_Citation | PlainMessage<CompletionResponse_Choice_Message_Context_Citation> | undefined): boolean;
 }
 
 /**

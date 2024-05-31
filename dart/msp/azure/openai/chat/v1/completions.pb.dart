@@ -16,8 +16,72 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../v1/entity.pb.dart' as $0;
 
-class ChatCompletionRequest extends $pb.GeneratedMessage {
-  factory ChatCompletionRequest({
+class CompletionRequest_Message extends $pb.GeneratedMessage {
+  factory CompletionRequest_Message({
+    $core.String? role,
+    $core.String? content,
+  }) {
+    final $result = create();
+    if (role != null) {
+      $result.role = role;
+    }
+    if (content != null) {
+      $result.content = content;
+    }
+    return $result;
+  }
+  CompletionRequest_Message._() : super();
+  factory CompletionRequest_Message.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionRequest_Message.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionRequest.Message', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'role')
+    ..aOS(2, _omitFieldNames ? '' : 'content')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CompletionRequest_Message clone() => CompletionRequest_Message()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CompletionRequest_Message copyWith(void Function(CompletionRequest_Message) updates) => super.copyWith((message) => updates(message as CompletionRequest_Message)) as CompletionRequest_Message;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CompletionRequest_Message create() => CompletionRequest_Message._();
+  CompletionRequest_Message createEmptyInstance() => create();
+  static $pb.PbList<CompletionRequest_Message> createRepeated() => $pb.PbList<CompletionRequest_Message>();
+  @$core.pragma('dart2js:noInline')
+  static CompletionRequest_Message getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionRequest_Message>(create);
+  static CompletionRequest_Message? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get role => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set role($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRole() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRole() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get content => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set content($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasContent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearContent() => clearField(2);
+}
+
+class CompletionRequest extends $pb.GeneratedMessage {
+  factory CompletionRequest({
     $core.double? temperature,
     $core.double? topP,
     $core.bool? stream,
@@ -27,7 +91,7 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
     $core.double? frequencyPenalty,
     $core.Map<$core.String, $core.double>? logitBias,
     $core.String? user,
-    $core.Iterable<ChatCompletionRequestMessage>? messages,
+    $core.Iterable<CompletionRequest_Message>? messages,
     $core.int? n,
     $fixnum.Int64? seed,
   }) {
@@ -70,11 +134,11 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ChatCompletionRequest._() : super();
-  factory ChatCompletionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionRequest._() : super();
+  factory CompletionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'temperature', $pb.PbFieldType.OF)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'topP', $pb.PbFieldType.OF)
     ..aOB(3, _omitFieldNames ? '' : 'stream')
@@ -82,9 +146,9 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'maxTokens', $pb.PbFieldType.OU3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'presencePenalty', $pb.PbFieldType.OF)
     ..a<$core.double>(7, _omitFieldNames ? '' : 'frequencyPenalty', $pb.PbFieldType.OF)
-    ..m<$core.String, $core.double>(8, _omitFieldNames ? '' : 'logitBias', entryClassName: 'ChatCompletionRequest.LogitBiasEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OF, packageName: const $pb.PackageName('msp.azure.openai.chat.v1'))
+    ..m<$core.String, $core.double>(8, _omitFieldNames ? '' : 'logitBias', entryClassName: 'CompletionRequest.LogitBiasEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OF, packageName: const $pb.PackageName('msp.azure.openai.chat.v1'))
     ..aOS(9, _omitFieldNames ? '' : 'user')
-    ..pc<ChatCompletionRequestMessage>(10, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: ChatCompletionRequestMessage.create)
+    ..pc<CompletionRequest_Message>(10, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: CompletionRequest_Message.create)
     ..a<$core.int>(12, _omitFieldNames ? '' : 'n', $pb.PbFieldType.OU3)
     ..aInt64(13, _omitFieldNames ? '' : 'seed')
     ..hasRequiredFields = false
@@ -94,22 +158,22 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ChatCompletionRequest clone() => ChatCompletionRequest()..mergeFromMessage(this);
+  CompletionRequest clone() => CompletionRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChatCompletionRequest copyWith(void Function(ChatCompletionRequest) updates) => super.copyWith((message) => updates(message as ChatCompletionRequest)) as ChatCompletionRequest;
+  CompletionRequest copyWith(void Function(CompletionRequest) updates) => super.copyWith((message) => updates(message as CompletionRequest)) as CompletionRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionRequest create() => ChatCompletionRequest._();
-  ChatCompletionRequest createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionRequest> createRepeated() => $pb.PbList<ChatCompletionRequest>();
+  static CompletionRequest create() => CompletionRequest._();
+  CompletionRequest createEmptyInstance() => create();
+  static $pb.PbList<CompletionRequest> createRepeated() => $pb.PbList<CompletionRequest>();
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionRequest>(create);
-  static ChatCompletionRequest? _defaultInstance;
+  static CompletionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionRequest>(create);
+  static CompletionRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get temperature => $_getN(0);
@@ -181,7 +245,7 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
   void clearUser() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.List<ChatCompletionRequestMessage> get messages => $_getList(9);
+  $core.List<CompletionRequest_Message> get messages => $_getList(9);
 
   /// repeated DataSource data_sources = 11;
   @$pb.TagNumber(12)
@@ -203,210 +267,8 @@ class ChatCompletionRequest extends $pb.GeneratedMessage {
   void clearSeed() => clearField(13);
 }
 
-class ChatCompletionRequestMessage extends $pb.GeneratedMessage {
-  factory ChatCompletionRequestMessage({
-    $core.String? role,
-    $core.String? content,
-  }) {
-    final $result = create();
-    if (role != null) {
-      $result.role = role;
-    }
-    if (content != null) {
-      $result.content = content;
-    }
-    return $result;
-  }
-  ChatCompletionRequestMessage._() : super();
-  factory ChatCompletionRequestMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionRequestMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionRequestMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'role')
-    ..aOS(2, _omitFieldNames ? '' : 'content')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ChatCompletionRequestMessage clone() => ChatCompletionRequestMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ChatCompletionRequestMessage copyWith(void Function(ChatCompletionRequestMessage) updates) => super.copyWith((message) => updates(message as ChatCompletionRequestMessage)) as ChatCompletionRequestMessage;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionRequestMessage create() => ChatCompletionRequestMessage._();
-  ChatCompletionRequestMessage createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionRequestMessage> createRepeated() => $pb.PbList<ChatCompletionRequestMessage>();
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionRequestMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionRequestMessage>(create);
-  static ChatCompletionRequestMessage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get role => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set role($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasRole() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRole() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get content => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set content($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasContent() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearContent() => clearField(2);
-}
-
-class ChatCompletionResponse extends $pb.GeneratedMessage {
-  factory ChatCompletionResponse({
-    $core.String? id,
-    $core.String? object,
-    $fixnum.Int64? created,
-    $core.String? model,
-    Usage? usage,
-    $core.String? systemFingerprint,
-    $core.Iterable<$0.PromptFilterResult>? promptFilterResults,
-    $core.Iterable<Choice>? choices,
-  }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (object != null) {
-      $result.object = object;
-    }
-    if (created != null) {
-      $result.created = created;
-    }
-    if (model != null) {
-      $result.model = model;
-    }
-    if (usage != null) {
-      $result.usage = usage;
-    }
-    if (systemFingerprint != null) {
-      $result.systemFingerprint = systemFingerprint;
-    }
-    if (promptFilterResults != null) {
-      $result.promptFilterResults.addAll(promptFilterResults);
-    }
-    if (choices != null) {
-      $result.choices.addAll(choices);
-    }
-    return $result;
-  }
-  ChatCompletionResponse._() : super();
-  factory ChatCompletionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOS(2, _omitFieldNames ? '' : 'object')
-    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'created', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(4, _omitFieldNames ? '' : 'model')
-    ..aOM<Usage>(5, _omitFieldNames ? '' : 'usage', subBuilder: Usage.create)
-    ..aOS(6, _omitFieldNames ? '' : 'systemFingerprint')
-    ..pc<$0.PromptFilterResult>(7, _omitFieldNames ? '' : 'promptFilterResults', $pb.PbFieldType.PM, subBuilder: $0.PromptFilterResult.create)
-    ..pc<Choice>(8, _omitFieldNames ? '' : 'choices', $pb.PbFieldType.PM, subBuilder: Choice.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ChatCompletionResponse clone() => ChatCompletionResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ChatCompletionResponse copyWith(void Function(ChatCompletionResponse) updates) => super.copyWith((message) => updates(message as ChatCompletionResponse)) as ChatCompletionResponse;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionResponse create() => ChatCompletionResponse._();
-  ChatCompletionResponse createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionResponse> createRepeated() => $pb.PbList<ChatCompletionResponse>();
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionResponse>(create);
-  static ChatCompletionResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set id($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get object => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set object($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasObject() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearObject() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $fixnum.Int64 get created => $_getI64(2);
-  @$pb.TagNumber(3)
-  set created($fixnum.Int64 v) { $_setInt64(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasCreated() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCreated() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get model => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set model($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasModel() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearModel() => clearField(4);
-
-  @$pb.TagNumber(5)
-  Usage get usage => $_getN(4);
-  @$pb.TagNumber(5)
-  set usage(Usage v) { setField(5, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasUsage() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearUsage() => clearField(5);
-  @$pb.TagNumber(5)
-  Usage ensureUsage() => $_ensure(4);
-
-  @$pb.TagNumber(6)
-  $core.String get systemFingerprint => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set systemFingerprint($core.String v) { $_setString(5, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasSystemFingerprint() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearSystemFingerprint() => clearField(6);
-
-  @$pb.TagNumber(7)
-  $core.List<$0.PromptFilterResult> get promptFilterResults => $_getList(6);
-
-  @$pb.TagNumber(8)
-  $core.List<Choice> get choices => $_getList(7);
-}
-
-class Usage extends $pb.GeneratedMessage {
-  factory Usage({
+class CompletionResponse_Usage extends $pb.GeneratedMessage {
+  factory CompletionResponse_Usage({
     $fixnum.Int64? promptTokens,
     $fixnum.Int64? completionTokens,
     $fixnum.Int64? totalTokens,
@@ -423,11 +285,11 @@ class Usage extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  Usage._() : super();
-  factory Usage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Usage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Usage._() : super();
+  factory CompletionResponse_Usage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Usage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Usage', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Usage', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'promptTokens', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'completionTokens', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'totalTokens', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -438,22 +300,22 @@ class Usage extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Usage clone() => Usage()..mergeFromMessage(this);
+  CompletionResponse_Usage clone() => CompletionResponse_Usage()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Usage copyWith(void Function(Usage) updates) => super.copyWith((message) => updates(message as Usage)) as Usage;
+  CompletionResponse_Usage copyWith(void Function(CompletionResponse_Usage) updates) => super.copyWith((message) => updates(message as CompletionResponse_Usage)) as CompletionResponse_Usage;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static Usage create() => Usage._();
-  Usage createEmptyInstance() => create();
-  static $pb.PbList<Usage> createRepeated() => $pb.PbList<Usage>();
+  static CompletionResponse_Usage create() => CompletionResponse_Usage._();
+  CompletionResponse_Usage createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Usage> createRepeated() => $pb.PbList<CompletionResponse_Usage>();
   @$core.pragma('dart2js:noInline')
-  static Usage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Usage>(create);
-  static Usage? _defaultInstance;
+  static CompletionResponse_Usage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Usage>(create);
+  static CompletionResponse_Usage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get promptTokens => $_getI64(0);
@@ -483,208 +345,8 @@ class Usage extends $pb.GeneratedMessage {
   void clearTotalTokens() => clearField(3);
 }
 
-class Choice extends $pb.GeneratedMessage {
-  factory Choice({
-    $core.int? index,
-    $core.String? finishReason,
-    ChatCompletionResponseMessage? message,
-    $0.ContentFilterChoiceResult? contentFilterResult,
-  }) {
-    final $result = create();
-    if (index != null) {
-      $result.index = index;
-    }
-    if (finishReason != null) {
-      $result.finishReason = finishReason;
-    }
-    if (message != null) {
-      $result.message = message;
-    }
-    if (contentFilterResult != null) {
-      $result.contentFilterResult = contentFilterResult;
-    }
-    return $result;
-  }
-  Choice._() : super();
-  factory Choice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Choice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Choice', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
-    ..aOS(2, _omitFieldNames ? '' : 'finishReason')
-    ..aOM<ChatCompletionResponseMessage>(3, _omitFieldNames ? '' : 'message', subBuilder: ChatCompletionResponseMessage.create)
-    ..aOM<$0.ContentFilterChoiceResult>(4, _omitFieldNames ? '' : 'content_filter_results', protoName: 'content_filter_result', subBuilder: $0.ContentFilterChoiceResult.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Choice clone() => Choice()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Choice copyWith(void Function(Choice) updates) => super.copyWith((message) => updates(message as Choice)) as Choice;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static Choice create() => Choice._();
-  Choice createEmptyInstance() => create();
-  static $pb.PbList<Choice> createRepeated() => $pb.PbList<Choice>();
-  @$core.pragma('dart2js:noInline')
-  static Choice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Choice>(create);
-  static Choice? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get index => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set index($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasIndex() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearIndex() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get finishReason => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set finishReason($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasFinishReason() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFinishReason() => clearField(2);
-
-  @$pb.TagNumber(3)
-  ChatCompletionResponseMessage get message => $_getN(2);
-  @$pb.TagNumber(3)
-  set message(ChatCompletionResponseMessage v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasMessage() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearMessage() => clearField(3);
-  @$pb.TagNumber(3)
-  ChatCompletionResponseMessage ensureMessage() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $0.ContentFilterChoiceResult get contentFilterResult => $_getN(3);
-  @$pb.TagNumber(4)
-  set contentFilterResult($0.ContentFilterChoiceResult v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasContentFilterResult() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearContentFilterResult() => clearField(4);
-  @$pb.TagNumber(4)
-  $0.ContentFilterChoiceResult ensureContentFilterResult() => $_ensure(3);
-}
-
-class ChatCompletionResponseMessage extends $pb.GeneratedMessage {
-  factory ChatCompletionResponseMessage({
-    $core.String? role,
-    $core.String? content,
-    $core.Iterable<ChatCompletionMessageToolCall>? toolCalls,
-    ChatCompletionFunctionCall? functionCall,
-    AzureChatExtensionsMessageContext? context,
-  }) {
-    final $result = create();
-    if (role != null) {
-      $result.role = role;
-    }
-    if (content != null) {
-      $result.content = content;
-    }
-    if (toolCalls != null) {
-      $result.toolCalls.addAll(toolCalls);
-    }
-    if (functionCall != null) {
-      $result.functionCall = functionCall;
-    }
-    if (context != null) {
-      $result.context = context;
-    }
-    return $result;
-  }
-  ChatCompletionResponseMessage._() : super();
-  factory ChatCompletionResponseMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionResponseMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionResponseMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'role')
-    ..aOS(2, _omitFieldNames ? '' : 'content')
-    ..pc<ChatCompletionMessageToolCall>(3, _omitFieldNames ? '' : 'toolCalls', $pb.PbFieldType.PM, subBuilder: ChatCompletionMessageToolCall.create)
-    ..aOM<ChatCompletionFunctionCall>(4, _omitFieldNames ? '' : 'functionCall', subBuilder: ChatCompletionFunctionCall.create)
-    ..aOM<AzureChatExtensionsMessageContext>(5, _omitFieldNames ? '' : 'context', subBuilder: AzureChatExtensionsMessageContext.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ChatCompletionResponseMessage clone() => ChatCompletionResponseMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ChatCompletionResponseMessage copyWith(void Function(ChatCompletionResponseMessage) updates) => super.copyWith((message) => updates(message as ChatCompletionResponseMessage)) as ChatCompletionResponseMessage;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionResponseMessage create() => ChatCompletionResponseMessage._();
-  ChatCompletionResponseMessage createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionResponseMessage> createRepeated() => $pb.PbList<ChatCompletionResponseMessage>();
-  @$core.pragma('dart2js:noInline')
-  static ChatCompletionResponseMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionResponseMessage>(create);
-  static ChatCompletionResponseMessage? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get role => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set role($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasRole() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRole() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get content => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set content($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasContent() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearContent() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.List<ChatCompletionMessageToolCall> get toolCalls => $_getList(2);
-
-  @$pb.TagNumber(4)
-  ChatCompletionFunctionCall get functionCall => $_getN(3);
-  @$pb.TagNumber(4)
-  set functionCall(ChatCompletionFunctionCall v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasFunctionCall() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearFunctionCall() => clearField(4);
-  @$pb.TagNumber(4)
-  ChatCompletionFunctionCall ensureFunctionCall() => $_ensure(3);
-
-  @$pb.TagNumber(5)
-  AzureChatExtensionsMessageContext get context => $_getN(4);
-  @$pb.TagNumber(5)
-  set context(AzureChatExtensionsMessageContext v) { setField(5, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasContext() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearContext() => clearField(5);
-  @$pb.TagNumber(5)
-  AzureChatExtensionsMessageContext ensureContext() => $_ensure(4);
-}
-
-class ChatCompletionMessageToolCall_Function extends $pb.GeneratedMessage {
-  factory ChatCompletionMessageToolCall_Function({
+class CompletionResponse_Choice_Message_ToolCall_Function extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message_ToolCall_Function({
     $core.String? name,
     $core.String? argument,
   }) {
@@ -697,11 +359,11 @@ class ChatCompletionMessageToolCall_Function extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ChatCompletionMessageToolCall_Function._() : super();
-  factory ChatCompletionMessageToolCall_Function.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionMessageToolCall_Function.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Choice_Message_ToolCall_Function._() : super();
+  factory CompletionResponse_Choice_Message_ToolCall_Function.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message_ToolCall_Function.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionMessageToolCall.Function', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message.ToolCall.Function', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'arguments', protoName: 'argument')
     ..hasRequiredFields = false
@@ -711,22 +373,22 @@ class ChatCompletionMessageToolCall_Function extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ChatCompletionMessageToolCall_Function clone() => ChatCompletionMessageToolCall_Function()..mergeFromMessage(this);
+  CompletionResponse_Choice_Message_ToolCall_Function clone() => CompletionResponse_Choice_Message_ToolCall_Function()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChatCompletionMessageToolCall_Function copyWith(void Function(ChatCompletionMessageToolCall_Function) updates) => super.copyWith((message) => updates(message as ChatCompletionMessageToolCall_Function)) as ChatCompletionMessageToolCall_Function;
+  CompletionResponse_Choice_Message_ToolCall_Function copyWith(void Function(CompletionResponse_Choice_Message_ToolCall_Function) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message_ToolCall_Function)) as CompletionResponse_Choice_Message_ToolCall_Function;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionMessageToolCall_Function create() => ChatCompletionMessageToolCall_Function._();
-  ChatCompletionMessageToolCall_Function createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionMessageToolCall_Function> createRepeated() => $pb.PbList<ChatCompletionMessageToolCall_Function>();
+  static CompletionResponse_Choice_Message_ToolCall_Function create() => CompletionResponse_Choice_Message_ToolCall_Function._();
+  CompletionResponse_Choice_Message_ToolCall_Function createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message_ToolCall_Function> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message_ToolCall_Function>();
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionMessageToolCall_Function getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionMessageToolCall_Function>(create);
-  static ChatCompletionMessageToolCall_Function? _defaultInstance;
+  static CompletionResponse_Choice_Message_ToolCall_Function getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message_ToolCall_Function>(create);
+  static CompletionResponse_Choice_Message_ToolCall_Function? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -747,11 +409,11 @@ class ChatCompletionMessageToolCall_Function extends $pb.GeneratedMessage {
   void clearArgument() => clearField(2);
 }
 
-class ChatCompletionMessageToolCall extends $pb.GeneratedMessage {
-  factory ChatCompletionMessageToolCall({
+class CompletionResponse_Choice_Message_ToolCall extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message_ToolCall({
     $core.String? id,
     $core.String? type,
-    ChatCompletionMessageToolCall_Function? function,
+    CompletionResponse_Choice_Message_ToolCall_Function? function,
   }) {
     final $result = create();
     if (id != null) {
@@ -765,14 +427,14 @@ class ChatCompletionMessageToolCall extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ChatCompletionMessageToolCall._() : super();
-  factory ChatCompletionMessageToolCall.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionMessageToolCall.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Choice_Message_ToolCall._() : super();
+  factory CompletionResponse_Choice_Message_ToolCall.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message_ToolCall.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionMessageToolCall', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message.ToolCall', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'type')
-    ..aOM<ChatCompletionMessageToolCall_Function>(3, _omitFieldNames ? '' : 'function', subBuilder: ChatCompletionMessageToolCall_Function.create)
+    ..aOM<CompletionResponse_Choice_Message_ToolCall_Function>(3, _omitFieldNames ? '' : 'function', subBuilder: CompletionResponse_Choice_Message_ToolCall_Function.create)
     ..hasRequiredFields = false
   ;
 
@@ -780,22 +442,22 @@ class ChatCompletionMessageToolCall extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ChatCompletionMessageToolCall clone() => ChatCompletionMessageToolCall()..mergeFromMessage(this);
+  CompletionResponse_Choice_Message_ToolCall clone() => CompletionResponse_Choice_Message_ToolCall()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChatCompletionMessageToolCall copyWith(void Function(ChatCompletionMessageToolCall) updates) => super.copyWith((message) => updates(message as ChatCompletionMessageToolCall)) as ChatCompletionMessageToolCall;
+  CompletionResponse_Choice_Message_ToolCall copyWith(void Function(CompletionResponse_Choice_Message_ToolCall) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message_ToolCall)) as CompletionResponse_Choice_Message_ToolCall;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionMessageToolCall create() => ChatCompletionMessageToolCall._();
-  ChatCompletionMessageToolCall createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionMessageToolCall> createRepeated() => $pb.PbList<ChatCompletionMessageToolCall>();
+  static CompletionResponse_Choice_Message_ToolCall create() => CompletionResponse_Choice_Message_ToolCall._();
+  CompletionResponse_Choice_Message_ToolCall createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message_ToolCall> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message_ToolCall>();
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionMessageToolCall getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionMessageToolCall>(create);
-  static ChatCompletionMessageToolCall? _defaultInstance;
+  static CompletionResponse_Choice_Message_ToolCall getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message_ToolCall>(create);
+  static CompletionResponse_Choice_Message_ToolCall? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -816,19 +478,19 @@ class ChatCompletionMessageToolCall extends $pb.GeneratedMessage {
   void clearType() => clearField(2);
 
   @$pb.TagNumber(3)
-  ChatCompletionMessageToolCall_Function get function => $_getN(2);
+  CompletionResponse_Choice_Message_ToolCall_Function get function => $_getN(2);
   @$pb.TagNumber(3)
-  set function(ChatCompletionMessageToolCall_Function v) { setField(3, v); }
+  set function(CompletionResponse_Choice_Message_ToolCall_Function v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasFunction() => $_has(2);
   @$pb.TagNumber(3)
   void clearFunction() => clearField(3);
   @$pb.TagNumber(3)
-  ChatCompletionMessageToolCall_Function ensureFunction() => $_ensure(2);
+  CompletionResponse_Choice_Message_ToolCall_Function ensureFunction() => $_ensure(2);
 }
 
-class ChatCompletionFunctionCall extends $pb.GeneratedMessage {
-  factory ChatCompletionFunctionCall({
+class CompletionResponse_Choice_Message_FunctionCall extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message_FunctionCall({
     $core.String? name,
     $core.String? argument,
   }) {
@@ -841,11 +503,11 @@ class ChatCompletionFunctionCall extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ChatCompletionFunctionCall._() : super();
-  factory ChatCompletionFunctionCall.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChatCompletionFunctionCall.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Choice_Message_FunctionCall._() : super();
+  factory CompletionResponse_Choice_Message_FunctionCall.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message_FunctionCall.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChatCompletionFunctionCall', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message.FunctionCall', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'arguments', protoName: 'argument')
     ..hasRequiredFields = false
@@ -855,22 +517,22 @@ class ChatCompletionFunctionCall extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ChatCompletionFunctionCall clone() => ChatCompletionFunctionCall()..mergeFromMessage(this);
+  CompletionResponse_Choice_Message_FunctionCall clone() => CompletionResponse_Choice_Message_FunctionCall()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChatCompletionFunctionCall copyWith(void Function(ChatCompletionFunctionCall) updates) => super.copyWith((message) => updates(message as ChatCompletionFunctionCall)) as ChatCompletionFunctionCall;
+  CompletionResponse_Choice_Message_FunctionCall copyWith(void Function(CompletionResponse_Choice_Message_FunctionCall) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message_FunctionCall)) as CompletionResponse_Choice_Message_FunctionCall;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionFunctionCall create() => ChatCompletionFunctionCall._();
-  ChatCompletionFunctionCall createEmptyInstance() => create();
-  static $pb.PbList<ChatCompletionFunctionCall> createRepeated() => $pb.PbList<ChatCompletionFunctionCall>();
+  static CompletionResponse_Choice_Message_FunctionCall create() => CompletionResponse_Choice_Message_FunctionCall._();
+  CompletionResponse_Choice_Message_FunctionCall createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message_FunctionCall> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message_FunctionCall>();
   @$core.pragma('dart2js:noInline')
-  static ChatCompletionFunctionCall getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChatCompletionFunctionCall>(create);
-  static ChatCompletionFunctionCall? _defaultInstance;
+  static CompletionResponse_Choice_Message_FunctionCall getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message_FunctionCall>(create);
+  static CompletionResponse_Choice_Message_FunctionCall? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -891,8 +553,8 @@ class ChatCompletionFunctionCall extends $pb.GeneratedMessage {
   void clearArgument() => clearField(2);
 }
 
-class AzureChatExtensionsMessageContext_Citation extends $pb.GeneratedMessage {
-  factory AzureChatExtensionsMessageContext_Citation({
+class CompletionResponse_Choice_Message_Context_Citation extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message_Context_Citation({
     $core.String? content,
     $core.String? title,
     $core.String? url,
@@ -917,11 +579,11 @@ class AzureChatExtensionsMessageContext_Citation extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AzureChatExtensionsMessageContext_Citation._() : super();
-  factory AzureChatExtensionsMessageContext_Citation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AzureChatExtensionsMessageContext_Citation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Choice_Message_Context_Citation._() : super();
+  factory CompletionResponse_Choice_Message_Context_Citation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message_Context_Citation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AzureChatExtensionsMessageContext.Citation', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message.Context.Citation', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'content')
     ..aOS(2, _omitFieldNames ? '' : 'title')
     ..aOS(3, _omitFieldNames ? '' : 'url')
@@ -934,22 +596,22 @@ class AzureChatExtensionsMessageContext_Citation extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AzureChatExtensionsMessageContext_Citation clone() => AzureChatExtensionsMessageContext_Citation()..mergeFromMessage(this);
+  CompletionResponse_Choice_Message_Context_Citation clone() => CompletionResponse_Choice_Message_Context_Citation()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AzureChatExtensionsMessageContext_Citation copyWith(void Function(AzureChatExtensionsMessageContext_Citation) updates) => super.copyWith((message) => updates(message as AzureChatExtensionsMessageContext_Citation)) as AzureChatExtensionsMessageContext_Citation;
+  CompletionResponse_Choice_Message_Context_Citation copyWith(void Function(CompletionResponse_Choice_Message_Context_Citation) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message_Context_Citation)) as CompletionResponse_Choice_Message_Context_Citation;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AzureChatExtensionsMessageContext_Citation create() => AzureChatExtensionsMessageContext_Citation._();
-  AzureChatExtensionsMessageContext_Citation createEmptyInstance() => create();
-  static $pb.PbList<AzureChatExtensionsMessageContext_Citation> createRepeated() => $pb.PbList<AzureChatExtensionsMessageContext_Citation>();
+  static CompletionResponse_Choice_Message_Context_Citation create() => CompletionResponse_Choice_Message_Context_Citation._();
+  CompletionResponse_Choice_Message_Context_Citation createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message_Context_Citation> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message_Context_Citation>();
   @$core.pragma('dart2js:noInline')
-  static AzureChatExtensionsMessageContext_Citation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AzureChatExtensionsMessageContext_Citation>(create);
-  static AzureChatExtensionsMessageContext_Citation? _defaultInstance;
+  static CompletionResponse_Choice_Message_Context_Citation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message_Context_Citation>(create);
+  static CompletionResponse_Choice_Message_Context_Citation? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get content => $_getSZ(0);
@@ -997,9 +659,9 @@ class AzureChatExtensionsMessageContext_Citation extends $pb.GeneratedMessage {
   void clearChunkId() => clearField(5);
 }
 
-class AzureChatExtensionsMessageContext extends $pb.GeneratedMessage {
-  factory AzureChatExtensionsMessageContext({
-    $core.Iterable<AzureChatExtensionsMessageContext_Citation>? citations,
+class CompletionResponse_Choice_Message_Context extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message_Context({
+    $core.Iterable<CompletionResponse_Choice_Message_Context_Citation>? citations,
     $core.String? intent,
   }) {
     final $result = create();
@@ -1011,12 +673,12 @@ class AzureChatExtensionsMessageContext extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AzureChatExtensionsMessageContext._() : super();
-  factory AzureChatExtensionsMessageContext.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AzureChatExtensionsMessageContext.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  CompletionResponse_Choice_Message_Context._() : super();
+  factory CompletionResponse_Choice_Message_Context.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message_Context.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AzureChatExtensionsMessageContext', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
-    ..pc<AzureChatExtensionsMessageContext_Citation>(1, _omitFieldNames ? '' : 'citations', $pb.PbFieldType.PM, subBuilder: AzureChatExtensionsMessageContext_Citation.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message.Context', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+    ..pc<CompletionResponse_Choice_Message_Context_Citation>(1, _omitFieldNames ? '' : 'citations', $pb.PbFieldType.PM, subBuilder: CompletionResponse_Choice_Message_Context_Citation.create)
     ..aOS(2, _omitFieldNames ? '' : 'intent')
     ..hasRequiredFields = false
   ;
@@ -1025,25 +687,25 @@ class AzureChatExtensionsMessageContext extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  AzureChatExtensionsMessageContext clone() => AzureChatExtensionsMessageContext()..mergeFromMessage(this);
+  CompletionResponse_Choice_Message_Context clone() => CompletionResponse_Choice_Message_Context()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  AzureChatExtensionsMessageContext copyWith(void Function(AzureChatExtensionsMessageContext) updates) => super.copyWith((message) => updates(message as AzureChatExtensionsMessageContext)) as AzureChatExtensionsMessageContext;
+  CompletionResponse_Choice_Message_Context copyWith(void Function(CompletionResponse_Choice_Message_Context) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message_Context)) as CompletionResponse_Choice_Message_Context;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AzureChatExtensionsMessageContext create() => AzureChatExtensionsMessageContext._();
-  AzureChatExtensionsMessageContext createEmptyInstance() => create();
-  static $pb.PbList<AzureChatExtensionsMessageContext> createRepeated() => $pb.PbList<AzureChatExtensionsMessageContext>();
+  static CompletionResponse_Choice_Message_Context create() => CompletionResponse_Choice_Message_Context._();
+  CompletionResponse_Choice_Message_Context createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message_Context> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message_Context>();
   @$core.pragma('dart2js:noInline')
-  static AzureChatExtensionsMessageContext getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AzureChatExtensionsMessageContext>(create);
-  static AzureChatExtensionsMessageContext? _defaultInstance;
+  static CompletionResponse_Choice_Message_Context getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message_Context>(create);
+  static CompletionResponse_Choice_Message_Context? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<AzureChatExtensionsMessageContext_Citation> get citations => $_getList(0);
+  $core.List<CompletionResponse_Choice_Message_Context_Citation> get citations => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.String get intent => $_getSZ(1);
@@ -1053,6 +715,344 @@ class AzureChatExtensionsMessageContext extends $pb.GeneratedMessage {
   $core.bool hasIntent() => $_has(1);
   @$pb.TagNumber(2)
   void clearIntent() => clearField(2);
+}
+
+class CompletionResponse_Choice_Message extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice_Message({
+    $core.String? role,
+    $core.String? content,
+    $core.Iterable<CompletionResponse_Choice_Message_ToolCall>? toolCalls,
+    CompletionResponse_Choice_Message_FunctionCall? functionCall,
+    CompletionResponse_Choice_Message_Context? context,
+  }) {
+    final $result = create();
+    if (role != null) {
+      $result.role = role;
+    }
+    if (content != null) {
+      $result.content = content;
+    }
+    if (toolCalls != null) {
+      $result.toolCalls.addAll(toolCalls);
+    }
+    if (functionCall != null) {
+      $result.functionCall = functionCall;
+    }
+    if (context != null) {
+      $result.context = context;
+    }
+    return $result;
+  }
+  CompletionResponse_Choice_Message._() : super();
+  factory CompletionResponse_Choice_Message.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice_Message.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice.Message', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'role')
+    ..aOS(2, _omitFieldNames ? '' : 'content')
+    ..pc<CompletionResponse_Choice_Message_ToolCall>(3, _omitFieldNames ? '' : 'toolCalls', $pb.PbFieldType.PM, subBuilder: CompletionResponse_Choice_Message_ToolCall.create)
+    ..aOM<CompletionResponse_Choice_Message_FunctionCall>(4, _omitFieldNames ? '' : 'functionCall', subBuilder: CompletionResponse_Choice_Message_FunctionCall.create)
+    ..aOM<CompletionResponse_Choice_Message_Context>(5, _omitFieldNames ? '' : 'context', subBuilder: CompletionResponse_Choice_Message_Context.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CompletionResponse_Choice_Message clone() => CompletionResponse_Choice_Message()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CompletionResponse_Choice_Message copyWith(void Function(CompletionResponse_Choice_Message) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice_Message)) as CompletionResponse_Choice_Message;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse_Choice_Message create() => CompletionResponse_Choice_Message._();
+  CompletionResponse_Choice_Message createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice_Message> createRepeated() => $pb.PbList<CompletionResponse_Choice_Message>();
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse_Choice_Message getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice_Message>(create);
+  static CompletionResponse_Choice_Message? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get role => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set role($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRole() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRole() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get content => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set content($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasContent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearContent() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<CompletionResponse_Choice_Message_ToolCall> get toolCalls => $_getList(2);
+
+  @$pb.TagNumber(4)
+  CompletionResponse_Choice_Message_FunctionCall get functionCall => $_getN(3);
+  @$pb.TagNumber(4)
+  set functionCall(CompletionResponse_Choice_Message_FunctionCall v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasFunctionCall() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFunctionCall() => clearField(4);
+  @$pb.TagNumber(4)
+  CompletionResponse_Choice_Message_FunctionCall ensureFunctionCall() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  CompletionResponse_Choice_Message_Context get context => $_getN(4);
+  @$pb.TagNumber(5)
+  set context(CompletionResponse_Choice_Message_Context v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasContext() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearContext() => clearField(5);
+  @$pb.TagNumber(5)
+  CompletionResponse_Choice_Message_Context ensureContext() => $_ensure(4);
+}
+
+class CompletionResponse_Choice extends $pb.GeneratedMessage {
+  factory CompletionResponse_Choice({
+    $core.int? index,
+    $core.String? finishReason,
+    CompletionResponse_Choice_Message? message,
+    $0.ContentFilterChoiceResult? contentFilterResult,
+  }) {
+    final $result = create();
+    if (index != null) {
+      $result.index = index;
+    }
+    if (finishReason != null) {
+      $result.finishReason = finishReason;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    if (contentFilterResult != null) {
+      $result.contentFilterResult = contentFilterResult;
+    }
+    return $result;
+  }
+  CompletionResponse_Choice._() : super();
+  factory CompletionResponse_Choice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse_Choice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse.Choice', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
+    ..aOS(2, _omitFieldNames ? '' : 'finishReason')
+    ..aOM<CompletionResponse_Choice_Message>(3, _omitFieldNames ? '' : 'message', subBuilder: CompletionResponse_Choice_Message.create)
+    ..aOM<$0.ContentFilterChoiceResult>(4, _omitFieldNames ? '' : 'content_filter_results', protoName: 'content_filter_result', subBuilder: $0.ContentFilterChoiceResult.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CompletionResponse_Choice clone() => CompletionResponse_Choice()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CompletionResponse_Choice copyWith(void Function(CompletionResponse_Choice) updates) => super.copyWith((message) => updates(message as CompletionResponse_Choice)) as CompletionResponse_Choice;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse_Choice create() => CompletionResponse_Choice._();
+  CompletionResponse_Choice createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse_Choice> createRepeated() => $pb.PbList<CompletionResponse_Choice>();
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse_Choice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse_Choice>(create);
+  static CompletionResponse_Choice? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get index => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set index($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIndex() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIndex() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get finishReason => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set finishReason($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFinishReason() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFinishReason() => clearField(2);
+
+  @$pb.TagNumber(3)
+  CompletionResponse_Choice_Message get message => $_getN(2);
+  @$pb.TagNumber(3)
+  set message(CompletionResponse_Choice_Message v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessage() => clearField(3);
+  @$pb.TagNumber(3)
+  CompletionResponse_Choice_Message ensureMessage() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $0.ContentFilterChoiceResult get contentFilterResult => $_getN(3);
+  @$pb.TagNumber(4)
+  set contentFilterResult($0.ContentFilterChoiceResult v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasContentFilterResult() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearContentFilterResult() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.ContentFilterChoiceResult ensureContentFilterResult() => $_ensure(3);
+}
+
+class CompletionResponse extends $pb.GeneratedMessage {
+  factory CompletionResponse({
+    $core.String? id,
+    $core.String? object,
+    $fixnum.Int64? created,
+    $core.String? model,
+    CompletionResponse_Usage? usage,
+    $core.String? systemFingerprint,
+    $core.Iterable<$0.PromptFilterResult>? promptFilterResults,
+    $core.Iterable<CompletionResponse_Choice>? choices,
+  }) {
+    final $result = create();
+    if (id != null) {
+      $result.id = id;
+    }
+    if (object != null) {
+      $result.object = object;
+    }
+    if (created != null) {
+      $result.created = created;
+    }
+    if (model != null) {
+      $result.model = model;
+    }
+    if (usage != null) {
+      $result.usage = usage;
+    }
+    if (systemFingerprint != null) {
+      $result.systemFingerprint = systemFingerprint;
+    }
+    if (promptFilterResults != null) {
+      $result.promptFilterResults.addAll(promptFilterResults);
+    }
+    if (choices != null) {
+      $result.choices.addAll(choices);
+    }
+    return $result;
+  }
+  CompletionResponse._() : super();
+  factory CompletionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CompletionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CompletionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.chat.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'object')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'created', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, _omitFieldNames ? '' : 'model')
+    ..aOM<CompletionResponse_Usage>(5, _omitFieldNames ? '' : 'usage', subBuilder: CompletionResponse_Usage.create)
+    ..aOS(6, _omitFieldNames ? '' : 'systemFingerprint')
+    ..pc<$0.PromptFilterResult>(7, _omitFieldNames ? '' : 'promptFilterResults', $pb.PbFieldType.PM, subBuilder: $0.PromptFilterResult.create)
+    ..pc<CompletionResponse_Choice>(8, _omitFieldNames ? '' : 'choices', $pb.PbFieldType.PM, subBuilder: CompletionResponse_Choice.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CompletionResponse clone() => CompletionResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CompletionResponse copyWith(void Function(CompletionResponse) updates) => super.copyWith((message) => updates(message as CompletionResponse)) as CompletionResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse create() => CompletionResponse._();
+  CompletionResponse createEmptyInstance() => create();
+  static $pb.PbList<CompletionResponse> createRepeated() => $pb.PbList<CompletionResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CompletionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CompletionResponse>(create);
+  static CompletionResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get object => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set object($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasObject() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearObject() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get created => $_getI64(2);
+  @$pb.TagNumber(3)
+  set created($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCreated() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCreated() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get model => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set model($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasModel() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearModel() => clearField(4);
+
+  @$pb.TagNumber(5)
+  CompletionResponse_Usage get usage => $_getN(4);
+  @$pb.TagNumber(5)
+  set usage(CompletionResponse_Usage v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUsage() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUsage() => clearField(5);
+  @$pb.TagNumber(5)
+  CompletionResponse_Usage ensureUsage() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $core.String get systemFingerprint => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set systemFingerprint($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasSystemFingerprint() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSystemFingerprint() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.List<$0.PromptFilterResult> get promptFilterResults => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $core.List<CompletionResponse_Choice> get choices => $_getList(7);
 }
 
 class ErrorResponse_InnerError extends $pb.GeneratedMessage {

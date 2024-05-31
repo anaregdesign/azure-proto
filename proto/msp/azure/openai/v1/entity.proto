@@ -48,12 +48,12 @@ message ContentFilterDetectedResult {
 }
 
 message ContentFilterDetectedWithCitationResult {
+  bool filtered = 1;
+  bool detected = 2;
+  Citation citation = 3;
+
   message Citation {
     string url = 1;
     string license = 2;
   }
-
-  bool filtered = 1;
-  bool detected = 2;
-  Citation citation = 3;
 }

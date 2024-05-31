@@ -31,28 +31,28 @@ message CompletionResponse {
   string object = 2;
   uint64 created = 3;
   string model = 4;
-  repeated PromptFilterResult prompt_filter_results = 5;
+  repeated msp.azure.openai.v1.PromptFilterResult prompt_filter_results = 5;
   repeated Choice choices = 6;
   Usage usage = 7;
-}
 
-message Choice {
-  message LogProbs {
-    repeated string tokens = 1;
-    repeated float token_logprobs = 2;
-    repeated float top_logprobs = 3;
-    repeated uint32 text_offsets = 4 [json_name = "text_offset"];
+  message Usage {
+    uint32 completion_tokens = 1;
+    uint32 prompt_tokens = 2;
+    uint32 total_tokens = 3;
   }
 
-  string text = 1;
-  uint32 index = 2;
-  LogProbs logprobs = 3;
-  string finish_reason = 4;
-  ContentFilterChoiceResult content_filter_result = 5 [json_name = "content_filter_results"];
-}
+  message Choice {
+    string text = 1;
+    uint32 index = 2;
+    LogProbs logprobs = 3;
+    string finish_reason = 4;
+    msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 5 [json_name = "content_filter_results"];
 
-message Usage {
-  uint32 completion_tokens = 1;
-  uint32 prompt_tokens = 2;
-  uint32 total_tokens = 3;
+    message LogProbs {
+      repeated string tokens = 1;
+      repeated float token_logprobs = 2;
+      repeated float top_logprobs = 3;
+      repeated uint32 text_offsets = 4 [json_name = "text_offset"];
+    }
+  }
 }
