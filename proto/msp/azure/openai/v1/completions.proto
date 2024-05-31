@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package msp.azure.openai.v1;
+//v1: 2024-02-01
+
+import "msp/azure/openai/v1/entity.proto";
+
+option go_package = "msp/azure/openai/v1";
+
+message CompletionRequest {
+  repeated string prompts = 1 [json_name = "prompt"];
+  uint32 max_tokens = 2;
+  float temperature = 3;
+  float top_p = 4;
+  map<string, float> logit_bias = 5;
+  string user = 6;
+  uint32 n = 7;
+  bool stream = 8;
+  uint32 logprobs = 9;
+  string suffix = 10;
+  bool echo = 11;
+  repeated string stops = 12 [json_name = "stop"];
+  string completion_config = 13;
+  float presence_penalty = 14;
+  float frequency_penalty = 15;
+  uint32 best_of = 16;
+}
+
+message CompletionResponse {
+  string id = 1;
+  string object = 2;
+  uint64 created = 3;
+  string model = 4;
+  repeated msp.azure.openai.v1.PromptFilterResult prompt_filter_results = 5;
+  repeated Choice choices = 6;
+  Usage usage = 7;
+
+  message Usage {
+    uint32 completion_tokens = 1;
+    uint32 prompt_tokens = 2;
+    uint32 total_tokens = 3;
+  }
+
+  message Choice {
+    string text = 1;
+    uint32 index = 2;
+    LogProbs logprobs = 3;
+    string finish_reason = 4;
+    msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 5 [json_name = "content_filter_results"];
+
+    message LogProbs {
+      repeated string tokens = 1;
+      repeated float token_logprobs = 2;
+      repeated float top_logprobs = 3;
+      repeated uint32 text_offsets = 4 [json_name = "text_offset"];
+    }
+  }
+}

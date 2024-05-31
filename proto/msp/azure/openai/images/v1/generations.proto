@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package msp.azure.openai.images.v1;
+//v1: 2024-02-01
+
+import "msp/azure/openai/v1/entity.proto";
+
+option go_package = "msp/azure/openai/images/v1";
+
+message ImageGenerationsRequest {
+  string prompt = 1;
+  uint32 n = 2;
+  string size = 3;
+  string response_format = 4;
+  string user_context = 5;
+  string quality = 6;
+  string style = 7;
+}
+
+message ImageGenerationsResponse {
+  uint64 created = 1;
+  ImageResult data = 2;
+}
+
+message ImageResult {
+  string url = 1;
+  string b64_json = 2;
+  DalleContentFilterResult content_filter_result = 3 [json_name = "content_filter_results"];
+  string revised_prompt = 4;
+  DalleFilterResult prompt_filter_result = 5 [json_name = "prompt_filter_results"];
+}
+
+message DalleContentFilterResult {
+  msp.azure.openai.v1.ContentFilterSeverityResult sexual = 1;
+  msp.azure.openai.v1.ContentFilterSeverityResult violence = 2;
+  msp.azure.openai.v1.ContentFilterSeverityResult hate = 3;
+  msp.azure.openai.v1.ContentFilterSeverityResult self_harm = 4;
+}
+
+message DalleFilterResult {
+  msp.azure.openai.v1.ContentFilterSeverityResult sexual = 1;
+  msp.azure.openai.v1.ContentFilterSeverityResult violence = 2;
+  msp.azure.openai.v1.ContentFilterSeverityResult hate = 3;
+  msp.azure.openai.v1.ContentFilterSeverityResult self_harm = 4;
+  msp.azure.openai.v1.ContentFilterDetectedResult profanity = 5;
+  msp.azure.openai.v1.ContentFilterDetectedResult jailbreak = 6;
+}
