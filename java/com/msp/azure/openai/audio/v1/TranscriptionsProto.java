@@ -35,14 +35,14 @@ public final class TranscriptionsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n.msp/azure/openai/audio/v1/transcriptio" +
-      "ns.proto\022\031msp.azure.openai.audio.v1B\207\002\n\035" +
+      "ns.proto\022\031msp.azure.openai.audio.v1B\203\002\n\035" +
       "com.msp.azure.openai.audio.v1B\023Transcrip" +
-      "tionsProtoP\001ZHgithub.com/anaregdesign/az" +
-      "ure-proto/go/msp/azure/openai/audio/v1;a" +
-      "udiov1\242\002\004MAOA\252\002\031Msp.Azure.Openai.Audio.V" +
-      "1\312\002\031Msp\\Azure\\Openai\\Audio\\V1\342\002%Msp\\Azur" +
-      "e\\Openai\\Audio\\V1\\GPBMetadata\352\002\035Msp::Azu" +
-      "re::Openai::Audio::V1b\006proto3"
+      "tionsProtoP\001ZDgithub.com/anaregdesign/ms" +
+      "proto/go/msp/azure/openai/audio/v1;audio" +
+      "v1\242\002\004MAOA\252\002\031Msp.Azure.Openai.Audio.V1\312\002\031" +
+      "Msp\\Azure\\Openai\\Audio\\V1\342\002%Msp\\Azure\\Op" +
+      "enai\\Audio\\V1\\GPBMetadata\352\002\035Msp::Azure::" +
+      "Openai::Audio::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

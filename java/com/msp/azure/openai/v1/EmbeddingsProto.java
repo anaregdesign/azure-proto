@@ -66,13 +66,13 @@ public final class EmbeddingsProto {
       "a\022\024\n\005index\030\001 \001(\rR\005index\022\026\n\006object\030\002 \001(\tR" +
       "\006object\022\034\n\tembedding\030\003 \003(\002R\tembedding\032O\n" +
       "\005Usage\022#\n\rprompt_tokens\030\001 \001(\rR\014promptTok" +
-      "ens\022!\n\014total_tokens\030\002 \001(\rR\013totalTokensB\336" +
+      "ens\022!\n\014total_tokens\030\002 \001(\rR\013totalTokensB\332" +
       "\001\n\027com.msp.azure.openai.v1B\017EmbeddingsPr" +
-      "otoP\001ZCgithub.com/anaregdesign/azure-pro" +
-      "to/go/msp/azure/openai/v1;openaiv1\242\002\003MAO" +
-      "\252\002\023Msp.Azure.Openai.V1\312\002\023Msp\\Azure\\Opena" +
-      "i\\V1\342\002\037Msp\\Azure\\Openai\\V1\\GPBMetadata\352\002" +
-      "\026Msp::Azure::Openai::V1b\006proto3"
+      "otoP\001Z?github.com/anaregdesign/msproto/g" +
+      "o/msp/azure/openai/v1;openaiv1\242\002\003MAO\252\002\023M" +
+      "sp.Azure.Openai.V1\312\002\023Msp\\Azure\\Openai\\V1" +
+      "\342\002\037Msp\\Azure\\Openai\\V1\\GPBMetadata\352\002\026Msp" +
+      "::Azure::Openai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -103,13 +103,13 @@ public final class CompletionsProto {
       "LogProbs\022\026\n\006tokens\030\001 \003(\tR\006tokens\022%\n\016toke" +
       "n_logprobs\030\002 \003(\002R\rtokenLogprobs\022!\n\014top_l" +
       "ogprobs\030\003 \003(\002R\013topLogprobs\022!\n\014text_offse" +
-      "ts\030\004 \003(\rR\013text_offsetB\337\001\n\027com.msp.azure." +
-      "openai.v1B\020CompletionsProtoP\001ZCgithub.co" +
-      "m/anaregdesign/azure-proto/go/msp/azure/" +
-      "openai/v1;openaiv1\242\002\003MAO\252\002\023Msp.Azure.Ope" +
-      "nai.V1\312\002\023Msp\\Azure\\Openai\\V1\342\002\037Msp\\Azure" +
-      "\\Openai\\V1\\GPBMetadata\352\002\026Msp::Azure::Ope" +
-      "nai::V1b\006proto3"
+      "ts\030\004 \003(\rR\013text_offsetB\333\001\n\027com.msp.azure." +
+      "openai.v1B\020CompletionsProtoP\001Z?github.co" +
+      "m/anaregdesign/msproto/go/msp/azure/open" +
+      "ai/v1;openaiv1\242\002\003MAO\252\002\023Msp.Azure.Openai." +
+      "V1\312\002\023Msp\\Azure\\Openai\\V1\342\002\037Msp\\Azure\\Ope" +
+      "nai\\V1\\GPBMetadata\352\002\026Msp::Azure::Openai:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

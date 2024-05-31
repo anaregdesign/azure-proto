@@ -24,12 +24,12 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,msp/azure/openai/audio/v1/translations.proto\x12\x19msp.azure.openai.audio.v1B\x85\x02\n\x1d\x63om.msp.azure.openai.audio.v1B\x11TranslationsProtoP\x01ZHgithub.com/anaregdesign/azure-proto/go/msp/azure/openai/audio/v1;audiov1\xa2\x02\x04MAOA\xaa\x02\x19Msp.Azure.Openai.Audio.V1\xca\x02\x19Msp\\Azure\\Openai\\Audio\\V1\xe2\x02%Msp\\Azure\\Openai\\Audio\\V1\\GPBMetadata\xea\x02\x1dMsp::Azure::Openai::Audio::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,msp/azure/openai/audio/v1/translations.proto\x12\x19msp.azure.openai.audio.v1B\x81\x02\n\x1d\x63om.msp.azure.openai.audio.v1B\x11TranslationsProtoP\x01ZDgithub.com/anaregdesign/msproto/go/msp/azure/openai/audio/v1;audiov1\xa2\x02\x04MAOA\xaa\x02\x19Msp.Azure.Openai.Audio.V1\xca\x02\x19Msp\\Azure\\Openai\\Audio\\V1\xe2\x02%Msp\\Azure\\Openai\\Audio\\V1\\GPBMetadata\xea\x02\x1dMsp::Azure::Openai::Audio::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'msp.azure.openai.audio.v1.translations_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'\n\035com.msp.azure.openai.audio.v1B\021TranslationsProtoP\001ZHgithub.com/anaregdesign/azure-proto/go/msp/azure/openai/audio/v1;audiov1\242\002\004MAOA\252\002\031Msp.Azure.Openai.Audio.V1\312\002\031Msp\\Azure\\Openai\\Audio\\V1\342\002%Msp\\Azure\\Openai\\Audio\\V1\\GPBMetadata\352\002\035Msp::Azure::Openai::Audio::V1'
+  _globals['DESCRIPTOR']._serialized_options = b'\n\035com.msp.azure.openai.audio.v1B\021TranslationsProtoP\001ZDgithub.com/anaregdesign/msproto/go/msp/azure/openai/audio/v1;audiov1\242\002\004MAOA\252\002\031Msp.Azure.Openai.Audio.V1\312\002\031Msp\\Azure\\Openai\\Audio\\V1\342\002%Msp\\Azure\\Openai\\Audio\\V1\\GPBMetadata\352\002\035Msp::Azure::Openai::Audio::V1'
 # @@protoc_insertion_point(module_scope)
