@@ -122,12 +122,12 @@ public final class EntityProto {
       ".openai.v1.ContentFilterDetectedWithCita" +
       "tionResult.CitationR\010citation\0326\n\010Citatio" +
       "n\022\020\n\003url\030\001 \001(\tR\003url\022\030\n\007license\030\002 \001(\tR\007li" +
-      "censeB\332\001\n\027com.msp.azure.openai.v1B\013Entit" +
-      "yProtoP\001ZCgithub.com/anaregdesign/azure-" +
-      "proto/go/msp/azure/openai/v1;openaiv1\242\002\003" +
-      "MAO\252\002\023Msp.Azure.Openai.V1\312\002\023Msp\\Azure\\Op" +
-      "enai\\V1\342\002\037Msp\\Azure\\Openai\\V1\\GPBMetadat" +
-      "a\352\002\026Msp::Azure::Openai::V1b\006proto3"
+      "censeB\326\001\n\027com.msp.azure.openai.v1B\013Entit" +
+      "yProtoP\001Z?github.com/anaregdesign/msprot" +
+      "o/go/msp/azure/openai/v1;openaiv1\242\002\003MAO\252" +
+      "\002\023Msp.Azure.Openai.V1\312\002\023Msp\\Azure\\Openai" +
+      "\\V1\342\002\037Msp\\Azure\\Openai\\V1\\GPBMetadata\352\002\026" +
+      "Msp::Azure::Openai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

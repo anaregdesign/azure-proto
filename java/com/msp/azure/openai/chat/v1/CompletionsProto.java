@@ -172,13 +172,13 @@ public final class CompletionsProto {
       "\nInnerError\022\022\n\004code\030\001 \001(\tR\004code\022e\n\025conte" +
       "nt_filter_result\030\002 \001(\0132..msp.azure.opena" +
       "i.v1.ContentFilterPromptResultR\026content_" +
-      "filter_resultsB\375\001\n\034com.msp.azure.openai." +
-      "chat.v1B\020CompletionsProtoP\001ZFgithub.com/" +
-      "anaregdesign/azure-proto/go/msp/azure/op" +
-      "enai/chat/v1;chatv1\242\002\004MAOC\252\002\030Msp.Azure.O" +
-      "penai.Chat.V1\312\002\030Msp\\Azure\\Openai\\Chat\\V1" +
-      "\342\002$Msp\\Azure\\Openai\\Chat\\V1\\GPBMetadata\352" +
-      "\002\034Msp::Azure::Openai::Chat::V1b\006proto3"
+      "filter_resultsB\371\001\n\034com.msp.azure.openai." +
+      "chat.v1B\020CompletionsProtoP\001ZBgithub.com/" +
+      "anaregdesign/msproto/go/msp/azure/openai" +
+      "/chat/v1;chatv1\242\002\004MAOC\252\002\030Msp.Azure.Opena" +
+      "i.Chat.V1\312\002\030Msp\\Azure\\Openai\\Chat\\V1\342\002$M" +
+      "sp\\Azure\\Openai\\Chat\\V1\\GPBMetadata\352\002\034Ms" +
+      "p::Azure::Openai::Chat::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

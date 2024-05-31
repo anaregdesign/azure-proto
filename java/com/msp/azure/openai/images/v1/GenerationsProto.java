@@ -97,14 +97,14 @@ public final class GenerationsProto {
       "rofanity\030\005 \001(\01320.msp.azure.openai.v1.Con" +
       "tentFilterDetectedResultR\tprofanity\022N\n\tj" +
       "ailbreak\030\006 \001(\01320.msp.azure.openai.v1.Con" +
-      "tentFilterDetectedResultR\tjailbreakB\213\002\n\036" +
+      "tentFilterDetectedResultR\tjailbreakB\207\002\n\036" +
       "com.msp.azure.openai.images.v1B\020Generati" +
-      "onsProtoP\001ZJgithub.com/anaregdesign/azur" +
-      "e-proto/go/msp/azure/openai/images/v1;im" +
-      "agesv1\242\002\004MAOI\252\002\032Msp.Azure.Openai.Images." +
-      "V1\312\002\032Msp\\Azure\\Openai\\Images\\V1\342\002&Msp\\Az" +
-      "ure\\Openai\\Images\\V1\\GPBMetadata\352\002\036Msp::" +
-      "Azure::Openai::Images::V1b\006proto3"
+      "onsProtoP\001ZFgithub.com/anaregdesign/mspr" +
+      "oto/go/msp/azure/openai/images/v1;images" +
+      "v1\242\002\004MAOI\252\002\032Msp.Azure.Openai.Images.V1\312\002" +
+      "\032Msp\\Azure\\Openai\\Images\\V1\342\002&Msp\\Azure\\" +
+      "Openai\\Images\\V1\\GPBMetadata\352\002\036Msp::Azur" +
+      "e::Openai::Images::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
