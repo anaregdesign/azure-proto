@@ -827,6 +827,7 @@ class CompletionResponse_Choice extends $pb.GeneratedMessage {
     $core.String? finishReason,
     CompletionResponse_Choice_Message? message,
     $0.ContentFilterChoiceResult? contentFilterResult,
+    $core.Iterable<$core.double>? logprobs,
   }) {
     final $result = create();
     if (index != null) {
@@ -841,6 +842,9 @@ class CompletionResponse_Choice extends $pb.GeneratedMessage {
     if (contentFilterResult != null) {
       $result.contentFilterResult = contentFilterResult;
     }
+    if (logprobs != null) {
+      $result.logprobs.addAll(logprobs);
+    }
     return $result;
   }
   CompletionResponse_Choice._() : super();
@@ -852,6 +856,7 @@ class CompletionResponse_Choice extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'finishReason')
     ..aOM<CompletionResponse_Choice_Message>(3, _omitFieldNames ? '' : 'message', subBuilder: CompletionResponse_Choice_Message.create)
     ..aOM<$0.ContentFilterChoiceResult>(4, _omitFieldNames ? '' : 'content_filter_results', protoName: 'content_filter_result', subBuilder: $0.ContentFilterChoiceResult.create)
+    ..p<$core.double>(5, _omitFieldNames ? '' : 'logprobs', $pb.PbFieldType.KF)
     ..hasRequiredFields = false
   ;
 
@@ -915,6 +920,9 @@ class CompletionResponse_Choice extends $pb.GeneratedMessage {
   void clearContentFilterResult() => clearField(4);
   @$pb.TagNumber(4)
   $0.ContentFilterChoiceResult ensureContentFilterResult() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.List<$core.double> get logprobs => $_getList(4);
 }
 
 class CompletionResponse extends $pb.GeneratedMessage {

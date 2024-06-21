@@ -240,6 +240,11 @@ export declare class CompletionResponse_Choice extends Message<CompletionRespons
    */
   contentFilterResult?: ContentFilterChoiceResult;
 
+  /**
+   * @generated from field: repeated float logprobs = 5;
+   */
+  logprobs: number[];
+
   constructor(data?: PartialMessage<CompletionResponse_Choice>);
 
   static readonly runtime: typeof proto3;

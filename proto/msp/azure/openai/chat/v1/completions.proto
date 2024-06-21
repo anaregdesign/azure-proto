@@ -54,6 +54,7 @@ message CompletionResponse {
     string finish_reason = 2;
     Message message = 3;
     msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];
+    repeated float logprobs = 5;
 
     message Message {
       string role = 1;

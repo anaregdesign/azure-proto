@@ -147,6 +147,8 @@ public struct Msp_Azure_Openai_Chat_V1_CompletionResponse {
     /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
     public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
 
+    public var logprobs: [Float] = []
+
     public var unknownFields = SwiftProtobuf.UnknownStorage()
 
     public struct Message {
@@ -633,6 +635,7 @@ extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: SwiftProtobuf.Mess
     2: .standard(proto: "finish_reason"),
     3: .same(proto: "message"),
     4: .unique(proto: "content_filter_result", json: "content_filter_results"),
+    5: .same(proto: "logprobs"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -645,6 +648,7 @@ extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: SwiftProtobuf.Mess
       case 2: try { try decoder.decodeSingularStringField(value: &self.finishReason) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._message) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._contentFilterResult) }()
+      case 5: try { try decoder.decodeRepeatedFloatField(value: &self.logprobs) }()
       default: break
       }
     }
@@ -667,6 +671,9 @@ extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: SwiftProtobuf.Mess
     try { if let v = self._contentFilterResult {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
     } }()
+    if !self.logprobs.isEmpty {
+      try visitor.visitPackedFloatField(value: self.logprobs, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -675,6 +682,7 @@ extension Msp_Azure_Openai_Chat_V1_CompletionResponse.Choice: SwiftProtobuf.Mess
     if lhs.finishReason != rhs.finishReason {return false}
     if lhs._message != rhs._message {return false}
     if lhs._contentFilterResult != rhs._contentFilterResult {return false}
+    if lhs.logprobs != rhs.logprobs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

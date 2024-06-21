@@ -121,7 +121,7 @@ public final class CompletionsProto {
       "\r \001(\003R\004seed\032<\n\016LogitBiasEntry\022\020\n\003key\030\001 \001" +
       "(\tR\003key\022\024\n\005value\030\002 \001(\002R\005value:\0028\001\0327\n\007Mes" +
       "sage\022\022\n\004role\030\001 \001(\tR\004role\022\030\n\007content\030\002 \001(" +
-      "\tR\007content\"\260\r\n\022CompletionResponse\022\016\n\002id\030" +
+      "\tR\007content\"\314\r\n\022CompletionResponse\022\016\n\002id\030" +
       "\001 \001(\tR\002id\022\026\n\006object\030\002 \001(\tR\006object\022\030\n\007cre" +
       "ated\030\003 \001(\004R\007created\022\024\n\005model\030\004 \001(\tR\005mode" +
       "l\022H\n\005usage\030\005 \001(\01322.msp.azure.openai.chat" +
@@ -134,51 +134,52 @@ public final class CompletionsProto {
       "hoiceR\007choices\032|\n\005Usage\022#\n\rprompt_tokens" +
       "\030\001 \001(\004R\014promptTokens\022+\n\021completion_token" +
       "s\030\002 \001(\004R\020completionTokens\022!\n\014total_token" +
-      "s\030\003 \001(\004R\013totalTokens\032\236\t\n\006Choice\022\024\n\005index" +
+      "s\030\003 \001(\004R\013totalTokens\032\272\t\n\006Choice\022\024\n\005index" +
       "\030\001 \001(\rR\005index\022#\n\rfinish_reason\030\002 \001(\tR\014fi" +
       "nishReason\022U\n\007message\030\003 \001(\0132;.msp.azure." +
       "openai.chat.v1.CompletionResponse.Choice" +
       ".MessageR\007message\022e\n\025content_filter_resu" +
       "lt\030\004 \001(\0132..msp.azure.openai.v1.ContentFi" +
       "lterChoiceResultR\026content_filter_results" +
-      "\032\232\007\n\007Message\022\022\n\004role\030\001 \001(\tR\004role\022\030\n\007cont" +
-      "ent\030\002 \001(\tR\007content\022c\n\ntool_calls\030\003 \003(\0132D" +
-      ".msp.azure.openai.chat.v1.CompletionResp" +
-      "onse.Choice.Message.ToolCallR\ttoolCalls\022" +
-      "m\n\rfunction_call\030\004 \001(\0132H.msp.azure.opena" +
-      "i.chat.v1.CompletionResponse.Choice.Mess" +
-      "age.FunctionCallR\014functionCall\022]\n\007contex" +
-      "t\030\005 \001(\0132C.msp.azure.openai.chat.v1.Compl" +
-      "etionResponse.Choice.Message.ContextR\007co" +
-      "ntext\032\326\001\n\010ToolCall\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004ty" +
-      "pe\030\002 \001(\tR\004type\022i\n\010function\030\003 \001(\0132M.msp.a" +
-      "zure.openai.chat.v1.CompletionResponse.C" +
-      "hoice.Message.ToolCall.FunctionR\010functio" +
-      "n\032;\n\010Function\022\022\n\004name\030\001 \001(\tR\004name\022\033\n\010arg" +
-      "ument\030\002 \001(\tR\targuments\032?\n\014FunctionCall\022\022" +
-      "\n\004name\030\001 \001(\tR\004name\022\033\n\010argument\030\002 \001(\tR\tar" +
-      "guments\032\223\002\n\007Context\022j\n\tcitations\030\001 \003(\0132L" +
-      ".msp.azure.openai.chat.v1.CompletionResp" +
-      "onse.Choice.Message.Context.CitationR\tci" +
-      "tations\022\026\n\006intent\030\002 \001(\tR\006intent\032\203\001\n\010Cita" +
-      "tion\022\030\n\007content\030\001 \001(\tR\007content\022\024\n\005title\030" +
-      "\002 \001(\tR\005title\022\020\n\003url\030\003 \001(\tR\003url\022\032\n\010filepa" +
-      "th\030\004 \001(\tR\010filepath\022\031\n\010chunk_id\030\005 \001(\tR\007ch" +
-      "unkId\"\306\002\n\rErrorResponse\022\022\n\004code\030\001 \001(\tR\004c" +
-      "ode\022\030\n\007message\030\002 \001(\tR\007message\022\024\n\005param\030\003" +
-      " \001(\tR\005param\022\022\n\004type\030\004 \001(\tR\004type\022S\n\013inner" +
-      "_error\030\005 \001(\01322.msp.azure.openai.chat.v1." +
-      "ErrorResponse.InnerErrorR\ninnerError\032\207\001\n" +
-      "\nInnerError\022\022\n\004code\030\001 \001(\tR\004code\022e\n\025conte" +
-      "nt_filter_result\030\002 \001(\0132..msp.azure.opena" +
-      "i.v1.ContentFilterPromptResultR\026content_" +
-      "filter_resultsB\371\001\n\034com.msp.azure.openai." +
-      "chat.v1B\020CompletionsProtoP\001ZBgithub.com/" +
-      "anaregdesign/msproto/go/msp/azure/openai" +
-      "/chat/v1;chatv1\242\002\004MAOC\252\002\030Msp.Azure.Opena" +
-      "i.Chat.V1\312\002\030Msp\\Azure\\Openai\\Chat\\V1\342\002$M" +
-      "sp\\Azure\\Openai\\Chat\\V1\\GPBMetadata\352\002\034Ms" +
-      "p::Azure::Openai::Chat::V1b\006proto3"
+      "\022\032\n\010logprobs\030\005 \003(\002R\010logprobs\032\232\007\n\007Message" +
+      "\022\022\n\004role\030\001 \001(\tR\004role\022\030\n\007content\030\002 \001(\tR\007c" +
+      "ontent\022c\n\ntool_calls\030\003 \003(\0132D.msp.azure.o" +
+      "penai.chat.v1.CompletionResponse.Choice." +
+      "Message.ToolCallR\ttoolCalls\022m\n\rfunction_" +
+      "call\030\004 \001(\0132H.msp.azure.openai.chat.v1.Co" +
+      "mpletionResponse.Choice.Message.Function" +
+      "CallR\014functionCall\022]\n\007context\030\005 \001(\0132C.ms" +
+      "p.azure.openai.chat.v1.CompletionRespons" +
+      "e.Choice.Message.ContextR\007context\032\326\001\n\010To" +
+      "olCall\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004type\030\002 \001(\tR\004ty" +
+      "pe\022i\n\010function\030\003 \001(\0132M.msp.azure.openai." +
+      "chat.v1.CompletionResponse.Choice.Messag" +
+      "e.ToolCall.FunctionR\010function\032;\n\010Functio" +
+      "n\022\022\n\004name\030\001 \001(\tR\004name\022\033\n\010argument\030\002 \001(\tR" +
+      "\targuments\032?\n\014FunctionCall\022\022\n\004name\030\001 \001(\t" +
+      "R\004name\022\033\n\010argument\030\002 \001(\tR\targuments\032\223\002\n\007" +
+      "Context\022j\n\tcitations\030\001 \003(\0132L.msp.azure.o" +
+      "penai.chat.v1.CompletionResponse.Choice." +
+      "Message.Context.CitationR\tcitations\022\026\n\006i" +
+      "ntent\030\002 \001(\tR\006intent\032\203\001\n\010Citation\022\030\n\007cont" +
+      "ent\030\001 \001(\tR\007content\022\024\n\005title\030\002 \001(\tR\005title" +
+      "\022\020\n\003url\030\003 \001(\tR\003url\022\032\n\010filepath\030\004 \001(\tR\010fi" +
+      "lepath\022\031\n\010chunk_id\030\005 \001(\tR\007chunkId\"\306\002\n\rEr" +
+      "rorResponse\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007messa" +
+      "ge\030\002 \001(\tR\007message\022\024\n\005param\030\003 \001(\tR\005param\022" +
+      "\022\n\004type\030\004 \001(\tR\004type\022S\n\013inner_error\030\005 \001(\013" +
+      "22.msp.azure.openai.chat.v1.ErrorRespons" +
+      "e.InnerErrorR\ninnerError\032\207\001\n\nInnerError\022" +
+      "\022\n\004code\030\001 \001(\tR\004code\022e\n\025content_filter_re" +
+      "sult\030\002 \001(\0132..msp.azure.openai.v1.Content" +
+      "FilterPromptResultR\026content_filter_resul" +
+      "tsB\371\001\n\034com.msp.azure.openai.chat.v1B\020Com" +
+      "pletionsProtoP\001ZBgithub.com/anaregdesign" +
+      "/msproto/go/msp/azure/openai/chat/v1;cha" +
+      "tv1\242\002\004MAOC\252\002\030Msp.Azure.Openai.Chat.V1\312\002\030" +
+      "Msp\\Azure\\Openai\\Chat\\V1\342\002$Msp\\Azure\\Ope" +
+      "nai\\Chat\\V1\\GPBMetadata\352\002\034Msp::Azure::Op" +
+      "enai::Chat::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -220,7 +221,7 @@ public final class CompletionsProto {
     internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_descriptor,
-        new java.lang.String[] { "Index", "FinishReason", "Message", "ContentFilterResult", });
+        new java.lang.String[] { "Index", "FinishReason", "Message", "ContentFilterResult", "Logprobs", });
     internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_descriptor =
       internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_descriptor.getNestedTypes().get(0);
     internal_static_msp_azure_openai_chat_v1_CompletionResponse_Choice_Message_fieldAccessorTable = new

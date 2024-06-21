@@ -79,6 +79,7 @@ export const CompletionResponse_Choice = /*@__PURE__*/ proto3.makeMessageType(
     { no: 2, name: "finish_reason", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "message", kind: "message", T: CompletionResponse_Choice_Message },
     { no: 4, name: "content_filter_result", jsonName: "content_filter_results", kind: "message", T: ContentFilterChoiceResult },
+    { no: 5, name: "logprobs", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true },
   ],
   {localName: "CompletionResponse_Choice"},
 );
