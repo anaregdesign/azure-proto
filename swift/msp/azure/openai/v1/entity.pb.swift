@@ -36,6 +36,8 @@ public struct Msp_Azure_Openai_V1_PromptFilterResult {
   /// Clears the value of `contentFilterResult`. Subsequent reads from it will return its default value.
   public mutating func clearContentFilterResult() {self._contentFilterResult = nil}
 
+  public var promptIndex: UInt32 = 0
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -309,6 +311,7 @@ extension Msp_Azure_Openai_V1_PromptFilterResult: SwiftProtobuf.Message, SwiftPr
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "index"),
     2: .unique(proto: "content_filter_result", json: "content_filter_results"),
+    3: .standard(proto: "prompt_index"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -319,6 +322,7 @@ extension Msp_Azure_Openai_V1_PromptFilterResult: SwiftProtobuf.Message, SwiftPr
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt32Field(value: &self.index) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._contentFilterResult) }()
+      case 3: try { try decoder.decodeSingularUInt32Field(value: &self.promptIndex) }()
       default: break
       }
     }
@@ -335,12 +339,16 @@ extension Msp_Azure_Openai_V1_PromptFilterResult: SwiftProtobuf.Message, SwiftPr
     try { if let v = self._contentFilterResult {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
+    if self.promptIndex != 0 {
+      try visitor.visitSingularUInt32Field(value: self.promptIndex, fieldNumber: 3)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Msp_Azure_Openai_V1_PromptFilterResult, rhs: Msp_Azure_Openai_V1_PromptFilterResult) -> Bool {
     if lhs.index != rhs.index {return false}
     if lhs._contentFilterResult != rhs._contentFilterResult {return false}
+    if lhs.promptIndex != rhs.promptIndex {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

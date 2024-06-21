@@ -20,6 +20,11 @@ export declare class PromptFilterResult extends Message<PromptFilterResult> {
    */
   contentFilterResult?: ContentFilterPromptResult;
 
+  /**
+   * @generated from field: uint32 prompt_index = 3;
+   */
+  promptIndex: number;
+
   constructor(data?: PartialMessage<PromptFilterResult>);
 
   static readonly runtime: typeof proto3;

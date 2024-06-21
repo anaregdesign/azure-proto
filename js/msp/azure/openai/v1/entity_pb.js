@@ -13,6 +13,7 @@ export const PromptFilterResult = /*@__PURE__*/ proto3.makeMessageType(
   () => [
     { no: 1, name: "index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 2, name: "content_filter_result", jsonName: "content_filter_results", kind: "message", T: ContentFilterPromptResult },
+    { no: 3, name: "prompt_index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
   ],
 );
 

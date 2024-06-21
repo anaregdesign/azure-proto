@@ -29,4 +29,10 @@ public interface PromptFilterResultOrBuilder extends
    * <code>.msp.azure.openai.v1.ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];</code>
    */
   com.msp.azure.openai.v1.ContentFilterPromptResultOrBuilder getContentFilterResultOrBuilder();
+
+  /**
+   * <code>uint32 prompt_index = 3 [json_name = "promptIndex"];</code>
+   * @return The promptIndex.
+   */
+  int getPromptIndex();
 }

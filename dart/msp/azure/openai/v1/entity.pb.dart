@@ -17,6 +17,7 @@ class PromptFilterResult extends $pb.GeneratedMessage {
   factory PromptFilterResult({
     $core.int? index,
     ContentFilterPromptResult? contentFilterResult,
+    $core.int? promptIndex,
   }) {
     final $result = create();
     if (index != null) {
@@ -24,6 +25,9 @@ class PromptFilterResult extends $pb.GeneratedMessage {
     }
     if (contentFilterResult != null) {
       $result.contentFilterResult = contentFilterResult;
+    }
+    if (promptIndex != null) {
+      $result.promptIndex = promptIndex;
     }
     return $result;
   }
@@ -34,6 +38,7 @@ class PromptFilterResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PromptFilterResult', package: const $pb.PackageName(_omitMessageNames ? '' : 'msp.azure.openai.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'index', $pb.PbFieldType.OU3)
     ..aOM<ContentFilterPromptResult>(2, _omitFieldNames ? '' : 'content_filter_results', protoName: 'content_filter_result', subBuilder: ContentFilterPromptResult.create)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'promptIndex', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -77,6 +82,15 @@ class PromptFilterResult extends $pb.GeneratedMessage {
   void clearContentFilterResult() => clearField(2);
   @$pb.TagNumber(2)
   ContentFilterPromptResult ensureContentFilterResult() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.int get promptIndex => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set promptIndex($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPromptIndex() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPromptIndex() => clearField(3);
 }
 
 class ErrorBase extends $pb.GeneratedMessage {
