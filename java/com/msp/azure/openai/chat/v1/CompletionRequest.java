@@ -27,10 +27,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CompletionRequest() {
-    stops_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    user_ = "";
-    messages_ = java.util.Collections.emptyList();
+    deploymentName_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -38,18 +35,6 @@ private static final long serialVersionUID = 0L;
     return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-      int number) {
-    switch (number) {
-      case 8:
-        return internalGetLogitBias();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -58,956 +43,70 @@ private static final long serialVersionUID = 0L;
             com.msp.azure.openai.chat.v1.CompletionRequest.class, com.msp.azure.openai.chat.v1.CompletionRequest.Builder.class);
   }
 
-  public interface MessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:msp.azure.openai.chat.v1.CompletionRequest.Message)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string role = 1 [json_name = "role"];</code>
-     * @return The role.
-     */
-    java.lang.String getRole();
-    /**
-     * <code>string role = 1 [json_name = "role"];</code>
-     * @return The bytes for role.
-     */
-    com.google.protobuf.ByteString
-        getRoleBytes();
-
-    /**
-     * <code>string content = 2 [json_name = "content"];</code>
-     * @return The content.
-     */
-    java.lang.String getContent();
-    /**
-     * <code>string content = 2 [json_name = "content"];</code>
-     * @return The bytes for content.
-     */
-    com.google.protobuf.ByteString
-        getContentBytes();
-  }
-  /**
-   * Protobuf type {@code msp.azure.openai.chat.v1.CompletionRequest.Message}
-   */
-  public static final class Message extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:msp.azure.openai.chat.v1.CompletionRequest.Message)
-      MessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 27,
-        /* patch= */ 0,
-        /* suffix= */ "",
-        Message.class.getName());
-    }
-    // Use Message.newBuilder() to construct.
-    private Message(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private Message() {
-      role_ = "";
-      content_ = "";
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_Message_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_Message_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.msp.azure.openai.chat.v1.CompletionRequest.Message.class, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder.class);
-    }
-
-    public static final int ROLE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object role_ = "";
-    /**
-     * <code>string role = 1 [json_name = "role"];</code>
-     * @return The role.
-     */
-    @java.lang.Override
-    public java.lang.String getRole() {
-      java.lang.Object ref = role_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        role_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string role = 1 [json_name = "role"];</code>
-     * @return The bytes for role.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRoleBytes() {
-      java.lang.Object ref = role_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        role_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object content_ = "";
-    /**
-     * <code>string content = 2 [json_name = "content"];</code>
-     * @return The content.
-     */
-    @java.lang.Override
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        content_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string content = 2 [json_name = "content"];</code>
-     * @return The bytes for content.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        content_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(role_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, role_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(content_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, content_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(role_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, role_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(content_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, content_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.msp.azure.openai.chat.v1.CompletionRequest.Message)) {
-        return super.equals(obj);
-      }
-      com.msp.azure.openai.chat.v1.CompletionRequest.Message other = (com.msp.azure.openai.chat.v1.CompletionRequest.Message) obj;
-
-      if (!getRole()
-          .equals(other.getRole())) return false;
-      if (!getContent()
-          .equals(other.getContent())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ROLE_FIELD_NUMBER;
-      hash = (53 * hash) + getRole().hashCode();
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.msp.azure.openai.chat.v1.CompletionRequest.Message prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code msp.azure.openai.chat.v1.CompletionRequest.Message}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:msp.azure.openai.chat.v1.CompletionRequest.Message)
-        com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_Message_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_Message_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.msp.azure.openai.chat.v1.CompletionRequest.Message.class, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder.class);
-      }
-
-      // Construct using com.msp.azure.openai.chat.v1.CompletionRequest.Message.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        role_ = "";
-        content_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_Message_descriptor;
-      }
-
-      @java.lang.Override
-      public com.msp.azure.openai.chat.v1.CompletionRequest.Message getDefaultInstanceForType() {
-        return com.msp.azure.openai.chat.v1.CompletionRequest.Message.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.msp.azure.openai.chat.v1.CompletionRequest.Message build() {
-        com.msp.azure.openai.chat.v1.CompletionRequest.Message result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.msp.azure.openai.chat.v1.CompletionRequest.Message buildPartial() {
-        com.msp.azure.openai.chat.v1.CompletionRequest.Message result = new com.msp.azure.openai.chat.v1.CompletionRequest.Message(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionRequest.Message result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.role_ = role_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.content_ = content_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.msp.azure.openai.chat.v1.CompletionRequest.Message) {
-          return mergeFrom((com.msp.azure.openai.chat.v1.CompletionRequest.Message)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionRequest.Message other) {
-        if (other == com.msp.azure.openai.chat.v1.CompletionRequest.Message.getDefaultInstance()) return this;
-        if (!other.getRole().isEmpty()) {
-          role_ = other.role_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                role_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                content_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object role_ = "";
-      /**
-       * <code>string role = 1 [json_name = "role"];</code>
-       * @return The role.
-       */
-      public java.lang.String getRole() {
-        java.lang.Object ref = role_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          role_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string role = 1 [json_name = "role"];</code>
-       * @return The bytes for role.
-       */
-      public com.google.protobuf.ByteString
-          getRoleBytes() {
-        java.lang.Object ref = role_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          role_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string role = 1 [json_name = "role"];</code>
-       * @param value The role to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRole(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        role_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string role = 1 [json_name = "role"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRole() {
-        role_ = getDefaultInstance().getRole();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string role = 1 [json_name = "role"];</code>
-       * @param value The bytes for role to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRoleBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        role_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object content_ = "";
-      /**
-       * <code>string content = 2 [json_name = "content"];</code>
-       * @return The content.
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          content_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string content = 2 [json_name = "content"];</code>
-       * @return The bytes for content.
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string content = 2 [json_name = "content"];</code>
-       * @param value The content to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContent(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        content_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string content = 2 [json_name = "content"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContent() {
-        content_ = getDefaultInstance().getContent();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string content = 2 [json_name = "content"];</code>
-       * @param value The bytes for content to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        content_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionRequest.Message)
-    }
-
-    // @@protoc_insertion_point(class_scope:msp.azure.openai.chat.v1.CompletionRequest.Message)
-    private static final com.msp.azure.openai.chat.v1.CompletionRequest.Message DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.msp.azure.openai.chat.v1.CompletionRequest.Message();
-    }
-
-    public static com.msp.azure.openai.chat.v1.CompletionRequest.Message getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Message>
-        PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      @java.lang.Override
-      public Message parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<Message> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Message> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.msp.azure.openai.chat.v1.CompletionRequest.Message getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public static final int TEMPERATURE_FIELD_NUMBER = 1;
-  private float temperature_ = 0F;
-  /**
-   * <code>float temperature = 1 [json_name = "temperature"];</code>
-   * @return The temperature.
-   */
-  @java.lang.Override
-  public float getTemperature() {
-    return temperature_;
-  }
-
-  public static final int TOP_P_FIELD_NUMBER = 2;
-  private float topP_ = 0F;
-  /**
-   * <code>float top_p = 2 [json_name = "topP"];</code>
-   * @return The topP.
-   */
-  @java.lang.Override
-  public float getTopP() {
-    return topP_;
-  }
-
-  public static final int STREAM_FIELD_NUMBER = 3;
-  private boolean stream_ = false;
-  /**
-   * <code>bool stream = 3 [json_name = "stream"];</code>
-   * @return The stream.
-   */
-  @java.lang.Override
-  public boolean getStream() {
-    return stream_;
-  }
-
-  public static final int STOPS_FIELD_NUMBER = 4;
+  private int bitField0_;
+  public static final int DEPLOYMENT_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList stops_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private volatile java.lang.Object deploymentName_ = "";
   /**
-   * <code>repeated string stops = 4 [json_name = "stop"];</code>
-   * @return A list containing the stops.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getStopsList() {
-    return stops_;
-  }
-  /**
-   * <code>repeated string stops = 4 [json_name = "stop"];</code>
-   * @return The count of stops.
-   */
-  public int getStopsCount() {
-    return stops_.size();
-  }
-  /**
-   * <code>repeated string stops = 4 [json_name = "stop"];</code>
-   * @param index The index of the element to return.
-   * @return The stops at the given index.
-   */
-  public java.lang.String getStops(int index) {
-    return stops_.get(index);
-  }
-  /**
-   * <code>repeated string stops = 4 [json_name = "stop"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the stops at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getStopsBytes(int index) {
-    return stops_.getByteString(index);
-  }
-
-  public static final int MAX_TOKENS_FIELD_NUMBER = 5;
-  private int maxTokens_ = 0;
-  /**
-   * <code>uint32 max_tokens = 5 [json_name = "maxTokens"];</code>
-   * @return The maxTokens.
+   * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+   * @return The deploymentName.
    */
   @java.lang.Override
-  public int getMaxTokens() {
-    return maxTokens_;
-  }
-
-  public static final int PRESENCE_PENALTY_FIELD_NUMBER = 6;
-  private float presencePenalty_ = 0F;
-  /**
-   * <code>float presence_penalty = 6 [json_name = "presencePenalty"];</code>
-   * @return The presencePenalty.
-   */
-  @java.lang.Override
-  public float getPresencePenalty() {
-    return presencePenalty_;
-  }
-
-  public static final int FREQUENCY_PENALTY_FIELD_NUMBER = 7;
-  private float frequencyPenalty_ = 0F;
-  /**
-   * <code>float frequency_penalty = 7 [json_name = "frequencyPenalty"];</code>
-   * @return The frequencyPenalty.
-   */
-  @java.lang.Override
-  public float getFrequencyPenalty() {
-    return frequencyPenalty_;
-  }
-
-  public static final int LOGIT_BIAS_FIELD_NUMBER = 8;
-  private static final class LogitBiasDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.Float> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.Float>newDefaultInstance(
-                com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_LogitBiasEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.FLOAT,
-                0F);
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.Float> logitBias_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
-  internalGetLogitBias() {
-    if (logitBias_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          LogitBiasDefaultEntryHolder.defaultEntry);
-    }
-    return logitBias_;
-  }
-  public int getLogitBiasCount() {
-    return internalGetLogitBias().getMap().size();
-  }
-  /**
-   * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-   */
-  @java.lang.Override
-  public boolean containsLogitBias(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetLogitBias().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getLogitBiasMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.Float> getLogitBias() {
-    return getLogitBiasMap();
-  }
-  /**
-   * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.Float> getLogitBiasMap() {
-    return internalGetLogitBias().getMap();
-  }
-  /**
-   * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-   */
-  @java.lang.Override
-  public float getLogitBiasOrDefault(
-      java.lang.String key,
-      float defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.Float> map =
-        internalGetLogitBias().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-   */
-  @java.lang.Override
-  public float getLogitBiasOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.Float> map =
-        internalGetLogitBias().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
-  public static final int USER_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object user_ = "";
-  /**
-   * <code>string user = 9 [json_name = "user"];</code>
-   * @return The user.
-   */
-  @java.lang.Override
-  public java.lang.String getUser() {
-    java.lang.Object ref = user_;
+  public java.lang.String getDeploymentName() {
+    java.lang.Object ref = deploymentName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      user_ = s;
+      deploymentName_ = s;
       return s;
     }
   }
   /**
-   * <code>string user = 9 [json_name = "user"];</code>
-   * @return The bytes for user.
+   * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+   * @return The bytes for deploymentName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUserBytes() {
-    java.lang.Object ref = user_;
+      getDeploymentNameBytes() {
+    java.lang.Object ref = deploymentName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      user_ = b;
+      deploymentName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int MESSAGES_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message> messages_;
+  public static final int BODY_FIELD_NUMBER = 2;
+  private com.msp.azure.openai.chat.v1.CompletionRequestBody body_;
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
+   * @return Whether the body field is set.
    */
   @java.lang.Override
-  public java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message> getMessagesList() {
-    return messages_;
+  public boolean hasBody() {
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
+   * @return The body.
    */
   @java.lang.Override
-  public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder> 
-      getMessagesOrBuilderList() {
-    return messages_;
+  public com.msp.azure.openai.chat.v1.CompletionRequestBody getBody() {
+    return body_ == null ? com.msp.azure.openai.chat.v1.CompletionRequestBody.getDefaultInstance() : body_;
   }
   /**
-   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+   * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
    */
   @java.lang.Override
-  public int getMessagesCount() {
-    return messages_.size();
-  }
-  /**
-   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-   */
-  @java.lang.Override
-  public com.msp.azure.openai.chat.v1.CompletionRequest.Message getMessages(int index) {
-    return messages_.get(index);
-  }
-  /**
-   * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-   */
-  @java.lang.Override
-  public com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder getMessagesOrBuilder(
-      int index) {
-    return messages_.get(index);
-  }
-
-  public static final int N_FIELD_NUMBER = 12;
-  private int n_ = 0;
-  /**
-   * <pre>
-   * repeated DataSource data_sources = 11;
-   * </pre>
-   *
-   * <code>uint32 n = 12 [json_name = "n"];</code>
-   * @return The n.
-   */
-  @java.lang.Override
-  public int getN() {
-    return n_;
-  }
-
-  public static final int SEED_FIELD_NUMBER = 13;
-  private long seed_ = 0L;
-  /**
-   * <pre>
-   * ResponseFormat response_format = 14;
-   * repeated Tool tools = 15;
-   * ToolChoice tool_choice = 16;
-   * repeated Function functions = 17;
-   * FunctionCall function_call = 18;
-   * </pre>
-   *
-   * <code>int64 seed = 13 [json_name = "seed"];</code>
-   * @return The seed.
-   */
-  @java.lang.Override
-  public long getSeed() {
-    return seed_;
+  public com.msp.azure.openai.chat.v1.CompletionRequestBodyOrBuilder getBodyOrBuilder() {
+    return body_ == null ? com.msp.azure.openai.chat.v1.CompletionRequestBody.getDefaultInstance() : body_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1024,44 +123,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Float.floatToRawIntBits(temperature_) != 0) {
-      output.writeFloat(1, temperature_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(deploymentName_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, deploymentName_);
     }
-    if (java.lang.Float.floatToRawIntBits(topP_) != 0) {
-      output.writeFloat(2, topP_);
-    }
-    if (stream_ != false) {
-      output.writeBool(3, stream_);
-    }
-    for (int i = 0; i < stops_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, stops_.getRaw(i));
-    }
-    if (maxTokens_ != 0) {
-      output.writeUInt32(5, maxTokens_);
-    }
-    if (java.lang.Float.floatToRawIntBits(presencePenalty_) != 0) {
-      output.writeFloat(6, presencePenalty_);
-    }
-    if (java.lang.Float.floatToRawIntBits(frequencyPenalty_) != 0) {
-      output.writeFloat(7, frequencyPenalty_);
-    }
-    com.google.protobuf.GeneratedMessage
-      .serializeStringMapTo(
-        output,
-        internalGetLogitBias(),
-        LogitBiasDefaultEntryHolder.defaultEntry,
-        8);
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(user_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 9, user_);
-    }
-    for (int i = 0; i < messages_.size(); i++) {
-      output.writeMessage(10, messages_.get(i));
-    }
-    if (n_ != 0) {
-      output.writeUInt32(12, n_);
-    }
-    if (seed_ != 0L) {
-      output.writeInt64(13, seed_);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getBody());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1072,62 +138,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Float.floatToRawIntBits(temperature_) != 0) {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(deploymentName_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, deploymentName_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(1, temperature_);
-    }
-    if (java.lang.Float.floatToRawIntBits(topP_) != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(2, topP_);
-    }
-    if (stream_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, stream_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < stops_.size(); i++) {
-        dataSize += computeStringSizeNoTag(stops_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getStopsList().size();
-    }
-    if (maxTokens_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(5, maxTokens_);
-    }
-    if (java.lang.Float.floatToRawIntBits(presencePenalty_) != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(6, presencePenalty_);
-    }
-    if (java.lang.Float.floatToRawIntBits(frequencyPenalty_) != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(7, frequencyPenalty_);
-    }
-    for (java.util.Map.Entry<java.lang.String, java.lang.Float> entry
-         : internalGetLogitBias().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.Float>
-      logitBias__ = LogitBiasDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, logitBias__);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(user_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, user_);
-    }
-    for (int i = 0; i < messages_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, messages_.get(i));
-    }
-    if (n_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(12, n_);
-    }
-    if (seed_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(13, seed_);
+        .computeMessageSize(2, getBody());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1144,34 +160,13 @@ private static final long serialVersionUID = 0L;
     }
     com.msp.azure.openai.chat.v1.CompletionRequest other = (com.msp.azure.openai.chat.v1.CompletionRequest) obj;
 
-    if (java.lang.Float.floatToIntBits(getTemperature())
-        != java.lang.Float.floatToIntBits(
-            other.getTemperature())) return false;
-    if (java.lang.Float.floatToIntBits(getTopP())
-        != java.lang.Float.floatToIntBits(
-            other.getTopP())) return false;
-    if (getStream()
-        != other.getStream()) return false;
-    if (!getStopsList()
-        .equals(other.getStopsList())) return false;
-    if (getMaxTokens()
-        != other.getMaxTokens()) return false;
-    if (java.lang.Float.floatToIntBits(getPresencePenalty())
-        != java.lang.Float.floatToIntBits(
-            other.getPresencePenalty())) return false;
-    if (java.lang.Float.floatToIntBits(getFrequencyPenalty())
-        != java.lang.Float.floatToIntBits(
-            other.getFrequencyPenalty())) return false;
-    if (!internalGetLogitBias().equals(
-        other.internalGetLogitBias())) return false;
-    if (!getUser()
-        .equals(other.getUser())) return false;
-    if (!getMessagesList()
-        .equals(other.getMessagesList())) return false;
-    if (getN()
-        != other.getN()) return false;
-    if (getSeed()
-        != other.getSeed()) return false;
+    if (!getDeploymentName()
+        .equals(other.getDeploymentName())) return false;
+    if (hasBody() != other.hasBody()) return false;
+    if (hasBody()) {
+      if (!getBody()
+          .equals(other.getBody())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1183,42 +178,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getTemperature());
-    hash = (37 * hash) + TOP_P_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getTopP());
-    hash = (37 * hash) + STREAM_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getStream());
-    if (getStopsCount() > 0) {
-      hash = (37 * hash) + STOPS_FIELD_NUMBER;
-      hash = (53 * hash) + getStopsList().hashCode();
+    hash = (37 * hash) + DEPLOYMENT_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDeploymentName().hashCode();
+    if (hasBody()) {
+      hash = (37 * hash) + BODY_FIELD_NUMBER;
+      hash = (53 * hash) + getBody().hashCode();
     }
-    hash = (37 * hash) + MAX_TOKENS_FIELD_NUMBER;
-    hash = (53 * hash) + getMaxTokens();
-    hash = (37 * hash) + PRESENCE_PENALTY_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPresencePenalty());
-    hash = (37 * hash) + FREQUENCY_PENALTY_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getFrequencyPenalty());
-    if (!internalGetLogitBias().getMap().isEmpty()) {
-      hash = (37 * hash) + LOGIT_BIAS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetLogitBias().hashCode();
-    }
-    hash = (37 * hash) + USER_FIELD_NUMBER;
-    hash = (53 * hash) + getUser().hashCode();
-    if (getMessagesCount() > 0) {
-      hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
-      hash = (53 * hash) + getMessagesList().hashCode();
-    }
-    hash = (37 * hash) + N_FIELD_NUMBER;
-    hash = (53 * hash) + getN();
-    hash = (37 * hash) + SEED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getSeed());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1328,28 +293,6 @@ private static final long serialVersionUID = 0L;
       return com.msp.azure.openai.chat.v1.CompletionsProto.internal_static_msp_azure_openai_chat_v1_CompletionRequest_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 8:
-          return internalGetLogitBias();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 8:
-          return internalGetMutableLogitBias();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1360,37 +303,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.msp.azure.openai.chat.v1.CompletionRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getBodyFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      temperature_ = 0F;
-      topP_ = 0F;
-      stream_ = false;
-      stops_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      maxTokens_ = 0;
-      presencePenalty_ = 0F;
-      frequencyPenalty_ = 0F;
-      internalGetMutableLogitBias().clear();
-      user_ = "";
-      if (messagesBuilder_ == null) {
-        messages_ = java.util.Collections.emptyList();
-      } else {
-        messages_ = null;
-        messagesBuilder_.clear();
+      deploymentName_ = "";
+      body_ = null;
+      if (bodyBuilder_ != null) {
+        bodyBuilder_.dispose();
+        bodyBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
-      n_ = 0;
-      seed_ = 0L;
       return this;
     }
 
@@ -1417,61 +353,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.msp.azure.openai.chat.v1.CompletionRequest buildPartial() {
       com.msp.azure.openai.chat.v1.CompletionRequest result = new com.msp.azure.openai.chat.v1.CompletionRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.msp.azure.openai.chat.v1.CompletionRequest result) {
-      if (messagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
-          messages_ = java.util.Collections.unmodifiableList(messages_);
-          bitField0_ = (bitField0_ & ~0x00000200);
-        }
-        result.messages_ = messages_;
-      } else {
-        result.messages_ = messagesBuilder_.build();
-      }
-    }
-
     private void buildPartial0(com.msp.azure.openai.chat.v1.CompletionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.temperature_ = temperature_;
+        result.deploymentName_ = deploymentName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.topP_ = topP_;
+        result.body_ = bodyBuilder_ == null
+            ? body_
+            : bodyBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.stream_ = stream_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        stops_.makeImmutable();
-        result.stops_ = stops_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.maxTokens_ = maxTokens_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.presencePenalty_ = presencePenalty_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.frequencyPenalty_ = frequencyPenalty_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.logitBias_ = internalGetLogitBias();
-        result.logitBias_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.user_ = user_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.n_ = n_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.seed_ = seed_;
-      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1486,73 +385,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.msp.azure.openai.chat.v1.CompletionRequest other) {
       if (other == com.msp.azure.openai.chat.v1.CompletionRequest.getDefaultInstance()) return this;
-      if (other.getTemperature() != 0F) {
-        setTemperature(other.getTemperature());
-      }
-      if (other.getTopP() != 0F) {
-        setTopP(other.getTopP());
-      }
-      if (other.getStream() != false) {
-        setStream(other.getStream());
-      }
-      if (!other.stops_.isEmpty()) {
-        if (stops_.isEmpty()) {
-          stops_ = other.stops_;
-          bitField0_ |= 0x00000008;
-        } else {
-          ensureStopsIsMutable();
-          stops_.addAll(other.stops_);
-        }
+      if (!other.getDeploymentName().isEmpty()) {
+        deploymentName_ = other.deploymentName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.getMaxTokens() != 0) {
-        setMaxTokens(other.getMaxTokens());
-      }
-      if (other.getPresencePenalty() != 0F) {
-        setPresencePenalty(other.getPresencePenalty());
-      }
-      if (other.getFrequencyPenalty() != 0F) {
-        setFrequencyPenalty(other.getFrequencyPenalty());
-      }
-      internalGetMutableLogitBias().mergeFrom(
-          other.internalGetLogitBias());
-      bitField0_ |= 0x00000080;
-      if (!other.getUser().isEmpty()) {
-        user_ = other.user_;
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
-      if (messagesBuilder_ == null) {
-        if (!other.messages_.isEmpty()) {
-          if (messages_.isEmpty()) {
-            messages_ = other.messages_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-          } else {
-            ensureMessagesIsMutable();
-            messages_.addAll(other.messages_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.messages_.isEmpty()) {
-          if (messagesBuilder_.isEmpty()) {
-            messagesBuilder_.dispose();
-            messagesBuilder_ = null;
-            messages_ = other.messages_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-            messagesBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getMessagesFieldBuilder() : null;
-          } else {
-            messagesBuilder_.addAllMessages(other.messages_);
-          }
-        }
-      }
-      if (other.getN() != 0) {
-        setN(other.getN());
-      }
-      if (other.getSeed() != 0L) {
-        setSeed(other.getSeed());
+      if (other.hasBody()) {
+        mergeBody(other.getBody());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1580,79 +419,18 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 13: {
-              temperature_ = input.readFloat();
+            case 10: {
+              deploymentName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 13
-            case 21: {
-              topP_ = input.readFloat();
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getBodyFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 21
-            case 24: {
-              stream_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureStopsIsMutable();
-              stops_.add(s);
-              break;
-            } // case 34
-            case 40: {
-              maxTokens_ = input.readUInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 53: {
-              presencePenalty_ = input.readFloat();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 53
-            case 61: {
-              frequencyPenalty_ = input.readFloat();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 61
-            case 66: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Float>
-              logitBias__ = input.readMessage(
-                  LogitBiasDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableLogitBias().getMutableMap().put(
-                  logitBias__.getKey(), logitBias__.getValue());
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            case 74: {
-              user_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 74
-            case 82: {
-              com.msp.azure.openai.chat.v1.CompletionRequest.Message m =
-                  input.readMessage(
-                      com.msp.azure.openai.chat.v1.CompletionRequest.Message.parser(),
-                      extensionRegistry);
-              if (messagesBuilder_ == null) {
-                ensureMessagesIsMutable();
-                messages_.add(m);
-              } else {
-                messagesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 82
-            case 96: {
-              n_ = input.readUInt32();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 96
-            case 104: {
-              seed_ = input.readInt64();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 104
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1670,844 +448,197 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private float temperature_ ;
+    private java.lang.Object deploymentName_ = "";
     /**
-     * <code>float temperature = 1 [json_name = "temperature"];</code>
-     * @return The temperature.
+     * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+     * @return The deploymentName.
      */
-    @java.lang.Override
-    public float getTemperature() {
-      return temperature_;
-    }
-    /**
-     * <code>float temperature = 1 [json_name = "temperature"];</code>
-     * @param value The temperature to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTemperature(float value) {
-
-      temperature_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>float temperature = 1 [json_name = "temperature"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTemperature() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      temperature_ = 0F;
-      onChanged();
-      return this;
-    }
-
-    private float topP_ ;
-    /**
-     * <code>float top_p = 2 [json_name = "topP"];</code>
-     * @return The topP.
-     */
-    @java.lang.Override
-    public float getTopP() {
-      return topP_;
-    }
-    /**
-     * <code>float top_p = 2 [json_name = "topP"];</code>
-     * @param value The topP to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTopP(float value) {
-
-      topP_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>float top_p = 2 [json_name = "topP"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTopP() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      topP_ = 0F;
-      onChanged();
-      return this;
-    }
-
-    private boolean stream_ ;
-    /**
-     * <code>bool stream = 3 [json_name = "stream"];</code>
-     * @return The stream.
-     */
-    @java.lang.Override
-    public boolean getStream() {
-      return stream_;
-    }
-    /**
-     * <code>bool stream = 3 [json_name = "stream"];</code>
-     * @param value The stream to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStream(boolean value) {
-
-      stream_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool stream = 3 [json_name = "stream"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStream() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      stream_ = false;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.LazyStringArrayList stops_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureStopsIsMutable() {
-      if (!stops_.isModifiable()) {
-        stops_ = new com.google.protobuf.LazyStringArrayList(stops_);
-      }
-      bitField0_ |= 0x00000008;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @return A list containing the stops.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getStopsList() {
-      stops_.makeImmutable();
-      return stops_;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @return The count of stops.
-     */
-    public int getStopsCount() {
-      return stops_.size();
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param index The index of the element to return.
-     * @return The stops at the given index.
-     */
-    public java.lang.String getStops(int index) {
-      return stops_.get(index);
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the stops at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getStopsBytes(int index) {
-      return stops_.getByteString(index);
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param index The index to set the value at.
-     * @param value The stops to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStops(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureStopsIsMutable();
-      stops_.set(index, value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param value The stops to add.
-     * @return This builder for chaining.
-     */
-    public Builder addStops(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureStopsIsMutable();
-      stops_.add(value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param values The stops to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllStops(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureStopsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, stops_);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStops() {
-      stops_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string stops = 4 [json_name = "stop"];</code>
-     * @param value The bytes of the stops to add.
-     * @return This builder for chaining.
-     */
-    public Builder addStopsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureStopsIsMutable();
-      stops_.add(value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private int maxTokens_ ;
-    /**
-     * <code>uint32 max_tokens = 5 [json_name = "maxTokens"];</code>
-     * @return The maxTokens.
-     */
-    @java.lang.Override
-    public int getMaxTokens() {
-      return maxTokens_;
-    }
-    /**
-     * <code>uint32 max_tokens = 5 [json_name = "maxTokens"];</code>
-     * @param value The maxTokens to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMaxTokens(int value) {
-
-      maxTokens_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 max_tokens = 5 [json_name = "maxTokens"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMaxTokens() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      maxTokens_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private float presencePenalty_ ;
-    /**
-     * <code>float presence_penalty = 6 [json_name = "presencePenalty"];</code>
-     * @return The presencePenalty.
-     */
-    @java.lang.Override
-    public float getPresencePenalty() {
-      return presencePenalty_;
-    }
-    /**
-     * <code>float presence_penalty = 6 [json_name = "presencePenalty"];</code>
-     * @param value The presencePenalty to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPresencePenalty(float value) {
-
-      presencePenalty_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>float presence_penalty = 6 [json_name = "presencePenalty"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPresencePenalty() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      presencePenalty_ = 0F;
-      onChanged();
-      return this;
-    }
-
-    private float frequencyPenalty_ ;
-    /**
-     * <code>float frequency_penalty = 7 [json_name = "frequencyPenalty"];</code>
-     * @return The frequencyPenalty.
-     */
-    @java.lang.Override
-    public float getFrequencyPenalty() {
-      return frequencyPenalty_;
-    }
-    /**
-     * <code>float frequency_penalty = 7 [json_name = "frequencyPenalty"];</code>
-     * @param value The frequencyPenalty to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFrequencyPenalty(float value) {
-
-      frequencyPenalty_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>float frequency_penalty = 7 [json_name = "frequencyPenalty"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFrequencyPenalty() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      frequencyPenalty_ = 0F;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.Float> logitBias_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
-        internalGetLogitBias() {
-      if (logitBias_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            LogitBiasDefaultEntryHolder.defaultEntry);
-      }
-      return logitBias_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
-        internalGetMutableLogitBias() {
-      if (logitBias_ == null) {
-        logitBias_ = com.google.protobuf.MapField.newMapField(
-            LogitBiasDefaultEntryHolder.defaultEntry);
-      }
-      if (!logitBias_.isMutable()) {
-        logitBias_ = logitBias_.copy();
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return logitBias_;
-    }
-    public int getLogitBiasCount() {
-      return internalGetLogitBias().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    @java.lang.Override
-    public boolean containsLogitBias(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetLogitBias().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getLogitBiasMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Float> getLogitBias() {
-      return getLogitBiasMap();
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.Float> getLogitBiasMap() {
-      return internalGetLogitBias().getMap();
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    @java.lang.Override
-    public float getLogitBiasOrDefault(
-        java.lang.String key,
-        float defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Float> map =
-          internalGetLogitBias().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    @java.lang.Override
-    public float getLogitBiasOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Float> map =
-          internalGetLogitBias().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearLogitBias() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      internalGetMutableLogitBias().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    public Builder removeLogitBias(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableLogitBias().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Float>
-        getMutableLogitBias() {
-      bitField0_ |= 0x00000080;
-      return internalGetMutableLogitBias().getMutableMap();
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    public Builder putLogitBias(
-        java.lang.String key,
-        float value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
-      internalGetMutableLogitBias().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000080;
-      return this;
-    }
-    /**
-     * <code>map&lt;string, float&gt; logit_bias = 8 [json_name = "logitBias"];</code>
-     */
-    public Builder putAllLogitBias(
-        java.util.Map<java.lang.String, java.lang.Float> values) {
-      internalGetMutableLogitBias().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000080;
-      return this;
-    }
-
-    private java.lang.Object user_ = "";
-    /**
-     * <code>string user = 9 [json_name = "user"];</code>
-     * @return The user.
-     */
-    public java.lang.String getUser() {
-      java.lang.Object ref = user_;
+    public java.lang.String getDeploymentName() {
+      java.lang.Object ref = deploymentName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        user_ = s;
+        deploymentName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string user = 9 [json_name = "user"];</code>
-     * @return The bytes for user.
+     * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+     * @return The bytes for deploymentName.
      */
     public com.google.protobuf.ByteString
-        getUserBytes() {
-      java.lang.Object ref = user_;
+        getDeploymentNameBytes() {
+      java.lang.Object ref = deploymentName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        user_ = b;
+        deploymentName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string user = 9 [json_name = "user"];</code>
-     * @param value The user to set.
+     * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+     * @param value The deploymentName to set.
      * @return This builder for chaining.
      */
-    public Builder setUser(
+    public Builder setDeploymentName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      user_ = value;
-      bitField0_ |= 0x00000100;
+      deploymentName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string user = 9 [json_name = "user"];</code>
+     * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUser() {
-      user_ = getDefaultInstance().getUser();
-      bitField0_ = (bitField0_ & ~0x00000100);
+    public Builder clearDeploymentName() {
+      deploymentName_ = getDefaultInstance().getDeploymentName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string user = 9 [json_name = "user"];</code>
-     * @param value The bytes for user to set.
+     * <code>string deployment_name = 1 [json_name = "deploymentName"];</code>
+     * @param value The bytes for deploymentName to set.
      * @return This builder for chaining.
      */
-    public Builder setUserBytes(
+    public Builder setDeploymentNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      user_ = value;
-      bitField0_ |= 0x00000100;
+      deploymentName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message> messages_ =
-      java.util.Collections.emptyList();
-    private void ensureMessagesIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
-        messages_ = new java.util.ArrayList<com.msp.azure.openai.chat.v1.CompletionRequest.Message>(messages_);
-        bitField0_ |= 0x00000200;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        com.msp.azure.openai.chat.v1.CompletionRequest.Message, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder, com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder> messagesBuilder_;
-
+    private com.msp.azure.openai.chat.v1.CompletionRequestBody body_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.msp.azure.openai.chat.v1.CompletionRequestBody, com.msp.azure.openai.chat.v1.CompletionRequestBody.Builder, com.msp.azure.openai.chat.v1.CompletionRequestBodyOrBuilder> bodyBuilder_;
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
+     * @return Whether the body field is set.
      */
-    public java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message> getMessagesList() {
-      if (messagesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(messages_);
+    public boolean hasBody() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
+     * @return The body.
+     */
+    public com.msp.azure.openai.chat.v1.CompletionRequestBody getBody() {
+      if (bodyBuilder_ == null) {
+        return body_ == null ? com.msp.azure.openai.chat.v1.CompletionRequestBody.getDefaultInstance() : body_;
       } else {
-        return messagesBuilder_.getMessageList();
+        return bodyBuilder_.getMessage();
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public int getMessagesCount() {
-      if (messagesBuilder_ == null) {
-        return messages_.size();
-      } else {
-        return messagesBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public com.msp.azure.openai.chat.v1.CompletionRequest.Message getMessages(int index) {
-      if (messagesBuilder_ == null) {
-        return messages_.get(index);
-      } else {
-        return messagesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public Builder setMessages(
-        int index, com.msp.azure.openai.chat.v1.CompletionRequest.Message value) {
-      if (messagesBuilder_ == null) {
+    public Builder setBody(com.msp.azure.openai.chat.v1.CompletionRequestBody value) {
+      if (bodyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMessagesIsMutable();
-        messages_.set(index, value);
-        onChanged();
+        body_ = value;
       } else {
-        messagesBuilder_.setMessage(index, value);
+        bodyBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public Builder setMessages(
-        int index, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder builderForValue) {
-      if (messagesBuilder_ == null) {
-        ensureMessagesIsMutable();
-        messages_.set(index, builderForValue.build());
-        onChanged();
+    public Builder setBody(
+        com.msp.azure.openai.chat.v1.CompletionRequestBody.Builder builderForValue) {
+      if (bodyBuilder_ == null) {
+        body_ = builderForValue.build();
       } else {
-        messagesBuilder_.setMessage(index, builderForValue.build());
+        bodyBuilder_.setMessage(builderForValue.build());
       }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public Builder addMessages(com.msp.azure.openai.chat.v1.CompletionRequest.Message value) {
-      if (messagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
+    public Builder mergeBody(com.msp.azure.openai.chat.v1.CompletionRequestBody value) {
+      if (bodyBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          body_ != null &&
+          body_ != com.msp.azure.openai.chat.v1.CompletionRequestBody.getDefaultInstance()) {
+          getBodyBuilder().mergeFrom(value);
+        } else {
+          body_ = value;
         }
-        ensureMessagesIsMutable();
-        messages_.add(value);
-        onChanged();
       } else {
-        messagesBuilder_.addMessage(value);
+        bodyBuilder_.mergeFrom(value);
+      }
+      if (body_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public Builder addMessages(
-        int index, com.msp.azure.openai.chat.v1.CompletionRequest.Message value) {
-      if (messagesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMessagesIsMutable();
-        messages_.add(index, value);
-        onChanged();
-      } else {
-        messagesBuilder_.addMessage(index, value);
+    public Builder clearBody() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      body_ = null;
+      if (bodyBuilder_ != null) {
+        bodyBuilder_.dispose();
+        bodyBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public Builder addMessages(
-        com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder builderForValue) {
-      if (messagesBuilder_ == null) {
-        ensureMessagesIsMutable();
-        messages_.add(builderForValue.build());
-        onChanged();
+    public com.msp.azure.openai.chat.v1.CompletionRequestBody.Builder getBodyBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getBodyFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
+     */
+    public com.msp.azure.openai.chat.v1.CompletionRequestBodyOrBuilder getBodyOrBuilder() {
+      if (bodyBuilder_ != null) {
+        return bodyBuilder_.getMessageOrBuilder();
       } else {
-        messagesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public Builder addMessages(
-        int index, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder builderForValue) {
-      if (messagesBuilder_ == null) {
-        ensureMessagesIsMutable();
-        messages_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        messagesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public Builder addAllMessages(
-        java.lang.Iterable<? extends com.msp.azure.openai.chat.v1.CompletionRequest.Message> values) {
-      if (messagesBuilder_ == null) {
-        ensureMessagesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, messages_);
-        onChanged();
-      } else {
-        messagesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public Builder clearMessages() {
-      if (messagesBuilder_ == null) {
-        messages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
-      } else {
-        messagesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public Builder removeMessages(int index) {
-      if (messagesBuilder_ == null) {
-        ensureMessagesIsMutable();
-        messages_.remove(index);
-        onChanged();
-      } else {
-        messagesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder getMessagesBuilder(
-        int index) {
-      return getMessagesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder getMessagesOrBuilder(
-        int index) {
-      if (messagesBuilder_ == null) {
-        return messages_.get(index);  } else {
-        return messagesBuilder_.getMessageOrBuilder(index);
+        return body_ == null ?
+            com.msp.azure.openai.chat.v1.CompletionRequestBody.getDefaultInstance() : body_;
       }
     }
     /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
+     * <code>.msp.azure.openai.chat.v1.CompletionRequestBody body = 2 [json_name = "body"];</code>
      */
-    public java.util.List<? extends com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder> 
-         getMessagesOrBuilderList() {
-      if (messagesBuilder_ != null) {
-        return messagesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(messages_);
-      }
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder addMessagesBuilder() {
-      return getMessagesFieldBuilder().addBuilder(
-          com.msp.azure.openai.chat.v1.CompletionRequest.Message.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder addMessagesBuilder(
-        int index) {
-      return getMessagesFieldBuilder().addBuilder(
-          index, com.msp.azure.openai.chat.v1.CompletionRequest.Message.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .msp.azure.openai.chat.v1.CompletionRequest.Message messages = 10 [json_name = "messages"];</code>
-     */
-    public java.util.List<com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder> 
-         getMessagesBuilderList() {
-      return getMessagesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        com.msp.azure.openai.chat.v1.CompletionRequest.Message, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder, com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder> 
-        getMessagesFieldBuilder() {
-      if (messagesBuilder_ == null) {
-        messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            com.msp.azure.openai.chat.v1.CompletionRequest.Message, com.msp.azure.openai.chat.v1.CompletionRequest.Message.Builder, com.msp.azure.openai.chat.v1.CompletionRequest.MessageOrBuilder>(
-                messages_,
-                ((bitField0_ & 0x00000200) != 0),
+    private com.google.protobuf.SingleFieldBuilder<
+        com.msp.azure.openai.chat.v1.CompletionRequestBody, com.msp.azure.openai.chat.v1.CompletionRequestBody.Builder, com.msp.azure.openai.chat.v1.CompletionRequestBodyOrBuilder> 
+        getBodyFieldBuilder() {
+      if (bodyBuilder_ == null) {
+        bodyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.msp.azure.openai.chat.v1.CompletionRequestBody, com.msp.azure.openai.chat.v1.CompletionRequestBody.Builder, com.msp.azure.openai.chat.v1.CompletionRequestBodyOrBuilder>(
+                getBody(),
                 getParentForChildren(),
                 isClean());
-        messages_ = null;
+        body_ = null;
       }
-      return messagesBuilder_;
-    }
-
-    private int n_ ;
-    /**
-     * <pre>
-     * repeated DataSource data_sources = 11;
-     * </pre>
-     *
-     * <code>uint32 n = 12 [json_name = "n"];</code>
-     * @return The n.
-     */
-    @java.lang.Override
-    public int getN() {
-      return n_;
-    }
-    /**
-     * <pre>
-     * repeated DataSource data_sources = 11;
-     * </pre>
-     *
-     * <code>uint32 n = 12 [json_name = "n"];</code>
-     * @param value The n to set.
-     * @return This builder for chaining.
-     */
-    public Builder setN(int value) {
-
-      n_ = value;
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * repeated DataSource data_sources = 11;
-     * </pre>
-     *
-     * <code>uint32 n = 12 [json_name = "n"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearN() {
-      bitField0_ = (bitField0_ & ~0x00000400);
-      n_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private long seed_ ;
-    /**
-     * <pre>
-     * ResponseFormat response_format = 14;
-     * repeated Tool tools = 15;
-     * ToolChoice tool_choice = 16;
-     * repeated Function functions = 17;
-     * FunctionCall function_call = 18;
-     * </pre>
-     *
-     * <code>int64 seed = 13 [json_name = "seed"];</code>
-     * @return The seed.
-     */
-    @java.lang.Override
-    public long getSeed() {
-      return seed_;
-    }
-    /**
-     * <pre>
-     * ResponseFormat response_format = 14;
-     * repeated Tool tools = 15;
-     * ToolChoice tool_choice = 16;
-     * repeated Function functions = 17;
-     * FunctionCall function_call = 18;
-     * </pre>
-     *
-     * <code>int64 seed = 13 [json_name = "seed"];</code>
-     * @param value The seed to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSeed(long value) {
-
-      seed_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ResponseFormat response_format = 14;
-     * repeated Tool tools = 15;
-     * ToolChoice tool_choice = 16;
-     * repeated Function functions = 17;
-     * FunctionCall function_call = 18;
-     * </pre>
-     *
-     * <code>int64 seed = 13 [json_name = "seed"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSeed() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      seed_ = 0L;
-      onChanged();
-      return this;
+      return bodyBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionRequest)
