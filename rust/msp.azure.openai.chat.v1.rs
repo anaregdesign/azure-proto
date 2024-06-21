@@ -87,6 +87,8 @@ pub mod completion_response {
         pub message: ::core::option::Option<choice::Message>,
         #[prost(message, optional, tag="4")]
         pub content_filter_result: ::core::option::Option<super::super::super::v1::ContentFilterChoiceResult>,
+        #[prost(float, repeated, tag="5")]
+        pub logprobs: ::prost::alloc::vec::Vec<f32>,
     }
     /// Nested message and enum types in `Choice`.
     pub mod choice {

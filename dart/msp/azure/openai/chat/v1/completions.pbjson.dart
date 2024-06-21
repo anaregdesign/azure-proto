@@ -100,6 +100,7 @@ const CompletionResponse_Choice$json = {
     {'1': 'finish_reason', '3': 2, '4': 1, '5': 9, '10': 'finishReason'},
     {'1': 'message', '3': 3, '4': 1, '5': 11, '6': '.msp.azure.openai.chat.v1.CompletionResponse.Choice.Message', '10': 'message'},
     {'1': 'content_filter_result', '3': 4, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.ContentFilterChoiceResult', '10': 'content_filter_results'},
+    {'1': 'logprobs', '3': 5, '4': 3, '5': 2, '10': 'logprobs'},
   ],
   '3': [CompletionResponse_Choice_Message$json],
 };
@@ -179,28 +180,29 @@ final $typed_data.Uint8List completionResponseDescriptor = $convert.base64Decode
     'GAggAygLMjMubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNvbXBsZXRpb25SZXNwb25zZS5DaG'
     '9pY2VSB2Nob2ljZXMafAoFVXNhZ2USIwoNcHJvbXB0X3Rva2VucxgBIAEoBFIMcHJvbXB0VG9r'
     'ZW5zEisKEWNvbXBsZXRpb25fdG9rZW5zGAIgASgEUhBjb21wbGV0aW9uVG9rZW5zEiEKDHRvdG'
-    'FsX3Rva2VucxgDIAEoBFILdG90YWxUb2tlbnMangkKBkNob2ljZRIUCgVpbmRleBgBIAEoDVIF'
+    'FsX3Rva2VucxgDIAEoBFILdG90YWxUb2tlbnMaugkKBkNob2ljZRIUCgVpbmRleBgBIAEoDVIF'
     'aW5kZXgSIwoNZmluaXNoX3JlYXNvbhgCIAEoCVIMZmluaXNoUmVhc29uElUKB21lc3NhZ2UYAy'
     'ABKAsyOy5tc3AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ29tcGxldGlvblJlc3BvbnNlLkNob2lj'
     'ZS5NZXNzYWdlUgdtZXNzYWdlEmUKFWNvbnRlbnRfZmlsdGVyX3Jlc3VsdBgEIAEoCzIuLm1zcC'
     '5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlckNob2ljZVJlc3VsdFIWY29udGVudF9maWx0'
-    'ZXJfcmVzdWx0cxqaBwoHTWVzc2FnZRISCgRyb2xlGAEgASgJUgRyb2xlEhgKB2NvbnRlbnQYAi'
-    'ABKAlSB2NvbnRlbnQSYwoKdG9vbF9jYWxscxgDIAMoCzJELm1zcC5henVyZS5vcGVuYWkuY2hh'
-    'dC52MS5Db21wbGV0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3NhZ2UuVG9vbENhbGxSCXRvb2xDYW'
-    'xscxJtCg1mdW5jdGlvbl9jYWxsGAQgASgLMkgubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNv'
-    'bXBsZXRpb25SZXNwb25zZS5DaG9pY2UuTWVzc2FnZS5GdW5jdGlvbkNhbGxSDGZ1bmN0aW9uQ2'
-    'FsbBJdCgdjb250ZXh0GAUgASgLMkMubXNwLmF6dXJlLm9wZW5haS5jaGF0LnYxLkNvbXBsZXRp'
-    'b25SZXNwb25zZS5DaG9pY2UuTWVzc2FnZS5Db250ZXh0Ugdjb250ZXh0GtYBCghUb29sQ2FsbB'
-    'IOCgJpZBgBIAEoCVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZRJpCghmdW5jdGlvbhgDIAEoCzJN'
+    'ZXJfcmVzdWx0cxIaCghsb2dwcm9icxgFIAMoAlIIbG9ncHJvYnMamgcKB01lc3NhZ2USEgoEcm'
+    '9sZRgBIAEoCVIEcm9sZRIYCgdjb250ZW50GAIgASgJUgdjb250ZW50EmMKCnRvb2xfY2FsbHMY'
+    'AyADKAsyRC5tc3AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ29tcGxldGlvblJlc3BvbnNlLkNob2'
+    'ljZS5NZXNzYWdlLlRvb2xDYWxsUgl0b29sQ2FsbHMSbQoNZnVuY3Rpb25fY2FsbBgEIAEoCzJI'
     'Lm1zcC5henVyZS5vcGVuYWkuY2hhdC52MS5Db21wbGV0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3'
-    'NhZ2UuVG9vbENhbGwuRnVuY3Rpb25SCGZ1bmN0aW9uGjsKCEZ1bmN0aW9uEhIKBG5hbWUYASAB'
-    'KAlSBG5hbWUSGwoIYXJndW1lbnQYAiABKAlSCWFyZ3VtZW50cxo/CgxGdW5jdGlvbkNhbGwSEg'
-    'oEbmFtZRgBIAEoCVIEbmFtZRIbCghhcmd1bWVudBgCIAEoCVIJYXJndW1lbnRzGpMCCgdDb250'
-    'ZXh0EmoKCWNpdGF0aW9ucxgBIAMoCzJMLm1zcC5henVyZS5vcGVuYWkuY2hhdC52MS5Db21wbG'
-    'V0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3NhZ2UuQ29udGV4dC5DaXRhdGlvblIJY2l0YXRpb25z'
-    'EhYKBmludGVudBgCIAEoCVIGaW50ZW50GoMBCghDaXRhdGlvbhIYCgdjb250ZW50GAEgASgJUg'
-    'djb250ZW50EhQKBXRpdGxlGAIgASgJUgV0aXRsZRIQCgN1cmwYAyABKAlSA3VybBIaCghmaWxl'
-    'cGF0aBgEIAEoCVIIZmlsZXBhdGgSGQoIY2h1bmtfaWQYBSABKAlSB2NodW5rSWQ=');
+    'NhZ2UuRnVuY3Rpb25DYWxsUgxmdW5jdGlvbkNhbGwSXQoHY29udGV4dBgFIAEoCzJDLm1zcC5h'
+    'enVyZS5vcGVuYWkuY2hhdC52MS5Db21wbGV0aW9uUmVzcG9uc2UuQ2hvaWNlLk1lc3NhZ2UuQ2'
+    '9udGV4dFIHY29udGV4dBrWAQoIVG9vbENhbGwSDgoCaWQYASABKAlSAmlkEhIKBHR5cGUYAiAB'
+    'KAlSBHR5cGUSaQoIZnVuY3Rpb24YAyABKAsyTS5tc3AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ2'
+    '9tcGxldGlvblJlc3BvbnNlLkNob2ljZS5NZXNzYWdlLlRvb2xDYWxsLkZ1bmN0aW9uUghmdW5j'
+    'dGlvbho7CghGdW5jdGlvbhISCgRuYW1lGAEgASgJUgRuYW1lEhsKCGFyZ3VtZW50GAIgASgJUg'
+    'lhcmd1bWVudHMaPwoMRnVuY3Rpb25DYWxsEhIKBG5hbWUYASABKAlSBG5hbWUSGwoIYXJndW1l'
+    'bnQYAiABKAlSCWFyZ3VtZW50cxqTAgoHQ29udGV4dBJqCgljaXRhdGlvbnMYASADKAsyTC5tc3'
+    'AuYXp1cmUub3BlbmFpLmNoYXQudjEuQ29tcGxldGlvblJlc3BvbnNlLkNob2ljZS5NZXNzYWdl'
+    'LkNvbnRleHQuQ2l0YXRpb25SCWNpdGF0aW9ucxIWCgZpbnRlbnQYAiABKAlSBmludGVudBqDAQ'
+    'oIQ2l0YXRpb24SGAoHY29udGVudBgBIAEoCVIHY29udGVudBIUCgV0aXRsZRgCIAEoCVIFdGl0'
+    'bGUSEAoDdXJsGAMgASgJUgN1cmwSGgoIZmlsZXBhdGgYBCABKAlSCGZpbGVwYXRoEhkKCGNodW'
+    '5rX2lkGAUgASgJUgdjaHVua0lk');
 
 @$core.Deprecated('Use errorResponseDescriptor instead')
 const ErrorResponse$json = {

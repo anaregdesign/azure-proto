@@ -680,6 +680,23 @@ private static final long serialVersionUID = 0L;
      * <code>.msp.azure.openai.v1.ContentFilterChoiceResult content_filter_result = 4 [json_name = "content_filter_results"];</code>
      */
     com.msp.azure.openai.v1.ContentFilterChoiceResultOrBuilder getContentFilterResultOrBuilder();
+
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @return A list containing the logprobs.
+     */
+    java.util.List<java.lang.Float> getLogprobsList();
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @return The count of logprobs.
+     */
+    int getLogprobsCount();
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @param index The index of the element to return.
+     * @return The logprobs at the given index.
+     */
+    float getLogprobs(int index);
   }
   /**
    * Protobuf type {@code msp.azure.openai.chat.v1.CompletionResponse.Choice}
@@ -704,6 +721,7 @@ private static final long serialVersionUID = 0L;
     }
     private Choice() {
       finishReason_ = "";
+      logprobs_ = emptyFloatList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -6439,6 +6457,36 @@ private static final long serialVersionUID = 0L;
       return contentFilterResult_ == null ? com.msp.azure.openai.v1.ContentFilterChoiceResult.getDefaultInstance() : contentFilterResult_;
     }
 
+    public static final int LOGPROBS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.FloatList logprobs_ =
+        emptyFloatList();
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @return A list containing the logprobs.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Float>
+        getLogprobsList() {
+      return logprobs_;
+    }
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @return The count of logprobs.
+     */
+    public int getLogprobsCount() {
+      return logprobs_.size();
+    }
+    /**
+     * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+     * @param index The index of the element to return.
+     * @return The logprobs at the given index.
+     */
+    public float getLogprobs(int index) {
+      return logprobs_.getFloat(index);
+    }
+    private int logprobsMemoizedSerializedSize = -1;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6453,6 +6501,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (index_ != 0) {
         output.writeUInt32(1, index_);
       }
@@ -6464,6 +6513,13 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getContentFilterResult());
+      }
+      if (getLogprobsList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(logprobsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < logprobs_.size(); i++) {
+        output.writeFloatNoTag(logprobs_.getFloat(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -6488,6 +6544,17 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getContentFilterResult());
+      }
+      {
+        int dataSize = 0;
+        dataSize = 4 * getLogprobsList().size();
+        size += dataSize;
+        if (!getLogprobsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        logprobsMemoizedSerializedSize = dataSize;
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6518,6 +6585,8 @@ private static final long serialVersionUID = 0L;
         if (!getContentFilterResult()
             .equals(other.getContentFilterResult())) return false;
       }
+      if (!getLogprobsList()
+          .equals(other.getLogprobsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6540,6 +6609,10 @@ private static final long serialVersionUID = 0L;
       if (hasContentFilterResult()) {
         hash = (37 * hash) + CONTENT_FILTER_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getContentFilterResult().hashCode();
+      }
+      if (getLogprobsCount() > 0) {
+        hash = (37 * hash) + LOGPROBS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogprobsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6691,6 +6764,7 @@ private static final long serialVersionUID = 0L;
           contentFilterResultBuilder_.dispose();
           contentFilterResultBuilder_ = null;
         }
+        logprobs_ = emptyFloatList();
         return this;
       }
 
@@ -6743,6 +6817,10 @@ private static final long serialVersionUID = 0L;
               : contentFilterResultBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          logprobs_.makeImmutable();
+          result.logprobs_ = logprobs_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -6771,6 +6849,17 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasContentFilterResult()) {
           mergeContentFilterResult(other.getContentFilterResult());
+        }
+        if (!other.logprobs_.isEmpty()) {
+          if (logprobs_.isEmpty()) {
+            logprobs_ = other.logprobs_;
+            logprobs_.makeImmutable();
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureLogprobsIsMutable();
+            logprobs_.addAll(other.logprobs_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6822,6 +6911,23 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 45: {
+                float v = input.readFloat();
+                ensureLogprobsIsMutable();
+                logprobs_.addFloat(v);
+                break;
+              } // case 45
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                int alloc = length > 4096 ? 4096 : length;
+                ensureLogprobsIsMutable(alloc / 4);
+                while (input.getBytesUntilLimit() > 0) {
+                  logprobs_.addFloat(input.readFloat());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7183,6 +7289,96 @@ private static final long serialVersionUID = 0L;
           contentFilterResult_ = null;
         }
         return contentFilterResultBuilder_;
+      }
+
+      private com.google.protobuf.Internal.FloatList logprobs_ = emptyFloatList();
+      private void ensureLogprobsIsMutable() {
+        if (!logprobs_.isModifiable()) {
+          logprobs_ = makeMutableCopy(logprobs_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      private void ensureLogprobsIsMutable(int capacity) {
+        if (!logprobs_.isModifiable()) {
+          logprobs_ = makeMutableCopy(logprobs_, capacity);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @return A list containing the logprobs.
+       */
+      public java.util.List<java.lang.Float>
+          getLogprobsList() {
+        logprobs_.makeImmutable();
+        return logprobs_;
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @return The count of logprobs.
+       */
+      public int getLogprobsCount() {
+        return logprobs_.size();
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @param index The index of the element to return.
+       * @return The logprobs at the given index.
+       */
+      public float getLogprobs(int index) {
+        return logprobs_.getFloat(index);
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @param index The index to set the value at.
+       * @param value The logprobs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogprobs(
+          int index, float value) {
+
+        ensureLogprobsIsMutable();
+        logprobs_.setFloat(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @param value The logprobs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLogprobs(float value) {
+
+        ensureLogprobsIsMutable();
+        logprobs_.addFloat(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @param values The logprobs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLogprobs(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensureLogprobsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, logprobs_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float logprobs = 5 [json_name = "logprobs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogprobs() {
+        logprobs_ = emptyFloatList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:msp.azure.openai.chat.v1.CompletionResponse.Choice)

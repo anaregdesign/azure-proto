@@ -60,7 +60,7 @@ class CompletionResponse(_message.Message):
         total_tokens: int
         def __init__(self, prompt_tokens: _Optional[int] = ..., completion_tokens: _Optional[int] = ..., total_tokens: _Optional[int] = ...) -> None: ...
     class Choice(_message.Message):
-        __slots__ = ("index", "finish_reason", "message", "content_filter_result")
+        __slots__ = ("index", "finish_reason", "message", "content_filter_result", "logprobs")
         class Message(_message.Message):
             __slots__ = ("role", "content", "tool_calls", "function_call", "context")
             class ToolCall(_message.Message):
@@ -121,11 +121,13 @@ class CompletionResponse(_message.Message):
         FINISH_REASON_FIELD_NUMBER: _ClassVar[int]
         MESSAGE_FIELD_NUMBER: _ClassVar[int]
         CONTENT_FILTER_RESULT_FIELD_NUMBER: _ClassVar[int]
+        LOGPROBS_FIELD_NUMBER: _ClassVar[int]
         index: int
         finish_reason: str
         message: CompletionResponse.Choice.Message
         content_filter_result: _entity_pb2.ContentFilterChoiceResult
-        def __init__(self, index: _Optional[int] = ..., finish_reason: _Optional[str] = ..., message: _Optional[_Union[CompletionResponse.Choice.Message, _Mapping]] = ..., content_filter_result: _Optional[_Union[_entity_pb2.ContentFilterChoiceResult, _Mapping]] = ...) -> None: ...
+        logprobs: _containers.RepeatedScalarFieldContainer[float]
+        def __init__(self, index: _Optional[int] = ..., finish_reason: _Optional[str] = ..., message: _Optional[_Union[CompletionResponse.Choice.Message, _Mapping]] = ..., content_filter_result: _Optional[_Union[_entity_pb2.ContentFilterChoiceResult, _Mapping]] = ..., logprobs: _Optional[_Iterable[float]] = ...) -> None: ...
     ID_FIELD_NUMBER: _ClassVar[int]
     OBJECT_FIELD_NUMBER: _ClassVar[int]
     CREATED_FIELD_NUMBER: _ClassVar[int]
