@@ -1,13 +1,29 @@
 syntax = "proto3";
 
 package msp.azure.openai.chat.v1;
-//v1: 2024-02-01
 
+import "google/api/annotations.proto";
+//v1: 2024-02-01
 import "msp/azure/openai/v1/entity.proto";
 
 option go_package = "msp/azure/openai/chat/v1";
 
+service CompletionService {
+  rpc Completion(CompletionRequest) returns (CompletionResponse) {
+    option (google.api.http) = {
+      post: "/openai/deployments/{deployment_name}/chat/completions?api-version={api_version}"
+      body: "body"
+    };
+  }
+}
+
 message CompletionRequest {
+  string deployment_name = 1;
+  string api_version = 2;
+  CompletionRequestBody body = 3;
+}
+
+message CompletionRequestBody {
   float temperature = 1;
   float top_p = 2;
   bool stream = 3;

@@ -2,6 +2,14 @@
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletionRequest {
+    #[prost(string, tag="1")]
+    pub deployment_name: ::prost::alloc::string::String,
+    #[prost(message, optional, tag="2")]
+    pub body: ::core::option::Option<CompletionRequestBody>,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CompletionRequestBody {
     #[prost(float, tag="1")]
     pub temperature: f32,
     #[prost(float, tag="2")]
@@ -21,7 +29,7 @@ pub struct CompletionRequest {
     #[prost(string, tag="9")]
     pub user: ::prost::alloc::string::String,
     #[prost(message, repeated, tag="10")]
-    pub messages: ::prost::alloc::vec::Vec<completion_request::Message>,
+    pub messages: ::prost::alloc::vec::Vec<completion_request_body::Message>,
     ///   repeated DataSource data_sources = 11;
     #[prost(uint32, tag="12")]
     pub n: u32,
@@ -33,8 +41,8 @@ pub struct CompletionRequest {
     #[prost(int64, tag="13")]
     pub seed: i64,
 }
-/// Nested message and enum types in `CompletionRequest`.
-pub mod completion_request {
+/// Nested message and enum types in `CompletionRequestBody`.
+pub mod completion_request_body {
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Message {
