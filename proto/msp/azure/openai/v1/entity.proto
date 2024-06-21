@@ -8,6 +8,7 @@ option go_package = "msp/azure/openai/v1";
 message PromptFilterResult {
   uint32 index = 1;
   ContentFilterPromptResult content_filter_result = 2 [json_name = "content_filter_results"];
+  uint32 prompt_index = 3;
 }
 
 message ErrorBase {

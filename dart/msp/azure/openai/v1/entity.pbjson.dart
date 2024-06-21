@@ -19,6 +19,7 @@ const PromptFilterResult$json = {
   '2': [
     {'1': 'index', '3': 1, '4': 1, '5': 13, '10': 'index'},
     {'1': 'content_filter_result', '3': 2, '4': 1, '5': 11, '6': '.msp.azure.openai.v1.ContentFilterPromptResult', '10': 'content_filter_results'},
+    {'1': 'prompt_index', '3': 3, '4': 1, '5': 13, '10': 'promptIndex'},
   ],
 };
 
@@ -26,7 +27,8 @@ const PromptFilterResult$json = {
 final $typed_data.Uint8List promptFilterResultDescriptor = $convert.base64Decode(
     'ChJQcm9tcHRGaWx0ZXJSZXN1bHQSFAoFaW5kZXgYASABKA1SBWluZGV4EmUKFWNvbnRlbnRfZm'
     'lsdGVyX3Jlc3VsdBgCIAEoCzIuLm1zcC5henVyZS5vcGVuYWkudjEuQ29udGVudEZpbHRlclBy'
-    'b21wdFJlc3VsdFIWY29udGVudF9maWx0ZXJfcmVzdWx0cw==');
+    'b21wdFJlc3VsdFIWY29udGVudF9maWx0ZXJfcmVzdWx0cxIhCgxwcm9tcHRfaW5kZXgYAyABKA'
+    '1SC3Byb21wdEluZGV4');
 
 @$core.Deprecated('Use errorBaseDescriptor instead')
 const ErrorBase$json = {

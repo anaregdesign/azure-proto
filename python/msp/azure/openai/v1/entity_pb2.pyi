@@ -5,12 +5,14 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class PromptFilterResult(_message.Message):
-    __slots__ = ("index", "content_filter_result")
+    __slots__ = ("index", "content_filter_result", "prompt_index")
     INDEX_FIELD_NUMBER: _ClassVar[int]
     CONTENT_FILTER_RESULT_FIELD_NUMBER: _ClassVar[int]
+    PROMPT_INDEX_FIELD_NUMBER: _ClassVar[int]
     index: int
     content_filter_result: ContentFilterPromptResult
-    def __init__(self, index: _Optional[int] = ..., content_filter_result: _Optional[_Union[ContentFilterPromptResult, _Mapping]] = ...) -> None: ...
+    prompt_index: int
+    def __init__(self, index: _Optional[int] = ..., content_filter_result: _Optional[_Union[ContentFilterPromptResult, _Mapping]] = ..., prompt_index: _Optional[int] = ...) -> None: ...
 
 class ErrorBase(_message.Message):
     __slots__ = ("code", "message")

@@ -6,6 +6,8 @@ pub struct PromptFilterResult {
     pub index: u32,
     #[prost(message, optional, tag="2")]
     pub content_filter_result: ::core::option::Option<ContentFilterPromptResult>,
+    #[prost(uint32, tag="3")]
+    pub prompt_index: u32,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]

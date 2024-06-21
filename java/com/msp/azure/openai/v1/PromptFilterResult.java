@@ -80,6 +80,17 @@ private static final long serialVersionUID = 0L;
     return contentFilterResult_ == null ? com.msp.azure.openai.v1.ContentFilterPromptResult.getDefaultInstance() : contentFilterResult_;
   }
 
+  public static final int PROMPT_INDEX_FIELD_NUMBER = 3;
+  private int promptIndex_ = 0;
+  /**
+   * <code>uint32 prompt_index = 3 [json_name = "promptIndex"];</code>
+   * @return The promptIndex.
+   */
+  @java.lang.Override
+  public int getPromptIndex() {
+    return promptIndex_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -100,6 +111,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getContentFilterResult());
     }
+    if (promptIndex_ != 0) {
+      output.writeUInt32(3, promptIndex_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -116,6 +130,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getContentFilterResult());
+    }
+    if (promptIndex_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(3, promptIndex_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -139,6 +157,8 @@ private static final long serialVersionUID = 0L;
       if (!getContentFilterResult()
           .equals(other.getContentFilterResult())) return false;
     }
+    if (getPromptIndex()
+        != other.getPromptIndex()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -156,6 +176,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTENT_FILTER_RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getContentFilterResult().hashCode();
     }
+    hash = (37 * hash) + PROMPT_INDEX_FIELD_NUMBER;
+    hash = (53 * hash) + getPromptIndex();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -299,6 +321,7 @@ private static final long serialVersionUID = 0L;
         contentFilterResultBuilder_.dispose();
         contentFilterResultBuilder_ = null;
       }
+      promptIndex_ = 0;
       return this;
     }
 
@@ -342,6 +365,9 @@ private static final long serialVersionUID = 0L;
             : contentFilterResultBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.promptIndex_ = promptIndex_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -362,6 +388,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasContentFilterResult()) {
         mergeContentFilterResult(other.getContentFilterResult());
+      }
+      if (other.getPromptIndex() != 0) {
+        setPromptIndex(other.getPromptIndex());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -401,6 +430,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              promptIndex_ = input.readUInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -569,6 +603,38 @@ private static final long serialVersionUID = 0L;
         contentFilterResult_ = null;
       }
       return contentFilterResultBuilder_;
+    }
+
+    private int promptIndex_ ;
+    /**
+     * <code>uint32 prompt_index = 3 [json_name = "promptIndex"];</code>
+     * @return The promptIndex.
+     */
+    @java.lang.Override
+    public int getPromptIndex() {
+      return promptIndex_;
+    }
+    /**
+     * <code>uint32 prompt_index = 3 [json_name = "promptIndex"];</code>
+     * @param value The promptIndex to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPromptIndex(int value) {
+
+      promptIndex_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 prompt_index = 3 [json_name = "promptIndex"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPromptIndex() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      promptIndex_ = 0;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:msp.azure.openai.v1.PromptFilterResult)

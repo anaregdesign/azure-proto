@@ -75,59 +75,60 @@ public final class EntityProto {
   static {
     java.lang.String[] descriptorData = {
       "\n msp/azure/openai/v1/entity.proto\022\023msp." +
-      "azure.openai.v1\"\221\001\n\022PromptFilterResult\022\024" +
+      "azure.openai.v1\"\264\001\n\022PromptFilterResult\022\024" +
       "\n\005index\030\001 \001(\rR\005index\022e\n\025content_filter_r" +
       "esult\030\002 \001(\0132..msp.azure.openai.v1.Conten" +
       "tFilterPromptResultR\026content_filter_resu" +
-      "lts\"9\n\tErrorBase\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007" +
-      "message\030\002 \001(\tR\007message\"\236\004\n\031ContentFilter" +
-      "PromptResult\022H\n\006sexual\030\001 \001(\01320.msp.azure" +
-      ".openai.v1.ContentFilterSeverityResultR\006" +
-      "sexual\022L\n\010violence\030\002 \001(\01320.msp.azure.ope" +
-      "nai.v1.ContentFilterSeverityResultR\010viol" +
-      "ence\022D\n\004hate\030\003 \001(\01320.msp.azure.openai.v1" +
-      ".ContentFilterSeverityResultR\004hate\022M\n\tse" +
-      "lf_harm\030\004 \001(\01320.msp.azure.openai.v1.Cont" +
-      "entFilterSeverityResultR\010selfHarm\022N\n\tpro" +
-      "fanity\030\005 \001(\01320.msp.azure.openai.v1.Conte" +
-      "ntFilterDetectedResultR\tprofanity\022N\n\tjai" +
-      "lbreak\030\006 \001(\01320.msp.azure.openai.v1.Conte" +
-      "ntFilterDetectedResultR\tjailbreak\0224\n\005err" +
-      "or\030c \001(\0132\036.msp.azure.openai.v1.ErrorBase" +
-      "R\005error\"\256\005\n\031ContentFilterChoiceResult\022H\n" +
-      "\006sexual\030\001 \001(\01320.msp.azure.openai.v1.Cont" +
-      "entFilterSeverityResultR\006sexual\022L\n\010viole" +
-      "nce\030\002 \001(\01320.msp.azure.openai.v1.ContentF" +
-      "ilterSeverityResultR\010violence\022D\n\004hate\030\003 " +
-      "\001(\01320.msp.azure.openai.v1.ContentFilterS" +
-      "everityResultR\004hate\022M\n\tself_harm\030\004 \001(\01320" +
+      "lts\022!\n\014prompt_index\030\003 \001(\rR\013promptIndex\"9" +
+      "\n\tErrorBase\022\022\n\004code\030\001 \001(\tR\004code\022\030\n\007messa" +
+      "ge\030\002 \001(\tR\007message\"\236\004\n\031ContentFilterPromp" +
+      "tResult\022H\n\006sexual\030\001 \001(\01320.msp.azure.open" +
+      "ai.v1.ContentFilterSeverityResultR\006sexua" +
+      "l\022L\n\010violence\030\002 \001(\01320.msp.azure.openai.v" +
+      "1.ContentFilterSeverityResultR\010violence\022" +
+      "D\n\004hate\030\003 \001(\01320.msp.azure.openai.v1.Cont" +
+      "entFilterSeverityResultR\004hate\022M\n\tself_ha" +
+      "rm\030\004 \001(\01320.msp.azure.openai.v1.ContentFi" +
+      "lterSeverityResultR\010selfHarm\022N\n\tprofanit" +
+      "y\030\005 \001(\01320.msp.azure.openai.v1.ContentFil" +
+      "terDetectedResultR\tprofanity\022N\n\tjailbrea" +
+      "k\030\006 \001(\01320.msp.azure.openai.v1.ContentFil" +
+      "terDetectedResultR\tjailbreak\0224\n\005error\030c " +
+      "\001(\0132\036.msp.azure.openai.v1.ErrorBaseR\005err" +
+      "or\"\256\005\n\031ContentFilterChoiceResult\022H\n\006sexu" +
+      "al\030\001 \001(\01320.msp.azure.openai.v1.ContentFi" +
+      "lterSeverityResultR\006sexual\022L\n\010violence\030\002" +
+      " \001(\01320.msp.azure.openai.v1.ContentFilter" +
+      "SeverityResultR\010violence\022D\n\004hate\030\003 \001(\01320" +
       ".msp.azure.openai.v1.ContentFilterSeveri" +
-      "tyResultR\010selfHarm\022N\n\tprofanity\030\005 \001(\01320." +
-      "msp.azure.openai.v1.ContentFilterDetecte" +
-      "dResultR\tprofanity\022h\n\027protected_material" +
-      "_text\030\006 \001(\01320.msp.azure.openai.v1.Conten" +
-      "tFilterDetectedResultR\025protectedMaterial" +
-      "Text\022t\n\027protected_material_code\030\007 \001(\0132<." +
-      "msp.azure.openai.v1.ContentFilterDetecte" +
-      "dWithCitationResultR\025protectedMaterialCo" +
-      "de\0224\n\005error\030c \001(\0132\036.msp.azure.openai.v1." +
-      "ErrorBaseR\005error\"U\n\033ContentFilterSeverit" +
-      "yResult\022\032\n\010filtered\030\001 \001(\010R\010filtered\022\032\n\010s" +
-      "everity\030\002 \001(\tR\010severity\"U\n\033ContentFilter" +
-      "DetectedResult\022\032\n\010filtered\030\001 \001(\010R\010filter" +
-      "ed\022\032\n\010detected\030\002 \001(\tR\010detected\"\374\001\n\'Conte" +
-      "ntFilterDetectedWithCitationResult\022\032\n\010fi" +
-      "ltered\030\001 \001(\010R\010filtered\022\032\n\010detected\030\002 \001(\010" +
-      "R\010detected\022a\n\010citation\030\003 \001(\0132E.msp.azure" +
-      ".openai.v1.ContentFilterDetectedWithCita" +
-      "tionResult.CitationR\010citation\0326\n\010Citatio" +
-      "n\022\020\n\003url\030\001 \001(\tR\003url\022\030\n\007license\030\002 \001(\tR\007li" +
-      "censeB\326\001\n\027com.msp.azure.openai.v1B\013Entit" +
-      "yProtoP\001Z?github.com/anaregdesign/msprot" +
-      "o/go/msp/azure/openai/v1;openaiv1\242\002\003MAO\252" +
-      "\002\023Msp.Azure.Openai.V1\312\002\023Msp\\Azure\\Openai" +
-      "\\V1\342\002\037Msp\\Azure\\Openai\\V1\\GPBMetadata\352\002\026" +
-      "Msp::Azure::Openai::V1b\006proto3"
+      "tyResultR\004hate\022M\n\tself_harm\030\004 \001(\01320.msp." +
+      "azure.openai.v1.ContentFilterSeverityRes" +
+      "ultR\010selfHarm\022N\n\tprofanity\030\005 \001(\01320.msp.a" +
+      "zure.openai.v1.ContentFilterDetectedResu" +
+      "ltR\tprofanity\022h\n\027protected_material_text" +
+      "\030\006 \001(\01320.msp.azure.openai.v1.ContentFilt" +
+      "erDetectedResultR\025protectedMaterialText\022" +
+      "t\n\027protected_material_code\030\007 \001(\0132<.msp.a" +
+      "zure.openai.v1.ContentFilterDetectedWith" +
+      "CitationResultR\025protectedMaterialCode\0224\n" +
+      "\005error\030c \001(\0132\036.msp.azure.openai.v1.Error" +
+      "BaseR\005error\"U\n\033ContentFilterSeverityResu" +
+      "lt\022\032\n\010filtered\030\001 \001(\010R\010filtered\022\032\n\010severi" +
+      "ty\030\002 \001(\tR\010severity\"U\n\033ContentFilterDetec" +
+      "tedResult\022\032\n\010filtered\030\001 \001(\010R\010filtered\022\032\n" +
+      "\010detected\030\002 \001(\tR\010detected\"\374\001\n\'ContentFil" +
+      "terDetectedWithCitationResult\022\032\n\010filtere" +
+      "d\030\001 \001(\010R\010filtered\022\032\n\010detected\030\002 \001(\010R\010det" +
+      "ected\022a\n\010citation\030\003 \001(\0132E.msp.azure.open" +
+      "ai.v1.ContentFilterDetectedWithCitationR" +
+      "esult.CitationR\010citation\0326\n\010Citation\022\020\n\003" +
+      "url\030\001 \001(\tR\003url\022\030\n\007license\030\002 \001(\tR\007license" +
+      "B\326\001\n\027com.msp.azure.openai.v1B\013EntityProt" +
+      "oP\001Z?github.com/anaregdesign/msproto/go/" +
+      "msp/azure/openai/v1;openaiv1\242\002\003MAO\252\002\023Msp" +
+      ".Azure.Openai.V1\312\002\023Msp\\Azure\\Openai\\V1\342\002" +
+      "\037Msp\\Azure\\Openai\\V1\\GPBMetadata\352\002\026Msp::" +
+      "Azure::Openai::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -138,7 +139,7 @@ public final class EntityProto {
     internal_static_msp_azure_openai_v1_PromptFilterResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_msp_azure_openai_v1_PromptFilterResult_descriptor,
-        new java.lang.String[] { "Index", "ContentFilterResult", });
+        new java.lang.String[] { "Index", "ContentFilterResult", "PromptIndex", });
     internal_static_msp_azure_openai_v1_ErrorBase_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_msp_azure_openai_v1_ErrorBase_fieldAccessorTable = new
